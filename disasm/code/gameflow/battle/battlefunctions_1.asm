@@ -868,7 +868,11 @@ loc_2444C:
 		andi.w  #2,d1
 		beq.s   loc_2447C
 		move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
-		moveq   #2,d1
+        ; calculate poison damage
+        jsr     j_GetMaxHP
+        mulu.w  #POISON_PERCENT,d1
+        divu.w  #$64,d1
+        andi.l  #$FFFF,d1
 		move.l  d1,((TEXT_NUMBER-$1000000)).w
 		trap    #TEXTBOX
 		dc.w $133               ; "{CLEAR}{NAME} gets damaged{N}by {#} because of the poison.{D3}"
