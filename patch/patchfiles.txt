@@ -1,0 +1,2 @@
+; patch/3-digit-stats-alt
+memberstatswindowslayout_3digitstats.bps graphics\tech\windowlayouts\memberstatswindowslayout.bin

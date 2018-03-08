@@ -2255,35 +2255,35 @@ DrawBattleEquipWindowStats:
 		
 		link    a6,#-4
 		move.w  ((byte_FFB18E-$1000000)).w,d0
-		move.w  #$701,d1
+		move.w  #$601,d1
 		jsr     (GetAddressOfWindowTileDataStartingAtCoord).w
 		move.l  a1,-4(a6)
 		move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
 		jsr     j_GetCurrentATK
 		move.w  d1,d0
 		movea.l -4(a6),a1
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
 		jsr     j_GetCurrentDEF
 		move.w  d1,d0
 		movea.l -4(a6),a1
 		adda.w  #$28,a1 
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
 		jsr     j_GetCurrentAGI
 		move.w  d1,d0
 		movea.l -4(a6),a1
 		adda.w  #$50,a1 
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
 		jsr     j_GetCurrentMOV
 		move.w  d1,d0
 		movea.l -4(a6),a1
 		adda.w  #$78,a1 
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		unlk    a6
 		rts
@@ -2300,7 +2300,7 @@ CreateFighterMiniStatusWindow:
 		addq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
 		movem.l d0-a2,-(sp)
 		move.w  d0,-(sp)
-		move.w  #$1605,d0
+		move.w  #$1805,d0
 		move.w  #$2001,d1
 		lea     ((FIGHTER_MINISTATUS_WINDOW_IDX-$1000000)).w,a2
 		tst.b   ((FIGHTER_IS_TARGETTING-$1000000)).w
@@ -2369,10 +2369,10 @@ loc_11600:
 
 sub_1161A:
 		jsr     (InitWindowProperties).w
-		move.w  #$1605,d0
+		move.w  #$1805,d0
 		move.w  #$2001,d1
 		jsr     (CreateWindow).w
-		move.w  #$1605,d0
+		move.w  #$1805,d0
 		move.w  #$2001,d1
 		jsr     (CreateWindow).w
 		rts
@@ -2672,7 +2672,7 @@ sub_118BE:
 		link    a6,#-8
 		move.l  a1,-8(a6)
 		movem.l d7/a1,-(sp)
-		move.w  #$36,d7 
+		move.w  #$3B,d7
 loc_118CE:
 		clr.l   (a1)+
 		dbf     d7,loc_118CE
@@ -2698,9 +2698,9 @@ loc_1190E:
 		ble.s   loc_11916
 		moveq   #$64,d6 
 loc_11916:
-		addq.w  #3,d6
+		addq.w  #2,d6
 		lsr.w   #3,d6
-		addi.w  #$A,d6
+		addi.w  #$C,d6
 		movem.w d0-d1/d7,-(sp)
 		move.w  -2(a6),d0
 		blt.s   loc_11958
@@ -2736,16 +2736,18 @@ loc_11970:
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		move.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,d7
-		subi.w  #9,d7
+		subi.w  #$A,d7
 loc_11990:
 		lea     unk_11B0A(pc), a0
 		nop
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		dbf     d7,loc_11990
-		lea     unk_11B14(pc), a0
-		nop
+		;lea     unk_11B14(pc), a0
+		;nop
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		bsr.w   CopyFighterMinistatusWindowTileColumn
+		bsr.w   CopyFighterMinistatusWindowTileColumn
+        adda.w  #$FFF6,a0
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		bsr.w   CopyFighterMinistatusWindowTileColumn
 		bsr.w   CopyFighterMinistatusWindowTileColumn
@@ -2753,7 +2755,7 @@ loc_11990:
 		move.w  -2(a6),d0
 		jsr     j_GetCharName
 		movea.l -8(a6),a1
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		addq.l  #2,a1
 		moveq   #$FFFFFFD4,d1
 		bsr.w   WriteTilesFromASCII
@@ -2779,14 +2781,14 @@ loc_11A0E:
 		movem.w d0-d3,-(sp)
 		movem.w d2-d3,-(sp)
 		movea.l -8(a6),a1
-		adda.w  #$58,a1 
+		adda.w  #$60,a1
 		addq.w  #6,a1
 		move.l  a1,-(sp)
 		lea     (FF8804_LOADING_SPACE).l,a0
 		moveq   #1,d2
 		bsr.w   DrawColoredStatBar
 		movea.l (sp)+,a1
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		movem.w (sp)+,d0-d1
 		tst.w   d1
 		beq.s   loc_11A4C
@@ -2797,22 +2799,22 @@ loc_11A4C:
 		movem.w (sp)+,d0-d3
 		ext.l   d0
 		movea.l -8(a6),a1
-		adda.w  #$58,a1 
+		adda.w  #$5C,a1
 		move.l  a1,-(sp)
 		adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
 		adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
 		suba.w  #$C,a1
 		move.l  a1,-(sp)
-		moveq   #2,d7
+        moveq   #3,d7
 		bsr.w   WriteStatValue  
 		movea.l (sp)+,a1
-		addq.l  #6,a1
+		addq.l  #8,a1
 		move.w  d1,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		movea.l (sp)+,a1
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
 		adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
 		suba.w  #$C,a1
@@ -2820,12 +2822,12 @@ loc_11A4C:
 		move.w  d2,d0
 		ext.l   d0
 		movea.l (sp)+,a1
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		addq.l  #2,a1
 		move.w  d3,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		unlk    a6
 		rts
@@ -2835,22 +2837,22 @@ loc_11A4C:
 
 ; =============== S U B R O U T I N E =======================================
 
-; display d0 stat value or "??" if above 99
+; display d0 stat value or "???" if greater than or equal to 400 (default)
 
 WriteStatValue:
 		
-		cmpi.w  #$64,d0 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d0
 		bge.s   loc_11ABC
 		ext.l   d0
 		bra.w   WriteTilesFromNumber
-		bra.s   UnknownValue    
+		;bra.s   UnknownValue
 loc_11ABC:
 		lea     UnknownValue(pc), a0
 		bra.w   WriteTilesFromASCII
 
 	; End of function WriteStatValue
 
-UnknownValue:   dc.b '??'
+UnknownValue:   dc.b '???',0
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -2860,13 +2862,13 @@ CopyFighterMinistatusWindowTileColumn:
 		
 		movem.l a1,-(sp)
 		move.w  (a0)+,(a1)
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		move.w  (a0)+,(a1)
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		move.w  (a0)+,(a1)
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		move.w  (a0)+,(a1)
-		adda.w  #$2C,a1 
+		adda.w  #$30,a1
 		move.w  (a0)+,(a1)
 		movem.l (sp)+,a1
 		addq.w  #2,a1
@@ -3479,44 +3481,44 @@ loc_120E4:
 loc_120F6:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentHP
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12118
 		movea.l -6(a6),a1
-		adda.w  #$DC,a1 
-		moveq   #2,d7
+		adda.w  #$DA,a1 
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
 loc_12118:
 		move.w  -2(a6),d0
 		jsr     j_GetMaxHP
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1213A
 		movea.l -6(a6),a1
-		adda.w  #$E2,a1 
-		moveq   #2,d7
+		adda.w  #$E2,a1
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
 loc_1213A:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentMP
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1215C
 		movea.l -6(a6),a1
-		adda.w  #$130,a1
-		moveq   #2,d7
+		adda.w  #$12E,a1
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
 loc_1215C:
 		move.w  -2(a6),d0
 		jsr     j_GetMaxMP
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1217E
 		movea.l -6(a6),a1
 		adda.w  #$136,a1
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
@@ -3526,7 +3528,7 @@ loc_1217E:
 		blt.s   loc_121BC
 		jsr     j_GetCurrentLevel
 		movea.l -6(a6),a1
-		adda.w  #$8E,a1 
+		adda.w  #$90,a1 
 		moveq   #2,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3534,7 +3536,7 @@ loc_1217E:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentEXP
 		movea.l -6(a6),a1
-		adda.w  #$18A,a1
+		adda.w  #$18C,a1
 		moveq   #2,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3543,33 +3545,33 @@ loc_1217E:
 loc_121BC:
 		lea     byte_11FEC(pc), a0
 		movea.l -6(a6),a1
-		adda.w  #$8C,a1 
+		adda.w  #$8E,a1 
 		moveq   #3,d7
 		bsr.w   WriteTilesFromASCII
 		lea     byte_11FEC(pc), a0
 		movea.l -6(a6),a1
-		adda.w  #$188,a1
+		adda.w  #$18A,a1
 		moveq   #3,d7
 		bsr.w   WriteTilesFromASCII
 loc_121E0:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentATK
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12202
 		movea.l -6(a6),a1
 		adda.w  #$A0,a1 
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
 loc_12202:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentDEF
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12224
 		movea.l -6(a6),a1
 		adda.w  #$F4,a1 
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
@@ -3577,22 +3579,22 @@ loc_12224:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentAGI
 		andi.w  #$7F,d1 
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1224A
 		movea.l -6(a6),a1
 		adda.w  #$148,a1
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
 loc_1224A:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentMOV
-		cmpi.w  #$64,d1 
+		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1226C
 		movea.l -6(a6),a1
 		adda.w  #$19C,a1
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
@@ -5112,7 +5114,7 @@ WriteMemberListText:
 		move.w  #$FFC6,d1
 		suba.w  d1,a1
 		addq.w  #4,a1
-		moveq   #$1E,d7
+		moveq   #$1A,d7
 		move.b  ((word_FFB13D-$1000000)).w,d0
 		bne.s   loc_135D4
 		lea     aNameClassLevExp(pc), a0
@@ -5185,42 +5187,42 @@ loc_13690:
 		bne.w   loc_1371E
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentHP
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentMP
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentATK
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentDEF
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentAGI
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentMOV
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
@@ -5240,29 +5242,29 @@ loc_1371E:
 		bra.s   loc_13798
 loc_13748:
 		jsr     j_GetWeaponNewATKandDEF
-		addq.l  #2,a1
+		;addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentATK
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
 		move.w  #$C0A0,(a1)+
 		move.w  d2,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
-		addq.l  #8,a1
+		addq.l  #4,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentDEF
-		moveq   #2,d7
+		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteStatValue  
 		move.w  #$C0A0,(a1)+
 		move.w  d3,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		addq.l  #2,a1
 loc_13798:
@@ -5484,50 +5486,50 @@ loc_139A6:
 		movea.l -6(a6),a1
 		adda.w  #$EA,a1 
 		lea     aAtt(pc), a0    
-		moveq   #7,d7
+		moveq   #4,d7
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentATK
 		move.w  d1,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		movea.l -6(a6),a1
 		adda.w  #$13E,a1
 		lea     aDef(pc), a0    
-		moveq   #8,d7
+		moveq   #4,d7
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentDEF
 		move.w  d1,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		movea.l -6(a6),a1
 		adda.w  #$192,a1
 		lea     aAgi(pc), a0    
-		moveq   #6,d7
+		moveq   #4,d7
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentAGI
 		move.w  d1,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		movea.l -6(a6),a1
 		adda.w  #$1E6,a1
 		lea     aMov(pc), a0    
-		moveq   #8,d7
+		moveq   #4,d7
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentMOV
 		move.w  d1,d0
 		ext.l   d0
-		moveq   #2,d7
+		moveq   #3,d7
 		bsr.w   WriteStatValue  
 		bra.w   loc_13C36
 		rts
@@ -5789,7 +5791,7 @@ loc_13CDE:
 aNameClassLevExp:
 		dc.b 'NAME    CLASS     LEV EXP',0
 aNameHpMpAtDfAgMv:
-		dc.b 'NAME    HP MP AT DF AG MV',0
+		dc.b 'NAME     HP MP AT DF AG MV'
 aNameAttackDefense:
 		dc.b 'NAME    ATTACK   DEFENSE',0
 aMagicItem:     dc.b 'MAGIC     ITEM'
@@ -8911,8 +8913,8 @@ loc_1576E:
 CreateLandEffectWindow:
 		
 		movem.l d0-a2,-(sp)
-		move.w  #$805,d0
-		move.w  #$F801,d1
+		move.w  #$605,d0
+		move.w  #$FA01,d1
 		jsr     (CreateWindow).w
 		addq.w  #1,d0
 		move.w  d0,((LAND_EFFECT_WINDOW_IDX-$1000000)).w
@@ -8921,7 +8923,7 @@ CreateLandEffectWindow:
 		subq.w  #1,d0
 		move.w  #$201,d1
 		move.w  #4,d2
-		cmpi.w  #$16,((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w
+		cmpi.w  #$18,((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w
 		blt.s   loc_157A6
 		move.w  #$101,d1
 loc_157A6:
@@ -8942,7 +8944,7 @@ HideLandEffectWindow:
 		movem.l d0-a2,-(sp)
 		move.w  ((LAND_EFFECT_WINDOW_IDX-$1000000)).w,d0
 		subq.w  #1,d0
-		move.w  #$F801,d1
+		move.w  #$FA01,d1
 		moveq   #4,d2
 		jsr     (MoveWindowWithSFX).w
 		jsr     (WaitForVint_andFFA900Clear).w
@@ -8987,7 +8989,7 @@ DrawLandEffectWindow:
 		clr.w   d1
 		jsr     (GetAddressOfWindowTileDataStartingAtCoord).w
 		move.l  a1,d3
-		move.w  #$805,d0
+		move.w  #$605,d0
 		bsr.w   CopyWindowTilesToRAM
 		move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
 		jsr     j_GetMoveCost
@@ -8996,13 +8998,13 @@ DrawLandEffectWindow:
 		moveq   #$FFFFFFF0,d1
 		moveq   #2,d7
 		movea.l d3,a1
-		adda.w  #$38,a1 
+		adda.w  #$28,a1
 		bsr.w   WriteTilesFromNumber
 		move.b  #$25,1(a1) 
 		moveq   #$FFFFFFF0,d1
-		moveq   #$F,d7
+		moveq   #2,d7
 		movea.l d3,a1
-		adda.w  #$12,a1
+		adda.w  #$E,a1
 		lea     aLandEffect(pc), a0
 		nop
 		bsr.w   WriteTilesFromASCII
@@ -9010,7 +9012,7 @@ DrawLandEffectWindow:
 
 	; End of function DrawLandEffectWindow
 
-aLandEffect:    dc.b 'LAND',$B,'EFFECT',0
+aLandEffect:    dc.b 'LE'
 
 ; =============== S U B R O U T I N E =======================================
 

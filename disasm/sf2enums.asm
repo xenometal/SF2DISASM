@@ -675,3 +675,8 @@ RIGHT: equ $0
 UP: equ $1
 LEFT: equ $2
 DOWN: equ $3
+
+; ---------------------------------------------------------------------------
+
+; enum 3_Digit_Stats
+UNKNOWN_VALUE_THRESHOLD: equ $190
