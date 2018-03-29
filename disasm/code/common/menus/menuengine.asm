@@ -1331,10 +1331,10 @@ LoadIHighlightableSpellIcon:
 		andi.w  #$3F,d0 
 		cmpi.w  #$3F,d0 
 		bne.s   loc_10950
-		move.w  #$7F,d0 
+		move.w  #ITEMIDX_NOTHING,d0
 		bra.s   loc_10954
 loc_10950:
-		addi.w  #$82,d0 
+		addi.w  #ICON_SPELL_START,d0
 loc_10954:
 		bra.w   LoadHighlightableIcon
 
@@ -1345,9 +1345,9 @@ loc_10954:
 
 LoadHighlightableItemIcon:
 		
-		cmpi.w  #$80,d0 
+		cmpi.w  #$100,d0
 		beq.s   LoadHighlightableIcon
-		andi.w  #$7F,d0 
+		andi.w  #ITEM_MASK_IDX,d0
 
 	; End of function LoadHighlightableItemIcon
 
@@ -1359,7 +1359,7 @@ LoadHighlightableIcon:
 		adda.w  #$C0,a1 
 		mulu.w  #$C0,d0 
 		movea.l (p_Icons).l,a0
-		adda.w  d0,a0           ; icon offset
+		adda.l  d0,a0       ;adda.w  d0,a0           ; icon offset
 		move.w  #$2F,d1 
 		lea     IconHighlightTiles(pc), a2
 loc_1097A:
@@ -3756,13 +3756,13 @@ loc_1244E:
 		beq.s   loc_124B8
 		move.l  a0,-(sp)
 		andi.w  #$3F,d1 
-		addi.w  #$82,d1 
+		addi.w  #ICON_SPELL_START,d1
 		movea.l (p_Icons).l,a0
 		move.w  d1,d2
 		add.w   d1,d1
 		add.w   d2,d1
 		lsl.w   #6,d1
-		adda.w  d1,a0
+		adda.l  d1,a0       ;adda.w  d1,a0
 		move.w  #$C0,d7 
 		jsr     (CopyBytes).w   
 		ori.b   #$F0,(a1)
@@ -3787,15 +3787,15 @@ loc_124BE:
 		andi.w  #ITEM_MASK_IDX,d1
 		movea.l (p_Icons).l,a0
 		mulu.w  #$C0,d1 
-		adda.w  d1,a0
+		adda.l  d1,a0       ;adda.w  d1,a0
 		move.w  #$C0,d7 
 		jsr     (CopyBytes).w   
 		move.w  (sp)+,d1
-		btst    #$F,d1
+		btst    #ITEM_BIT_BROKEN,d1
 		beq.s   loc_12536
 		movem.l d2-d3/a0-a1,-(sp)
 		movea.l (p_Icons).l,a0
-		lea     $6F00(a0),a0
+		adda.l  #ICON_OFFSET_BROKEN,a0        ;lea     $6F00(a0),a0
 		move.w  #$BF,d2 
 loc_1250A:
 		move.b  (a0)+,d3
@@ -3824,13 +3824,13 @@ loc_12536:
 		adda.w  #$C0,a1 
 		dbf     d6,loc_124BE
 loc_12556:
-		move.w  #$92,d1 
+		move.w  #ICONIDX_JEWEL_OF_LIGHT,d1
 		movea.l (p_Icons).l,a0
 		move.w  d1,d2
 		add.w   d1,d1
 		add.w   d2,d1
 		lsl.w   #6,d1
-		adda.w  d1,a0
+		adda.l  d1,a0       ;adda.w  d1,a0
 		move.w  #$C0,d7 
 		jsr     (CopyBytes).w   
 		ori.b   #$F0,(a1)
@@ -3838,13 +3838,13 @@ loc_12556:
 		ori.b   #$F0,$9C(a1)
 		ori.b   #$F,$BF(a1)
 		adda.w  #$C0,a1 
-		move.w  #$93,d1 
+		move.w  #ICONIDX_JEWEL_OF_EVIL,d1
 		movea.l (p_Icons).l,a0
 		move.w  d1,d2
 		add.w   d1,d1
 		add.w   d2,d1
 		lsl.w   #6,d1
-		adda.w  d1,a0
+		adda.l  d1,a0       ;adda.w  d1,a0
 		move.w  #$C0,d7 
 		jsr     (CopyBytes).w   
 		ori.b   #$F0,(a1)
@@ -5615,7 +5615,7 @@ loc_13AFE:
 		bsr.w   WriteTilesFromASCII
 		movem.l (sp)+,a0-a1
 		movem.w (sp)+,d0-d1/d6-d7
-		btst    #7,d1
+		btst    #ITEM_BIT_EQUIPPED,d1
 		beq.w   loc_13B3E
 		move.w  #$C0B1,-2(a1)
 loc_13B3E:
@@ -5653,10 +5653,10 @@ LoadSpellIcon:
 		movea.l (p_Icons).l,a0
 		cmpi.w  #$3F,d1 
 		bne.s   loc_13B7E
-		move.w  #$7F,d1 
+		move.w  #ITEMIDX_NOTHING,d1
 		bra.s   LoadIcon
 loc_13B7E:
-		addi.w  #$82,d1 
+		addi.w  #ICON_SPELL_START,d1
 
 	; End of function LoadSpellIcon
 
@@ -5668,7 +5668,7 @@ LoadIcon:
 		add.w   d1,d1
 		add.w   d2,d1
 		lsl.w   #6,d1
-		adda.w  d1,a0           ; icon offset
+		adda.l  d1,a0       ;adda.w  d1,a0           ; icon offset
 		moveq   #$2F,d7 
 loc_13B8E:
 		move.l  (a0)+,(a1)+
@@ -7197,7 +7197,7 @@ sub_14CB2:
 		add.w   d0,d0
 		add.w   d1,d0
 		lsl.w   #6,d0
-		adda.w  d0,a1
+		adda.l  d0,a1       ;adda.w  d0,a1
 		moveq   #$2F,d7 
 loc_14CC8:
 		move.l  (a1)+,(a0)+

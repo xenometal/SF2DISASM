@@ -1,0 +1,49 @@
+Expanded initial character data required for the Item Expansion patch.
+
+32 10-byte entries:
+
+	[class][level][item0_bitfield][item0_idx][item1_bitfield][item1_idx]
+[item2_bitfield][item2_idx][item3_bitfield][item3_idx]
+    
+	Each item index is preceded by a bitfield representing its state.
+	bit 7 = broken
+	bit 6 = equipped
+	bit 5 = ? (something related to AI?)
+	bit 4-0: unused
+
+
+; ---------------------------------------------------------------------------
+; Entries offsets
+
+$0	; Bowie
+$A	; Sarah
+$14	; Chester
+$1E	; Jaha
+$28	; Kazin
+$32	; Slade
+$3C	; Kiwi
+$46	; Peter
+$50	; May
+$5A	; Gerhalt
+$64	; Luke
+$6E	; Rohde
+$78	; Rick
+$82	; Elric
+$8C	; Eric
+$96	; Karna
+$A0	; Randolf
+$AA	; Tyrin
+$B4	; Janet
+$BE	; Higins
+$C8	; Skreech
+$D2	; Taya
+$DC	; Frayja
+$E6	; Jaro
+$F0	; Gyan
+$FA	; Sheela
+$104	; Zynk
+$10E	; Chaz
+$118	; Lemon
+$122	; Claude
+$12C	; char30 (dummied out)
+$136	; char31 (dummied out)

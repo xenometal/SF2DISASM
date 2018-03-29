@@ -2225,6 +2225,28 @@ rjt_ItemUsedEffects:
 		dc.w sub_BAD6-rjt_ItemUsedEffects
 		dc.w sub_BA1C-rjt_ItemUsedEffects
 		dc.w sub_BAF4-rjt_ItemUsedEffects
+        ; -------------------------------------------------------------------
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell44
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell45
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell46
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell47
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell48
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell49
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell50
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell51
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell52
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell53
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell54
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell55
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell56
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell57
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell58
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell59
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell60
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell61
+        dc.w NoItemEffect-rjt_ItemUsedEffects       ; spell62
+        ; -------------------------------------------------------------------
+
 
 ; =============== S U B R O U T I N E =======================================
 

@@ -79,7 +79,7 @@ COM_STATUS_MASK_SLEEP: equ $C0
 
 ; enum CharDef
 CHAR_IDX_BOWIE: equ $0
-CHARDEF_STARTDATA_ENTRYSIZE: equ $6
+CHARDEF_STARTDATA_ENTRYSIZE: equ $A
 CHAR_IDX_PETER: equ $7
 CHAR_CLASS_FIRSTPROMOTED: equ $C
 CHAR_CLASS_EXTRALEVEL: equ $14
@@ -204,7 +204,7 @@ ITEMDEF_OFFSET_PRICE: equ $6
 ITEMDEF_OFFSET_TYPE: equ $8
 ITEMDEF_OFFSET_SPELL: equ $9
 ITEMDEF_OFFSET_STATINFO1: equ $A
-ITEM_MAX_IDX: equ $7F
+ITEM_MAX_IDX: equ $FF
 
 ; ---------------------------------------------------------------------------
 
@@ -255,22 +255,31 @@ ITEMTYPE_MASK_UNSELLABLE: equ $10
 ; ---------------------------------------------------------------------------
 
 ; enum ItemEntry
-ITEM_OFFSET_IDXANDEQUIPBYTE: equ $1
-ITEM_MASK_IDXANDBROKEN: equ $807F
+;ITEM_OFFSET_IDXANDEQUIPBYTE: equ $1
+ITEM_MASK_IDXANDBROKEN: equ $80FF
 
 ; ---------------------------------------------------------------------------
 
 ; enum ItemEntry_Idx
-ITEM_IDX_BITSIZE: equ $7
+ITEM_IDX_BITSIZE: equ $8
 
 ; ---------------------------------------------------------------------------
 
 ; enum ItemEntry_Props
-ITEM_BIT_EQUIPPED: equ $7
+ITEM_UPPERBIT_EQUIPPED: equ $6
 ITEM_UPPERBIT_BROKEN: equ $7
 ITEM_BIT_ENEMYUSE: equ $D
+ITEM_BIT_EQUIPPED: equ $E
 ITEM_BIT_BROKEN: equ $F
-ITEM_MASK_IDX: equ $7F
+ITEM_MASK_IDX: equ $FF
+
+; ---------------------------------------------------------------------------
+
+; enum Icons
+ICON_SPELL_START: equ $102
+ICONIDX_JEWEL_OF_LIGHT: equ $141
+ICONIDX_JEWEL_OF_EVIL: equ $142
+ICON_OFFSET_BROKEN: equ $F240
 
 ; ---------------------------------------------------------------------------
 
