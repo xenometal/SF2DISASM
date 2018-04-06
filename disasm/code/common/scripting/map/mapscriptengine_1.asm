@@ -864,7 +864,7 @@ csc1A_setEntitySprite:
 		move.w  (a6)+,d0
 		bsr.w   GetEntityAddressFromPlayableCharacterIdx
 		move.w  (a6)+,d0
-		cmpi.w  #$1E,d0
+		cmpi.w  #COM_ALLIES_NUM,d0
 		bcc.s   loc_46A5E
 		jsr     GetForceMemberSpriteIdx
 		move.w  d4,d0
@@ -1733,7 +1733,7 @@ AdjustScriptPointerByCharAliveStatus:
 		
 		btst    #7,d0
 		bne.s   return_4709C
-		cmpi.b  #$1E,d0         ; HARDCODED force member index limit
+		cmpi.b  #COM_ALLIES_NUM,d0         ; HARDCODED force member index limit
 		bge.s   return_4709C    ; it must be a force member
 		jsr     j_GetCurrentHP
 		tst.w   d1

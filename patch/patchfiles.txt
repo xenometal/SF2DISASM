@@ -1,0 +1,4 @@
+; patch/character-expansion
+allybattlesprites-expanded.bps stats\allies\allybattlesprites.bin
+allynames-expanded.bps stats\allies\allynames.bin
+allyspriteids-expanded.bps stats\allies\allyspriteids.bin

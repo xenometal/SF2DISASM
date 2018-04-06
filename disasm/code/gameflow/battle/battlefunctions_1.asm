@@ -2026,7 +2026,7 @@ sub_2519E:
 
 BattlefieldMenuActions:
 		
-		moveq   #$3D,d7 
+		moveq   #COM_ALL_COUNTER,d7 
 		clr.w   d0
 loc_251BC:
 		jsr     j_GetCurrentHP
@@ -2060,9 +2060,9 @@ loc_2521C:
 		rts
 loc_25226:
 		addq.w  #1,d0
-		cmpi.w  #$1E,d0
+		cmpi.w  #COM_ALLIES_NUM,d0
 		bne.s   loc_25232
-		move.w  #$80,d0 
+		move.w  #COM_ENEMY_START,d0
 loc_25232:
 		dbf     d7,loc_251BC
 loc_25236:
@@ -2299,8 +2299,8 @@ loc_254D4:
 
 UpdateAllEnemyAI:
 		
-		move.w  #$80,d0 
-		moveq   #$1F,d7
+		move.w  #COM_ENEMY_START,d0 
+		moveq   #COM_ENEMIES_COUNTER,d7
 loc_25512:
 		move.w  d7,-(sp)
 		bsr.w   UpdateEnemyAI
@@ -2342,22 +2342,22 @@ loc_2554C:
 		dbf     d7,loc_2554C
 		movea.l (sp)+,a0
 		clr.w   d0
-		moveq   #$1D,d7
+		moveq   #COM_ALLIES_COUNTER,d7
 loc_2555A:
 		move.w  d7,-(sp)
 		bsr.w   AddRandomizedAGIToTurnOrder
 		move.w  (sp)+,d7
 		addq.w  #1,d0
 		dbf     d7,loc_2555A
-		move.w  #$80,d0 
-		moveq   #$1D,d7
+		move.w  #COM_ENEMY_START,d0
+		moveq   #COM_ENEMIES_COUNTER,d7
 loc_2556E:
 		move.w  d7,-(sp)
 		bsr.w   AddRandomizedAGIToTurnOrder
 		move.w  (sp)+,d7
 		addq.w  #1,d0
 		dbf     d7,loc_2556E
-		moveq   #$3D,d6 
+		moveq   #COM_ALL_COUNTER,d6 
 loc_2557E:
 		moveq   #$3E,d7 
 		lea     ((BATTLE_TURN_ORDER-$1000000)).w,a0
@@ -2524,7 +2524,7 @@ sub_256E6:
 		move.w  d0,d2
 		move.w  d1,d3
 		clr.w   d0
-		move.w  #$3D,d7 
+		move.w  #COM_ALL_COUNTER,d7 
 loc_256F4:
 		jsr     j_GetXPos
 		cmp.w   d1,d2
@@ -2536,9 +2536,9 @@ loc_256F4:
 		bra.w   loc_25724
 loc_25712:
 		addq.w  #1,d0
-		cmpi.w  #$1E,d0
+		cmpi.w  #COM_ALLIES_NUM,d0
 		bne.s   loc_2571E
-		move.w  #$80,d0 
+		move.w  #COM_ENEMY_START,d0
 loc_2571E:
 		dbf     d7,loc_256F4
 		moveq   #$FFFFFFFF,d3

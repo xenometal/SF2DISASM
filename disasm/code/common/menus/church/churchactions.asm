@@ -705,7 +705,7 @@ WaitForMusicResumeAndPlayerInput:
 ; =============== S U B R O U T I N E =======================================
 
 sub_2124A:
-		cmpi.b  #$1E,d0
+		cmpi.b  #COM_ALLIES_NUM,d0
 		bhi.s   return_2127C
 		movem.l d0-d4/a0,-(sp)
 		move.w  d0,d1

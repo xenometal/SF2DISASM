@@ -66,6 +66,12 @@ DebugModeBattleTest:
 		bsr.w   j_JoinForce
 		moveq   #$1D,d0
 		bsr.w   j_JoinForce
+        ; -------------------------------------------------------------------
+		moveq   #$1E,d0
+		bsr.w   j_JoinForce
+		moveq   #$1F,d0
+		bsr.w   j_JoinForce
+        ; -------------------------------------------------------------------
 		moveq   #0,d0
 		move.w  #$63,d1 
 		bsr.w   j_SetBaseAGI
@@ -171,7 +177,7 @@ loc_78BA:
 ; =============== S U B R O U T I N E =======================================
 
 sub_78BC:
-		moveq   #$1D,d7
+		moveq   #COM_ALLIES_COUNTER,d7
 		clr.w   d0
 		lea     (FF0000_RAM_START).l,a0
 loc_78C6:
@@ -207,7 +213,7 @@ loc_78C6:
 
 LevelUpWholeForce:
 		
-		moveq   #$1D,d7
+		moveq   #COM_ALLIES_COUNTER,d7
 		clr.w   d0
 loc_7924:
 		bsr.w   j_LevelUp

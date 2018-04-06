@@ -8877,7 +8877,7 @@ MenuLayout_15706:
 GetCharPortraitIdx:
 		
 		move.w  d1,-(sp)
-		cmpi.b  #$1E,d0
+		cmpi.b  #COM_ALLIES_NUM,d0
 		bhi.w   loc_1576E
 		jsr     j_GetClass      
 		cmpi.b  #$C,d1          ; stupid CMP mechanism for alternate portraits, need to improve that one day

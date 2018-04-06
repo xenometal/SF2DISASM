@@ -31,8 +31,8 @@ loc_47DCA:
 						; dead code ?
 		move.w  #1,(DEAD_COMBATANTS_LIST_LENGTH).l
 loc_47DEE:
-		moveq   #0,d0
-		moveq   #$1D,d7         ; HARDCODED $1D limit for number of allies ?
+		moveq   #COM_ALLY_START,d0
+		moveq   #COM_ALLIES_COUNTER,d7         ; HARDCODED $1D limit for number of allies ?
 loc_47DF2:
 		move.w  #$FFFF,d1
 		jsr     j_SetXPos

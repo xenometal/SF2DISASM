@@ -811,12 +811,12 @@ sub_C68E:
 loc_C692:
 		move.w  #0,((TARGET_CHARACTERS_INDEX_LIST_SIZE-$1000000)).w
 		lea     ((TARGET_CHARACTERS_INDEX_LIST-$1000000)).w,a0
-		move.w  #0,d0
+		move.w  #COM_ALLY_START,d0
 		bra.s   loc_C6A4
 loc_C6A2:
 		addq.w  #1,d0
 loc_C6A4:
-		cmpi.w  #$1D,d0
+		cmpi.w  #COM_ALLY_END,d0
 		bgt.s   loc_C6CE
 		jsr     GetXPos
 		cmpi.b  #$FF,d1
@@ -978,8 +978,8 @@ MakeTargetListAllies:
 		
 		movem.l d0-a0,-(sp)
 		bsr.w   ClearTargetGrid 
-		moveq   #0,d0
-		moveq   #$1D,d7
+		moveq   #COM_ALLY_START,d0
+		moveq   #COM_ALLIES_COUNTER,d7
 		bra.w   loc_C828
 
 	; End of function MakeTargetListAllies
@@ -991,8 +991,8 @@ MakeTargetListMonsters:
 		
 		movem.l d0-a0,-(sp)
 		bsr.w   ClearTargetGrid 
-		move.w  #$80,d0 
-		moveq   #$1F,d7
+		move.w  #COM_ENEMY_START,d0 
+		moveq   #COM_ENEMIES_COUNTER,d7
 		bra.w   loc_C828
 
 	; End of function MakeTargetListMonsters
@@ -1108,8 +1108,8 @@ loc_C8F4:
 
 sub_C900:
 		movem.l d0-a0,-(sp)
-		move.w  #0,d0
-		moveq   #$1D,d7
+		move.w  #COM_ALLY_START,d0
+		moveq   #COM_ALLIES_COUNTER,d7
 loc_C90A:
 		jsr     GetCurrentHP
 		tst.w   d1
@@ -2188,13 +2188,13 @@ loc_D22E:
 loc_D23A:
 		btst    #7,d0
 		beq.s   loc_D248
-		moveq   #0,d0
-		move.w  #$1D,d7
+		moveq   #COM_ALLY_START,d0
+		move.w  #COM_ALLIES_COUNTER,d7
 		bra.s   loc_D250
 loc_D248:
-		move.b  #$80,d0
+		move.b  #COM_ENEMY_START,d0
 loc_D24C:
-		move.w  #$1F,d7
+		move.w  #COM_ENEMIES_COUNTER,d7
 loc_D250:
 		move.w  #0,(a1)
 loc_D254:

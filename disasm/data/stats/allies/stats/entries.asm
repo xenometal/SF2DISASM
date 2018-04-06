@@ -31,8 +31,8 @@ pt_AllyStats:   dc.l AllyStats00
 		dc.l AllyStats27
 		dc.l AllyStats28
 		dc.l AllyStats29
-		dc.l AllyStats29
-		dc.l AllyStats29
+		dc.l AllyStats30
+		dc.l AllyStats31
 AllyStats00:    incbin "data/stats/allies/stats/allystats00.bin"
 AllyStats01:    incbin "data/stats/allies/stats/allystats01.bin"
 AllyStats02:    incbin "data/stats/allies/stats/allystats02.bin"
@@ -63,3 +63,7 @@ AllyStats26:    incbin "data/stats/allies/stats/allystats26.bin"
 AllyStats27:    incbin "data/stats/allies/stats/allystats27.bin"
 AllyStats28:    incbin "data/stats/allies/stats/allystats28.bin"
 AllyStats29:    incbin "data/stats/allies/stats/allystats29.bin"
+; ---------------------------------------------------------------------------
+AllyStats30:    incbin "data/stats/allies/stats/allystats30.bin"
+AllyStats31:    incbin "data/stats/allies/stats/allystats31.bin"
+; ---------------------------------------------------------------------------

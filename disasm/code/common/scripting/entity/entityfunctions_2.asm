@@ -6,7 +6,7 @@
 
 GetForceMemberSpriteIdx:
 		
-		cmpi.w  #$1E,d0         ; HARDCODED Force member max index
+		cmpi.w  #COM_ALLIES_NUM,d0         ; HARDCODED Force member max index
 		blt.s   loc_449D2
 		move.w  d0,d4
 		bra.w   return_44A5C

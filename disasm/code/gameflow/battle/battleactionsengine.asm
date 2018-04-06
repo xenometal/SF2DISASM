@@ -752,23 +752,23 @@ loc_A3AE:
 		bsr.w   WriteSkirmishScript_EXPandGold
 loc_A3B2:
 		lea     -$18(a2),a0
-		move.w  #0,d0
+		move.w  #COM_ALLY_START,d0
 		bra.s   loc_A3BE
 loc_A3BC:
 		addq.w  #1,d0
 loc_A3BE:
-		cmpi.w  #$1D,d0
+		cmpi.w  #COM_ALLY_END,d0
 		bgt.s   loc_A3CE
 		move.w  -(a0),d1
 		jsr     SetCurrentHP
 		bra.s   loc_A3BC
 loc_A3CE:
-		move.w  #$80,d0 
+		move.w  #COM_ENEMY_START,d0 
 		bra.s   loc_A3D6
 loc_A3D4:
 		addq.w  #1,d0
 loc_A3D6:
-		cmpi.w  #$9F,d0 
+		cmpi.w  #COM_ENEMY_END,d0 
 		bgt.s   loc_A3E6
 		move.w  -(a0),d1
 		jsr     SetCurrentHP
