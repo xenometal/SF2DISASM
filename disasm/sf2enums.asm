@@ -684,3 +684,9 @@ RIGHT: equ $0
 UP: equ $1
 LEFT: equ $2
 DOWN: equ $3
+
+; ---------------------------------------------------------------------------
+
+; enum Item_And_Spell_Expansion
+
+CHEST_GOLD_AMOUNTS_START: equ $100

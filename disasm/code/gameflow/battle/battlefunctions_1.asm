@@ -1931,7 +1931,7 @@ loc_250B0:
 		dc.w $193               ; "{NAME} opened the chest.{W2}{CLEAR}"
 		move.w  ((byte_FFB180-$1000000)).w,d1
 		andi.w  #ITEM_MASK_IDX,d1
-		cmpi.w  #$7F,d1 
+		cmpi.w  #ITEMIDX_NOTHING,d1
 		beq.w   loc_25178
 		move.w  -2(a6),d0
 		bsr.w   GetEntityPositionAfterApplyingFacing
@@ -1949,7 +1949,7 @@ loc_250B0:
 		bra.w   loc_25188
 loc_250FC:
 		move.w  ((byte_FFB180-$1000000)).w,d2
-		cmpi.w  #$80,d2 
+		cmpi.w  #CHEST_GOLD_AMOUNTS_START,d2 
 		blt.s   loc_25124
 		bsr.w   GetChestGoldAmount
 		move.l  d1,((TEXT_NUMBER-$1000000)).w
