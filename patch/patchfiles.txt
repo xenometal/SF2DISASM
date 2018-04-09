@@ -1,4 +1,5 @@
 ; patch/item-and-spell-expansion
+enemydata-equip.bps battles\global\enemydata.bin
 icons-expanded.bps graphics\icons\icons.bin
 allystartdata-expanded.bps stats\allies\allystartdata.bin
 itemdefs-expanded.bps stats\items\itemdefs.bin
