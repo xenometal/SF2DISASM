@@ -276,6 +276,7 @@ ITEM_MASK_IDX: equ $FF
 ; ---------------------------------------------------------------------------
 
 ; enum Icons
+ICONIDX_UNEQUIP: equ $100
 ICON_SPELL_START: equ $102
 ICONIDX_JEWEL_OF_LIGHT: equ $141
 ICONIDX_JEWEL_OF_EVIL: equ $142
@@ -688,5 +689,4 @@ DOWN: equ $3
 ; ---------------------------------------------------------------------------
 
 ; enum Item_And_Spell_Expansion
-
 CHEST_GOLD_AMOUNTS_START: equ $100

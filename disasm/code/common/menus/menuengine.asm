@@ -1123,7 +1123,7 @@ sub_10748:
 		andi.w  #3,d0
 		lsl.w   #1,d0
 		move.w  (a0,d0.w),d1
-		cmpi.w  #$80,d1 
+		cmpi.w  #ICONIDX_UNEQUIP,d1
 		bne.s   loc_10798
 		move.w  #ITEMIDX_NOTHING,((word_FFB18C-$1000000)).w
 		move.w  -$C(a6),d0
@@ -1144,8 +1144,8 @@ loc_10798:
 		moveq   #$FFFFFFDC,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  (sp)+,d1
-		tst.b   d1
-		bpl.s   return_107D4
+		btst    #ITEM_BIT_EQUIPPED,d1
+        beq.s   return_107D4
 		lea     aEquipped(pc), a0
 		move.w  -$C(a6),d0
 		move.w  #$904,d1
@@ -1345,7 +1345,7 @@ loc_10954:
 
 LoadHighlightableItemIcon:
 		
-		cmpi.w  #$100,d0
+		cmpi.w  #ICONIDX_UNEQUIP,d0
 		beq.s   LoadHighlightableIcon
 		andi.w  #ITEM_MASK_IDX,d0
 
@@ -5471,7 +5471,7 @@ WriteEquipMiniStatus:
 		moveq   #$A,d7
 		bsr.w   WriteTilesFromASCII
 		move.w  d5,d1
-		cmpi.w  #$80,d1 
+		cmpi.w  #ICONIDX_UNEQUIP,d1
 		beq.s   loc_139A0
 		jsr     j_FindItemName
 		bra.s   loc_139A6
