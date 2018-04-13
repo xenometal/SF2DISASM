@@ -1328,8 +1328,8 @@ loc_10930:
 
 LoadIHighlightableSpellIcon:
 		
-		andi.w  #$3F,d0 
-		cmpi.w  #$3F,d0 
+		andi.w  #SPELL_IDX_REALMASK,d0
+		cmpi.w  #SPELLIDX_NOTHING,d0
 		bne.s   loc_10950
 		move.w  #ITEMIDX_NOTHING,d0
 		bra.s   loc_10954
@@ -5649,9 +5649,9 @@ LoadItemIcon:
 
 LoadSpellIcon:
 		
-		andi.w  #$3F,d1 
+		andi.w  #SPELL_IDX_REALMASK,d1
 		movea.l (p_Icons).l,a0
-		cmpi.w  #$3F,d1 
+		cmpi.w  #SPELLIDX_NOTHING,d1
 		bne.s   loc_13B7E
 		move.w  #ITEMIDX_NOTHING,d1
 		bra.s   LoadIcon

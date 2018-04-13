@@ -3440,7 +3440,7 @@ IsItemInSlotEquippedAndCursed:
 loc_8DBC:
 		lea     CHAR_OFFSET_ITEM_0(a0,d1.w),a0
 		move.w  (a0),d1
-		andi.w  #ITEM_MAX_IDX,d1
+		andi.w  #ITEM_MASK_IDX,d1
 		cmpi.w  #ITEMIDX_NOTHING,d1
 		beq.s   loc_8DF8        
 		btst    #ITEM_UPPERBIT_EQUIPPED,(a0)
@@ -3943,7 +3943,7 @@ loc_915A:
 loc_916A:
 		move.w  d7,d1
 		bsr.w   GetCharItemAtSlotAndNumberOfItems
-		andi.w  #$7F,d1 
+		andi.w  #ITEM_MASK_IDX,d1
 		cmp.w   d3,d1
 		bne.s   loc_917E
 		move.w  d7,d1
@@ -3971,7 +3971,7 @@ GetItemSlotContainingIndex:
 		
 		movem.l d1/d3/d7,-(sp)
 		move.w  d1,d3
-		andi.w  #$7F,d3 
+		andi.w  #ITEM_MASK_IDX,d3
 		moveq   #0,d2
 		moveq   #3,d7
 loc_91A2:
@@ -3979,7 +3979,7 @@ loc_91A2:
 		move.l  d2,-(sp)
 		jsr     GetCharItemAtSlotAndNumberOfItems(pc)
 		move.l  (sp)+,d2
-		andi.w  #$7F,d1 
+		andi.w  #ITEM_MASK_IDX,d1
 		cmp.b   d3,d1
 		beq.w   loc_91C0
 		addq.w  #1,d2
@@ -4001,7 +4001,7 @@ loc_91C0:
 FindSpellName:
 		
 		move.w  d1,-(sp)
-		andi.w  #$3F,d1 
+		andi.w  #SPELL_IDX_REALMASK,d1
 		movea.l (p_SpellNames).l,a0
 		bsr.w   FindName        
 		move.w  (sp)+,d1
@@ -4021,7 +4021,7 @@ GetSpellDefAddress:
 		move.l  d0,-(sp)
 loc_91DC:
 		movea.l (p_SpellData).l,a0
-		moveq   #$63,d0 
+		move.b  #SPELL_ENTRIES_COUNTER,d0
 loc_91E4:
 		cmp.b   (a0),d1
 		beq.s   loc_91F6
@@ -5212,7 +5212,7 @@ AddItemToCaravan:
 		bcs.s   loc_9A5C
 		lea     ((CARAVAN_ITEMS-$1000000)).w,a0
 		move.w  ((NUM_ITEMS_IN_CARAVAN-$1000000)).w,d0
-		andi.w  #ITEM_MAX_IDX,d1
+		andi.w  #ITEM_MASK_IDX,d1
 		move.b  d1,(a0,d0.w)
 		addq.w  #1,((NUM_ITEMS_IN_CARAVAN-$1000000)).w
 loc_9A5C:

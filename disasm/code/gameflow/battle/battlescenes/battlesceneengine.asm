@@ -3239,13 +3239,13 @@ GetWeaponSpriteAndPalette:
 		cmpi.w  #$80,d0 
 		bcc.w   loc_19DF2
 		jsr     j_GetEquippedWeapon
-		andi.w  #$7F,d1 
-		cmpi.w  #$1A,d1
-		bcs.w   loc_19DF2
-		cmpi.w  #$6D,d1 
-		bhi.w   loc_19DF2
+		andi.w  #ITEM_MASK_IDX,d1 
+		;cmpi.w  #$1A,d1
+		;bcs.w   loc_19DF2
+		;cmpi.w  #$6D,d1 
+		;bhi.w   loc_19DF2
 		lea     WeaponBattleSprites(pc), a0
-		subi.w  #$1A,d1
+		;subi.w  #$1A,d1
 		add.w   d1,d1
 		move.b  (a0,d1.w),d2
 		ext.w   d2

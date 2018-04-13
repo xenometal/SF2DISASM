@@ -5,6 +5,7 @@ allystartdata-expanded.bps stats\allies\allystartdata.bin
 itemdefs-expanded.bps stats\items\itemdefs.bin
 itemnames-expanded.bps stats\items\itemnames.bin
 shopitems-expanded.bps stats\items\shopitems.bin
+weaponsprites-expanded.bps stats\items\weaponsprites.bin
 spelldefs-expanded.bps stats\spells\spelldefs.bin
 spellelements-expanded.bps stats\spells\spellelements.bin
 spellnames-expanded.bps stats\spells\spellnames.bin

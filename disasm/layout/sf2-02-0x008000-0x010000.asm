@@ -5,6 +5,7 @@
 
 
 		include "code\common\stats\statsengine.asm"		; Character stats engine
+        align $9A9A     ; Temporary fix for garbled battle background following ranged attack transition
 		include "code\gameflow\special\debugmodebattleactions.asm"		; Debug mode battle actions
 		include "code\gameflow\battle\battleactionsengine.asm"		; Battle actions engine
 		include "code\gameflow\battle\battlefieldengine.asm"		; Battlefield engine

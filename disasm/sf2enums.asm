@@ -204,7 +204,7 @@ ITEMDEF_OFFSET_PRICE: equ $6
 ITEMDEF_OFFSET_TYPE: equ $8
 ITEMDEF_OFFSET_SPELL: equ $9
 ITEMDEF_OFFSET_STATINFO1: equ $A
-ITEM_MAX_IDX: equ $FF
+ITEM_MAX_IDX: equ $7F
 
 ; ---------------------------------------------------------------------------
 
@@ -689,4 +689,5 @@ DOWN: equ $3
 ; ---------------------------------------------------------------------------
 
 ; enum Item_And_Spell_Expansion
+SPELL_ENTRIES_COUNTER: equ $FC
 CHEST_GOLD_AMOUNTS_START: equ $100
