@@ -15,6 +15,9 @@ p_pt_CharacterStats:
 p_CharacterStartData:
 		dc.l AllyStartData
 p_ClassData:    dc.l ClassData
+; ---------------------------------------------------------------------------
+p_ClassNames:   dc.l ClassNames
+; ---------------------------------------------------------------------------
 p_JewelEndScreenTiles:
 		dc.l JewelsEndScreenTiles
 p_JewelEndScreenLayout:
@@ -32,6 +35,9 @@ StatGrowthCurves:
 		include "data\stats\allies\stats\entries.asm"		; Ally stats
 AllyStartData:  incbin "data/stats/allies/allystartdata.bin"
 ClassData:      incbin "data/stats/allies/classes/classdata.bin"
+; ---------------------------------------------------------------------------
+ClassNames:     incbin "data\stats\allies\classes\fullclassnames.bin"
+; ---------------------------------------------------------------------------
 		includeIfVanillaRom "code\specialscreens\jewelend\graphics.asm"		; Jewel End Graphics
 		includeIfVanillaRom "code\specialscreens\suspend\graphics.asm"		; Suspend String Graphics
 unused_BasePalettes:

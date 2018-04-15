@@ -8,5 +8,5 @@
 ItemDefs:       incbin "data/stats/items/itemdefs.bin"
 SpellDefs:      incbin "data/stats/spells/spelldefs.bin"
 ItemNames:      incbin "data/stats/items/itemnames.bin"
-ClassNames:     incbin "data/stats/allies/classes/classnames.bin"
+ClassAbbrs:     incbin "data/stats/allies/classes/classnames.bin"
 		align $18000

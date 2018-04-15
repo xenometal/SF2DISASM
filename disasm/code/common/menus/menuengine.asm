@@ -277,7 +277,7 @@ sub_10080:
 	; End of function sub_10080
 
 p_ItemNames:    dc.l ItemNames
-p_ClassNames:   dc.l ClassNames
+p_ClassAbbrs:   dc.l ClassAbbrs
 p_ItemDefs:     dc.l ItemDefs
 p_SpellData:    dc.l SpellDefs
 
@@ -2708,7 +2708,7 @@ loc_11916:
 		bsr.w   AdjustStringLengthForSpecialChars
 		move.w  d7,d4
 		jsr     j_GetClass      
-		jsr     j_GetClassName
+		bsr.w   GetClassAbbr
 		bsr.w   AdjustStringLengthForSpecialChars
 		add.w   d7,d4
 		addq.w  #4,d4
@@ -2763,7 +2763,7 @@ loc_11990:
 		move.w  -2(a6),d0
 		blt.s   loc_11A0E
 		jsr     j_GetClass      
-		jsr     j_GetClassName
+		bsr.w   GetClassAbbr
 		move.w  #$FFD4,d1
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
@@ -3414,7 +3414,8 @@ BuildMemberStatsWindow:
 		jsr     j_GetClassName
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
-		addq.w  #2,a1
+        movea.l -6(a6),a1
+		adda.w  #$56,a1
 loc_1202E:
 		move.w  -2(a6),d0
 		jsr     j_GetCharName
@@ -3484,7 +3485,7 @@ loc_120F6:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12118
 		movea.l -6(a6),a1
-		adda.w  #$DA,a1 
+		adda.w  #$104,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3495,7 +3496,7 @@ loc_12118:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1213A
 		movea.l -6(a6),a1
-		adda.w  #$E2,a1
+		adda.w  #$10C,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3506,7 +3507,7 @@ loc_1213A:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1215C
 		movea.l -6(a6),a1
-		adda.w  #$12E,a1
+		adda.w  #$158,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3517,7 +3518,7 @@ loc_1215C:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1217E
 		movea.l -6(a6),a1
-		adda.w  #$136,a1
+		adda.w  #$160,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3528,7 +3529,7 @@ loc_1217E:
 		blt.s   loc_121BC
 		jsr     j_GetCurrentLevel
 		movea.l -6(a6),a1
-		adda.w  #$90,a1 
+		adda.w  #$BA,a1 
 		moveq   #2,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3536,7 +3537,7 @@ loc_1217E:
 		move.w  -2(a6),d0
 		jsr     j_GetCurrentEXP
 		movea.l -6(a6),a1
-		adda.w  #$18C,a1
+		adda.w  #$1B6,a1
 		moveq   #2,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3545,12 +3546,12 @@ loc_1217E:
 loc_121BC:
 		lea     byte_11FEC(pc), a0
 		movea.l -6(a6),a1
-		adda.w  #$8E,a1 
+		adda.w  #$B8,a1 
 		moveq   #3,d7
 		bsr.w   WriteTilesFromASCII
 		lea     byte_11FEC(pc), a0
 		movea.l -6(a6),a1
-		adda.w  #$18A,a1
+		adda.w  #$1B4,a1
 		moveq   #3,d7
 		bsr.w   WriteTilesFromASCII
 loc_121E0:
@@ -3559,7 +3560,7 @@ loc_121E0:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12202
 		movea.l -6(a6),a1
-		adda.w  #$A0,a1 
+		adda.w  #$CA,a1 
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3570,7 +3571,7 @@ loc_12202:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_12224
 		movea.l -6(a6),a1
-		adda.w  #$F4,a1 
+		adda.w  #$11E,a1 
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3582,7 +3583,7 @@ loc_12224:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1224A
 		movea.l -6(a6),a1
-		adda.w  #$148,a1
+		adda.w  #$172,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -3593,7 +3594,7 @@ loc_1224A:
 		cmpi.w  #UNKNOWN_VALUE_THRESHOLD,d1
 		bge.s   loc_1226C
 		movea.l -6(a6),a1
-		adda.w  #$19C,a1
+		adda.w  #$1C6,a1
 		moveq   #3,d7
 		move.w  d1,d0
 		ext.l   d0
@@ -5168,14 +5169,14 @@ loc_1363C:
 		moveq   #$FFFFFFC6,d1
 		bsr.w   WriteTilesFromASCII
 		movea.l (sp)+,a1
-		lea     $16(a1),a1
+		lea     $1A(a1),a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentLevel
 		moveq   #2,d7
 		move.w  d1,d0
 		ext.l   d0
 		bsr.w   WriteTilesFromNumber
-		addq.l  #4,a1
+		addq.l  #2,a1
 		move.w  -$10(a6),d0
 		jsr     j_GetCurrentEXP
 		moveq   #2,d7
@@ -5306,7 +5307,7 @@ sub_137BC:
 		bsr.w   WriteTilesFromASCII
 		move.w  -2(a6),d0
 		jsr     j_GetClass      
-		jsr     j_GetClassName
+		bsr.w   GetClassAbbr
 		addq.w  #2,a1
 		moveq   #$FFFFFFD6,d1
 		bsr.w   WriteTilesFromASCII
@@ -5789,7 +5790,7 @@ loc_13CDE:
 	; End of function CopyWindowTilesToRAM
 
 aNameClassLevExp:
-		dc.b 'NAME    CLASS     LEV EXP',0
+		dc.b 'NAME    CLASS        LV EX'
 aNameHpMpAtDfAgMv:
 		dc.b 'NAME     HP MP AT DF AG MV'
 aNameAttackDefense:
@@ -10498,6 +10499,15 @@ loc_16A5C:
 		rts
 
 	; End of function sub_16A30
+
+
+; =============== S U B R O U T I N E =======================================
+
+GetClassAbbr:
+		movea.l (p_ClassAbbrs).l,a0
+        jmp     FindName
+
+	; End of function GetClassAbbr
 
 MemberStatsWindowLayout:
 		incbin "data/graphics/tech/windowlayouts/memberstatswindowslayout.bin"
