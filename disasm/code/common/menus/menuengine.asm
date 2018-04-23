@@ -3091,7 +3091,7 @@ BuildMemberStatsScreen:
 		bsr.w   LoadTileDataForMemberScreen
 		move.w  -$C(a6),d0
 		blt.s   loc_11CA6
-		bsr.w   GetCharPortraitIdx
+		;bsr.w   GetCharPortraitIdx
 		bsr.w   LoadPortrait    
 loc_11CA6:
 		move.w  -4(a6),d0
@@ -8872,35 +8872,26 @@ MenuLayout_15706:
 
 ;     Get index of portrait based on char index for force members.
 ;     In: D0 = char idx
-;     Out: D0 = adjusted portrait idx
+;     Out: D0 = portrait idx
 
 GetCharPortraitIdx:
-		
-		move.w  d1,-(sp)
-		cmpi.b  #COM_ALLIES_NUM,d0
-		bhi.w   loc_1576E
-		jsr     j_GetClass      
-		cmpi.b  #$C,d1          ; stupid CMP mechanism for alternate portraits, need to improve that one day
-		bne.s   loc_1574E       ; HARDCODED promotion classes which trigger new portraits
-		moveq   #$2F,d0 
+
+		movem.l d4/a0,-(sp)
+        jsr     j_GetForceMemberSpriteIdx       ; D4 = sprite index
+		lea     SpriteToPortraitnBlip,a0
+loc_15742:
+		cmp.b   (a0),d4         ; get sprite's owner (it implies that each force member has a unique sprite !!)
+		bne.s   loc_1574E
+		move.b  1(a0),d0        ; get portrait index
+		ext.w   d0
+		bra.s   loc_1575C
 loc_1574E:
-		cmpi.b  #$1A,d1
-		bne.s   loc_15756
-		moveq   #$30,d0 
-loc_15756:
-		cmpi.b  #$18,d1
-		bne.s   loc_1575E
-		moveq   #$31,d0 
-loc_1575E:
-		cmpi.b  #$1B,d1
-		bne.s   loc_15766
-		moveq   #$32,d0 
-loc_15766:
-		cmpi.b  #$1C,d1
-		bne.s   loc_1576E
-		moveq   #$33,d0 
-loc_1576E:
-		move.w  (sp)+,d1
+		adda.w  #4,a0
+		cmpi.w  #$FFFF,(a0)
+		bne.s   loc_15742      
+		move.w  #$FFFF,d0       ; default portrait
+loc_1575C:
+		movem.l (sp)+,d4/a0
 		rts
 
 	; End of function GetCharPortraitIdx
