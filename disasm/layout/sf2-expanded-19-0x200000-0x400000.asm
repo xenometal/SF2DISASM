@@ -14,7 +14,7 @@
 		include "code\common\tech\graphics\specialspritesentries.asm"		; Special Sprites Entries
 		align $270000
 		include "data\graphics\battles\battlesprites\enemies\entries.asm"		; Enemy battle sprites
-		align $2E0000
+		align $2D0000
 		include "data\graphics\battles\battlesprites\allies\entries.asm"		; Ally battlesprites
 		align $320000
 		include "data\graphics\battles\backgrounds\entries.asm"		; Backgrounds
