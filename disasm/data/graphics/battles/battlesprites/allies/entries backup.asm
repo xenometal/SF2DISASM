@@ -33,11 +33,11 @@ pt_AllyBattleSprites:
                 dc.l allybattlesprite04a_Kazin_Base
                 dc.l allybattlesprite04a_Kazin_Promo
                 dc.l allybattlesprite04a_Kazin_Special
-                dc.l allybattlesprite04b_Tryin_Base
-		dc.l allybattlesprite04b_Tryin_Promo
-		dc.l allybattlesprite04b_Tryin_Special
-		dc.l allybattlesprite04d_Chaz_Promo
-		dc.l allybattlesprite04e_Taya_Special
+                dc.l allybattlesprite04b_Tyrin_Base
+		dc.l allybattlesprite04b_Tyrin_Promo
+		dc.l allybattlesprite04b_Tyrin_Special
+		dc.l allybattlesprite04c_Chaz_Promo
+		dc.l allybattlesprite04d_Taya_Special
 		dc.l allybattlesprite05_Slade_Base
 		dc.l allybattlesprite05_Slade_Promo
 		dc.l allybattlesprite06_Kiwi_Base
@@ -50,7 +50,6 @@ pt_AllyBattleSprites:
 		dc.l allybattlesprite09_Gerhalt_Promo
 		dc.l allybattlesprite10a_Luke_Base
 		dc.l allybattlesprite10a_Luke_Promo
-		dc.l allybattlesprite10b_Screech_Base
 		dc.l allybattlesprite10b_Screech_Promo
 		dc.l allybattlesprite11_Rohde_Special
 		dc.l allybattlesprite12_Zynk_Special
@@ -118,16 +117,16 @@ allybattlesprite04a_Kazin_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04a_Kazin_Promo.bin"
 allybattlesprite04a_Kazin_Special:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04a_Kazin_Special.bin"
-allybattlesprite04b_Tryin_Base:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tryin_Base.bin"
-allybattlesprite04b_Tryin_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tryin_Promo.bin"
-allybattlesprite04b_Tryin_Special:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tryin_Special.bin"
-allybattlesprite04d_Chaz_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04d_Chaz_Promo.bin"
-allybattlesprite04e_Taya_Special:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04e_Taya_Special.bin"
+allybattlesprite04b_Tyrin_Base:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tyrin_Base.bin"
+allybattlesprite04b_Tyrin_Promo:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tyrin_Promo.bin"
+allybattlesprite04b_Tyrin_Special:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04b_Tyrin_Special.bin"
+allybattlesprite04c_Chaz_Promo:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04c_Chaz_Promo.bin"
+allybattlesprite04d_Taya_Special:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04d_Taya_Special.bin"
 allybattlesprite05_Slade_Base:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite05_Slade_Base.bin"
 allybattlesprite05_Slade_Promo:
@@ -152,8 +151,6 @@ allybattlesprite10a_Luke_Base:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite10a_Luke_Base.bin"
 allybattlesprite10a_Luke_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite10a_Luke_Promo.bin"
-allybattlesprite10b_Screech_Base:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite10b_Screech_Base.bin"
 allybattlesprite10b_Screech_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite10b_Screech_Promo.bin"
 allybattlesprite11_Rohde_Special:
