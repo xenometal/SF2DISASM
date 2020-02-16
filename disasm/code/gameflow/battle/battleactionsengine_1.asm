@@ -673,19 +673,19 @@ loc_A248:
                 bne.s   loc_A2B6
                 move.b  (a4),d0
                 jsr     GetClass
-                moveq   #$53,d5 
+                moveq   #121,d5 
                 cmpi.w  #CLASS_MMNK,d1  ; MMNK
                 beq.w   loc_A29C        
-                moveq   #$55,d5 
+                moveq   #123,d5 
                 cmpi.w  #CLASS_RBT,d1   ; RBT
                 beq.w   loc_A29C        
-                moveq   #$56,d5 
+                moveq   #124,d5 
                 cmpi.w  #CLASS_BRGN,d1  ; BRGN
                 bne.s   loc_A296
                 jsr     GetEquippedWeapon
                 cmpi.w  #$FFFF,d1
                 bne.s   loc_A296
-                moveq   #$56,d5 
+                moveq   #124,d5 
                 moveq   #0,d4
                 beq.w   loc_A304
 loc_A296:
@@ -710,7 +710,7 @@ loc_A2B6:
                 bne.s   loc_A2FC
                 move.b  (a4),d0
                 jsr     GetClass
-                moveq   #$54,d5 
+                moveq   #122,d5 
                 cmpi.w  #CLASS_MNST,d1  ; MNST
                 beq.w   loc_A304
                 jsr     GetEnemyID
