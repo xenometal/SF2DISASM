@@ -122,7 +122,7 @@ pt_AlliesAnimations:
 				dc.l AllyAnimation30b_Elric_Special_Dodge
 				dc.l AllyAnimation080_Critical_KNTE_Spear
 				dc.l AllyAnimation081_Critical_PLDN_Spear
-				dc.l AllyAnimation081_Critical_PGNT_Spear
+				dc.l AllyAnimation082_Critical_PGNT_Spear
 				dc.l AllyAnimation083_Critical_MMNK_Critical
 				dc.l AllyAnimation084_Critical_MNST_Flame
 				dc.l AllyAnimation085_Critical_RBT_Laser
@@ -365,10 +365,10 @@ AllyAnimation30b_Elric_Special_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30b_Elric_Special_Dodge.bin"
 AllyAnimation080_Critical_KNTE_Spear:
                 incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation080_Critical_KNTE_Spear.bin"
-AllyAnimation081_Critical_PGNT_Spear:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation081_Critical_PGNT_Spear.bin"
 AllyAnimation081_Critical_PLDN_Spear:
                 incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation081_Critical_PLDN_Spear.bin"
+AllyAnimation082_Critical_PGNT_Spear:
+                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation082_Critical_PGNT_Spear.bin"
 AllyAnimation083_Critical_MMNK_Critical:
                 incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation083_Critical_MMNK_Critical.bin"
 AllyAnimation084_Critical_MNST_Flame:
