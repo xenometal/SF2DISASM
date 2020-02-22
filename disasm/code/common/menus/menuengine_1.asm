@@ -8,7 +8,7 @@ j_ExecuteMenu:
                 
                 jmp     ExecuteMenu(pc) 
 
-	; End of function j_ExecuteMenu
+    ; End of function j_ExecuteMenu
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -17,7 +17,7 @@ sub_10004:
                 
                 jmp     sub_10586(pc)
 
-	; End of function sub_10004
+    ; End of function sub_10004
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -26,7 +26,7 @@ sub_10008:
                 
                 jmp     sub_10586(pc)
 
-	; End of function sub_10008
+    ; End of function sub_10008
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -35,7 +35,7 @@ sub_1000C:
                 
                 jmp     sub_10586(pc)
 
-	; End of function sub_1000C
+    ; End of function sub_1000C
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -44,7 +44,7 @@ sub_10010:
                 
                 jmp     sub_10A4A(pc)
 
-	; End of function sub_10010
+    ; End of function sub_10010
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -53,7 +53,7 @@ j_CreateFighterMiniStatusWindow:
                 
                 jmp     CreateFighterMiniStatusWindow(pc)
 
-	; End of function j_CreateFighterMiniStatusWindow
+    ; End of function j_CreateFighterMiniStatusWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -62,7 +62,7 @@ j_HideFighterMiniStatusWindow:
                 
                 jmp     HideFighterMiniStatusWindow(pc)
 
-	; End of function j_HideFighterMiniStatusWindow
+    ; End of function j_HideFighterMiniStatusWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -71,7 +71,7 @@ sub_1001C:
                 
                 jmp     sub_1161A(pc)
 
-	; End of function sub_1001C
+    ; End of function sub_1001C
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -80,7 +80,7 @@ sub_10020:
                 
                 jmp     sub_11638(pc)
 
-	; End of function sub_10020
+    ; End of function sub_10020
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -89,7 +89,7 @@ sub_10024:
                 
                 jmp     loc_116B8(pc)
 
-	; End of function sub_10024
+    ; End of function sub_10024
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -98,7 +98,7 @@ sub_10028:
                 
                 jmp     loc_11694(pc)
 
-	; End of function sub_10028
+    ; End of function sub_10028
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -107,7 +107,7 @@ sub_1002C:
                 
                 jmp     sub_11716(pc)
 
-	; End of function sub_1002C
+    ; End of function sub_1002C
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -116,7 +116,7 @@ j_MemberStatsScreen:
                 
                 jmp     BuildMemberStatsScreen(pc)
 
-	; End of function j_MemberStatsScreen
+    ; End of function j_MemberStatsScreen
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -125,7 +125,7 @@ sub_10034:
                 
                 jmp     sub_1288E(pc)
 
-	; End of function sub_10034
+    ; End of function sub_10034
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -134,7 +134,7 @@ j_InitPortraitWindow:
                 
                 jmp     InitPortraitWindow(pc)
 
-	; End of function j_InitPortraitWindow
+    ; End of function j_InitPortraitWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -143,7 +143,7 @@ j_HidePortraitWindow:
                 
                 jmp     HidePortraitWindow(pc)
 
-	; End of function j_HidePortraitWindow
+    ; End of function j_HidePortraitWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -152,7 +152,7 @@ sub_10040:
                 
                 jmp     sub_12FE6(pc)
 
-	; End of function sub_10040
+    ; End of function sub_10040
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -161,7 +161,7 @@ sub_10044:
                 
                 jmp     loc_13004(pc)
 
-	; End of function sub_10044
+    ; End of function sub_10044
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -170,7 +170,7 @@ sub_10048:
                 
                 jmp     loc_13030(pc)
 
-	; End of function sub_10048
+    ; End of function sub_10048
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -179,7 +179,7 @@ sub_1004C:
                 
                 jmp     sub_147FA(pc)
 
-	; End of function sub_1004C
+    ; End of function sub_1004C
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -188,7 +188,7 @@ sub_10050:
                 
                 jmp     sub_12F12(pc)
 
-	; End of function sub_10050
+    ; End of function sub_10050
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -197,7 +197,7 @@ sub_10054:
                 
                 jmp     sub_12F5E(pc)
 
-	; End of function sub_10054
+    ; End of function sub_10054
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -206,7 +206,7 @@ sub_10058:
                 
                 jmp     sub_12F9A(pc)
 
-	; End of function sub_10058
+    ; End of function sub_10058
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -215,7 +215,7 @@ sub_1005C:
                 
                 jmp     sub_113C6(pc)
 
-	; End of function sub_1005C
+    ; End of function sub_1005C
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -224,7 +224,7 @@ sub_10060:
                 
                 jmp     sub_11404(pc)
 
-	; End of function sub_10060
+    ; End of function sub_10060
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -233,7 +233,7 @@ sub_10064:
                 
                 jmp     sub_1141E(pc)
 
-	; End of function sub_10064
+    ; End of function sub_10064
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -242,7 +242,7 @@ j_CreateLandEffectWindow:
                 
                 jmp     CreateLandEffectWindow(pc)
 
-	; End of function j_CreateLandEffectWindow
+    ; End of function j_CreateLandEffectWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -251,7 +251,7 @@ j_HideLandEffectWindow:
                 
                 jmp     HideLandEffectWindow(pc)
 
-	; End of function j_HideLandEffectWindow
+    ; End of function j_HideLandEffectWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -260,7 +260,7 @@ sub_10070:
                 
                 jmp     sub_157E8(pc)
 
-	; End of function sub_10070
+    ; End of function sub_10070
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -269,7 +269,7 @@ j_YesNoChoiceBox:
                 
                 jmp     YesNoChoiceBox(pc)
 
-	; End of function j_YesNoChoiceBox
+    ; End of function j_YesNoChoiceBox
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -278,7 +278,7 @@ j_YesNoPrompt:
                 
                 jmp     YesNoPrompt(pc)
 
-	; End of function j_YesNoPrompt
+    ; End of function j_YesNoPrompt
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -287,7 +287,7 @@ j_NameCharacter:
                 
                 jmp     NameCharacter(pc)
 
-	; End of function j_NameCharacter
+    ; End of function j_NameCharacter
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -296,7 +296,7 @@ sub_10080:
                 
                 jmp     sub_1586E(pc)   
 
-	; End of function sub_10080
+    ; End of function sub_10080
 
 p_ItemNames:    dc.l ItemNames
 p_ClassNames:   dc.l ClassNames
@@ -309,7 +309,7 @@ j_NumberPrompt:
                 
                 jmp     NumberPrompt(pc)
 
-	; End of function j_NumberPrompt
+    ; End of function j_NumberPrompt
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -318,7 +318,7 @@ j_DebugFlagSetter:
                 
                 jmp     DebugFlagSetter(pc)
 
-	; End of function j_DebugFlagSetter
+    ; End of function j_DebugFlagSetter
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -327,7 +327,7 @@ j_SpecialBattle:
                 
                 jmp     DisplayTimerWindow(pc)
 
-	; End of function j_SpecialBattle
+    ; End of function j_SpecialBattle
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -336,7 +336,7 @@ j_DisplayTimerWindow:
                 
                 jmp     RemoveTimerWindow(pc)
 
-	; End of function j_DisplayTimerWindow
+    ; End of function j_DisplayTimerWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -345,7 +345,7 @@ j_VintFunc_16588:
                 
                 jmp     VInt_UpdateTimerWindow(pc)
 
-	; End of function j_VintFunc_16588
+    ; End of function j_VintFunc_16588
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -354,7 +354,7 @@ j_WitchMainMenu:
                 
                 jmp     WitchMainMenu(pc)
 
-	; End of function j_WitchMainMenu
+    ; End of function j_WitchMainMenu
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -363,7 +363,7 @@ sub_100AC:
                 
                 jmp     sub_169AE(pc)
 
-	; End of function sub_100AC
+    ; End of function sub_100AC
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -372,7 +372,7 @@ sub_100B0:
                 
                 jmp     sub_16A30(pc)
 
-	; End of function sub_100B0
+    ; End of function sub_100B0
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -383,7 +383,7 @@ j_EndKiss:
                 
                 jmp     PlayEndKiss(pc)
 
-	; End of function j_EndKiss
+    ; End of function j_EndKiss
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -392,7 +392,7 @@ j_ClosePortraitEyes:
                 
                 jmp     ClosePortraitEyes(pc)
 
-	; End of function j_ClosePortraitEyes
+    ; End of function j_ClosePortraitEyes
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -401,7 +401,7 @@ j_LoadPortrait:
                 
                 jmp     LoadPortrait(pc)
 
-	; End of function j_LoadPortrait
+    ; End of function j_LoadPortrait
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -410,7 +410,7 @@ j_GetAllyPortrait:
                 
                 jmp     GetAllyPortrait(pc)
 
-	; End of function j_GetAllyPortrait
+    ; End of function j_GetAllyPortrait
 
 p_WindowLayout_MemberStats:
                 dc.l MemberStatsWindowLayout
@@ -424,8 +424,29 @@ sub_100C8:
                 link    a6,#-2
                 move.w  #$FFFF,-2(a6)
                 bra.s   loc_100EA
+                
+; ---------------------------------------------------------------------------
+                
+; Wrapper for function WriteTilesFromNumber : required by patches Full_Class_Names and Three_Digits_Stats
+                
+WriteTilesFromNumber_Wrapper:
+                
+@DIGITS_NUM_LEVEL_EXP_MOV: equ 2
+                
+                if (FULL_CLASS_NAMES=1)
+                moveq   #@DIGITS_NUM_LEVEL_EXP_MOV,d7
+                move.w  d1,d0
+                ext.l   d0
+                elseif (THREE_DIGITS_STATS=1)
+                moveq   #@DIGITS_NUM_LEVEL_EXP_MOV,d7
+                move.w  d1,d0
+                ext.l   d0
+                endif
+                
+; ---------------------------------------------------------------------------
+                
 
-	; End of function sub_100C8
+    ; End of function sub_100C8
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -440,7 +461,7 @@ WriteTilesFromNumber:
                 sub.w   d7,d0
                 adda.w  d0,a0
 
-	; End of function WriteTilesFromNumber
+    ; End of function WriteTilesFromNumber
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -550,7 +571,7 @@ loc_10186:
                 unlk    a6
                 rts
 
-	; End of function WriteTilesFromASCII
+    ; End of function WriteTilesFromASCII
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -596,7 +617,7 @@ loc_101D4:
                 movem.l (sp)+,d4-d5/a1
                 rts
 
-	; End of function sub_1018E
+    ; End of function sub_1018E
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -607,7 +628,7 @@ sub_101E6:
                 clr.b   (SPRITE_63_LINK).l
                 rts
 
-	; End of function sub_101E6
+    ; End of function sub_101E6
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -795,7 +816,7 @@ loc_10398:
                 subq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 rts
 
-	; End of function ExecuteMenu
+    ; End of function ExecuteMenu
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -825,7 +846,7 @@ LoadDiamenuWindowVDPTileData:
                 moveq   #$C,d7
                 bra.w   WriteTilesFromASCII
 
-	; End of function LoadDiamenuWindowVDPTileData
+    ; End of function LoadDiamenuWindowVDPTileData
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -836,7 +857,7 @@ sub_103FE:
                 move.w  rjt_10408(pc,d0.w),d0
                 jmp     rjt_10408(pc,d0.w)
 
-	; End of function sub_103FE
+    ; End of function sub_103FE
 
 rjt_10408:      dc.w LoadVDPTileListForDiamenuIconTop-rjt_10408
                 dc.w LoadVDPTileListForDiamenuIconLeft-rjt_10408
@@ -858,7 +879,7 @@ loc_10420:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function LoadVDPTileListForDiamenuIconTop
+    ; End of function LoadVDPTileListForDiamenuIconTop
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -878,7 +899,7 @@ loc_10440:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function LoadVDPTileListForDiamenuIconLeft
+    ; End of function LoadVDPTileListForDiamenuIconLeft
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -898,7 +919,7 @@ loc_1046A:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function LoadVDPTileListForDiamenuIconRight
+    ; End of function LoadVDPTileListForDiamenuIconRight
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -940,7 +961,7 @@ loc_104D0:
                 movea.l (sp)+,a0
                 rts
 
-	; End of function sub_10484
+    ; End of function sub_10484
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -982,7 +1003,7 @@ loc_10532:
                 movea.l (sp)+,a0
                 rts
 
-	; End of function sub_104E6
+    ; End of function sub_104E6
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1000,7 +1021,7 @@ loc_10558:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function LoadVDPTileListForDiamenuIconBottom
+    ; End of function LoadVDPTileListForDiamenuIconBottom
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1020,7 +1041,7 @@ loc_1057C:
                 move.l  (sp)+,d0
                 rts
 
-	; End of function LoadMainMenuIcon
+    ; End of function LoadMainMenuIcon
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1195,7 +1216,7 @@ loc_10726:
                 move.w  (sp)+,d6
                 rts
 
-	; End of function sub_10586
+    ; End of function sub_10586
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1249,7 +1270,7 @@ return_107D4:
                 
                 rts
 
-	; End of function sub_10748
+    ; End of function sub_10748
 
 aEquipped:      dc.b '\Equipped',0
 aNothing:       dc.b '\Nothing',0
@@ -1266,7 +1287,7 @@ sub_107EA:
                 move.w  rjt_107F8(pc,d0.w),d0
                 jmp     rjt_107F8(pc,d0.w)
 
-	; End of function sub_107EA
+    ; End of function sub_107EA
 
 rjt_107F8:      dc.w sub_10800-rjt_107F8
                 dc.w sub_10820-rjt_107F8
@@ -1288,7 +1309,7 @@ loc_10810:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function sub_10800
+    ; End of function sub_10800
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1308,7 +1329,7 @@ loc_10830:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function sub_10820
+    ; End of function sub_10820
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1328,7 +1349,7 @@ loc_1085A:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function sub_1084A
+    ; End of function sub_1084A
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1368,7 +1389,7 @@ loc_108BA:
                 movea.l (sp)+,a0
                 rts
 
-	; End of function sub_10874
+    ; End of function sub_10874
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1408,7 +1429,7 @@ loc_10910:
                 movea.l (sp)+,a0
                 rts
 
-	; End of function sub_108CA
+    ; End of function sub_108CA
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1426,7 +1447,7 @@ loc_10930:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function sub_10920
+    ; End of function sub_10920
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1450,7 +1471,7 @@ loc_10954:
                 
                 bra.w   LoadHighlightableIcon
 
-	; End of function LoadIHighlightableSpellIcon
+    ; End of function LoadIHighlightableSpellIcon
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1461,7 +1482,7 @@ LoadHighlightableItemIcon:
                 beq.s   LoadHighlightableIcon
                 andi.w  #ITEM_MASK_IDX,d0
 
-	; End of function LoadHighlightableItemIcon
+    ; End of function LoadHighlightableItemIcon
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1483,7 +1504,7 @@ loc_1097A:
                 dbf     d1,loc_1097A
                 rts
 
-	; End of function LoadHighlightableIcon
+    ; End of function LoadHighlightableIcon
 
 IconHighlightTiles:
                 incbin "data/graphics/tech/iconhighlighttiles.bin"
@@ -1666,7 +1687,7 @@ loc_10C02:
                 subq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 rts
 
-	; End of function sub_10A4A
+    ; End of function sub_10A4A
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1717,7 +1738,7 @@ sub_10C22:
                 bsr.w   WriteTilesFromNumber
                 rts
 
-	; End of function sub_10C22
+    ; End of function sub_10C22
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1731,7 +1752,7 @@ sub_10CB0:
                 move.w  rjt_10CBE(pc,d0.w),d0
                 jmp     rjt_10CBE(pc,d0.w)
 
-	; End of function sub_10CB0
+    ; End of function sub_10CB0
 
 rjt_10CBE:      dc.w (sub_10800-rjt_10CBE) & $FFFF
                 dc.w (sub_10820-rjt_10CBE) & $FFFF
@@ -1804,7 +1825,7 @@ byte_10D48:
                 jsr     (WaitForVInt).w
                 rts
 
-	; End of function sub_10CC6
+    ; End of function sub_10CC6
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1858,7 +1879,7 @@ loc_10DCE:
                 
                 bra.w   loc_10CF4
 
-	; End of function sub_10D56
+    ; End of function sub_10D56
 
 dword_10DD2:    dc.l $13C0D09
                 dc.l $C5E00124
@@ -1889,7 +1910,7 @@ loc_10E18:
                 
                 bra.w   sub_101E6
 
-	; End of function sub_10DE2
+    ; End of function sub_10DE2
 
 DiamondMenuLayout:
                 incbin "data/graphics/tech/menus/diamondmenulayout.bin" 
@@ -2361,7 +2382,7 @@ sub_113C6:
                 movem.l (sp)+,d0-a2
                 rts
 
-	; End of function sub_113C6
+    ; End of function sub_113C6
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2376,7 +2397,7 @@ sub_11404:
                 movem.l (sp)+,d0-a2
                 rts
 
-	; End of function sub_11404
+    ; End of function sub_11404
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2394,7 +2415,7 @@ sub_1141E:
                 movem.l (sp)+,d0-a2
                 rts
 
-	; End of function sub_1141E
+    ; End of function sub_1141E
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2403,40 +2424,40 @@ DrawBattleEquipWindowStats:
                 
                 link    a6,#-4
                 move.w  ((byte_FFB18E-$1000000)).w,d0
-                move.w  #$701,d1
+                move.w  #WINDOW_BATTLEEQUIP_STATS_TILE_COORDS,d1
                 jsr     (GetWindowTileAddress).w
                 move.l  a1,-4(a6)
                 move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
                 jsr     j_GetCurrentATK
                 move.w  d1,d0
                 movea.l -4(a6),a1
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
                 jsr     j_GetCurrentDEF
                 move.w  d1,d0
                 movea.l -4(a6),a1
                 adda.w  #$28,a1 
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
                 jsr     j_GetCurrentAGI
                 move.w  d1,d0
                 movea.l -4(a6),a1
                 adda.w  #$50,a1 
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
                 jsr     j_GetCurrentMOV
                 move.w  d1,d0
                 movea.l -4(a6),a1
                 adda.w  #$78,a1 
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 unlk    a6
                 rts
 
-	; End of function DrawBattleEquipWindowStats
+    ; End of function DrawBattleEquipWindowStats
 
 BattleEquipWindowLayout:
                 incbin "data/graphics/tech/windowlayouts/battleequipwindowlayout.bin"
@@ -2448,8 +2469,8 @@ CreateFighterMiniStatusWindow:
                 addq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 movem.l d0-a2,-(sp)
                 move.w  d0,-(sp)
-                move.w  #$1605,d0
-                move.w  #$2001,d1
+                move.w  #WINDOW_FIGHTERMINISTATUS_SIZE,d0
+                move.w  #WINDOW_FIGHTERMINISTATUS_DEST,d1
                 lea     ((FIGHTER_MINISTATUS_WINDOW_IDX-$1000000)).w,a2
                 tst.b   ((FIGHTER_IS_TARGETTING-$1000000)).w
                 beq.s   loc_11594
@@ -2484,7 +2505,7 @@ loc_115C4:
                 movem.l (sp)+,d0-a2
                 rts
 
-	; End of function CreateFighterMiniStatusWindow
+    ; End of function CreateFighterMiniStatusWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2499,7 +2520,7 @@ HideFighterMiniStatusWindow:
 loc_115F0:
                 
                 move.w  (a2),d0
-                move.w  #$2001,d1
+                move.w  #WINDOW_FIGHTERMINISTATUS_DEST,d1
                 tst.b   ((FIGHTER_IS_TARGETTING-$1000000)).w
                 beq.s   loc_11600
                 addi.w  #$15,d1
@@ -2514,7 +2535,7 @@ loc_11600:
                 subq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 rts
 
-	; End of function HideFighterMiniStatusWindow
+    ; End of function HideFighterMiniStatusWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2522,15 +2543,15 @@ loc_11600:
 sub_1161A:
                 
                 jsr     (InitWindowProperties).w
-                move.w  #$1605,d0
-                move.w  #$2001,d1
+                move.w  #WINDOW_FIGHTERMINISTATUS_SIZE,d0
+                move.w  #WINDOW_FIGHTERMINISTATUS_DEST,d1
                 jsr     (CreateWindow).w
-                move.w  #$1605,d0
-                move.w  #$2001,d1
+                move.w  #WINDOW_FIGHTERMINISTATUS_SIZE,d0
+                move.w  #WINDOW_FIGHTERMINISTATUS_DEST,d1
                 jsr     (CreateWindow).w
                 rts
 
-	; End of function sub_1161A
+    ; End of function sub_1161A
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2618,7 +2639,7 @@ return_11714:
                 
                 rts
 
-	; End of function sub_11638
+    ; End of function sub_11638
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2636,7 +2657,7 @@ sub_11716:
                 movem.l (sp)+,d0-a1
                 rts
 
-	; End of function sub_11716
+    ; End of function sub_11716
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2740,7 +2761,7 @@ loc_117FA:
                 movem.l (sp)+,d0-a1
                 rts
 
-	; End of function DrawColoredStatBar
+    ; End of function DrawColoredStatBar
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2757,7 +2778,7 @@ sub_11804:
                 movem.l (sp)+,d0-d2/a0-a1
                 rts
 
-	; End of function sub_11804
+    ; End of function sub_11804
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2775,7 +2796,7 @@ loc_11830:
                 moveq   #2,d1
                 jmp     (ApplyVIntVramDMA).w
 
-	; End of function sub_11826
+    ; End of function sub_11826
 
 dword_1183E:    dc.l $F11111FF
                 dc.l $FFFFFFFF
@@ -2815,7 +2836,7 @@ loc_1187A:
                 addq.w  #1,d7
                 rts
 
-	; End of function sub_11862
+    ; End of function sub_11862
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2847,7 +2868,7 @@ return_118BC:
                 
                 rts
 
-	; End of function AdjustStringLengthForSpecialChars
+    ; End of function AdjustStringLengthForSpecialChars
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2857,11 +2878,11 @@ sub_118BE:
                 link    a6,#-8
                 move.l  a1,-8(a6)
                 movem.l d7/a1,-(sp)
-                move.w  #$36,d7 
-loc_118CE:
+                move.w  #WINDOW_FIGHTERMINISTATUS_COUNTER,d7
+@Clear_Loop:
                 
                 clr.l   (a1)+
-                dbf     d7,loc_118CE
+                dbf     d7,@Clear_Loop
                 movem.l (sp)+,d7/a1
                 ext.w   d0
                 move.w  d0,-2(a6)
@@ -2876,22 +2897,22 @@ loc_118CE:
                 move.w  d1,d3
                 movem.w (sp)+,d0-d1
                 move.w  d1,d6
-                cmp.w   d1,d3
-                ble.s   loc_1190E
+                cmp.w   d1,d3           ; keep highest of max HP or MP
+                ble.s   @CapStatBarLength
                 move.w  d3,d6
-loc_1190E:
+@CapStatBarLength:
                 
-                cmpi.w  #$64,d6 
-                ble.s   loc_11916
-                moveq   #$64,d6 
-loc_11916:
+                cmpi.w  #WINDOW_FIGHTERMINISTATUS_MAX_BAR_LENGTH,d6
+                ble.s   @CalculateStatBarWidth
+                moveq   #WINDOW_FIGHTERMINISTATUS_MAX_BAR_LENGTH,d6
+@CalculateStatBarWidth:
                 
                 addq.w  #3,d6
                 lsr.w   #3,d6
-                addi.w  #$A,d6
+                addi.w  #WINDOW_FIGHTERMINISTATUS_MIN_WIDTH,d6
                 movem.w d0-d1/d7,-(sp)
                 move.w  -2(a6),d0
-                blt.s   loc_11958
+                blt.s   @EnemyName
                 jsr     j_GetCharName
                 bsr.w   AdjustStringLengthForSpecialChars
                 move.w  d7,d4
@@ -2902,24 +2923,24 @@ loc_11916:
                 addq.w  #4,d4
                 jsr     j_GetCurrentLevel
                 cmpi.w  #$A,d1
-                blt.s   loc_11956
+                blt.s   @_
                 addq.w  #1,d4
-loc_11956:
+@_:
                 
-                bra.s   loc_11966
-loc_11958:
+                bra.s   @DetermineWidth
+@EnemyName:
                 
                 jsr     j_GetCharName
                 bsr.w   AdjustStringLengthForSpecialChars
                 move.w  d7,d4
                 addq.w  #2,d4
-loc_11966:
+@DetermineWidth:
                 
                 movem.w (sp)+,d0-d1/d7
                 cmp.w   d4,d6
-                bge.s   loc_11970
+                bge.s   @CopyTileColumns
                 move.w  d4,d6
-loc_11970:
+@CopyTileColumns:
                 
                 move.w  d6,((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w
                 lea     wl_FighterMiniStatus(pc), a0
@@ -2928,15 +2949,21 @@ loc_11970:
                 bsr.w   CopyFighterMinistatusWindowTileColumn
                 bsr.w   CopyFighterMinistatusWindowTileColumn
                 move.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,d7
-                subi.w  #9,d7
-loc_11990:
+                subi.w  #WINDOW_FIGHTERMINISTATUS_WIDTH_COUNTER,d7
+@Copy_Loop:
                 
-                lea     unk_11B0A(pc), a0
+                lea     word_11B0A(pc), a0
                 nop
                 bsr.w   CopyFighterMinistatusWindowTileColumn
-                dbf     d7,loc_11990
-                lea     unk_11B14(pc), a0
+                dbf     d7,@Copy_Loop
+                
+                if (THREE_DIGITS_STATS=1)
+                bsr.w   CopyFighterMinistatusWindowTileColumn
+                else
+                lea     word_11B14(pc), a0
                 nop
+                endif
+                
                 bsr.w   CopyFighterMinistatusWindowTileColumn
                 bsr.w   CopyFighterMinistatusWindowTileColumn
                 bsr.w   CopyFighterMinistatusWindowTileColumn
@@ -2946,13 +2973,13 @@ loc_11990:
                 move.w  -2(a6),d0
                 jsr     j_GetCharName
                 movea.l -8(a6),a1
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 addq.l  #2,a1
                 moveq   #$FFFFFFD4,d1
                 bsr.w   WriteTilesFromASCII
                 addq.w  #2,a1
                 move.w  -2(a6),d0
-                blt.s   loc_11A0E
+                blt.s   @DrawStatBar
                 jsr     j_GetClass      
                 jsr     j_GetClassName
                 move.w  #$FFD4,d1
@@ -2963,70 +2990,87 @@ loc_11990:
                 ext.l   d0
                 moveq   #2,d7
                 cmpi.w  #$A,d0
-                bge.s   loc_11A0A
+                bge.s   @WriteLevel
                 subq.w  #1,d7
-loc_11A0A:
+@WriteLevel:
                 
                 bsr.w   WriteTilesFromNumber
-loc_11A0E:
+@DrawStatBar:
                 
                 movem.w (sp)+,d0-d3
                 movem.w d0-d3,-(sp)
                 movem.w d2-d3,-(sp)
                 movea.l -8(a6),a1
-                adda.w  #$58,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_TWO_LINES_OFFSET,a1
                 addq.w  #6,a1
                 move.l  a1,-(sp)
                 lea     (FF8804_LOADING_SPACE).l,a0
                 moveq   #1,d2
                 bsr.w   DrawColoredStatBar
                 movea.l (sp)+,a1
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 movem.w (sp)+,d0-d1
                 tst.w   d1
-                beq.s   loc_11A4C
+                beq.s   @WriteStats
                 lea     (byte_FF8A04).l,a0
                 moveq   #6,d2
                 bsr.w   DrawColoredStatBar
-loc_11A4C:
+@WriteStats:
                 
                 movem.w (sp)+,d0-d3
                 ext.l   d0
                 movea.l -8(a6),a1
-                adda.w  #$58,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_TWO_LINES_OFFSET,a1
                 move.l  a1,-(sp)
                 adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
                 adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
-                suba.w  #$C,a1
+                suba.w  #WINDOW_FIGHTERMINISTATUS_STAT_VALUES_OFFSET,a1
                 move.l  a1,-(sp)
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 movea.l (sp)+,a1
-                addq.l  #6,a1
+                addq.l  #WINDOW_FIGHTERMINISTATUS_MAX_HP_OFFSET,a1
                 move.w  d1,d0
                 ext.l   d0
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 movea.l (sp)+,a1
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
                 adda.w  ((FIGHTER_MINISTATUS_WINDOW_WIDTH-$1000000)).w,a1
-                suba.w  #$C,a1
+                suba.w  #WINDOW_FIGHTERMINISTATUS_STAT_VALUES_OFFSET,a1
                 move.l  a1,-(sp)
                 move.w  d2,d0
                 ext.l   d0
                 movea.l (sp)+,a1
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 addq.l  #2,a1
                 move.w  d3,d0
                 ext.l   d0
-                moveq   #2,d7
+                moveq   #STATS_DIGITS_NUM,d7
                 bsr.w   WriteStatValue  
                 unlk    a6
                 rts
+                
+; ---------------------------------------------------------------------------
+                
+; Wrapper for function WriteStatValue : required by patches Full_Class_Names and Three_Digits_Stats
+                
+WriteStatValue_Wrapper:
+                
+                if (FULL_CLASS_NAMES=1)
+                moveq   #STATS_DIGITS_NUM,d7
+                move.w  d1,d0
+                elseif (THREE_DIGITS_STATS=1)
+                moveq   #STATS_DIGITS_NUM,d7
+                move.w  d1,d0
+                endif
+                
+; ---------------------------------------------------------------------------
+                
 
-	; End of function sub_118BE
+    ; End of function sub_118BE
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3035,19 +3079,30 @@ loc_11A4C:
 
 WriteStatValue:
                 
-                cmpi.w  #$64,d0 
-                bge.s   loc_11ABC
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d0
+                bge.s   @WriteUnknownValue
                 ext.l   d0
                 bra.w   WriteTilesFromNumber
-                bra.s   UnknownValue    
-loc_11ABC:
+                
+                if (THREE_DIGITS_STATS=0)
+                bra.s   UnknownValue    ; bad instruction
+                endif
+                
+@WriteUnknownValue:
                 
                 lea     UnknownValue(pc), a0
                 bra.w   WriteTilesFromASCII
 
-	; End of function WriteStatValue
+    ; End of function WriteStatValue
 
-UnknownValue:   dc.b '??'
+UnknownValue:   
+                ; display "???" if value is greater than or equal to threshold (default is 400)
+                if (THREE_DIGITS_STATS=1)
+                dc.b '???',0
+                else
+                dc.b '??'
+                endif
+                
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -3057,111 +3112,75 @@ CopyFighterMinistatusWindowTileColumn:
                 
                 movem.l a1,-(sp)
                 move.w  (a0)+,(a1)
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 move.w  (a0)+,(a1)
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 move.w  (a0)+,(a1)
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 move.w  (a0)+,(a1)
-                adda.w  #$2C,a1 
+                adda.w  #WINDOW_FIGHTERMINISTATUS_NEXT_LINE_OFFSET,a1
                 move.w  (a0)+,(a1)
                 movem.l (sp)+,a1
                 addq.w  #2,a1
                 rts
 
-	; End of function CopyFighterMinistatusWindowTileColumn
+    ; End of function CopyFighterMinistatusWindowTileColumn
 
 wl_FighterMiniStatus:
-                dc.b $C0 
-                dc.b $60 
-                dc.b $C0 
-                dc.b $70 
-                dc.b $C0 
-                dc.b $70 
-                dc.b $C0 
-                dc.b $70 
-                dc.b $D0 
-                dc.b $60 
-                dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $48 
-                dc.b $C0 
-                dc.b $4D 
-                dc.b $D0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $50 
-                dc.b $C0 
-                dc.b $50 
-                dc.b $D0 
-                dc.b $61 
-unk_11B0A:      dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $20
-                dc.b $D0 
-                dc.b $61 
-unk_11B14:      dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $30 
-                dc.b $C0 
-                dc.b $30 
-                dc.b $D0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $2F 
-                dc.b $C0 
-                dc.b $2F 
-                dc.b $D0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $20
-                dc.b $D0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $61 
-                dc.b $C0 
-                dc.b $20
-                dc.b $C0 
-                dc.b $30 
-                dc.b $C0 
-                dc.b $30 
-                dc.b $D0 
-                dc.b $61 
-                dc.b $C8 
-                dc.b $60 
-                dc.b $C8 
-                dc.b $70 
-                dc.b $C8 
-                dc.b $70 
-                dc.b $C8 
-                dc.b $70 
-                dc.b $D8 
-                dc.b $60 
+                dc.w $C060
+                dc.w $C070
+                dc.w $C070
+                dc.w $C070
+                dc.w $D060
+                dc.w $C061
+                dc.w $C020
+                dc.w $C048
+                dc.w $C04D
+                dc.w $D061
+                dc.w $C061
+                dc.w $C020
+                dc.w $C050
+                dc.w $C050
+                dc.w $D061
+word_11B0A:     dc.w $C061
+                dc.w $C020
+                dc.w $C020
+                dc.w $C020
+                dc.w $D061
+word_11B14:     dc.w $C061
+                dc.w $C020
+                dc.w $C030
+                dc.w $C030
+                dc.w $D061
+                dc.w $C061
+                dc.w $C020
+                dc.w $C02F
+                dc.w $C02F
+                dc.w $D061
+                dc.w $C061
+                dc.w $C020
+                dc.w $C020
+                dc.w $C020
+                dc.w $D061
+                
+                if (THREE_DIGITS_STATS=1)
+                dc.w $C061
+                dc.w $C020
+                dc.w $C020
+                dc.w $C020
+                dc.w $D061
+                endif
+                
+                dc.w $C061
+                dc.w $C020
+                dc.w $C030
+                dc.w $C030
+                dc.w $D061
+                dc.w $C860
+                dc.w $C870
+                dc.w $C870
+                dc.w $C870
+                dc.w $D860
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -3199,7 +3218,11 @@ loc_11B9E:
                 move.w  #$A0,d7 
                 jsr     (CopyBytes).w   
                 move.w  (sp)+,d0
-                bsrIfVanillaRom.w GetAllyPortrait
+                
+                if (FORCE_MEMBERS_EXPANSION=0)
+                bsr.w   GetAllyPortrait 
+                endif
+                
                 bsr.w   LoadPortrait    
                 move.w  ((PORTRAIT_WINDOW_INDEX-$1000000)).w,d0
                 subq.w  #1,d0
@@ -3221,7 +3244,7 @@ return_11BE0:
                 
                 rts
 
-	; End of function InitPortraitWindow
+    ; End of function InitPortraitWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3253,7 +3276,7 @@ loc_11C08:
                 subq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 rts
 
-	; End of function HidePortraitWindow
+    ; End of function HidePortraitWindow
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3294,7 +3317,11 @@ BuildMemberStatsScreen:
                 bsr.w   LoadTileDataForMemberScreen
                 move.w  -$C(a6),d0
                 blt.s   loc_11CA6
-                bsrIfVanillaRom.w GetAllyPortrait
+                
+                if (FORCE_MEMBERS_EXPANSION=0)
+                bsr.w   GetAllyPortrait 
+                endif
+                
                 bsr.w   LoadPortrait    
 loc_11CA6:
                 
@@ -3503,7 +3530,7 @@ loc_11EBA:
                 subq.b  #1,((WINDOW_IS_PRESENT-$1000000)).w
                 rts
 
-	; End of function BuildMemberStatsScreen
+    ; End of function BuildMemberStatsScreen
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3514,15 +3541,25 @@ AddStatusEffectTileIndexesToVDPTileOrder:
                 
                 move.l  d0,(a1)
                 subq.l  #4,a1
-                cmpi.w  #$C020,(a1)
-                beq.s   return_11EFC
+                cmpi.w  #VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND,(a1)
+                beq.s   @Return
+                
+                if (FULL_CLASS_NAMES=1)
+                addi.w  #42,d3
+                movea.l d3,a1
+                elseif (THREE_DIGITS_STATS=1)
+                addi.w  #42,d3
+                movea.l d3,a1
+                else
                 movea.l -6(a6),a1
                 adda.w  #$78,a1 
-return_11EFC:
+                endif
+                
+@Return:
                 
                 rts
 
-	; End of function AddStatusEffectTileIndexesToVDPTileOrder
+    ; End of function AddStatusEffectTileIndexesToVDPTileOrder
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -3614,16 +3651,23 @@ return_11FEA:
                 
                 rts
 
-	; End of function LoadTileDataForMemberScreen
+    ; End of function LoadTileDataForMemberScreen
 
-byte_11FEC:     dc.b $4E
-                dc.b $2F
-                dc.b $41
-                dc.b 0
+aNA:            dc.b 'N/A',0
 
 ; =============== S U B R O U T I N E =======================================
 
 BuildMemberStatsWindow:
+                
+                
+; ---------------------------------------------------------------------------
+                
+                module
+                
+; Constants required by patch Full_Class_Names
+                
+@NEXT_LINE_OFFSET: equ 42
+@FULL_CLASS_NAME_OFFSET: equ 86
                 
                 link    a6,#-6
                 move.w  d0,-2(a6)
@@ -3634,216 +3678,380 @@ BuildMemberStatsWindow:
                 move.w  -2(a6),d0
                 movea.l -6(a6),a1
                 adda.w  #WINDOW_MEMBER_STATS_TEXT_CLASS_OFFSET,a1
+                
+                if (FULL_CLASS_NAMES=1)
+                jsr     GetCharName
+                moveq   #$FFFFFFD6,d1
+                bsr.w   WriteTilesFromASCII
+                move.w  -2(a6),d0
                 tst.b   d0
-                blt.s   loc_1202E
+                blt.s   @AddStatusEffectTiles
+                movea.l -6(a6),a1
+                adda.w  #@FULL_CLASS_NAME_OFFSET,a1
+                jsr     GetFullClassName_Wrapper
+                moveq   #$FFFFFFD6,d1
+                bsr.w   WriteTilesFromASCII
+                else
+                tst.b   d0
+                blt.s   @WriteMemberName
                 jsr     j_GetClass      
                 jsr     j_GetClassName
                 moveq   #$FFFFFFD6,d1
                 bsr.w   WriteTilesFromASCII
                 addq.w  #2,a1
-loc_1202E:
+@WriteMemberName:
                 
                 move.w  -2(a6),d0
                 jsr     j_GetCharName
                 moveq   #$FFFFFFD6,d1
                 bsr.w   WriteTilesFromASCII
+                endif
+                
+@AddStatusEffectTiles:
+                
                 movea.l -6(a6),a1
-                adda.w  #$4E,a1 
-                lea     ((byte_FFB852-$1000000)).w,a0
+                adda.w  #WINDOW_MEMBER_STATS_STATUSEFFECT_TILES_OFFSET,a1
+                
+                if (FULL_CLASS_NAMES=1)
+                move.l  d3,-(sp)
+                move.l  a1,d3
+                elseif (THREE_DIGITS_STATS=1)
+                move.l  d3,-(sp)
+                move.l  a1,d3
+                endif
+                
+                lea     ((byte_FFB852-$1000000)).w,a0 ; unused (?)
                 move.w  -2(a6),d0
                 jsr     j_GetStatus
                 move.w  d1,d2
-                andi.w  #4,d2
-                beq.s   loc_12066
+                andi.w  #COM_STATUS_MASK_CURSE,d2
+                beq.s   @AddTiles_Poison
                 move.l  #VDPTILE_STATUSEFFECT_CURSE,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_12066:
+@AddTiles_Poison:
                 
                 move.w  d1,d2
-                andi.w  #2,d2
-                beq.s   loc_12078
-                move.l  #$C0E8C0E9,d0
+                andi.w  #COM_STATUS_MASK_POISON,d2
+                beq.s   @AddTiles_Muddle
+                move.l  #VDPTILE_STATUSEFFECT_POISON,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_12078:
+@AddTiles_Muddle:
                 
                 move.w  d1,d2
-                andi.w  #$30,d2 
-                beq.s   loc_1208A
-                move.l  #$C0E2C0E3,d0
+                andi.w  #COM_STATUS_MASK_MUDDLE,d2
+                beq.s   @AddTiles_Silence
+                move.l  #VDPTILE_STATUSEFFECT_MUDDLE,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_1208A:
+@AddTiles_Silence:
                 
                 move.w  d1,d2
-                andi.w  #$300,d2
-                beq.s   loc_1209C
-                move.l  #$C0E4C0E5,d0
+                andi.w  #COM_STATUS_MASK_SILENCE,d2
+                beq.s   @AddTiles_Stun
+                move.l  #VDPTILE_STATUSEFFECT_SILENCE,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_1209C:
+@AddTiles_Stun:
                 
                 move.w  d1,d2
-                andi.w  #1,d2
-                beq.s   loc_120AE
-                move.l  #$C0EAC0EB,d0
+                andi.w  #COM_STATUS_MASK_STUN,d2
+                beq.s   @AddTiles_Sleep
+                move.l  #VDPTILE_STATUSEFFECT_STUN,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_120AE:
+@AddTiles_Sleep:
                 
                 move.w  d1,d2
-                andi.w  #$C0,d2 
-                beq.s   loc_120C0
-                move.l  #$C0E6C0E7,d0
+                andi.w  #COM_STATUS_MASK_SLEEP,d2
+                beq.s   @AddTiles_Attack
+                move.l  #VDPTILE_STATUSEFFECT_SLEEP,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_120C0:
+@AddTiles_Attack:
                 
                 move.w  d1,d2
-                andi.w  #$C000,d2
-                beq.s   loc_120D2
-                move.l  #$C0A1C0A2,d0
+                andi.w  #COM_STATUS_MASK_ATTACK,d2
+                beq.s   @AddTiles_Boost
+                move.l  #VDPTILE_STATUSEFFECT_ATTACK,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_120D2:
+@AddTiles_Boost:
                 
                 move.w  d1,d2
-                andi.w  #$3000,d2
-                beq.s   loc_120E4
-                move.l  #$C0A3C0A4,d0
+                andi.w  #COM_STATUS_MASK_BOOST,d2
+                beq.s   @AddTiles_Slow
+                move.l  #VDPTILE_STATUSEFFECT_BOOST,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_120E4:
+@AddTiles_Slow:
                 
                 move.w  d1,d2
-                andi.w  #$C00,d2
-                beq.s   loc_120F6
-                move.l  #$C0DDC0DF,d0
+                andi.w  #COM_STATUS_MASK_SLOW,d2
+                beq.s   @WriteCurrentHP
+                move.l  #VDPTILE_STATUSEFFECT_SLOW,d0
                 bsr.w   AddStatusEffectTileIndexesToVDPTileOrder
-loc_120F6:
+@WriteCurrentHP:
+                
+                
+; ---------------------------------------------------------------------------
+                
+                if (FULL_CLASS_NAMES=1)
+                move.l  (sp)+,d3
+                elseif (THREE_DIGITS_STATS=1)
+                move.l  (sp)+,d3
+                endif
                 
                 move.w  -2(a6),d0
+                
+; ---------------------------------------------------------------------------
+                
+@writeStatValue:    macro
+                jsr     \1
+                movea.l -6(a6),a1
+                if (FULL_CLASS_NAMES=1)
+                adda.w  #\2+@NEXT_LINE_OFFSET,a1
+                else
+                adda.w  #\2,a1
+                endif
+                bsr.w   WriteStatValue_Wrapper
+                endm
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetCurrentHP, WINDOW_MEMBER_STATS_CURRENT_HP_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetCurrentHP, WINDOW_MEMBER_STATS_CURRENT_HP_OFFSET
+                else
                 jsr     j_GetCurrentHP
-                cmpi.w  #$64,d1 
-                bge.s   loc_12118
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteMaxHP
                 movea.l -6(a6),a1
-                adda.w  #$DC,a1 
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_CURRENT_HP_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_12118:
+                endif
+                
+@WriteMaxHP:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetMaxHP, WINDOW_MEMBER_STATS_MAX_HP_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetMaxHP, WINDOW_MEMBER_STATS_MAX_HP_OFFSET
+                else
                 jsr     j_GetMaxHP
-                cmpi.w  #$64,d1 
-                bge.s   loc_1213A
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteCurrentMP
                 movea.l -6(a6),a1
-                adda.w  #$E2,a1 
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_MAX_HP_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_1213A:
+                endif
+                
+@WriteCurrentMP:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetCurrentMP, WINDOW_MEMBER_STATS_CURRENT_MP_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetCurrentMP, WINDOW_MEMBER_STATS_CURRENT_MP_OFFSET
+                else
                 jsr     j_GetCurrentMP
-                cmpi.w  #$64,d1 
-                bge.s   loc_1215C
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteMaxMP
                 movea.l -6(a6),a1
-                adda.w  #$130,a1
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_CURRENT_MP_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_1215C:
+                endif
+                
+@WriteMaxMP:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetMaxMP, WINDOW_MEMBER_STATS_MAX_MP_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetMaxMP, WINDOW_MEMBER_STATS_MAX_MP_OFFSET
+                else
                 jsr     j_GetMaxMP
-                cmpi.w  #$64,d1 
-                bge.s   loc_1217E
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteLevelAndEXP
                 movea.l -6(a6),a1
-                adda.w  #$136,a1
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_MAX_MP_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_1217E:
+                endif
+                
+@WriteLevelAndEXP:
                 
                 move.w  -2(a6),d0
                 tst.b   d0
-                blt.s   loc_121BC
+                blt.s   @NotAvailable
+                
+@writeNumber:   macro
+                jsr     \1
+                movea.l -6(a6),a1
+                if (FULL_CLASS_NAMES=1)
+                adda.w  #\2+@NEXT_LINE_OFFSET,a1
+                else
+                adda.w  #\2,a1
+                endif
+                bsr.w   WriteTilesFromNumber_Wrapper
+                endm
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeNumber GetCurrentLevel, WINDOW_MEMBER_STATS_LEVEL_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeNumber GetCurrentLevel, WINDOW_MEMBER_STATS_LEVEL_OFFSET
+                else
                 jsr     j_GetCurrentLevel
                 movea.l -6(a6),a1
-                adda.w  #$8E,a1 
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_LEVEL_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM_LEVEL,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
+                endif
+                
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeNumber GetCurrentEXP, WINDOW_MEMBER_STATS_EXP_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeNumber GetCurrentEXP, WINDOW_MEMBER_STATS_EXP_OFFSET
+                else
                 jsr     j_GetCurrentEXP
                 movea.l -6(a6),a1
-                adda.w  #$18A,a1
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_EXP_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM_EXP,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-                bra.s   loc_121E0
-loc_121BC:
+                endif
                 
-                lea     byte_11FEC(pc), a0
+                bra.s   @WriteCurrentATK
+@NotAvailable:
+                
+                lea     aNA(pc), a0     
                 movea.l -6(a6),a1
-                adda.w  #$8C,a1 
-                moveq   #3,d7
+                
+                if (FULL_CLASS_NAMES=1)
+                adda.w  #WINDOW_MEMBER_STATS_ENEMY_LEVEL_OFFSET+@NEXT_LINE_OFFSET,a1
+                else
+                adda.w  #WINDOW_MEMBER_STATS_ENEMY_LEVEL_OFFSET,a1
+                endif
+                
+                moveq   #WINDOW_MEMBER_STATS_NA_LENGTH,d7
                 bsr.w   WriteTilesFromASCII
-                lea     byte_11FEC(pc), a0
+                lea     aNA(pc), a0     
                 movea.l -6(a6),a1
-                adda.w  #$188,a1
-                moveq   #3,d7
+                
+                if (FULL_CLASS_NAMES=1)
+                adda.w  #WINDOW_MEMBER_STATS_ENEMY_EXP_OFFSET+@NEXT_LINE_OFFSET,a1
+                else
+                adda.w  #WINDOW_MEMBER_STATS_ENEMY_EXP_OFFSET,a1
+                endif
+                
+                moveq   #WINDOW_MEMBER_STATS_NA_LENGTH,d7
                 bsr.w   WriteTilesFromASCII
-loc_121E0:
+@WriteCurrentATK:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetCurrentATK, WINDOW_MEMBER_STATS_ATK_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetCurrentATK, WINDOW_MEMBER_STATS_ATK_OFFSET
+                else
                 jsr     j_GetCurrentATK
-                cmpi.w  #$64,d1 
-                bge.s   loc_12202
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteCurrentDEF
                 movea.l -6(a6),a1
-                adda.w  #$A0,a1 
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_ATK_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_12202:
+                endif
+                
+@WriteCurrentDEF:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue GetCurrentDEF, WINDOW_MEMBER_STATS_DEF_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue GetCurrentDEF, WINDOW_MEMBER_STATS_DEF_OFFSET
+                else
                 jsr     j_GetCurrentDEF
-                cmpi.w  #$64,d1 
-                bge.s   loc_12224
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteCurrentAGI
                 movea.l -6(a6),a1
-                adda.w  #$F4,a1 
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_DEF_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_12224:
+                endif
+                
+@WriteCurrentAGI:
                 
                 move.w  -2(a6),d0
+                
+@writeStatValue_CurrentAGI: macro
+                jsr     GetCurrentAGI
+                andi.w  #STATS_MASK_DISPLAYED_AGI,d1
+                movea.l -6(a6),a1
+                if (FULL_CLASS_NAMES=1)
+                adda.w  #WINDOW_MEMBER_STATS_AGI_OFFSET+@NEXT_LINE_OFFSET,a1
+                else
+                adda.w  #WINDOW_MEMBER_STATS_AGI_OFFSET,a1
+                endif
+                bsr.w   WriteStatValue_Wrapper
+                endm
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeStatValue_CurrentAGI
+                elseif (THREE_DIGITS_STATS=1)
+                @writeStatValue_CurrentAGI
+                else
                 jsr     j_GetCurrentAGI
-                andi.w  #$7F,d1 
-                cmpi.w  #$64,d1 
-                bge.s   loc_1224A
+                andi.w  #STATS_MASK_DISPLAYED_AGI,d1
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteCurrentMOV
                 movea.l -6(a6),a1
-                adda.w  #$148,a1
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_AGI_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_1224A:
+                endif
+                
+@WriteCurrentMOV:
                 
                 move.w  -2(a6),d0
+                
+                if (FULL_CLASS_NAMES=1)
+                @writeNumber GetCurrentMOV, WINDOW_MEMBER_STATS_MOV_OFFSET
+                elseif (THREE_DIGITS_STATS=1)
+                @writeNumber GetCurrentMOV, WINDOW_MEMBER_STATS_MOV_OFFSET
+                else
                 jsr     j_GetCurrentMOV
-                cmpi.w  #$64,d1 
-                bge.s   loc_1226C
+                cmpi.w  #STATS_UNKNOWN_VALUE_THRESHOLD,d1
+                bge.s   @WriteSpellNames
                 movea.l -6(a6),a1
-                adda.w  #$19C,a1
-                moveq   #2,d7
+                adda.w  #WINDOW_MEMBER_STATS_MOV_OFFSET,a1
+                moveq   #STATS_DIGITS_NUM_MOV,d7
                 move.w  d1,d0
                 ext.l   d0
                 bsr.w   WriteTilesFromNumber
-loc_1226C:
+                endif
+                
+@WriteSpellNames:
                 
                 move.w  #$C6D0,d7
                 move.w  -2(a6),d0
@@ -3853,19 +4061,19 @@ loc_1226C:
                 adda.w  #$224,a1
                 move.l  a1,-(sp)
                 moveq   #3,d6
-loc_12288:
+@SpellNames_Loop:
                 
                 move.w  -2(a6),d0
                 move.w  #3,d1
                 sub.w   d6,d1
                 jsr     j_GetSpellAndNumberOfSpells
                 cmpi.b  #$3F,d1 
-                beq.w   loc_1230E
+                beq.w   @Loop_Done
                 movem.l d1/a0,-(sp)
                 jsr     j_GetSpellDefAddress
                 btst    #7,3(a0)
                 movem.l (sp)+,d1/a0
-                beq.w   loc_1230A
+                beq.w   @SpellNames_Skip
                 bsr.w   CopyMemberScreenIconsToVDPTileOrder
                 movem.w d0-d1/d6-d7,-(sp)
                 movem.l a0-a1,-(sp)
@@ -3890,14 +4098,14 @@ loc_12288:
                 movem.l (sp)+,a0-a1
                 movem.w (sp)+,d6-d7
                 adda.w  #$7E,a1 
-loc_1230A:
+@SpellNames_Skip:
                 
-                dbf     d6,loc_12288
-loc_1230E:
+                dbf     d6,@SpellNames_Loop
+@Loop_Done:
                 
                 movea.l (sp)+,a0
                 cmpa.l  a0,a1
-                bne.w   loc_1232E
+                bne.w   @WriteItemNames
                 move.w  d7,-(sp)
                 lea     aNothing_0(pc), a0
                 movea.l -6(a6),a1
@@ -3906,24 +4114,24 @@ loc_1230E:
                 moveq   #$A,d7
                 bsr.w   WriteTilesFromASCII
                 move.w  (sp)+,d7
-loc_1232E:
+@WriteItemNames:
                 
                 move.w  -2(a6),d0
                 clr.w   d1
                 jsr     j_GetItemAndNumberOfItems
                 tst.w   d2
-                beq.w   loc_123DA
+                beq.w   @Write_Nothing
                 movea.l -6(a6),a1
                 adda.w  #$236,a1
                 moveq   #3,d6
-loc_1234A:
+@ItemNames_Loop:
                 
                 move.w  -2(a6),d0
                 move.w  #3,d1
                 sub.w   d6,d1
                 jsr     j_GetItemAndNumberOfItems
                 cmpi.b  #ITEM_NOTHING,d1
-                beq.w   loc_123F2
+                beq.w   @CopyJewelIcons
                 bsr.w   CopyMemberScreenIconsToVDPTileOrder
                 movem.w d0-d1/d6-d7,-(sp)
                 movem.l a0-a1,-(sp)
@@ -3934,7 +4142,7 @@ loc_1234A:
                 movem.l (sp)+,a0-a1
                 movem.w (sp)+,d0-d1/d6-d7
                 btst    #ITEM_BIT_EQUIPPED,d1
-                beq.w   loc_123AC
+                beq.w   @Next
                 movem.w d6-d7,-(sp)
                 movem.l a0-a1,-(sp)
                 lea     aEquipped_0(pc), a0
@@ -3944,11 +4152,11 @@ loc_1234A:
                 bsr.w   WriteTilesFromASCII
                 movem.l (sp)+,a0-a1
                 movem.w (sp)+,d6-d7
-loc_123AC:
+@Next:
                 
                 adda.w  #$7E,a1 
-                dbf     d6,loc_1234A
-                bra.w   loc_123F2
+                dbf     d6,@ItemNames_Loop
+                bra.w   @CopyJewelIcons
 aNothing_0:
                 
                 dc.b '\Nothing',0
@@ -3961,7 +4169,7 @@ aNothing_1:
 aJewel:
                 
                 dc.b 'JEWEL',0
-loc_123DA:
+@Write_Nothing:
                 
                 move.w  d7,-(sp)
                 lea     aNothing_1(pc), a0
@@ -3971,12 +4179,12 @@ loc_123DA:
                 moveq   #$A,d7
                 bsr.w   WriteTilesFromASCII
                 move.w  (sp)+,d7
-loc_123F2:
+@CopyJewelIcons:
                 
                 move.w  -2(a6),d0
-                bne.s   loc_12446
-                chkFlg  $180            ; Set after Bowie obtains the jewel of light/evil... whichever it is
-                beq.s   loc_12446
+                bne.s   @DrawSpellIcons
+                chkFlg  $180
+                beq.s   @DrawSpellIcons
                 move.w  d7,-(sp)
                 lea     aJewel(pc), a0  
                 movea.l -6(a6),a1
@@ -3989,31 +4197,31 @@ loc_123F2:
                 adda.w  #$39E,a1
                 move.w  #$92,d1 
                 bsr.w   CopyMemberScreenIconsToVDPTileOrder
-                chkFlg  $181            ; Set after Bowie obtains King Galam's jewel
-                beq.s   loc_12446
+                chkFlg  $181
+                beq.s   @DrawSpellIcons
                 movea.l -6(a6),a1
                 adda.w  #$3A2,a1
                 move.w  #$92,d1 
                 bsr.w   CopyMemberScreenIconsToVDPTileOrder
                 movea.l -6(a6),a1
                 move.w  #$C053,$37E(a1)
-loc_12446:
+@DrawSpellIcons:
                 
                 lea     (byte_FF9004).l,a1
                 moveq   #3,d6
-loc_1244E:
+@SpellIcons_Loop:
                 
                 moveq   #3,d1
                 sub.w   d6,d1
                 move.w  -2(a6),d0
                 jsr     j_GetSpellAndNumberOfSpells
                 cmpi.b  #SPELL_NOTHING,d1
-                beq.w   loc_124BC
+                beq.w   @DrawItemIcons
                 movem.l d1/a0,-(sp)
                 jsr     j_GetSpellDefAddress
                 btst    #7,3(a0)
                 movem.l (sp)+,d1/a0
-                beq.s   loc_124B8
+                beq.s   @SpellIcons_Skip
                 move.l  a0,-(sp)
                 andi.w  #SPELL_MASK_IDX,d1
                 addi.w  #ICONIDX_HEAL,d1
@@ -4031,20 +4239,20 @@ loc_1244E:
                 ori.b   #$F,$BF(a1)
                 movea.l (sp)+,a0
                 adda.w  #$C0,a1 
-loc_124B8:
+@SpellIcons_Skip:
                 
-                dbf     d6,loc_1244E
-loc_124BC:
+                dbf     d6,@SpellIcons_Loop
+@DrawItemIcons:
                 
                 moveq   #3,d6
-loc_124BE:
+@ItemIcons_Loop:
                 
                 moveq   #3,d1
                 sub.w   d6,d1
                 move.w  -2(a6),d0
                 jsr     j_GetItemAndNumberOfItems
                 cmpi.b  #ITEM_NOTHING,d1
-                beq.w   loc_12556
+                beq.w   @DrawJewelIcons
                 move.l  a0,-(sp)
                 move.w  d1,-(sp)
                 andi.w  #ITEM_MASK_IDX,d1
@@ -4055,15 +4263,15 @@ loc_124BE:
                 jsr     (CopyBytes).w   
                 move.w  (sp)+,d1
                 btst    #ITEM_BIT_BROKEN,d1
-                beq.s   loc_12536
+                beq.s   @CleanIconCorners
                 movem.l d2-d3/a0-a1,-(sp)
                 movea.l (p_Icons).l,a0
                 lea     ICON_OFFSET_CRACKS(a0),a0
                 move.w  #$BF,d2 
-loc_1250A:
+@DrawCracks_Loop:
                 
                 move.b  (a0)+,d3
-                beq.s   loc_1252C
+                beq.s   @DrawCracks_Skip
                 andi.w  #$F0,d3 
                 beq.s   loc_12518
                 andi.b  #$F,(a1)
@@ -4077,12 +4285,12 @@ loc_12526:
                 
                 move.b  -1(a0),d3
                 or.b    d3,(a1)
-loc_1252C:
+@DrawCracks_Skip:
                 
                 addq.l  #1,a1
-                dbf     d2,loc_1250A
+                dbf     d2,@DrawCracks_Loop
                 movem.l (sp)+,d2-d3/a0-a1
-loc_12536:
+@CleanIconCorners:
                 
                 ori.b   #$F0,(a1)
                 ori.b   #$F,$23(a1)
@@ -4090,8 +4298,8 @@ loc_12536:
                 ori.b   #$F,$BF(a1)
                 movea.l (sp)+,a0
                 adda.w  #$C0,a1 
-                dbf     d6,loc_124BE
-loc_12556:
+                dbf     d6,@ItemIcons_Loop
+@DrawJewelIcons:
                 
                 move.w  #ICONIDX_JEWEL_OF_LIGHT,d1
                 movea.l (p_Icons).l,a0
@@ -4129,8 +4337,10 @@ loc_12556:
                 jsr     (WaitForDMAQueueProcessing).w
                 unlk    a6
                 rts
+                
+                modend
 
-	; End of function BuildMemberStatsWindow
+    ; End of function BuildMemberStatsWindow
 
                 dc.w $FFFF
 
@@ -4152,7 +4362,7 @@ CopyMemberScreenIconsToVDPTileOrder:
                 addq.w  #1,d7
                 rts
 
-	; End of function CopyMemberScreenIconsToVDPTileOrder
+    ; End of function CopyMemberScreenIconsToVDPTileOrder
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -4177,5 +4387,5 @@ loc_1261C:
                 jsr     (ApplyVIntVramDMA).w
                 jmp     (WaitForDMAQueueProcessing).w
 
-	; End of function sub_12606
+    ; End of function sub_12606
 
