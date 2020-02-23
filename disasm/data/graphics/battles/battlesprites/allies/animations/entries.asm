@@ -2,380 +2,264 @@
 ; ASM FILE data\graphics\battles\battlesprites\allies\animations\entries.asm :
 ; 0x1AAC3A..0x1AB79E : Ally animations
 pt_AlliesAnimations:
-                dc.l AllyAnimation00_Bowie_Base
-                dc.l AllyAnimation00_Bowie_Promo
-                dc.l AllyAnimation01a_Sarah_Base
-                dc.l AllyAnimation01a_Sarah_Promo
-                dc.l AllyAnimation01a_Sarah_Special
-                dc.l AllyAnimation01b_Karna_Base
-                dc.l AllyAnimation01b_Karna_Promo
-                dc.l AllyAnimation01b_Karna_Special
-                dc.l AllyAnimation01c_Fraiyja_Promo
-                dc.l AllyAnimation01d_Sheela_Special
-                dc.l AllyAnimation02a_Chester_Base
-                dc.l AllyAnimation02a_Chester_Promo
-                dc.l AllyAnimation02a_Chester_Special
-                dc.l AllyAnimation02b_Rick_Base
-                dc.l AllyAnimation02b_Rick_Promo
-                dc.l AllyAnimation02b_Rick_Special
-                dc.l AllyAnimation02c_Eric_Base
-                dc.l AllyAnimation02c_Eric_Promo
-                dc.l AllyAnimation02c_Eric_Special
-                dc.l AllyAnimation02d_Higins_Promo
-                dc.l AllyAnimation02e_Jaro_Special
-                dc.l AllyAnimation03a_Jaha_Base
-                dc.l AllyAnimation03a_Jaha_Promo
-                dc.l AllyAnimation03a_Jaha_Special
-                dc.l AllyAnimation03b_Randolf_Base
-                dc.l AllyAnimation03b_Randolf_Promo
-                dc.l AllyAnimation03b_Randolf_Special
-                dc.l AllyAnimation03c_Gyan_Promo
-                dc.l AllyAnimation04a_Kazin_Base
-                dc.l AllyAnimation04a_Kazin_Promo
-                dc.l AllyAnimation04a_Kazin_Special
-                dc.l AllyAnimation04b_Tyrin_Base
-                dc.l AllyAnimation04b_Tyrin_Promo
-                dc.l AllyAnimation04b_Tyrin_Special
-                dc.l AllyAnimation04c_Chaz_Promo
-                dc.l AllyAnimation04d_Taya_Special
-                dc.l AllyAnimation05_Slade_Base
-                dc.l AllyAnimation05_Slade_Promo
-                dc.l AllyAnimation06_Kiwi_Base
-                dc.l AllyAnimation06_Kiwi_Promo
-                dc.l AllyAnimation07_Peter_Base
-                dc.l AllyAnimation07_Peter_Promo
-                dc.l AllyAnimation08_May_Base
-                dc.l AllyAnimation08_May_Promo
-                dc.l AllyAnimation09_Gerhalt_Base
-                dc.l AllyAnimation09_Gerhalt_Promo
-                dc.l AllyAnimation10a_Luke_Base
-                dc.l AllyAnimation10a_Luke_Promo
-                dc.l AllyAnimation10b_Screech_Promo
-                dc.l AllyAnimation11_Rhode_Special
-                dc.l AllyAnimation12_Zynk_Special
-                dc.l AllyAnimation13_Claude_Special
-                dc.l AllyAnimation14_Lemon_Special
-                dc.l AllyAnimation15a_Janet_Base
-                dc.l AllyAnimation15a_Janet_Promo
-                dc.l AllyAnimation15a_Janet_Special
-                dc.l AllyAnimation15b_Elric_Base
-                dc.l AllyAnimation15b_Elric_Promo
-                dc.l AllyAnimation15b_Elric_Special
-                dc.l AllyAnimation16_Bowie_Base_Dodge
-                dc.l AllyAnimation16_Bowie_Promo_Dodge
-                dc.l AllyAnimation17a_Sarah_Base_Dodge
-                dc.l AllyAnimation17a_Sarah_Promo_Dodge
-                dc.l AllyAnimation17a_Sarah_Special_Dodge
-                dc.l AllyAnimation17b_Karna_Base_Dodge
-                dc.l AllyAnimation17b_Karna_Promo_Dodge
-                dc.l AllyAnimation17b_Karna_Special_Dodge
-                dc.l AllyAnimation17c_Fraiyja_Promo_Dodge
-                dc.l AllyAnimation17d_Sheela_Special_Dodge
-                dc.l AllyAnimation18a_Chester_Base_Dodge
-                dc.l AllyAnimation18a_Chester_Promo_Dodge
-                dc.l AllyAnimation18a_Chester_Special_Dodge
-                dc.l AllyAnimation18b_Rick_Base_Dodge
-                dc.l AllyAnimation18b_Rick_Promo_Dodge
-                dc.l AllyAnimation18b_Rick_Special_Dodge
-                dc.l AllyAnimation18c_Eric_Base_Dodge
-                dc.l AllyAnimation18c_Eric_Promo_Dodge
-                dc.l AllyAnimation18c_Eric_Special_Dodge
-                dc.l AllyAnimation18d_Higins_Promo_Dodge
-                dc.l AllyAnimation18e_Jaro_Special_Dodge
-                dc.l AllyAnimation19a_Jaha_Base_Dodge
-                dc.l AllyAnimation19a_Jaha_Promo_Dodge
-                dc.l AllyAnimation19a_Jaha_Special_Dodge
-                dc.l AllyAnimation19b_Randolf_Base_Dodge
-                dc.l AllyAnimation19b_Randolf_Promo_Dodge
-                dc.l AllyAnimation19b_Randolf_Special_Dodge
-                dc.l AllyAnimation19c_Gyan_Promo_Dodge
-				dc.l AllyAnimation20a_Kazin_Base_Dodge
-				dc.l AllyAnimation20a_Kazin_Promo_Dodge
-				dc.l AllyAnimation20a_Kazin_Special_Dodge
-				dc.l AllyAnimation20b_Tyrin_Base_Dodge
-				dc.l AllyAnimation20b_Tyrin_Promo_Dodge
-				dc.l AllyAnimation20b_Tyrin_Special_Dodge
-				dc.l AllyAnimation20c_Chaz_Promo_Dodge
-				dc.l AllyAnimation20d_Taya_Special_Dodge
-				dc.l AllyAnimation21_Slade_Base_Dodge
-				dc.l AllyAnimation21_Slade_Promo_Dodge
-				dc.l AllyAnimation22_Kiwi_Base_Dodge
-				dc.l AllyAnimation22_Kiwi_Promo_Dodge
-				dc.l AllyAnimation23_Peter_Base_Dodge
-				dc.l AllyAnimation23_Peter_Promo_Dodge
-				dc.l AllyAnimation24_May_Base_Dodge
-				dc.l AllyAnimation24_May_Promo_Dodge
-				dc.l AllyAnimation25_Gerhalt_Base_Dodge
-				dc.l AllyAnimation25_Gerhalt_Promo_Dodge
-				dc.l AllyAnimation26a_Luke_Base_Dodge
-				dc.l AllyAnimation26a_Luke_Promo_Dodge
-				dc.l AllyAnimation26b_Screech_Promo_Dodge
-				dc.l AllyAnimation27_Rhode_Special_Dodge
-				dc.l AllyAnimation28_Zynk_Special_Dodge
-				dc.l AllyAnimation29_Claude_Special_Dodge
-				dc.l AllyAnimation30_Lemon_Special_Dodge
-				dc.l AllyAnimation30a_Janet_Base_Dodge
-				dc.l AllyAnimation30a_Janet_Promo_Dodge
-				dc.l AllyAnimation30a_Janet_Special_Dodge
-				dc.l AllyAnimation30b_Elric_Base_Dodge
-				dc.l AllyAnimation30b_Elric_Promo_Dodge
-				dc.l AllyAnimation30b_Elric_Special_Dodge
-				dc.l AllyAnimation080_Critical_KNTE_Spear
-				dc.l AllyAnimation081_Critical_PLDN_Spear
-				dc.l AllyAnimation082_Critical_PGNT_Spear
-				dc.l AllyAnimation083_Critical_MMNK_Critical
-				dc.l AllyAnimation084_Critical_MNST_Flame
-				dc.l AllyAnimation085_Critical_RBT_Laser
-				dc.l AllyAnimation086_Critical_BRGN_Attack
-AllyAnimation00_Bowie_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation00_Bowie_Base.bin"
-AllyAnimation00_Bowie_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation00_Bowie_Promo.bin"
-AllyAnimation01a_Sarah_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01a_Sarah_Base.bin"
-AllyAnimation01a_Sarah_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01a_Sarah_Promo.bin"
-AllyAnimation01a_Sarah_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01a_Sarah_Special.bin"
-AllyAnimation01b_Karna_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01b_Karna_Base.bin"
-AllyAnimation01b_Karna_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01b_Karna_Promo.bin"
-AllyAnimation01b_Karna_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01b_Karna_Special.bin"
-AllyAnimation01c_Fraiyja_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01c_Fraiyja_Promo.bin"
-AllyAnimation01d_Sheela_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation01d_Sheela_Special.bin"
-AllyAnimation02a_Chester_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02a_Chester_Base.bin"
-AllyAnimation02a_Chester_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02a_Chester_Promo.bin"
-AllyAnimation02a_Chester_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02a_Chester_Special.bin"
-AllyAnimation02b_Rick_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02b_Rick_Base.bin"
-AllyAnimation02b_Rick_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02b_Rick_Promo.bin"
-AllyAnimation02b_Rick_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02b_Rick_Special.bin"
-AllyAnimation02c_Eric_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02c_Eric_Base.bin"
-AllyAnimation02c_Eric_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02c_Eric_Promo.bin"
-AllyAnimation02c_Eric_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02c_Eric_Special.bin"
-AllyAnimation02d_Higins_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02d_Higins_Promo.bin"
-AllyAnimation02e_Jaro_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation02e_Jaro_Special.bin"
-AllyAnimation03a_Jaha_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03a_Jaha_Base.bin"
-AllyAnimation03a_Jaha_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03a_Jaha_Promo.bin"
-AllyAnimation03a_Jaha_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03a_Jaha_Special.bin"
-AllyAnimation03b_Randolf_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03b_Randolf_Base.bin"
-AllyAnimation03b_Randolf_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03b_Randolf_Promo.bin"
-AllyAnimation03b_Randolf_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03b_Randolf_Special.bin"
-AllyAnimation03c_Gyan_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation03c_Gyan_Promo.bin"
-AllyAnimation04a_Kazin_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04a_Kazin_Base.bin"
-AllyAnimation04a_Kazin_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04a_Kazin_Promo.bin"
-AllyAnimation04a_Kazin_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04a_Kazin_Special.bin"
-AllyAnimation04b_Tyrin_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04b_Tyrin_Base.bin"
-AllyAnimation04b_Tyrin_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04b_Tyrin_Promo.bin"
-AllyAnimation04b_Tyrin_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04b_Tyrin_Special.bin"
-AllyAnimation04c_Chaz_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04c_Chaz_Promo.bin"
-AllyAnimation04d_Taya_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation04d_Taya_Special.bin"
-AllyAnimation05_Slade_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation05_Slade_Base.bin"
-AllyAnimation05_Slade_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation05_Slade_Promo.bin"
-AllyAnimation06_Kiwi_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation06_Kiwi_Base.bin"
-AllyAnimation06_Kiwi_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation06_Kiwi_Promo.bin"
-AllyAnimation07_Peter_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation07_Peter_Base.bin"
-AllyAnimation07_Peter_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation07_Peter_Promo.bin"
-AllyAnimation08_May_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation08_May_Base.bin"
-AllyAnimation08_May_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation08_May_Promo.bin"
-AllyAnimation09_Gerhalt_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation09_Gerhalt_Base.bin"
-AllyAnimation09_Gerhalt_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation09_Gerhalt_Promo.bin"
-AllyAnimation10a_Luke_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation10a_Luke_Base.bin"
-AllyAnimation10a_Luke_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation10a_Luke_Promo.bin"
-AllyAnimation10b_Screech_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation10b_Screech_Promo.bin"
-AllyAnimation11_Rhode_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation11_Rhode_Special.bin"
-AllyAnimation12_Zynk_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation12_Zynk_Special.bin"
-AllyAnimation13_Claude_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation13_Claude_Special.bin"
-AllyAnimation14_Lemon_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation14_Lemon_Special.bin"
-AllyAnimation15a_Janet_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15a_Janet_Base.bin"
-AllyAnimation15a_Janet_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15a_Janet_Promo.bin"
-AllyAnimation15a_Janet_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15a_Janet_Special.bin"
-AllyAnimation15b_Elric_Base:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15b_Elric_Base.bin"
-AllyAnimation15b_Elric_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15b_Elric_Promo.bin"
-AllyAnimation15b_Elric_Special:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation15b_Elric_Special.bin"
-AllyAnimation16_Bowie_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation16_Bowie_Base_Dodge.bin"
-AllyAnimation16_Bowie_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation16_Bowie_Promo_Dodge.bin"
-AllyAnimation17a_Sarah_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17a_Sarah_Base_Dodge.bin"
-AllyAnimation17a_Sarah_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17a_Sarah_Promo_Dodge.bin"
-AllyAnimation17a_Sarah_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17a_Sarah_Special_Dodge.bin"
-AllyAnimation17b_Karna_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17b_Karna_Base_Dodge.bin"
-AllyAnimation17b_Karna_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17b_Karna_Promo_Dodge.bin"
-AllyAnimation17b_Karna_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17b_Karna_Special_Dodge.bin"
-AllyAnimation17c_Fraiyja_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17c_Fraiyja_Promo_Dodge.bin"
-AllyAnimation17d_Sheela_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation17d_Sheela_Special_Dodge.bin"
-AllyAnimation18a_Chester_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18a_Chester_Base_Dodge.bin"
-AllyAnimation18a_Chester_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18a_Chester_Promo_Dodge.bin"
-AllyAnimation18a_Chester_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18a_Chester_Special_Dodge.bin"
-AllyAnimation18b_Rick_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18b_Rick_Base_Dodge.bin"
-AllyAnimation18b_Rick_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18b_Rick_Promo_Dodge.bin"
-AllyAnimation18b_Rick_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18b_Rick_Special_Dodge.bin"
-AllyAnimation18c_Eric_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18c_Eric_Base_Dodge.bin"
-AllyAnimation18c_Eric_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18c_Eric_Promo_Dodge.bin"
-AllyAnimation18c_Eric_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18c_Eric_Special_Dodge.bin"
-AllyAnimation18d_Higins_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18d_Higins_Promo_Dodge.bin"
-AllyAnimation18e_Jaro_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation18e_Jaro_Special_Dodge.bin"
-AllyAnimation19a_Jaha_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19a_Jaha_Base_Dodge.bin"
-AllyAnimation19a_Jaha_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19a_Jaha_Promo_Dodge.bin"
-AllyAnimation19a_Jaha_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19a_Jaha_Special_Dodge.bin"
-AllyAnimation19b_Randolf_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19b_Randolf_Base_Dodge.bin"
-AllyAnimation19b_Randolf_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19b_Randolf_Promo_Dodge.bin"
-AllyAnimation19b_Randolf_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19b_Randolf_Special_Dodge.bin"
-AllyAnimation19c_Gyan_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation19c_Gyan_Promo_Dodge.bin"
-AllyAnimation20a_Kazin_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20a_Kazin_Base_Dodge.bin"
-AllyAnimation20a_Kazin_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20a_Kazin_Promo_Dodge.bin"
-AllyAnimation20a_Kazin_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20a_Kazin_Special_Dodge.bin"
-AllyAnimation20b_Tyrin_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20b_Tyrin_Base_Dodge.bin"
-AllyAnimation20b_Tyrin_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20b_Tyrin_Promo_Dodge.bin"
-AllyAnimation20b_Tyrin_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20b_Tyrin_Special_Dodge.bin"
-AllyAnimation20c_Chaz_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20c_Chaz_Promo_Dodge.bin"
-AllyAnimation20d_Taya_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation20d_Taya_Special_Dodge.bin"
-AllyAnimation21_Slade_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation21_Slade_Base_Dodge.bin"
-AllyAnimation21_Slade_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation21_Slade_Promo_Dodge.bin"
-AllyAnimation22_Kiwi_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation22_Kiwi_Base_Dodge.bin"
-AllyAnimation22_Kiwi_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation22_Kiwi_Promo_Dodge.bin"
-AllyAnimation23_Peter_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation23_Peter_Base_Dodge.bin"
-AllyAnimation23_Peter_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation23_Peter_Promo_Dodge.bin"
-AllyAnimation24_May_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation24_May_Base_Dodge.bin"
-AllyAnimation24_May_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation24_May_Promo_Dodge.bin"
-AllyAnimation25_Gerhalt_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation25_Gerhalt_Base_Dodge.bin"
-AllyAnimation25_Gerhalt_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation25_Gerhalt_Promo_Dodge.bin"
-AllyAnimation26a_Luke_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation26a_Luke_Base_Dodge.bin"
-AllyAnimation26a_Luke_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation26a_Luke_Promo_Dodge.bin"
-AllyAnimation26b_Screech_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation26b_Screech_Promo_Dodge.bin"
-AllyAnimation27_Rhode_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation27_Rhode_Special_Dodge.bin"
-AllyAnimation28_Zynk_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation28_Zynk_Special_Dodge.bin"
-AllyAnimation29_Claude_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation29_Claude_Special_Dodge.bin"
-AllyAnimation30_Lemon_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30_Lemon_Special_Dodge.bin"
-AllyAnimation30a_Janet_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30a_Janet_Base_Dodge.bin"
-AllyAnimation30a_Janet_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30a_Janet_Promo_Dodge.bin"
-AllyAnimation30a_Janet_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30a_Janet_Special_Dodge.bin"
-AllyAnimation30b_Elric_Base_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30b_Elric_Base_Dodge.bin"
-AllyAnimation30b_Elric_Promo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30b_Elric_Promo_Dodge.bin"
-AllyAnimation30b_Elric_Special_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation30b_Elric_Special_Dodge.bin"
-AllyAnimation080_Critical_KNTE_Spear:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation080_Critical_KNTE_Spear.bin"
-AllyAnimation081_Critical_PLDN_Spear:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation081_Critical_PLDN_Spear.bin"
-AllyAnimation082_Critical_PGNT_Spear:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation082_Critical_PGNT_Spear.bin"
-AllyAnimation083_Critical_MMNK_Critical:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation083_Critical_MMNK_Critical.bin"
-AllyAnimation084_Critical_MNST_Flame:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation084_Critical_MNST_Flame.bin"
-AllyAnimation085_Critical_RBT_Laser:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation085_Critical_RBT_Laser.bin"
-AllyAnimation086_Critical_BRGN_Attack:
-                incbin "data/graphics/battles/battlesprites/allies/animations/Modded_Animations/AllyAnimation086_Critical_BRGN_Attack.bin"
-
-
+                dc.l AllyAnimation000
+                dc.l AllyAnimation001
+                dc.l AllyAnimation002
+                dc.l AllyAnimation003
+                dc.l AllyAnimation004
+                dc.l AllyAnimation005
+                dc.l AllyAnimation006
+                dc.l AllyAnimation007
+                dc.l AllyAnimation008
+                dc.l AllyAnimation009
+                dc.l AllyAnimation010
+                dc.l AllyAnimation011
+                dc.l AllyAnimation012
+                dc.l AllyAnimation013
+                dc.l AllyAnimation014
+                dc.l AllyAnimation015
+                dc.l AllyAnimation016
+                dc.l AllyAnimation017
+                dc.l AllyAnimation018
+                dc.l AllyAnimation019
+                dc.l AllyAnimation020
+                dc.l AllyAnimation021
+                dc.l AllyAnimation022
+                dc.l AllyAnimation023
+                dc.l AllyAnimation024
+                dc.l AllyAnimation025
+                dc.l AllyAnimation026
+                dc.l AllyAnimation027
+                dc.l AllyAnimation028
+                dc.l AllyAnimation029
+                dc.l AllyAnimation030
+                dc.l AllyAnimation031
+                dc.l AllyAnimation032
+                dc.l AllyAnimation033
+                dc.l AllyAnimation034
+                dc.l AllyAnimation035
+                dc.l AllyAnimation036
+                dc.l AllyAnimation037
+                dc.l AllyAnimation038
+                dc.l AllyAnimation039
+                dc.l AllyAnimation040
+                dc.l AllyAnimation041
+                dc.l AllyAnimation042
+                dc.l AllyAnimation043
+                dc.l AllyAnimation044
+                dc.l AllyAnimation045
+                dc.l AllyAnimation046
+                dc.l AllyAnimation047
+                dc.l AllyAnimation048
+                dc.l AllyAnimation049
+                dc.l AllyAnimation050
+                dc.l AllyAnimation051
+                dc.l AllyAnimation052
+                dc.l AllyAnimation053
+                dc.l AllyAnimation054
+                dc.l AllyAnimation055
+                dc.l AllyAnimation056
+                dc.l AllyAnimation057
+                dc.l AllyAnimation058
+                dc.l AllyAnimation059
+                dc.l AllyAnimation060
+                dc.l AllyAnimation061
+                dc.l AllyAnimation062
+                dc.l AllyAnimation063
+                dc.l AllyAnimation064
+                dc.l AllyAnimation065
+                dc.l AllyAnimation066
+                dc.l AllyAnimation067
+                dc.l AllyAnimation068
+                dc.l AllyAnimation069
+                dc.l AllyAnimation070
+                dc.l AllyAnimation071
+                dc.l AllyAnimation072
+                dc.l AllyAnimation073
+                dc.l AllyAnimation074
+                dc.l AllyAnimation075
+                dc.l AllyAnimation076
+                dc.l AllyAnimation077
+                dc.l AllyAnimation078
+                dc.l AllyAnimation079
+                dc.l AllyAnimation080
+                dc.l AllyAnimation081
+                dc.l AllyAnimation082
+                dc.l AllyAnimation083
+                dc.l AllyAnimation084
+                dc.l AllyAnimation085
+                dc.l AllyAnimation086
+AllyAnimation000:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation000.bin"
+AllyAnimation001:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation001.bin"
+AllyAnimation002:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation002.bin"
+AllyAnimation003:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation003.bin"
+AllyAnimation004:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation004.bin"
+AllyAnimation005:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation005.bin"
+AllyAnimation006:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation006.bin"
+AllyAnimation007:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation007.bin"
+AllyAnimation008:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation008.bin"
+AllyAnimation009:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation009.bin"
+AllyAnimation010:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation010.bin"
+AllyAnimation011:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation011.bin"
+AllyAnimation012:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation012.bin"
+AllyAnimation013:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation013.bin"
+AllyAnimation014:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation014.bin"
+AllyAnimation015:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation015.bin"
+AllyAnimation016:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation016.bin"
+AllyAnimation017:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation017.bin"
+AllyAnimation018:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation018.bin"
+AllyAnimation019:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation019.bin"
+AllyAnimation020:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation020.bin"
+AllyAnimation021:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation021.bin"
+AllyAnimation022:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation022.bin"
+AllyAnimation023:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation023.bin"
+AllyAnimation024:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation024.bin"
+AllyAnimation025:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation025.bin"
+AllyAnimation026:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation026.bin"
+AllyAnimation027:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation027.bin"
+AllyAnimation028:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation028.bin"
+AllyAnimation029:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation029.bin"
+AllyAnimation030:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation030.bin"
+AllyAnimation031:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation031.bin"
+AllyAnimation032:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation032.bin"
+AllyAnimation033:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation033.bin"
+AllyAnimation034:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation034.bin"
+AllyAnimation035:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation035.bin"
+AllyAnimation036:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation036.bin"
+AllyAnimation037:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation037.bin"
+AllyAnimation038:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation038.bin"
+AllyAnimation039:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation039.bin"
+AllyAnimation040:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation040.bin"
+AllyAnimation041:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation041.bin"
+AllyAnimation042:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation042.bin"
+AllyAnimation043:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation043.bin"
+AllyAnimation044:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation044.bin"
+AllyAnimation045:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation045.bin"
+AllyAnimation046:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation046.bin"
+AllyAnimation047:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation047.bin"
+AllyAnimation048:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation048.bin"
+AllyAnimation049:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation049.bin"
+AllyAnimation050:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation050.bin"
+AllyAnimation051:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation051.bin"
+AllyAnimation052:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation052.bin"
+AllyAnimation053:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation053.bin"
+AllyAnimation054:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation054.bin"
+AllyAnimation055:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation055.bin"
+AllyAnimation056:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation056.bin"
+AllyAnimation057:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation057.bin"
+AllyAnimation058:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation058.bin"
+AllyAnimation059:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation059.bin"
+AllyAnimation060:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation060.bin"
+AllyAnimation061:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation061.bin"
+AllyAnimation062:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation062.bin"
+AllyAnimation063:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation063.bin"
+AllyAnimation064:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation064.bin"
+AllyAnimation065:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation065.bin"
+AllyAnimation066:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation066.bin"
+AllyAnimation067:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation067.bin"
+AllyAnimation068:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation068.bin"
+AllyAnimation069:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation069.bin"
+AllyAnimation070:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation070.bin"
+AllyAnimation071:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation071.bin"
+AllyAnimation072:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation072.bin"
+AllyAnimation073:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation073.bin"
+AllyAnimation074:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation074.bin"
+AllyAnimation075:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation075.bin"
+AllyAnimation076:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation076.bin"
+AllyAnimation077:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation077.bin"
+AllyAnimation078:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation078.bin"
+AllyAnimation079:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation079.bin"
+AllyAnimation080:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation080.bin"
+AllyAnimation081:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation081.bin"
+AllyAnimation082:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation082.bin"
+AllyAnimation083:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation083.bin"
+AllyAnimation084:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation084.bin"
+AllyAnimation085:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation085.bin"
+AllyAnimation086:
+                incbin "data/graphics/battles/battlesprites/allies/animations/allybattlespriteanimation086.bin"

@@ -7,227 +7,232 @@ AllyBattleSpritesTable:
 ;  allyBattleSprite enum AllyBattleSprites : ALLYBATTLESPRITE_*, Pallete ID
     
                 forClass SDMN           ; BOWIE
-                allyBattleSprite Bowie_base, 0
+                allyBattleSprite SDMN, 0
                 forClass HERO
                 allyBattleSprite HERO, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass PRST           ; SARAH
-                allyBattleSprite Sarah_Base, 0
+                allyBattleSprite PRST, 0
                 forClass VICR
-                allyBattleSprite Sarah_Promo, 0
+                allyBattleSprite VICR, 1
                 forClass MMNK
-                allyBattleSprite Sarah_Special, 0
+                allyBattleSprite MMNK, 1
                     
                 forClass KNTE           ; CHESTER
-                allyBattleSprite Chester_Base, 0
+                allyBattleSprite KNTE, 0
                 forClass PLDN
-                allyBattleSprite Chester_Promo, 0
+                allyBattleSprite PLDN, 0
                 forClass PGNT
-                allyBattleSprite Chester_Special, 0
+                allyBattleSprite PGNT, 0
                     
                 forClass WARR           ; JAHA
-                allyBattleSprite Jaha_Base, 0
+                allyBattleSprite WARR, 0
                 forClass GLDT
-                allyBattleSprite Jaha_Promo, 0
+                allyBattleSprite GLDT, 1
                 forClass BRN
-                allyBattleSprite Jaha_Special, 0
+                allyBattleSprite BRN, 1
                     
                 forClass MAGE           ; KAZIN
-                allyBattleSprite Kazin_Base, 0
+                allyBattleSprite MAGE, 0
                 forClass WIZ
-                allyBattleSprite Kazin_Promo, 0
+                allyBattleSprite WIZ, 2
                 forClass SORC
-                allyBattleSprite Kazin_Special, 0
+                allyBattleSprite SORC_MALE, 0
                     
                 forClass THIF           ; SLADE
-                allyBattleSprite Slade_Base, 0
+                allyBattleSprite THIF, 0
                 forClass NINJ
-                allyBattleSprite Slade_Promo, 0
+                allyBattleSprite NINJ, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass TORT           ; KIWI
-                allyBattleSprite Kiwi_Base, 0
+                allyBattleSprite TORT, 0
                 forClass MNST
-                allyBattleSprite Kiwi_Promo, 0
+                allyBattleSprite MNST, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass PHNK           ; PETER
-                allyBattleSprite Peter_Base, 0
+                allyBattleSprite PHNK, 0
                 forClass PHNX
-                allyBattleSprite Peter_Promo, 0
+                allyBattleSprite PHNX, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass RNGR           ; MAY
-                allyBattleSprite May_Base, 0
+                allyBattleSprite RNGR, 0
                 forClass BWNT
-                allyBattleSprite May_Promo, 0
+                allyBattleSprite BWNT, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass WFMN           ; GERHALT
-                allyBattleSprite Gerhalt_Base, 0
+                allyBattleSprite WFMN, 0
                 forClass WFBR
-                allyBattleSprite Gerhalt_Promo, 0
+                allyBattleSprite WFBR, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass BDMN           ; LUKE
-                allyBattleSprite Luke_Base, 0
+                allyBattleSprite BDMN, 0
                 forClass BDBT
-                allyBattleSprite Luke_Promo, 0
+                allyBattleSprite BDBT, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass BRGN           ; ROHDE
-                allyBattleSprite Rohde_Special, 0
+                allyBattleSprite BRGN, 1
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass KNTE           ; RICK
-                allyBattleSprite Rick_Base, 0
+                allyBattleSprite KNTE, 1
                 forClass PLDN
-                allyBattleSprite Rick_Promo, 0
+                allyBattleSprite PLDN, 1
                 forClass PGNT
-                allyBattleSprite Rick_Special, 0
+                allyBattleSprite PGNT, 1
                     
                 forClass ACHR           ; ELRIC
-                allyBattleSprite Elric_Base, 0
+                allyBattleSprite ACHR, 1
                 forClass SNIP
-                allyBattleSprite Elric_Promo, 0
+                allyBattleSprite SNIP, 0
                 forClass BRGN
-                allyBattleSprite Elric_Special, 0
+                allyBattleSprite BRGN, 0
                     
                 forClass KNTE           ; ERIC
-                allyBattleSprite Eric_Base, 0
+                allyBattleSprite KNTE, 2
                 forClass PLDN
-                allyBattleSprite Eric_Promo, 0
+                allyBattleSprite PLDN, 3
                 forClass PGNT
-                allyBattleSprite Eric_Special, 0
+                allyBattleSprite PGNT, 2
                     
                 forClass PRST           ; KARNA
-                allyBattleSprite Karna_Base, 0
+                allyBattleSprite PRST, 1
                 forClass VICR
-                allyBattleSprite Karna_Promo, 0
+                allyBattleSprite VICR, 2
                 forClass MMNK
-                allyBattleSprite Karna_Special, 0
+                allyBattleSprite MMNK, 2
                     
                 forClass WARR           ; RANDOLF
-                allyBattleSprite Randolf_Base, 0
+                allyBattleSprite WARR, 1
                 forClass GLDT
-                allyBattleSprite Randolf_Promo, 0
+                allyBattleSprite GLDT, 2
                 forClass BRN
-                allyBattleSprite Randolf_Special, 0
+                allyBattleSprite BRN, 2
                     
                 forClass MAGE           ; TYRIN
-                allyBattleSprite Tyrin_Base, 0
+                allyBattleSprite MAGE, 1
                 forClass WIZ
-                allyBattleSprite Tyrin_Promo, 0
+                allyBattleSprite WIZ, 1
                 forClass SORC
-                allyBattleSprite Tryin_Special, 0
+                allyBattleSprite SORC_MALE, 1
                     
                 forClass ACHR           ; JANET
-                allyBattleSprite Janet_Base, 0
+                allyBattleSprite ACHR, 0
                 forClass SNIP
-                allyBattleSprite Janet_Promo, 0
+                allyBattleSprite SNIP, 1
                 forClass BRGN
-                allyBattleSprite Janet_Special, 0
+                allyBattleSprite BRGN, 2
                     
                 forClass PLDN           ; HIGINS
-                allyBattleSprite Higins_Promo, 0
+                allyBattleSprite PLDN, 2
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass BDBT           ; SKREECH
-                allyBattleSprite Screech_Promo, 0
+                allyBattleSprite BDBT, 1
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass SORC           ; TAYA
-                allyBattleSprite Taya_Special, 0
+                allyBattleSprite SORC_FEMALE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass VICR           ; FRAYJA
-                allyBattleSprite Fraiyja_Promo, 0
+                allyBattleSprite VICR, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass PGNT           ; JARO
-                allyBattleSprite Jaro_Special, 0
+                allyBattleSprite PGNT, 3
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass GLDT           ; GYAN
-                allyBattleSprite Gyan_Promo, 0
+                allyBattleSprite GLDT, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass MMNK           ; SHEELA
-                allyBattleSprite Sheela_Special, 0
+                allyBattleSprite MMNK, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass RBT            ; ZYNK
-                allyBattleSprite Zynk_Special, 0
+                allyBattleSprite RBT, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass WIZ            ; CHAZ
-                allyBattleSprite Chaz_Promo, 0
+                allyBattleSprite WIZ, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass RDBN           ; LEMON
-                allyBattleSprite Lemon_Special, 0
+                allyBattleSprite BRN, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass GLM            ; CLAUDE
-                allyBattleSprite Claude_Special, 0
+                allyBattleSprite GLM, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
-                ; Additional entries to be defined in expanded ROM
-                forClassIfExpandedRom RDBN
-                allyBattleSpriteIfExpandedRom SDMN, 0
-                forClassIfExpandedRom NONE
-                allyBattleSpriteIfExpandedRom NONE, 0
-                forClassIfExpandedRom NONE
-                allyBattleSpriteIfExpandedRom NONE, 0
                 
-                forClassIfExpandedRom RDBN
-                allyBattleSpriteIfExpandedRom SDMN, 0
-                forClassIfExpandedRom NONE
-                allyBattleSpriteIfExpandedRom NONE, 0
-                forClassIfExpandedRom NONE
-                allyBattleSpriteIfExpandedRom NONE, 0
+                ; Additional entries to be defined with force members expansion patch
+                if (FORCE_MEMBERS_EXPANSION=1)
+                
+                forClass RDBN
+                allyBattleSprite SDMN, 0
+                forClass NONE
+                allyBattleSprite NONE, 0
+                forClass NONE
+                allyBattleSprite NONE, 0
+                
+                forClass RDBN
+                allyBattleSprite SDMN, 0
+                forClass NONE
+                allyBattleSprite NONE, 0
+                forClass NONE
+                allyBattleSprite NONE, 0
+                
+                endif
                 
                     
