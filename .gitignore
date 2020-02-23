@@ -328,7 +328,7 @@ disasm/data/stats/allies/allybattlesprites Backup.asm
 disasm/sf2enums - Copy.asm
 
 # Do not ignore assets present in the following folders
-!*\disasm\data\graphics\battles\battlesprites\allies-sf2gu\*.bin
-!*\disasm\data\graphics\battles\battlesprites\allies-sf2gu\animations\*.bin
-!*\disasm\data\graphics\mapsprites\sf2gu\*.bin
-!*\disasm\data\graphics\portraits\sf2gu\*.bin
+!disasm/data/graphics/battles/battlesprites/allies-sf2gu/*.bin
+!disasm/data/graphics/battles/battlesprites/allies-sf2gu/animations/*.bin
+!disasm/data/graphics/mapsprites/sf2gu/*.bin
+!disasm/data/graphics/portraits/sf2gu/*.bin
