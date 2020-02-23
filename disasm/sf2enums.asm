@@ -1522,67 +1522,6 @@ ALLYBATTLESPRITE_WFBR: equ $1E
 ALLYBATTLESPRITE_SNIP: equ $1F
 ALLYBATTLESPRITE_NONE: equ $FF
 
-; SFGU
-ALLYBATTLESPRITE_BOWIE_BASE: equ $0
-ALLYBATTLESPRITE_Bowie_Promo: equ $1
-ALLYBATTLESPRITE_Sarah_Base: equ $2
-ALLYBATTLESPRITE_Sarah_Promo: equ $3
-ALLYBATTLESPRITE_Sarah_Special: equ $4
-ALLYBATTLESPRITE_Karna_Base: equ $5
-ALLYBATTLESPRITE_Karna_Promo: equ $6
-ALLYBATTLESPRITE_Karna_Special: equ $7
-ALLYBATTLESPRITE_Fraiyja_Promo: equ $8
-ALLYBATTLESPRITE_Sheela_Special: equ $9
-ALLYBATTLESPRITE_Chester_Base: equ $A
-ALLYBATTLESPRITE_Chester_Promo: equ $B
-ALLYBATTLESPRITE_Chester_Special: equ $C
-ALLYBATTLESPRITE_Rick_Base: equ $D
-ALLYBATTLESPRITE_Rick_Promo: equ $E
-ALLYBATTLESPRITE_Rick_Special: equ $F
-ALLYBATTLESPRITE_Eric_Base: equ $10
-ALLYBATTLESPRITE_Eric_Promo: equ $11
-ALLYBATTLESPRITE_Eric_Special: equ $12
-ALLYBATTLESPRITE_Higins_Promo: equ $13
-ALLYBATTLESPRITE_Jaro_Special: equ $14
-ALLYBATTLESPRITE_Jaha_Base: equ $15
-ALLYBATTLESPRITE_Jaha_Promo: equ $16
-ALLYBATTLESPRITE_Jaha_Special: equ $17
-ALLYBATTLESPRITE_Randolf_Base: equ $18
-ALLYBATTLESPRITE_Randolf_Promo: equ $19
-ALLYBATTLESPRITE_Randolf_Special: equ $1A
-ALLYBATTLESPRITE_Gyan_Promo: equ $1B
-ALLYBATTLESPRITE_Kazin_Base: equ $1C
-ALLYBATTLESPRITE_Kazin_Promo: equ $1D
-ALLYBATTLESPRITE_Kazin_Special: equ $1E
-ALLYBATTLESPRITE_Tyrin_Base: equ $1F
-ALLYBATTLESPRITE_Tyrin_Promo: equ $20
-ALLYBATTLESPRITE_Tryin_Special: equ $21
-ALLYBATTLESPRITE_Chaz_Promo: equ $22
-ALLYBATTLESPRITE_Taya_Special: equ $23
-ALLYBATTLESPRITE_Slade_Base: equ $24
-ALLYBATTLESPRITE_Slade_Promo: equ $25
-ALLYBATTLESPRITE_Kiwi_Base: equ $26
-ALLYBATTLESPRITE_Kiwi_Promo: equ $27
-ALLYBATTLESPRITE_Peter_Base: equ $28
-ALLYBATTLESPRITE_Peter_Promo: equ $29
-ALLYBATTLESPRITE_May_Base: equ $2A
-ALLYBATTLESPRITE_May_Promo: equ $2B
-ALLYBATTLESPRITE_Gerhalt_Base: equ $2C
-ALLYBATTLESPRITE_Gerhalt_Promo: equ $2D
-ALLYBATTLESPRITE_Luke_Base: equ $2E
-ALLYBATTLESPRITE_Luke_Promo: equ $2F
-ALLYBATTLESPRITE_Screech_Promo: equ $30
-ALLYBATTLESPRITE_Rohde_Special: equ $31
-ALLYBATTLESPRITE_Zynk_Special: equ $32
-ALLYBATTLESPRITE_Claude_Special: equ $33
-ALLYBATTLESPRITE_Lemon_Special: equ $34
-ALLYBATTLESPRITE_Janet_Base: equ $35
-ALLYBATTLESPRITE_Janet_Promo: equ $36
-ALLYBATTLESPRITE_Janet_Special: equ $37
-ALLYBATTLESPRITE_Elric_Base: equ $38
-ALLYBATTLESPRITE_Elric_Promo: equ $39
-ALLYBATTLESPRITE_Elric_Special: equ $3A
-
 ; ---------------------------------------------------------------------------
 
 ; enum EnemyBattleSprites
