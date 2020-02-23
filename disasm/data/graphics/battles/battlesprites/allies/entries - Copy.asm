@@ -9,8 +9,8 @@ pt_AllyBattleSprites:
                 dc.l allybattlesprite01a_Sarah_Special
                 dc.l allybattlesprite01b_Karna_Base
                 dc.l allybattlesprite01b_Karna_Promo
-                dc.l allybattlesprite01b_Karna_Special
-                dc.l allybattlesprite01c_Fraiyja_Promo
+                dc.l allybattlesprite01b_Peter_Base
+                dc.l allybattlesprite01c_Karna_Special
                 dc.l allybattlesprite01d_Sheela_Special
                 dc.l allybattlesprite02a_Chester_Base
                 dc.l allybattlesprite02a_Chester_Promo
@@ -30,7 +30,7 @@ pt_AllyBattleSprites:
                 dc.l allybattlesprite03b_Randolf_Promo
                 dc.l allybattlesprite03b_Randolf_Special
                 dc.l allybattlesprite03c_Gyan_Promo
-                dc.l allybattlesprite04a_Kazin_Base
+                dc.l allybattlesprite03d_Peter_Promo
                 dc.l allybattlesprite04a_Kazin_Promo
                 dc.l allybattlesprite04a_Kazin_Special
                 dc.l allybattlesprite04b_Tyrin_Base
@@ -42,8 +42,8 @@ pt_AllyBattleSprites:
 		dc.l allybattlesprite05_Slade_Promo
 		dc.l allybattlesprite06_Kiwi_Base
 		dc.l allybattlesprite06_Kiwi_Promo
-		dc.l allybattlesprite07_Peter_Base
-		dc.l allybattlesprite07_Peter_Promo
+		dc.l allybattlesprite07_Frayja_Promo
+		dc.l allybattlesprite07_Kazin_Base
 		dc.l allybattlesprite08_May_Base
 		dc.l allybattlesprite08_May_Promo
 		dc.l allybattlesprite09_Gerhalt_Base
@@ -69,10 +69,10 @@ allybattlesprite01b_Karna_Base:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01b_Karna_Base.bin"
 allybattlesprite01b_Karna_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01b_Karna_Promo.bin"
-allybattlesprite01b_Karna_Special:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01b_Karna_Special.bin"
-allybattlesprite01c_Fraiyja_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01c_Fraiyja_Promo.bin"
+allybattlesprite01b_Peter_Base:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01b_Peter_Base.bin"
+allybattlesprite01c_Karna_Special:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01c_Karna_Special.bin"
 allybattlesprite01d_Sheela_Special:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite01d_Sheela_Special.bin"
 allybattlesprite02a_Chester_Base:
@@ -111,8 +111,8 @@ allybattlesprite03b_Randolf_Special:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite03b_Randolf_Special.bin"
 allybattlesprite03c_Gyan_Promo
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite03c_Gyan_Promo.bin"
-allybattlesprite04a_Kazin_Base:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04a_Kazin_Base.bin"
+allybattlesprite03d_Peter_Promo:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite03d_Peter_Promo.bin"
 allybattlesprite04a_Kazin_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite04a_Kazin_Promo.bin"
 allybattlesprite04a_Kazin_Special:
@@ -135,10 +135,10 @@ allybattlesprite06_Kiwi_Base:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite06_Kiwi_Base.bin"
 allybattlesprite06_Kiwi_Promo:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite06_Kiwi_Promo.bin"
-allybattlesprite07_Peter_Base:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite07_Peter_Base.bin"
-allybattlesprite07_Peter_Promo:
-                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite07_Peter_Promo.bin"
+allybattlesprite07_Frayja_Promo:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite07_Frayja_Promo.bin"
+allybattlesprite07_Kazin_Base:
+                incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite07_Kazin_Base.bin"
 allybattlesprite08_May_Base:
                 incbin "data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/allybattlesprite08_May_Base.bin"
 allybattlesprite08_May_Promo:
