@@ -297,3 +297,38 @@ disasm/data/battles/global/newbattlemapcoords.asm
 disasm/data/maps/SF2MapEditor.jar
 disasm/data/maps/entries/map*/*hptiles*.txt
 disasm/data/maps/entries/map*/*layoutflags*.txt
+
+
+#############
+## SF2GU
+#############
+
+# Emulator files
+Gens.cfg
+*.gs0
+*.gs1
+*.gs2
+*.gs3
+*.gs4
+*.gs5
+*.gs6
+*.gs7
+*.gs8
+*.gs9
+*.gsx
+
+# Old files
+disasm/data/graphics/battles/battlesprites/allies/Originalentries.asm
+disasm/data/graphics/battles/battlesprites/allies/animations/entries - Copy.asm
+disasm/data/graphics/battles/battlesprites/allies/entries backup.asm
+disasm/data/graphics/battles/battlesprites/allyidlebattlesprites Backup.asm
+disasm/data/graphics/portraits/EntriesBackup.asm
+disasm/data/graphics/portraits/entries-modded.asm
+disasm/data/stats/allies/allybattlesprites Backup.asm
+disasm/sf2enums - Copy.asm
+
+# Do not ignore assets present in the following folders
+!*\disasm\data\graphics\battles\battlesprites\allies-sf2gu\*.bin
+!*\disasm\data\graphics\battles\battlesprites\allies-sf2gu\animations\*.bin
+!*\disasm\data\graphics\mapsprites\sf2gu\*.bin
+!*\disasm\data\graphics\portraits\sf2gu\*.bin
