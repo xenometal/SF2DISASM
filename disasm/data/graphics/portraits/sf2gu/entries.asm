@@ -36,6 +36,7 @@ pt_Portraits:   dc.l PortraitBowieBase
                 dc.l PortraitKingGranseal
                 dc.l PortraitMerchant
                 dc.l PortraitPriest
+                dc.l PortraitMerchant
                 dc.l PortraitMitula
                 dc.l PortraitCreed
                 dc.l PortraitKingGalam

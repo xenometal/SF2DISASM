@@ -5,7 +5,7 @@
 ;
 ;     0 = OFF, 1 = ON
 ;
-EASY_BATTLE_TEST: equ 0
+EASY_BATTLE_TEST: equ 1
 
 ; ---------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ EASY_BATTLE_TEST: equ 0
 ;
 ;     0 = OFF, 1 = ON
 ;
-EASY_CONFIGURATION_MODE: equ 0
+EASY_CONFIGURATION_MODE: equ 1
 
 ; ---------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ EASY_CONFIGURATION_MODE: equ 0
 ;
 ;     0 = OFF, 1 = ON
 ;
-EASY_DEBUG_MODE: equ 0
+EASY_DEBUG_MODE: equ 1
 
 ; ---------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ EASY_DEBUG_MODE: equ 0
 ;
 ;     0 = OFF, 1-100 = n% of max HP
 ;
-PERCENT_POISON_DAMAGE: equ 0
+PERCENT_POISON_DAMAGE: equ 25
 
 ; ---------------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ PERCENT_POISON_DAMAGE: equ 0
 ;
 ;     0 = OFF, 1 = ON
 ;
-THREE_DIGITS_STATS: equ 0
+THREE_DIGITS_STATS: equ 1
 
 ; ---------------------------------------------------------------------------
 
@@ -45,7 +45,7 @@ THREE_DIGITS_STATS: equ 0
 ;
 ;     0 = OFF, 1 = ON
 ;
-EIGHT_CHARACTERS_MEMBER_NAMES: equ 0
+EIGHT_CHARACTERS_MEMBER_NAMES: equ 1
 
 ; ---------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ EIGHT_CHARACTERS_MEMBER_NAMES: equ 0
 ;
 ;     0 = OFF, 1 = ON
 ;
-FULL_CLASS_NAMES: equ 0
+FULL_CLASS_NAMES: equ 1
 
 ; ---------------------------------------------------------------------------
 
