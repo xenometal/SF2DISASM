@@ -303,6 +303,9 @@ disasm/data/maps/entries/map*/*layoutflags*.txt
 ## SF2GU
 #############
 
+# Archives
+*.rar
+
 # Emulator files
 Gens.cfg
 *.gs0
