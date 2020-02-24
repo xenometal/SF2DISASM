@@ -21,7 +21,7 @@ pt_Portraits:   dc.l PortraitBowieBase
                 dc.l PortraitTyrin
                 dc.l PortraitJanet
                 dc.l PortraitHigins
-                dc.l PortraitScreech
+                dc.l PortraitSkreech
                 dc.l PortraitTaya
                 dc.l PortraitFrayja
                 dc.l PortraitJaro
@@ -40,9 +40,9 @@ pt_Portraits:   dc.l PortraitBowieBase
                 dc.l PortraitMitula
                 dc.l PortraitCreed
                 dc.l PortraitKingGalam
-                dc.l PortraitMadGalam
-                dc.l PortraitHurtOddeye
-                dc.l PortraitOddeye
+                dc.l PortraitPossessedGalam
+                dc.l PortraitOddler
+                dc.l PortraitOddEye
                 dc.l PortraitTaros
                 dc.l PortraitZalbard
                 dc.l PortraitCameela
@@ -53,10 +53,10 @@ pt_Portraits:   dc.l PortraitBowieBase
                 dc.l PortraitGerhaltPromo
                 dc.l PortraitSladePromo
                 dc.l PortraitKiwiPromo
-                dc.l PortraitDrawingOfBowie
-                dc.l PortraitDrawingOfBowie
-                dc.l PortraitDrawingOfBowie
-                dc.l PortraitDrawingOfBowie
+                dc.l PortraitBowiePainting
+                dc.l PortraitBowiePainting
+                dc.l PortraitBowiePainting
+                dc.l PortraitBowiePainting
 PortraitBowieBase:         incbin "data/graphics/portraits/sf2gu/PRT_00_Bowie_Base.bin"
 PortraitSarah:             incbin "data/graphics/portraits/sf2gu/PRT_01_Sarah_Base.bin"
 PortraitChester:           incbin "data/graphics/portraits/sf2gu/PRT_02_Chester_Base.bin"
@@ -77,7 +77,7 @@ PortraitRandolf:           incbin "data/graphics/portraits/sf2gu/PRT_16_Randolf_
 PortraitTyrin:             incbin "data/graphics/portraits/sf2gu/PRT_17_Tyrin_Base.bin"
 PortraitJanet:             incbin "data/graphics/portraits/sf2gu/PRT_18_Janet_Base.bin"
 PortraitHigins:            incbin "data/graphics/portraits/sf2gu/PRT_19_Higins_Promo.bin"
-PortraitScreech:           incbin "data/graphics/portraits/sf2gu/PRT_20_Screech_Promo.bin"
+PortraitSkreech:           incbin "data/graphics/portraits/sf2gu/PRT_20_Screech_Promo.bin"
 PortraitTaya:              incbin "data/graphics/portraits/sf2gu/PRT_21_Taya_Special.bin"
 PortraitFrayja:            incbin "data/graphics/portraits/sf2gu/PRT_22_Frayja_Promo.bin"
 PortraitJaro:              incbin "data/graphics/portraits/sf2gu/PRT_23_Jaro_Special.bin"
@@ -95,9 +95,9 @@ PortraitPriest:            incbin "data/graphics/portraits/sf2gu/PRT_34_Priest.b
 PortraitMitula:            incbin "data/graphics/portraits/sf2gu/PRT_36_Mitula.bin"
 PortraitCreed:             incbin "data/graphics/portraits/sf2gu/PRT_37_Creed.bin"
 PortraitKingGalam:         incbin "data/graphics/portraits/sf2gu/PRT_38_KingGalam.bin"
-PortraitMadGalam:          incbin "data/graphics/portraits/sf2gu/PRT_39_MadGalam.bin"
-PortraitHurtOddeye:        incbin "data/graphics/portraits/sf2gu/PRT_40_HurtOddeye.bin"
-PortraitOddeye:            incbin "data/graphics/portraits/sf2gu/PRT_41_Oddeye.bin"
+PortraitPossessedGalam:    incbin "data/graphics/portraits/sf2gu/PRT_39_MadGalam.bin"
+PortraitOddler:            incbin "data/graphics/portraits/sf2gu/PRT_40_HurtOddeye.bin"
+PortraitOddEye:            incbin "data/graphics/portraits/sf2gu/PRT_41_Oddeye.bin"
 PortraitTaros:             incbin "data/graphics/portraits/sf2gu/PRT_42_Taros.bin"
 PortraitZalbard:           incbin "data/graphics/portraits/sf2gu/PRT_43_Zalbard.bin"
 PortraitCameela:           incbin "data/graphics/portraits/sf2gu/PRT_44_Cameela.bin"
@@ -108,4 +108,4 @@ PortraitPeterPromo:        incbin "data/graphics/portraits/sf2gu/PRT_48_Peter_Pr
 PortraitGerhaltPromo:      incbin "data/graphics/portraits/sf2gu/PRT_49_Gerhalt_Promo.bin"
 PortraitSladePromo:        incbin "data/graphics/portraits/sf2gu/PRT_50_Slade_Promo.bin"
 PortraitKiwiPromo:         incbin "data/graphics/portraits/sf2gu/PRT_51_Kiwi_Promo.bin"
-PortraitDrawingOfBowie:    incbin "data/graphics/portraits/sf2gu/PRT_52_DrawingofBowie.bin"
+PortraitBowiePainting:     incbin "data/graphics/portraits/sf2gu/PRT_52_DrawingofBowie.bin"

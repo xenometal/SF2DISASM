@@ -51,7 +51,7 @@ pt_AllyBattleSprites:
                 dc.l AllyBattleSprite_JanetPromo
                 dc.l AllyBattleSprite_JanetSpecial
                 dc.l AllyBattleSprite_HiginsPromo
-                dc.l AllyBattleSprite_ScreechPromo
+                dc.l AllyBattleSprite_SkreechPromo
                 dc.l AllyBattleSprite_TayaSpecial
                 dc.l AllyBattleSprite_FrayjaPromo
                 dc.l AllyBattleSprite_JaroSpecial
@@ -159,7 +159,7 @@ AllyBattleSprite_JanetSpecial:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/allybattlesprite_47_janet_special.bin"
 AllyBattleSprite_HiginsPromo:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/allybattlesprite_48_higins_promo.bin"
-AllyBattleSprite_ScreechPromo:
+AllyBattleSprite_SkreechPromo:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/allybattlesprite_49_screech_promo.bin"
 AllyBattleSprite_TayaSpecial:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/allybattlesprite_50_taya_special.bin"
