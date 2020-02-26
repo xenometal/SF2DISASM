@@ -300,86 +300,86 @@ AllyAnimation_GerhaltBase_Dodge:
 AllyAnimation_GerhaltPromo_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_82_gerhalt_promo_dodge.bin"
 AllyAnimation_LukeBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_82_luke_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_83_luke_base_dodge.bin"
 AllyAnimation_LukePromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_83_luke_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_84_luke_promo_dodge.bin"
 AllyAnimation_RhodeSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_84_rhode_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_85_rhode_special_dodge.bin"
 AllyAnimation_RickBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_85_rick_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_86_rick_base_dodge.bin"
 AllyAnimation_RickPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_86_rick_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_87_rick_promo_dodge.bin"
 AllyAnimation_RickSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_87_rick_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_88_rick_special_dodge.bin"
 AllyAnimation_ElricBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_88_elric_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_89_elric_base_dodge.bin"
 AllyAnimation_ElricPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_89_elric_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_90_elric_promo_dodge.bin"
 AllyAnimation_ElricSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_90_elric_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_91_elric_special_dodge.bin"
 AllyAnimation_EricBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_91_eric_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_92_eric_base_dodge.bin"
 AllyAnimation_EricPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_92_eric_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_93_eric_promo_dodge.bin"
 AllyAnimation_EricSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_93_eric_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_94_eric_special_dodge.bin"
 AllyAnimation_KarnaBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_94_karna_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_95_karna_base_dodge.bin"
 AllyAnimation_KarnaPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_95_karna_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_96_karna_promo_dodge.bin"
 AllyAnimation_KarnaSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_96_karna_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_97_karna_special_dodge.bin"
 AllyAnimation_RandolfBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_97_randolf_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_98_randolf_base_dodge.bin"
 AllyAnimation_RandolfPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_98_randolf_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_99_randolf_promo_dodge.bin"
 AllyAnimation_RandolfSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_99_randolf_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_100_randolf_special_dodge.bin"
 AllyAnimation_TyrinBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_100_tyrin_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_101_tyrin_base_dodge.bin"
 AllyAnimation_TyrinPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_101_tyrin_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_102_tyrin_promo_dodge.bin"
 AllyAnimation_TyrinSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_102_tyrin_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_103_tyrin_special_dodge.bin"
 AllyAnimation_JanetBase_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_103_janet_base_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_104_janet_base_dodge.bin"
 AllyAnimation_JanetPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_104_janet_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_105_janet_promo_dodge.bin"
 AllyAnimation_JanetSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_105_janet_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_106_janet_special_dodge.bin"
 AllyAnimation_HiginsPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_106_higins_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_107_higins_promo_dodge.bin"
 AllyAnimation_ScreechPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_107_screech_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_108_screech_promo_dodge.bin"
 AllyAnimation_TayaSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_108_taya_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_109_taya_special_dodge.bin"
 AllyAnimation_FrayjaPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_109_frayja_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_110_frayja_promo_dodge.bin"
 AllyAnimation_JaroSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_110_jaro_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_111_jaro_special_dodge.bin"
 AllyAnimation_GyanPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_111_gyan_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_112_gyan_promo_dodge.bin"
 AllyAnimation_SheelaSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_112_sheela_special_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_113_sheela_special_dodge.bin"
 AllyAnimation_ZynkPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_113_zynk_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_114_zynk_dodge.bin"
 AllyAnimation_ChazPromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_114_chaz_promo_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_115_chaz_promo_dodge.bin"
 AllyAnimation_LemonSpecial_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_115_lemon_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_116_lemon_dodge.bin"
 AllyAnimation_ClaudePromo_Dodge:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_116_claude_dodge.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_117_claude_dodge.bin"
 AllyAnimation_SpearKNTE:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_117_special_knte_spear.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_118_special_knte_spear.bin"
 AllyAnimation_SpearPLDN:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_118_special_pldn_spear.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_119_special_pldn_spear.bin"
 AllyAnimation_SpearPGNT:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_119_special_pgnt_spear.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_120_special_pgnt_spear.bin"
 AllyAnimation_CriticalMMNK:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_120_special_msmk_critical.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_121_special_msmk_critical.bin"
 AllyAnimation_SpellCastMNST:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_121_special_mnst_flame.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_122_special_mnst_flame.bin"
 AllyAnimation_CriticalRBT:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_122_special_rbt_critical.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_123_special_rbt_critical.bin"
 AllyAnimation_AttackBRGN:
-                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_123_special_brgn_attack.bin"
+                incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_124_special_brgn_attack.bin"
