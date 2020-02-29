@@ -5,5 +5,11 @@
 
 
 p_Icons:        dc.l Icons
-Icons:          incbin "data/graphics/icons/icons.bin"
+Icons:          
+                if (PROJECT_SF2GU=1)
+                incbin "data/graphics/icons/icons-sf2gu.bin"
+                else
+                incbin "data/graphics/icons/icons.bin"
+                endif
+                
                 align $1E0000
