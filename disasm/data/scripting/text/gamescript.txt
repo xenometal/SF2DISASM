@@ -1262,7 +1262,7 @@
 04ED=Yes, it is.{W1}
 04EE={LEADER} and {NAME;7}{N}explain in detail.{W1}
 04EF=About the ancient ruins{N}and Creed....{W2}
-04F0=And Zeon's message through{N}Evil Spilit.{W2}
+04F0=And Zeon's message through{N}Evil Spirit.{W2}
 04F1=They explain everything.{W1}
 04F2=Amazing!{N}{LEADER}!  And {NAME;7}...{W1}
 04F3=you've experienced a great{N}deal.{W1}
