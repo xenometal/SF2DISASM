@@ -53,7 +53,7 @@ pt_AlliesAnimations:
                 dc.l AllyAnimation_JanetPromo
                 dc.l AllyAnimation_JanetSpecial
                 dc.l AllyAnimation_HiginsPromo
-                dc.l AllyAnimation_ScreechPromo
+                dc.l AllyAnimation_SkreechPromo
                 dc.l AllyAnimation_TayaSpecial
                 dc.l AllyAnimation_FrayjaPromo
                 dc.l AllyAnimation_JaroSpecial
@@ -114,7 +114,7 @@ pt_AlliesAnimations:
                 dc.l AllyAnimation_JanetPromo_Dodge
                 dc.l AllyAnimation_JanetSpecial_Dodge
                 dc.l AllyAnimation_HiginsPromo_Dodge
-                dc.l AllyAnimation_ScreechPromo_Dodge
+                dc.l AllyAnimation_SkreechPromo_Dodge
                 dc.l AllyAnimation_TayaSpecial_Dodge
                 dc.l AllyAnimation_FrayjaPromo_Dodge
                 dc.l AllyAnimation_JaroSpecial_Dodge
@@ -231,7 +231,7 @@ AllyAnimation_JanetSpecial:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_47_janet_special.bin"
 AllyAnimation_HiginsPromo
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_48_higins_promo.bin"
-AllyAnimation_ScreechPromo:
+AllyAnimation_SkreechPromo:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_49_screech_promo.bin"
 AllyAnimation_TayaSpecial:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_50_taya_special.bin"
@@ -349,7 +349,7 @@ AllyAnimation_JanetSpecial_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_106_janet_special_dodge.bin"
 AllyAnimation_HiginsPromo_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_107_higins_promo_dodge.bin"
-AllyAnimation_ScreechPromo_Dodge:
+AllyAnimation_SkreechPromo_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_108_screech_promo_dodge.bin"
 AllyAnimation_TayaSpecial_Dodge:
                 incbin "data/graphics/battles/battlesprites/allies-sf2gu/animations/allyanimation_109_taya_special_dodge.bin"
