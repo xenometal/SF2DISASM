@@ -590,7 +590,7 @@ loc_19C58:
                 lea     (FF8804_LOADING_SPACE).l,a1
                 jsr     (LoadCompressedData).w
                 lea     (FF8804_LOADING_SPACE).l,a0
-                lea     (loc_B600).l,a1
+                lea     ($B600).l,a1
                 move.w  #$500,d0
                 moveq   #2,d1
                 jsr     (ApplyVIntVramDMA).w

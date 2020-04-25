@@ -1063,7 +1063,7 @@ loc_189FC:
                 move.w  #$F0,d1 
                 moveq   #1,d2
                 lea     (byte_FF9202).l,a0
-                lea     (loc_9E00).l,a1
+                lea     ($9E00).l,a1
                 lea     (byte_FFC1B8).l,a2
 loc_18A14:
                 
@@ -1150,7 +1150,7 @@ loc_18ACE:
 loc_18AEC:
                 
                 lea     (byte_FF4A00).l,a0
-                lea     (loc_9E00).l,a1
+                lea     ($9E00).l,a1
                 lea     (byte_FFC1B8).l,a2
 loc_18AFE:
                 
