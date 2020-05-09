@@ -328,6 +328,7 @@ disasm/data/graphics/battles/battlesprites/allyidlebattlesprites Backup.asm
 disasm/data/graphics/portraits/EntriesBackup.asm
 disasm/data/graphics/portraits/entries-modded.asm
 disasm/data/stats/allies/allybattlesprites Backup.asm
+disasm/data/stats/enemies/enemybattlesprites - Copy.asm
 disasm/sf2enums - Copy.asm
 disasm/data/graphics/battles/battlesprites/allies/animations/Modded_Animations/
 disasm/data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/
@@ -337,6 +338,8 @@ disasm/data/graphics/portraits/Modded Portraits/
 # Do not ignore assets present in the following folders
 !disasm/data/graphics/battles/battlesprites/allies-sf2gu/*.bin
 !disasm/data/graphics/battles/battlesprites/allies-sf2gu/animations/*.bin
+!disasm/data/graphics/battles/battlesprites/enemies-sf2gu/*.bin
+!disasm/data/graphics/battles/battlesprites/enemies-sf2gu/animations/*.bin
 !disasm/data/graphics/icons/icons-sf2gu.bin
 !disasm/data/graphics/mapsprites/sf2gu/*.bin
 !disasm/data/graphics/portraits/sf2gu/*.bin
