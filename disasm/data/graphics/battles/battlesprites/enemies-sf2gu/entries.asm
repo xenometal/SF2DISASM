@@ -38,7 +38,7 @@ off_130010:     dc.l EnemyBattleSprite03
                 dc.l EnemyBattleSprite33
                 dc.l EnemyBattleSprite34
                 dc.l EnemyBattleSprite35
-                dc.l EnemyBattleSprite36
+                dc.l EnemyBattleSprite35
                 dc.l EnemyBattleSprite37
                 dc.l EnemyBattleSprite38
                 dc.l EnemyBattleSprite39
@@ -129,7 +129,7 @@ EnemyBattleSprite34:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite34_Arrowlauncher.bin"
 EnemyBattleSprite35:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite35_Bowrider.bin"
-EnemyBattleSprite36:
+EnemyBattleSprite35:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite36_Mage.bin"
 EnemyBattleSprite37:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite37_Witch.bin"
