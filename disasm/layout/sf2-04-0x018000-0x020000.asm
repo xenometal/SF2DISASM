@@ -23,11 +23,12 @@
                 
                 if (PROJECT_SF2GU=1)
                 include "data\graphics\battles\battlesprites\allyidlebattlesprites-sf2gu.asm"
+                include "data\graphics\battles\battlesprites\enemyidlebattlesprites-sf2gu.asm"
                 else
                 include "data\graphics\battles\battlesprites\allyidlebattlesprites.asm"    ; Ally Idle Battle Sprites
+                include "data\graphics\battles\battlesprites\enemyidlebattlesprites.asm"    ; Enemy Idle Battle Sprites
                 endif
                 
-                include "data\graphics\battles\battlesprites\enemyidlebattlesprites.asm"    ; Enemy Idle Battle Sprites
                 include "code\gameflow\battle\battlescenes\battlesceneengine_2.asm"    ; Battlescene engine
                 
                 if (PROJECT_SF2GU=1)
