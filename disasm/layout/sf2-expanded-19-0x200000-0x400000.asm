@@ -19,7 +19,13 @@
 		align $268000
 		include "code\common\tech\graphics\specialspritesentries.asm"		; Special Sprites Entries
 		align $270000
+        
+        if (PROJECT_SF2GU=1)
+        include "data\graphics\battles\battlesprites\enemies-sf2gu\entries.asm"
+        else
 		include "data\graphics\battles\battlesprites\enemies\entries.asm"		; Enemy battle sprites
+        endif
+        
 		align $2D0000
         
         if (PROJECT_SF2GU=1)

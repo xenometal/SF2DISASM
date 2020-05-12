@@ -34,9 +34,10 @@ BoltAnimData_B: incbin "data/graphics/battles/spells/animations/boltanimdatab.bi
                 
                 if (PROJECT_SF2GU=1)
                 include "data\graphics\battles\battlesprites\allies-sf2gu\animations\entries.asm"
+                include "data\graphics\battles\battlesprites\enemies-sf2gu\animations\entries.asm"
                 else
                 include "data\graphics\battles\battlesprites\allies\animations\entries.asm"    ; Ally animations
+                include "data\graphics\battles\battlesprites\enemies\animations\entries.asm"    ; Enemy animations
                 endif
                 
-                include "data\graphics\battles\battlesprites\enemies\animations\entries.asm"    ; Enemy animations
                 align $1AC000
