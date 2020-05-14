@@ -38,7 +38,7 @@ off_130010:     dc.l EnemyBattleSprite03
                 dc.l EnemyBattleSprite33
                 dc.l EnemyBattleSprite34
                 dc.l EnemyBattleSprite35
-                dc.l EnemyBattleSprite35
+                dc.l EnemyBattleSprite36
                 dc.l EnemyBattleSprite37
                 dc.l EnemyBattleSprite38
                 dc.l EnemyBattleSprite39
@@ -56,7 +56,9 @@ off_130010:     dc.l EnemyBattleSprite03
                 dc.l EnemyBattleSprite51
                 dc.l EnemyBattleSprite52
                 dc.l EnemyBattleSprite53
-                dc.l EnemyBattleSprite54
+				dc.l EnemyBattleSprite54
+				dc.l EnemyBattleSprite55
+				dc.l EnemyBattleSprite56
 EnemyBattleSprite00:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/EnemyBattleSprite00_Ooze.bin"
 EnemyBattleSprite01:
@@ -129,7 +131,7 @@ EnemyBattleSprite34:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite34_Arrowlauncher.bin"
 EnemyBattleSprite35:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite35_Bowrider.bin"
-EnemyBattleSprite35:
+EnemyBattleSprite36:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite36_Mage.bin"
 EnemyBattleSprite37:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite37_Witch.bin"
@@ -167,3 +169,7 @@ EnemyBattleSprite53:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite53_Zeon.bin"
 EnemyBattleSprite54:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite54_Galam.bin"
+EnemyBattleSprite55:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite55_Wolf.bin"
+EnemyBattleSprite56:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite55_Wolf2.bin"				

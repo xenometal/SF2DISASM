@@ -1,10 +1,10 @@
 
-; ASM FILE data\stats\enemies\enemybattlesprites.asm :
+; ASM FILE data\stats\enemies\enemybattlesprites-sf2gu.asm :
 ; 0x1F914..0x1F9E2 : Enemy battle sprites table
 EnemyBattleSpritesTable:
                 ; enemyBattleSprite enum EnemyBattleSprites : ENEMYBATTLESPRITE_*, Pallete ID
     
-                enemyBattleSprite OOZE, 1 ; OOZE
+                enemyBattleSprite OOZE, 0 ; OOZE
                 enemyBattleSprite RAT, 0 ; HUGE RAT
                 enemyBattleSprite SOLDIER, 0 ; GALAM SOLDIER
                 enemyBattleSprite KNIGHT, 0 ; GALAM KNIGHT
@@ -101,7 +101,7 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite RED_BARON, 0 ; RED BARON
                 enemyBattleSprite GESHP, 0 ; GESHP
                 enemyBattleSprite ODD_EYE, 0 ; ODD EYE
-                enemyBattleSprite KING, 0 ; GALAM
+                enemyBattleSprite Galam, 0 ; GALAM
                 enemyBattleSprite ZEON, 0 ; ZEON
                 enemyBattleSprite PEGASUS_KNIGHT, 1 ; JAR
                 enemyBattleSprite MAGE, 1 ; MASTER MAGE
