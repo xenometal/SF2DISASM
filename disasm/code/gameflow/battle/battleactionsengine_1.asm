@@ -714,15 +714,18 @@ loc_A2B6:
                 cmpi.w  #CLASS_MNST,d1  ; MNST
                 beq.w   loc_A304
                 jsr     GetEnemyID
-                moveq   #ENEMY_SPECIAL_ANIMATION_HELL_HOUND,d5 
+                ;moveq   #ENEMY_SPECIAL_ANIMATION_HELL_HOUND,d5 
+                move.w  #ENEMY_SPECIAL_ANIMATION_HELL_HOUND,d5 
                 cmpi.w  #$1D,d1
                 beq.w   loc_A304
                 cmpi.w  #$18,d1
                 beq.w   loc_A304
-                moveq   #ENEMY_SPECIAL_ANIMATION_DEVIL_GRIFFIN,d5 
+                ;moveq   #ENEMY_SPECIAL_ANIMATION_DEVIL_GRIFFIN,d5 
+                move.w  #ENEMY_SPECIAL_ANIMATION_DEVIL_GRIFFIN,d5 
                 cmpi.w  #$36,d1 
                 beq.w   loc_A304
-                moveq   #ENEMY_SPECIAL_ANIMATION_ODD_EYE,d5 
+                ;moveq   #ENEMY_SPECIAL_ANIMATION_ODD_EYE,d5 
+                move.w  #ENEMY_SPECIAL_ANIMATION_ODD_EYE,d5 
                 cmpi.w  #$60,d1 
                 beq.w   loc_A304
                 moveq   #0,d5
