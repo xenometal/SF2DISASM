@@ -43,7 +43,7 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite EVIL_BEAST, 0 ; EVIL BEAST
                 enemyBattleSprite HYDRA, 0 ; PYROHYDRA
                 enemyBattleSprite PRISM_FLOWER, 0 ; ZEON GUARD
-                enemyBattleSprite Vipressa, 0 ; GIZMO
+                enemyBattleSprite Gizmo, 0 ; GIZMO
                 enemyBattleSprite Ratflya, 0 ; RAT FLY
                 enemyBattleSprite Vampirebata, 0 ; VAMPIRE BAT
                 enemyBattleSprite GIZMO, 0 ; EVIL CLOUD
@@ -60,7 +60,7 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite DRAGON, 0 ; CHAOS DRAGON
                 enemyBattleSprite GRIFFIN, 0 ; DEVIL GRIFFIN
                 enemyBattleSprite DEMON, 0 ; ARCH DEMON
-                enemyBattleSprite ARCHER, 0 ; GALAM ARCHER
+                enemyBattleSprite Archer, 0 ; GALAM ARCHER
                 enemyBattleSprite HUNTER_GOBLIN, 0 ; HUNTER GOBLIN
                 enemyBattleSprite ARCHER, 0 ; DEATH ARCHER
                 enemyBattleSprite KRAKEN_ARM, 0 ; KRAKEN ARM

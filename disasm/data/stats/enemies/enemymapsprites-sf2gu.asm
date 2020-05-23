@@ -3,8 +3,8 @@
 ; 0x44AA4..0x44B4A : Enemy map sprite IDs
 EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
     
-                mapSprite Rabid_Rabbit  ; Rabid Rabbit
-                mapSprite Wolf      	; Wolf
+                mapSprite OOZE          ; OOZE
+                mapSprite HUGE_RAT      ; HUGE RAT
                 mapSprite GALAM_SOLDIER ; GALAM SOLDIER
                 mapSprite GALAM_KNIGHT  ; GALAM KNIGHT
                 mapSprite GOBLIN        ; GOBLIN
@@ -42,8 +42,8 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite EVIL_BEAST    ; EVIL BEAST
                 mapSprite PYROHYDRA     ; PYROHYDRA
                 mapSprite ZEON_GUARD    ; ZEON GUARD
-                mapSprite GIZMO         ; GIZMO
-                mapSprite Rat_Fly       ; Rat Fly
+                mapSprite GIZMO		    ; GIZMO
+                mapSprite HUGE_BAT      ; Rat Fly
                 mapSprite VAMPIRE_BAT   ; VAMPIRE BAT
                 mapSprite EVIL_CLOUD    ; EVIL CLOUD
                 mapSprite GARGOYLE      ; GARGOYLE

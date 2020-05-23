@@ -8,7 +8,7 @@ EnemyDefs:      ; spellPower     enum SpellPower : SPELLPOWER_*
 ; spells         enum Spells : SPELL_*
 ; moveType       enum MoveTypes : MOVETYPE_*
     
-                unknownByte 0           ; Rabid Rabbit
+                unknownByte 0           ; Ooze
                 spellPower REGULAR
                 level 0
                 maxHp 9
