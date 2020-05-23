@@ -673,19 +673,19 @@ loc_A248:
                 bne.s   loc_A2B6
                 move.b  (a4),d0
                 jsr     GetClass
-                moveq   #121,d5 
+                moveq   #SPECIAL_ANIMATION_MMNK,d5 
                 cmpi.w  #CLASS_MMNK,d1  ; MMNK
                 beq.w   loc_A29C        
-                moveq   #123,d5 
+                moveq   #SPECIAL_ANIMATION_RBT,d5 
                 cmpi.w  #CLASS_RBT,d1   ; RBT
                 beq.w   loc_A29C        
-                moveq   #124,d5 
+                moveq   #SPECIAL_ANIMATION_BRGN,d5 
                 cmpi.w  #CLASS_BRGN,d1  ; BRGN
                 bne.s   loc_A296
                 jsr     GetEquippedWeapon
                 cmpi.w  #$FFFF,d1
                 bne.s   loc_A296
-                moveq   #124,d5 
+                moveq   #SPECIAL_ANIMATION_BRGN,d5 
                 moveq   #0,d4
                 beq.w   loc_A304
 loc_A296:
@@ -710,19 +710,19 @@ loc_A2B6:
                 bne.s   loc_A2FC
                 move.b  (a4),d0
                 jsr     GetClass
-                moveq   #122,d5 
+                moveq   #SPECIAL_ANIMATION_MNST,d5 
                 cmpi.w  #CLASS_MNST,d1  ; MNST
                 beq.w   loc_A304
                 jsr     GetEnemyID
-                moveq   #$76,d5 
+                moveq   #ENEMY_SPECIAL_ANIMATION_HELL_HOUND,d5 
                 cmpi.w  #$1D,d1
                 beq.w   loc_A304
                 cmpi.w  #$18,d1
                 beq.w   loc_A304
-                moveq   #$77,d5 
+                moveq   #ENEMY_SPECIAL_ANIMATION_DEVIL_GRIFFIN,d5 
                 cmpi.w  #$36,d1 
                 beq.w   loc_A304
-                moveq   #$78,d5 
+                moveq   #ENEMY_SPECIAL_ANIMATION_ODD_EYE,d5 
                 cmpi.w  #$60,d1 
                 beq.w   loc_A304
                 moveq   #0,d5
