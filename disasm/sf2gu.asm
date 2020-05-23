@@ -13,6 +13,12 @@ SPEARTHROW_ANIMATION_PGNT:  equ SPECIAL_ANIMATIONS_START+2
 
 ; ---------------------------------------------------------------------------
 
+; enum EnemyBattleAnimations_Properties
+ENEMY_DODGE_ANIMATIONS_START:     equ 95
+ENEMY_SPECIAL_ANIMATIONS_START:   equ ENEMY_DODGE_ANIMATIONS_START*2
+
+; ---------------------------------------------------------------------------
+
 ; enum AllyBattleSprites
 ALLYBATTLESPRITE_BOWIE_BASE:        equ 0
 ALLYBATTLESPRITE_BOWIE_PROMO:       equ 1

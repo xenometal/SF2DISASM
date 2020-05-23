@@ -7,11 +7,11 @@
 sub_19838:
                 
                 move.w  d1,-(sp)
-                cmpi.w  #$76,d1 
+                cmpi.w  #ENEMY_SPECIAL_ANIMATIONS_START,d1 
                 bcc.s   loc_19850
                 cmpi.w  #1,d1
                 bne.s   loc_1984A
-                moveq   #$3C,d1 
+                moveq   #ENEMY_DODGE_ANIMATIONS_START,d1 
                 bra.s   loc_1984C
 loc_1984A:
                 
