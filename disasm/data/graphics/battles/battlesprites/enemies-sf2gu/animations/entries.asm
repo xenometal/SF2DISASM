@@ -329,7 +329,7 @@ EnemyAnimation059:
 EnemyAnimation060:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation060_Darkknight.bin"
 EnemyAnimation061:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation061_Darkcloud.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation061_Evilgizmo.bin"
 EnemyAnimation062:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation062_Mastermonk.bin"
 EnemyAnimation063:
@@ -521,7 +521,7 @@ EnemyAnimation155:
 EnemyAnimation156:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation156_Darkknight_Dodge.bin"
 EnemyAnimation157:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation157_Darkcloud_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation157_Evilgizmo_Dodge.bin"
 EnemyAnimation158:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation158_Mastermonk_Dodge.bin"
 EnemyAnimation159:

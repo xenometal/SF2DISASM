@@ -95,7 +95,9 @@ off_130010:     dc.l EnemyBattleSprite03
 				dc.l EnemyBattleSprite90
 				dc.l EnemyBattleSprite91
 				dc.l EnemyBattleSprite92
-				dc.l EnemyBattleSprite93				
+				dc.l EnemyBattleSprite93
+				dc.l EnemyBattleSprite94
+				dc.l EnemyBattleSprite95				
 EnemyBattleSprite00:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/EnemyBattleSprite00_Ooze.bin"
 EnemyBattleSprite01:
@@ -219,7 +221,7 @@ EnemyBattleSprite59:
 EnemyBattleSprite60:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite60_Darkknight.bin"
 EnemyBattleSprite61:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite61_Darkcloud.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite61_Evilgizmo.bin"
 EnemyBattleSprite62:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite62_Mastermonk.bin"
 EnemyBattleSprite63:

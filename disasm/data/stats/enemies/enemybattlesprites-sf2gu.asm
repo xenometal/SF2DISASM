@@ -9,16 +9,16 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite Galamsoldiera, 0 ; GALAM SOLDIER
                 enemyBattleSprite Galamknighta, 0 ; GALAM KNIGHT
                 enemyBattleSprite Goblina, 0 ; GOBLIN
-                enemyBattleSprite Oozea, 0 ; GREEN OOZE
+                enemyBattleSprite Cursedtreea, 0 ; GREEN OOZE
                 enemyBattleSprite Dwarfa, 0 ; DARK DWARF
                 enemyBattleSprite Hobgoblina, 0 ; HOBGOBLIN
                 enemyBattleSprite ZOMBIE, 0 ; ZOMBIE
                 enemyBattleSprite GOLEM, 0 ; GOLEM
                 enemyBattleSprite KRAKEN_LEG, 0 ; KRAKEN LEG
                 enemyBattleSprite SOULSOWER, 0 ; SOULSOWER
-                enemyBattleSprite ORC, 0 ; ORC
-                enemyBattleSprite SOLDIER, 0 ; PAWN
-                enemyBattleSprite KNIGHT, 0 ; KNIGHT
+                enemyBattleSprite ORCa, 0 ; ORC
+                enemyBattleSprite Chesspawna, 0 ; PAWN
+                enemyBattleSprite Chessknighta, 0 ; KNIGHT
                 enemyBattleSprite RAT, 0 ; RAT
                 enemyBattleSprite OOZE, 0 ; BUBBLING OOZE
                 enemyBattleSprite SKELETON, 0 ; SKELETON
@@ -46,9 +46,9 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite Gizmo, 0 ; GIZMO
                 enemyBattleSprite Ratflya, 0 ; RAT FLY
                 enemyBattleSprite Vampirebata, 0 ; VAMPIRE BAT
-                enemyBattleSprite GIZMO, 0 ; EVIL CLOUD
+                enemyBattleSprite Skullya, 0 ; EVIL CLOUD
                 enemyBattleSprite GARGOYLE, 0 ; GARGOYLE
-                enemyBattleSprite HARPY, 0 ; HARPY
+                enemyBattleSprite HARPYA, 0 ; HARPY
                 enemyBattleSprite GARGOYLE, 0 ; LESSER DEMON
                 enemyBattleSprite WYVERN, 0 ; WYVERN
                 enemyBattleSprite HARPY, 0 ; HARPY QUEEN
@@ -61,11 +61,11 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite GRIFFIN, 0 ; DEVIL GRIFFIN
                 enemyBattleSprite DEMON, 0 ; ARCH DEMON
                 enemyBattleSprite Archer, 0 ; GALAM ARCHER
-                enemyBattleSprite HUNTER_GOBLIN, 0 ; HUNTER GOBLIN
-                enemyBattleSprite ARCHER, 0 ; DEATH ARCHER
+                enemyBattleSprite Bandita, 0 ; Bandit
+                enemyBattleSprite Deatharchera, 0 ; DEATH ARCHER
                 enemyBattleSprite KRAKEN_ARM, 0 ; KRAKEN ARM
-                enemyBattleSprite ARROW_LAUNCHER, 0 ; ARROW LAUNCHER
-                enemyBattleSprite ARROW_LAUNCHER, 0 ; ROOK
+                enemyBattleSprite HUNTER_GOBLIN, 0 ; Hunter Goblin
+                enemyBattleSprite Chessrooka, 0 ; Chess Rook
                 enemyBattleSprite HUNTER_GOBLIN, 0 ; DARK SNIPER
                 enemyBattleSprite ARCHER, 0 ; BOW MASTER
                 enemyBattleSprite BOW_RIDER, 0 ; BOW RIDER
@@ -73,27 +73,27 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite BOW_RIDER, 0 ; HORSEMAN
                 enemyBattleSprite MAGE, 0 ; GALAM MAGE
                 enemyBattleSprite WITCH, 0 ; WITCH
-                enemyBattleSprite MAGE, 0 ; MASTER MAGE
-                enemyBattleSprite WITCH, 0 ; DARK MADAM
-                enemyBattleSprite WITCH, 0 ; QUEEN
+                enemyBattleSprite Darkmadama, 0 ; Dark Madam
+                enemyBattleSprite Wizard, 0 ; Wizard
+                enemyBattleSprite Chessqueena, 0 ; QUEEN
                 enemyBattleSprite WIZARD, 0 ; WIZARD
                 enemyBattleSprite NECROMANCER, 0 ; NECROMANCER
                 enemyBattleSprite WIZARD, 0 ; CHAOS WIZARD
                 enemyBattleSprite NECROMANCER, 0 ; DEMON MASTER
                 enemyBattleSprite CLERIC, 0 ; DARK CLERIC
-                enemyBattleSprite MONK, 0 ; DEATH MONK
+                enemyBattleSprite Bishop, 0 ; DEATH MONK
                 enemyBattleSprite MONK, 0 ; BLACK MONK
-                enemyBattleSprite CLERIC, 0 ; HIGH PRIEST
-                enemyBattleSprite BISHOP, 0 ; EVIL BISHOP
+                enemyBattleSprite Succubusa, 0 ; HIGH PRIEST
+                enemyBattleSprite Chessbishopa, 0 ; EVIL BISHOP
                 enemyBattleSprite BISHOP, 0 ; DARK BISHOP
                 enemyBattleSprite MONK, 0 ; MASTER MONK
                 enemyBattleSprite SHAMAN, 0 ; SHAMAN
                 enemyBattleSprite BISHOP, 0 ; EVIL BISHOP
                 enemyBattleSprite SHAMAN, 1 ; BLUE SHAMAN
-                enemyBattleSprite GIZMO, 0 ; DARK SMOKE
+                enemyBattleSprite Evilgizmoa, 0 ; Evil Gizmo
                 enemyBattleSprite KRAKEN_HEAD, 0 ; KRAKEN HEAD
                 enemyBattleSprite TAROS, 0 ; TAROS
-                enemyBattleSprite KING, 0 ; KING
+                enemyBattleSprite Chesskinga, 0 ; KING
                 enemyBattleSprite RAT, 0 ; WILLARD
                 enemyBattleSprite ZALBARD, 0 ; ZALBARD
                 enemyBattleSprite CAMEELA, 0 ; CAMEELA

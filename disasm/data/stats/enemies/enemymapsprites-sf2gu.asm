@@ -8,7 +8,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite GALAM_SOLDIER ; GALAM SOLDIER
                 mapSprite GALAM_KNIGHT  ; GALAM KNIGHT
                 mapSprite GOBLIN        ; GOBLIN
-                mapSprite GREEN_OOZE    ; GREEN OOZE
+                mapSprite GREEN_OOZE    ; Cursed Tree
                 mapSprite DARK_DWARF    ; DARK DWARF
                 mapSprite HOBGOBLIN     ; HOBGOBLIN
                 mapSprite ZOMBIE        ; ZOMBIE
@@ -89,7 +89,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite SHAMAN        ; SHAMAN
                 mapSprite EVIL_BISHOP   ; EVIL BISHOP
                 mapSprite BLUE_SHAMAN   ; BLUE SHAMAN
-                mapSprite DARK_SMOKE    ; DARK SMOKE
+                mapSprite DARK_SMOKE    ; Evil Gizmo
                 mapSprite KRAKEN        ; KRAKEN HEAD
                 mapSprite TAROS         ; TAROS
                 mapSprite KING          ; KING
