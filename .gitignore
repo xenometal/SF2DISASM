@@ -320,6 +320,10 @@ Gens.cfg
 *.gs9
 *.gsx
 
+# Tools
+build/WindHex32.exe
+build/windhex.cfg
+
 # Old files
 disasm/data/graphics/battles/battlesprites/allies/Originalentries.asm
 disasm/data/graphics/battles/battlesprites/allies/animations/entries - Copy.asm
