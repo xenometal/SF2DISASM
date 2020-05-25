@@ -205,7 +205,9 @@ pt_EnemyAnimations:
                 dc.l EnemyAnimation200
                 dc.l EnemyAnimation201
                 dc.l EnemyAnimation203
-                dc.l EnemyAnimation204			
+                dc.l EnemyAnimation204	
+                dc.l EnemyAnimation205
+                dc.l EnemyAnimation206				
 EnemyAnimation000:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation000_Ooze.bin"
 EnemyAnimation001:
@@ -325,13 +327,13 @@ EnemyAnimation057:
 EnemyAnimation058:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation058_Bubblingooze.bin"
 EnemyAnimation059:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation059_Hobgoblin.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation059_Gully.bin"
 EnemyAnimation060:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation060_Darkknight.bin"
 EnemyAnimation061:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation061_Evilgizmo.bin"
 EnemyAnimation062:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation062_Mastermonk.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation062_Goblinmessiah.bin"
 EnemyAnimation063:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation063_Bowmaster.bin"
 EnemyAnimation064:
@@ -369,7 +371,7 @@ EnemyAnimation079:
 EnemyAnimation080:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation080_Bandit.bin"
 EnemyAnimation081:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation081_Deatharcher.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation081_Meduser.bin"
 EnemyAnimation082:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation082_Mastermage.bin"
 EnemyAnimation083:
@@ -399,216 +401,216 @@ EnemyAnimation094:
 EnemyAnimation095:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation095_Gatekeeper.bin"
 EnemyAnimation096:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation096_Ooze_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation096_Willard.bin"
 EnemyAnimation097:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation097_Rat_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation097_Wraiths.bin"
 EnemyAnimation098:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation098_Galamsoldier_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation098_Galamguard.bin"
 EnemyAnimation099:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation099_Galamknight_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation099_Ooze_Dodge.bin"
 EnemyAnimation100:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation100_Goblin_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation100_Rat_Dodge.bin"
 EnemyAnimation101:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation101_Dwarf_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation101_Galamsoldier_Dodge.bin"
 EnemyAnimation102:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation102_Zombie_Dodge.bin"
-EnemyAnimation103:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation103_Golem_Dodge.bin"
-EnemyAnimation104:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation104_Krakenleg_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation102_Galamknight_Dodge.bin"
+EnemyAnimation103
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation103_Goblin_Dodge.bin"
+EnemyAnimation104
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation104_Dwarf_Dodge.bin"
 EnemyAnimation105:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation105_Soulsower_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation105_Zombie_Dodge.bin"
 EnemyAnimation106:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation106_Orclord_Dodge.bin"
-EnemyAnimation107:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation107_Skeleton_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation106_Golem_Dodge.bin"
+EnemyAnimation107
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation107_Krakenleg_Dodge.bin"
 EnemyAnimation108:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation108_Lizardman_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation108_Soulsower_Dodge.bin"
 EnemyAnimation109:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation109_Worm_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation109_Orclord_Dodge.bin"
 EnemyAnimation110:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation110_Cerberus_Dodge.bin"
-EnemyAnimation111:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation111_Reaper_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation110_Skeleton_Dodge.bin"
+EnemyAnimation111
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation111_Lizardman_Dodge.bin"
 EnemyAnimation112:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation112_Minotaur_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation112_Worm_Dodge.bin"
 EnemyAnimation113:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation113_Cyclops_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation113_Cerberus_Dodge.bin"
 EnemyAnimation114:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation114_Burstrock_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation114_Reaper_Dodge.bin"
 EnemyAnimation115:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation115_Hydra_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation115_Minotaur_Dodge.bin"
 EnemyAnimation116:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation116_Chaoswarrior_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation116_Cyclops_Dodge.bin"
 EnemyAnimation117:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation117_Evilbeast_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation117_Burstrock_Dodge.bin"
 EnemyAnimation118:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation118_Gizmo_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation118_Hydra_Dodge.bin"
 EnemyAnimation119:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation119_Vampirebat_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation119_Chaoswarrior_Dodge.bin"
 EnemyAnimation120:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation120_Gargoyle_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation120_Evilbeast_Dodge.bin"
 EnemyAnimation121:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation121_Harpyqueen_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation121_Gizmo_Dodge.bin"
 EnemyAnimation122:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation122_Wyvern_Dodge.bin"
-EnemyAnimation123:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation123_Pegasusknight_Dodge.bin"
-EnemyAnimation124:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation124_Griffin_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation122_Vampirebat_Dodge.bin"
+EnemyAnimation123
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation123_Gargoyle_Dodge.bin"
+EnemyAnimation124
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation124_Harpyqueen_Dodge.bin"
 EnemyAnimation125:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation125_Demon_Dodge.bin"
-EnemyAnimation126:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation126_Chaosdragon_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation125_Wyvern_Dodge.bin"
+EnemyAnimation126
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation126_Pegasusknight_Dodge.bin"
 EnemyAnimation127:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation127_Archer_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation127_Griffin_Dodge.bin"
 EnemyAnimation128:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation128_Sniper_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation128_Demon_Dodge.bin"
 EnemyAnimation129:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation129_Krakenarm_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation129_Chaosdragon_Dodge.bin"
 EnemyAnimation130:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation130_Arrowlauncher_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation130_Archer_Dodge.bin"
 EnemyAnimation131:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation131_Bowrider_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation131_Sniper_Dodge.bin"
 EnemyAnimation132:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation132_Mage_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation132_Krakenarm_Dodge.bin"
 EnemyAnimation133:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation133_Witch_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation133_Arrowlauncher_Dodge.bin"
 EnemyAnimation134:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation134_Wizard_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation134_Bowrider_Dodge.bin"
 EnemyAnimation135:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation135_Necromancer_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation135_Mage_Dodge.bin"
 EnemyAnimation136:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation136_Darkcleric_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation136_Witch_Dodge.bin"
 EnemyAnimation137:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation137_Blackmonk_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation137_Wizard_Dodge.bin"
 EnemyAnimation138:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation138_Bishop_Dodge.bin"
-EnemyAnimation139:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation139_Shaman_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation138_Necromancer_Dodge.bin"
+EnemyAnimation139
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation139_Darkcleric_Dodge.bin"
 EnemyAnimation140:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation140_Kraken_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation140_Blackmonk_Dodge.bin"
 EnemyAnimation141:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation141_Taros_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation141_Bishop_Dodge.bin"
 EnemyAnimation142:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation142_Chessking_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation142_Shaman_Dodge.bin"
 EnemyAnimation143:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation143_Zalbard_Dodge.bin"
-EnemyAnimation144:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation144_Cameela_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation143_Kraken_Dodge.bin"
+EnemyAnimation144
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation144_Taros_Dodge.bin"
 EnemyAnimation145:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation145_Prismflower_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation145_Chessking_Dodge.bin"
 EnemyAnimation146:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation146_Redbaron_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation146_Zalbard_Dodge.bin"
 EnemyAnimation147:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation147_Geshp_Dodge.bin"
-EnemyAnimation148:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation148_Oddeye_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation147_Cameela_Dodge.bin"
+EnemyAnimation148
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation148_Prismflower_Dodge.bin"
 EnemyAnimation149:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation149_Zeon_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation149_Redbaron_Dodge.bin"
 EnemyAnimation150:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation150_Galam_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation150_Geshp_Dodge.bin"
 EnemyAnimation151:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation151_Cursedtree_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation151_Oddeye_Dodge.bin"
 EnemyAnimation152:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation152_Wolf_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation152_Zeon_Dodge.bin"
 EnemyAnimation153:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation153_Ratfly_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation153_Galam_Dodge.bin"
 EnemyAnimation154:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation154_Bubblingooze_Dodge.bin"
-EnemyAnimation155:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation155_Hobgoblin_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation154_Cursedtree_Dodge.bin"
+EnemyAnimation155
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation155_Wolf_Dodge.bin"
 EnemyAnimation156:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation156_Darkknight_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation156_Ratfly_Dodge.bin"
 EnemyAnimation157:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation157_Evilgizmo_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation157_Bubblingooze_Dodge.bin"
 EnemyAnimation158:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation158_Mastermonk_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation158_Gully_Dodge.bin"
 EnemyAnimation159:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation159_Bowmaster_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation159_Darkknight_Dodge.bin"
 EnemyAnimation160:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation160_Darkgunner_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation160_Evilgizmo_Dodge.bin"
 EnemyAnimation161:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation161_Orc_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation161_Goblinmessiah_Dodge.bin"
 EnemyAnimation162:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation162_Elvenmarauder_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation162_Bowmaster_Dodge.bin"
 EnemyAnimation163:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation163_Devilsoldier_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation163_Darkgunner_Dodge.bin"
 EnemyAnimation164:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation164_Monolith_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation164_Orc_Dodge.bin"
 EnemyAnimation165:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation165_Dragonewt_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation165_Elvenmarauder_Dodge.bin"
 EnemyAnimation166:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation166_Evilmantis_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation166_Devilsoldier_Dodge.bin"
 EnemyAnimation167:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation167_Maneater_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation167_Monolith_Dodge.bin"
 EnemyAnimation168:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation168_Pyrohydra_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation168_Dragonewt_Dodge.bin"
 EnemyAnimation169:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation169_Harpy_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation169_Evilmantis_Dodge.bin"
 EnemyAnimation170:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation170_Hellfiredemon_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation170_Maneater_Dodge.bin"
 EnemyAnimation171:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation171_Skully_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation171_Pyrohydra_Dodge.bin"
 EnemyAnimation172:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation172_Brassloader_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation172_Harpy_Dodge.bin"
 EnemyAnimation173:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation173_Manticore_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation173_Hellfiredemon_Dodge.bin"
 EnemyAnimation174:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation174_Devilguardian_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation174_Skully_Dodge.bin"
 EnemyAnimation175:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation175_Deathangel_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation175_Brassloader_Dodge.bin"
 EnemyAnimation176:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation176_Bandit_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation176_Manticore_Dodge.bin"
 EnemyAnimation177:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation177_Deatharcher_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation177_Devilguardian_Dodge.bin"
 EnemyAnimation178:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation178_Mastermage_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation178_Deathangel_Dodge.bin"
 EnemyAnimation179:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation179_Darkmadam_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation179_Bandit_Dodge.bin"
 EnemyAnimation180:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation180_Demonmaster_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation180_Meduser_Dodge.bin"
 EnemyAnimation181:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation181_Demonqueen_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation181_Mastermage_Dodge.bin"
 EnemyAnimation182:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation182_Undeadpriest_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation182_Darkmadam_Dodge.bin"
 EnemyAnimation183:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation183_Vipress_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation183_Demonmaster_Dodge.bin"
 EnemyAnimation184:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation184_Warlock_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation184_Demonqueen_Dodge.bin"
 EnemyAnimation185:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation185_Succubus_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation185_Undeadpriest_Dodge.bin"
 EnemyAnimation186:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation186_Chessrook_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation186_Vipress_Dodge.bin"
 EnemyAnimation187:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation187_Chessqueen_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation187_Warlock_Dodge.bin"
 EnemyAnimation188:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation188_Chesspawn_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation188_Succubus_Dodge.bin"
 EnemyAnimation189:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation189_Chessknight_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation189_Chessrook_Dodge.bin"
 EnemyAnimation190:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation190_Chessbishop_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation190_Chessqueen_Dodge.bin"
 EnemyAnimation191:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation191_Gatekeeper_Dodge.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation191_Chesspawn_Dodge.bin"
 EnemyAnimation192:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation192.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation192_Chessknight_Dodge.bin"
 EnemyAnimation193:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation193.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation193_Chessbishop_Dodge.bin"
 EnemyAnimation194:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation194.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation194_Gatekeeper_Dodge.bin"
 EnemyAnimation195:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation195.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation195_Willard_Dodge.bin"
 EnemyAnimation196:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation196.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation196_Wraiths_Dodge.bin"
 EnemyAnimation197:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation197.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation197_Galamgaurd_Dodge.bin"
 EnemyAnimation198:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation198.bin"
 EnemyAnimation199:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation199.bin"
 EnemyAnimation200:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation200.bin"
-EnemyAnimation201:
+EnemyAnimation201
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation201.bin"
 EnemyAnimation202:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation202.bin"
@@ -616,3 +618,15 @@ EnemyAnimation203:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation203.bin"
 EnemyAnimation204:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation204.bin"
+EnemyAnimation205:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation205.bin"
+EnemyAnimation206:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation206.bin"
+EnemyAnimation207:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation207.bin"
+EnemyAnimation208:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation208.bin"
+EnemyAnimation209:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation209.bin"
+EnemyAnimation210:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation210.bin"

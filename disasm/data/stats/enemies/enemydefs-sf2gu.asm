@@ -192,7 +192,7 @@ EnemyDefs:      ; spellPower     enum SpellPower : SPELLPOWER_*
                 moveType REGULAR
                 unknownWord 8224
                     
-                unknownByte 7           ; HOBGOBLIN
+                unknownByte 7           ; Gully
                 spellPower REGULAR
                 level 9
                 maxHp 21
@@ -2748,4 +2748,26 @@ EnemyDefs:      ; spellPower     enum SpellPower : SPELLPOWER_*
                 initialStatus 0
                 moveType HEALER
                 unknownWord 12288
-                    
+ 
+                unknownByte 7           ; HOBGOBLIN
+                spellPower REGULAR
+                level 9
+                maxHp 21
+                maxMp 0
+                baseAtk 10
+                baseDef 19
+                baseAgi 19
+                baseMov 5
+                baseResistance NONE
+                baseProwess &
+                    CRITICAL150_1IN32|DOUBLE_1IN32|COUNTER_1IN32
+                items &
+                    MIDDLE_AXE|EQUIPPED, &
+                    NOTHING, &
+                    NOTHING, &
+                    NOTHING
+                spells &
+                    NOTHING, &
+                    NOTHING, &
+                    NOTHING, &
+                    NOTHING 

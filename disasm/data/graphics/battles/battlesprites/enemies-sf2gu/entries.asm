@@ -97,7 +97,10 @@ off_130010:     dc.l EnemyBattleSprite03
 				dc.l EnemyBattleSprite92
 				dc.l EnemyBattleSprite93
 				dc.l EnemyBattleSprite94
-				dc.l EnemyBattleSprite95				
+				dc.l EnemyBattleSprite95	
+				dc.l EnemyBattleSprite96
+				dc.l EnemyBattleSprite97
+				dc.l EnemyBattleSprite98				
 EnemyBattleSprite00:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/EnemyBattleSprite00_Ooze.bin"
 EnemyBattleSprite01:
@@ -217,13 +220,13 @@ EnemyBattleSprite57:
 EnemyBattleSprite58:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite58_Bubblingooze.bin"
 EnemyBattleSprite59:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite59_Hobgoblin.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite59_Gully.bin"
 EnemyBattleSprite60:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite60_Darkknight.bin"
 EnemyBattleSprite61:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite61_Evilgizmo.bin"
 EnemyBattleSprite62:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite62_Mastermonk.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite62_Goblinmessiah.bin"
 EnemyBattleSprite63:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite63_Bowmaster.bin"
 EnemyBattleSprite64:
@@ -261,7 +264,7 @@ EnemyBattleSprite79:
 EnemyBattleSprite80:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite80_Bandit.bin"
 EnemyBattleSprite81:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite81_Deatharcher.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite81_Meduser.bin"
 EnemyBattleSprite82:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite82_Mastermage.bin"
 EnemyBattleSprite83:
@@ -290,4 +293,9 @@ EnemyBattleSprite94:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite94_Chessbishop.bin"
 EnemyBattleSprite95:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite95_Gatekeeper.bin"
-
+EnemyBattleSprite96:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite96_Willard.bin"
+EnemyBattleSprite97:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite97_Wraiths.bin"
+EnemyBattleSprite98:
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/enemybattlesprite98_Galamguard.bin"

@@ -10,7 +10,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite GOBLIN        ; GOBLIN
                 mapSprite GREEN_OOZE    ; Cursed Tree
                 mapSprite DARK_DWARF    ; DARK DWARF
-                mapSprite HOBGOBLIN     ; HOBGOBLIN
+                mapSprite Gully     	; Gully
                 mapSprite ZOMBIE        ; ZOMBIE
                 mapSprite GOLEM         ; GOLEM
                 mapSprite KRAKEN_LEG    ; KRAKEN LEG
@@ -53,7 +53,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite HARPY_QUEEN   ; HARPY QUEEN
                 mapSprite PEGASUS_KNIGHT ; PEGASUS KNIGHT
                 mapSprite GRIFFIN       ; GRIFFIN
-                mapSprite MIST_DEMON    ; MIST DEMON
+                mapSprite MIST_DEMON    ; Skully
                 mapSprite WHITE_DRAGON  ; WHITE DRAGON
                 mapSprite DEMON         ; DEMON
                 mapSprite CHAOS_DRAGON  ; CHAOS DRAGON
@@ -106,7 +106,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite MASTER_MAGE   ; MASTER MAGE
                 mapSprite NECROMANCER   ; NECROMANCER
                 mapSprite BLUE_SHAMAN   ; BLUE SHAMAN
-                mapSprite FILLER7
+                mapSprite Filler7
                 mapSprite FILLER8
                 mapSprite FILLER9
                 mapSprite NPC_ROHDE
