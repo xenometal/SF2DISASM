@@ -1525,6 +1525,8 @@ ALLYBATTLESPRITE_NONE: equ $FF
 ; ---------------------------------------------------------------------------
 
 ; enum EnemyBattleSprites
+
+                if (PROJECT_SF2GU=0)
 ENEMYBATTLESPRITE_OOZE: equ $0
 ENEMYBATTLESPRITE_RAT: equ $1
 ENEMYBATTLESPRITE_SOLDIER: equ $2
@@ -1579,6 +1581,7 @@ ENEMYBATTLESPRITE_RED_BARON: equ $32
 ENEMYBATTLESPRITE_GESHP: equ $33
 ENEMYBATTLESPRITE_ODD_EYE: equ $34
 ENEMYBATTLESPRITE_ZEON: equ $35
+                endif
 
 ; ---------------------------------------------------------------------------
 
@@ -1657,6 +1660,8 @@ WEAPONPALETTE_DAGGER: equ $29
 ; ---------------------------------------------------------------------------
 
 ; enum Mapsprites
+
+                if (PROJECT_SF2GU=0)
 MAPSPRITE_BOWIE_BASE: equ $0
 MAPSPRITE_BOWIE_PROMO: equ $1
 MAPSPRITE_SARAH_BASE: equ $2
@@ -1913,6 +1918,7 @@ MAPSPRITE_EVIL_SPIRIT: equ $FC
 MAPSPRITE_NAZCA_SHIP: equ $FD
 MAPSPRITE_KRAKEN: equ $FE
 MAPSPRITE_TAROS: equ $FF
+                endif
 
 ; ---------------------------------------------------------------------------
 

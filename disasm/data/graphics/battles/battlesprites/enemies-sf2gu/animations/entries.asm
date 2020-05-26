@@ -202,12 +202,7 @@ pt_EnemyAnimations:
                 dc.l EnemyAnimation197
                 dc.l EnemyAnimation198
                 dc.l EnemyAnimation199
-                dc.l EnemyAnimation200
-                dc.l EnemyAnimation201
-                dc.l EnemyAnimation203
-                dc.l EnemyAnimation204	
-                dc.l EnemyAnimation205
-                dc.l EnemyAnimation206				
+                dc.l EnemyAnimation200			
 EnemyAnimation000:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation000_Ooze.bin"
 EnemyAnimation001:
@@ -605,28 +600,8 @@ EnemyAnimation196:
 EnemyAnimation197:
                 incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation197_Galamgaurd_Dodge.bin"
 EnemyAnimation198:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation198.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation198_Cerberus_Special.bin"
 EnemyAnimation199:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation199.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation199_Devil Guardian_Special.bin"
 EnemyAnimation200:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation200.bin"
-EnemyAnimation201
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation201.bin"
-EnemyAnimation202:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation202.bin"
-EnemyAnimation203:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation203.bin"
-EnemyAnimation204:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation204.bin"
-EnemyAnimation205:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation205.bin"
-EnemyAnimation206:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation206.bin"
-EnemyAnimation207:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation207.bin"
-EnemyAnimation208:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation208.bin"
-EnemyAnimation209:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation209.bin"
-EnemyAnimation210:
-                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation210.bin"
+                incbin "data/graphics/battles/battlesprites/enemies-sf2gu/animations/enemybattlespriteanimation200_Odd_Eye_Special.bin"
