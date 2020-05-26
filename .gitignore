@@ -321,6 +321,7 @@ Gens.cfg
 *.gsx
 
 # Tools
+build/aWindHex32.exe
 build/WindHex32.exe
 build/windhex.cfg
 

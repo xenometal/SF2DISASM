@@ -23,5 +23,11 @@
                 include "code\gameflow\battle\aiengine.asm"    ; AI engine
                 include "data\stats\spells\spellnames.asm"    ; Spell names
                 include "data\stats\allies\allynames.asm"    ; Ally names
-                include "data\stats\enemies\enemynames-sf2gu.asm"    ; Enemy names
+                
+                if (PROJECT_SF2GU=1)
+                include "data\stats\enemies\enemynames-sf2gu.asm"
+                else
+                include "data\stats\enemies\enemynames.asm"    ; Enemy names
+                endif
+                
 algn_FF87:      align $8000

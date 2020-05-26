@@ -3,14 +3,14 @@
 ; 0x44AA4..0x44B4A : Enemy map sprite IDs
 EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
     
-                mapSprite OOZE          ; OOZE
-                mapSprite HUGE_RAT      ; HUGE RAT
+                mapSprite RABID_RABBIT  ; OOZE
+                mapSprite WOLF          ; HUGE RAT
                 mapSprite GALAM_SOLDIER ; GALAM SOLDIER
                 mapSprite GALAM_KNIGHT  ; GALAM KNIGHT
                 mapSprite GOBLIN        ; GOBLIN
                 mapSprite GREEN_OOZE    ; Cursed Tree
                 mapSprite DARK_DWARF    ; DARK DWARF
-                mapSprite Gully     	; Gully
+                mapSprite HOBGOBLIN     ; Gully
                 mapSprite ZOMBIE        ; ZOMBIE
                 mapSprite GOLEM         ; GOLEM
                 mapSprite KRAKEN_LEG    ; KRAKEN LEG
@@ -106,7 +106,7 @@ EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
                 mapSprite MASTER_MAGE   ; MASTER MAGE
                 mapSprite NECROMANCER   ; NECROMANCER
                 mapSprite BLUE_SHAMAN   ; BLUE SHAMAN
-                mapSprite Filler7
+                mapSprite FILLER7
                 mapSprite FILLER8
                 mapSprite FILLER9
                 mapSprite NPC_ROHDE
