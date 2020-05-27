@@ -223,6 +223,7 @@ WEAPONSPRITE_KNIFE: equ 21
 WEAPONSPRITE_DAGGER: equ 22
 Weaponsprite_Woodenstick: equ 23
 WEAPONSPRITE_NONEa: equ 24
+WEAPONSPRITE_NONE: equ $FF
 
 ; ---------------------------------------------------------------------------
 
@@ -269,6 +270,7 @@ WEAPONPALETTE_GREAT_ROD: equ 38
 WEAPONPALETTE_POWER_STICK: equ 39
 WEAPONPALETTE_KNIFE: equ 40
 WEAPONPALETTE_DAGGER: equ 41
+
 ; ---------------------------------------------------------------------------
 
 ; enum Mapsprites
