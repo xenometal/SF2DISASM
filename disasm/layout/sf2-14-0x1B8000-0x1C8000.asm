@@ -22,7 +22,7 @@ p_WitchEndTiles:dc.l WitchEndTiles
                 includeIfVanillaRom "data\graphics\battles\grounds\entries.asm"    ; Grounds
                 includeIfVanillaRom "data\graphics\battles\weapons\entries.asm"    ; Weapons
 plt_WeaponPalettes:
-                incbin "data/graphics/battles/weapons/weaponpalettes.bin"
+                incbin "data/graphics/battles/weapons-sf2gu/weaponpalettes.bin"
                 includeIfVanillaRom "data\graphics\battles\spells\entries.asm"    ; Spell Graphics
                 include "code\specialscreens\witch\graphics.asm"    ; Witch Screen
                 include "code\specialscreens\witchend\graphics.asm"    ; Witch End Screen

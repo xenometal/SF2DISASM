@@ -17,7 +17,7 @@
                 include "data\stats\enemies\enemybattlesprites.asm"    ; Enemy battle sprites table
                 endif
                 
-                include "data\stats\items\weapongraphics.asm"    ; Weapon graphics table
+                include "data\stats\items\weapongraphics-sf2gu.asm"    ; Weapon graphics table
                 include "data\battles\global\custombackgrounds.asm"    ; Battle custom backgrounds table
                 include "code\gameflow\battle\battlescenes\battlesceneengine_1.asm"    ; Battlescene engine
                 
