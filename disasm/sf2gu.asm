@@ -222,7 +222,27 @@ WEAPONSPRITE_POWER_STICK: equ 20
 WEAPONSPRITE_KNIFE: equ 21
 WEAPONSPRITE_DAGGER: equ 22
 Weaponsprite_Woodenstick: equ 23
-WEAPONSPRITE_NONEa: equ 24
+WEAPONSPRITE_SF1Lance: equ 24
+WEAPONSPRITE_SF1Steellance: equ 25
+WEAPONSPRITE_SF1Valkyrie: equ 26
+WEAPONSPRITE_SF1Demonlance: equ 27
+WEAPONSPRITE_SF1Spear: equ 28
+WEAPONSPRITE_SF1Powerspear: equ 29
+WEAPONSPRITE_SF1middlesword: equ 30
+WEAPONSPRITE_SF1Steelsword: equ 31
+WEAPONSPRITE_Levanter: equ 32
+WEAPONSPRITE_Fancysword: equ 33
+WEAPONSPRITE_Gisarme: equ 34
+WEAPONSPRITE_Darksword: equ 35
+WEAPONSPRITE_SF1staff: equ 36
+WEAPONSPRITE_SF1Holystaff: equ 37
+WEAPONSPRITE_Mysterystaff: equ 38
+WEAPONSPRITE_SF1Demonrod: equ 39
+WEAPONSPRITE_SF1Shortaxe: equ 40
+WEAPONSPRITE_SF1Middleaxe: equ 41
+WEAPONSPRITE_Heataxe: equ 42
+WEAPONSPRITE_SF1Atlas: equ 43
+WEAPONSPRITE_NONEa: equ 44
 WEAPONSPRITE_NONE: equ $FF
 
 ; ---------------------------------------------------------------------------
