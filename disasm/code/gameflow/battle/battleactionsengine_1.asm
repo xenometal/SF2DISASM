@@ -9,7 +9,7 @@
 WriteSkirmishScript:
                 
                 movem.l d0-a6,-(sp)
-                link    a2,#-$98
+                link    a2,#BTLSCENE_STACKNEGSIZE
                 lea     ((BATTLESCENE_ACTION_TYPE-$1000000)).w,a3
                 lea     ((BATTLESCENE_ATTACKER-$1000000)).w,a4
                 lea     ((TARGET_CHARACTERS_INDEX_LIST-$1000000)).w,a5
@@ -181,7 +181,7 @@ loc_9DC4:
                 movem.l (sp)+,d0-a6
                 rts
 
-	; End of function WriteSkirmishScript
+    ; End of function WriteSkirmishScript
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -238,7 +238,7 @@ loc_9E5A:
                 bsr.w   SortTargets
                 rts
 
-	; End of function DetermineTargetsByAction
+    ; End of function DetermineTargetsByAction
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -291,7 +291,7 @@ loc_9EB2:
                 move.b  d4,((SKIRMISH_LAST_ENEMY-$1000000)).w
                 rts
 
-	; End of function InitSkirmishDisplayedChars
+    ; End of function InitSkirmishDisplayedChars
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -329,7 +329,7 @@ loc_9F22:
                 movem.l (sp)+,d0-d1
                 rts
 
-	; End of function CheckForTaros
+    ; End of function CheckForTaros
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -468,7 +468,7 @@ loc_A056:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function InitSkirmishProperties
+    ; End of function InitSkirmishProperties
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -624,7 +624,7 @@ loc_A1FA:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function CreateBattleSceneText
+    ; End of function CreateBattleSceneText
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -765,7 +765,7 @@ loc_A348:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function CreateBattleSceneAnimation
+    ; End of function CreateBattleSceneAnimation
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -839,7 +839,7 @@ loc_A3E6:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function sub_A34E
+    ; End of function sub_A34E
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -899,7 +899,7 @@ loc_A458:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function WriteSkirmishScript_DoAction
+    ; End of function WriteSkirmishScript_DoAction
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -931,7 +931,7 @@ loc_A496:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function FinalDoubleAttackCheck
+    ; End of function FinalDoubleAttackCheck
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -991,7 +991,7 @@ loc_A548:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function FinalCounterAttackCheck
+    ; End of function FinalCounterAttackCheck
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1141,7 +1141,7 @@ loc_A6E2:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function GetEffectGraphicsIdx
+    ; End of function GetEffectGraphicsIdx
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1167,7 +1167,7 @@ return_A700:
                 
                 rts
 
-	; End of function WriteSkirmishScript_AnimateSprite
+    ; End of function WriteSkirmishScript_AnimateSprite
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1249,7 +1249,7 @@ loc_A7CA:
                 movem.l (sp)+,d0-d1
                 rts
 
-	; End of function WriteSkirmishScript_SwitchTargets
+    ; End of function WriteSkirmishScript_SwitchTargets
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1273,7 +1273,7 @@ loc_A7F2:
                 movem.l (sp)+,d1
                 rts
 
-	; End of function WriteSkirmishScript_IdleSprite
+    ; End of function WriteSkirmishScript_IdleSprite
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1333,7 +1333,7 @@ loc_A86A:
                 movem.l (sp)+,d0-d1/a0
                 rts
 
-	; End of function WriteSkirmishScript_EXPandGold
+    ; End of function WriteSkirmishScript_EXPandGold
 
 HalvedEXPEarnedBattles:
                 dc.b BATTLE_INSIDE_ANCIENT_TOWER
@@ -1375,7 +1375,7 @@ loc_A8C4:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function sub_A872
+    ; End of function sub_A872
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1398,7 +1398,7 @@ loc_A8F0:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function CalculateDamageEXP
+    ; End of function CalculateDamageEXP
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1415,7 +1415,7 @@ loc_A908:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function GiveMagicDrainEXP
+    ; End of function GiveMagicDrainEXP
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1442,7 +1442,7 @@ loc_A93A:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function GiveEXPandGoldForKill
+    ; End of function GiveEXPandGoldForKill
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1457,7 +1457,7 @@ return_A952:
                 
                 rts
 
-	; End of function GiveEXPandCap
+    ; End of function GiveEXPandCap
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1472,7 +1472,7 @@ return_A966:
                 
                 rts
 
-	; End of function GiveEXPandHealingCap
+    ; End of function GiveEXPandHealingCap
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1519,7 +1519,7 @@ loc_A9C6:
                 movem.l (sp)+,d0-d3/a0
                 rts
 
-	; End of function GetAmountOfEXPForEncounter
+    ; End of function GetAmountOfEXPForEncounter
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1605,7 +1605,7 @@ loc_AA92:
                 movem.l (sp)+,d0-d2/d6-a0
                 rts
 
-	; End of function SortTargets
+    ; End of function SortTargets
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1618,7 +1618,7 @@ OneSecondSleep:
                 move.l  (sp)+,d0
                 rts
 
-	; End of function OneSecondSleep
+    ; End of function OneSecondSleep
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1628,7 +1628,7 @@ NopOnce:
                 nop
                 rts
 
-	; End of function NopOnce
+    ; End of function NopOnce
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1639,7 +1639,7 @@ NopTwice:
                 nop
                 rts
 
-	; End of function NopTwice
+    ; End of function NopTwice
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1651,7 +1651,7 @@ NopThrice:
                 nop
                 rts
 
-	; End of function NopThrice
+    ; End of function NopThrice
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1685,7 +1685,7 @@ return_AAFA:
                 
                 rts
 
-	; End of function WriteSkirmishScript_Attack
+    ; End of function WriteSkirmishScript_Attack
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1754,7 +1754,7 @@ return_ABBC:
                 
                 rts
 
-	; End of function WriteSkirmishScript_DodgeAttack
+    ; End of function WriteSkirmishScript_DodgeAttack
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1822,7 +1822,7 @@ return_AC4C:
                 
                 rts
 
-	; End of function CalculateDamage
+    ; End of function CalculateDamage
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1882,5 +1882,5 @@ return_ACC8:
                 
                 rts
 
-	; End of function CalculateCriticalHit
+    ; End of function CalculateCriticalHit
 
