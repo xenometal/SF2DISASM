@@ -4,6 +4,7 @@
 WeaponGraphicsTable:
                 ; weaponSprite  enum WeaponSprites : WEAPONSPRITE_*
 ; weaponPalette enum WeaponPalettes : WEAPONPALETTE_*
+; Total of 66 that could use their own palettem will probably make a palette bin for each one so they are all independent of eachother
     
                 weaponSprite NONE       ; Leather Glove
                 weaponPalette SHORT_AXE
@@ -59,7 +60,7 @@ WeaponGraphicsTable:
                 weaponSprite MITHRIL_AXE ; Rune Axe
                 weaponPalette RUNE_AXE
                     
-                weaponSprite MITHRIL_AXE ; Evil Axe
+                weaponSprite MITHRIL_AXE ; Evil Axe 
                 weaponPalette EVIL_AXE
                     
                 weaponSprite NONE       ; Wooden Arrow
@@ -140,7 +141,7 @@ WeaponGraphicsTable:
                 weaponSprite KATANA     ; Dark Sword
                 weaponPalette DARK_SWORD
                     
-                weaponSprite Wooden_Sword ; Wooden Sword
+                weaponSprite Wooden_Sword ; Wooden Sword 
                 weaponPalette WOODEN_SWORD
                     
                 weaponSprite SPEAR      ; Short Spear
@@ -179,7 +180,7 @@ WeaponGraphicsTable:
                 weaponSprite HALBERD    ; Halberd
                 weaponPalette HALBERD
                     
-                weaponSprite CHROME_LANCE ; Evil Lance
+                weaponSprite CHROME_LANCE ; Evil Lance 
                 weaponPalette EVIL_LANCE
                     
                 weaponSprite WOODEN_ROD ; Wooden Rod
@@ -254,6 +255,6 @@ WeaponGraphicsTable:
                 weaponSprite KATANA     ; Ninja Katana
                 weaponPalette KATANA
                     
-                weaponSprite KATANA     ; Gisarme
+                weaponSprite KATANA     ; Gisarme 
                 weaponPalette KATANA
                     
