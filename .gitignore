@@ -339,13 +339,17 @@ disasm/data/graphics/battles/battlesprites/allies/animations/Modded_Animations/
 disasm/data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/
 disasm/data/graphics/mapsprites/Modded_Mapsprites/
 disasm/data/graphics/portraits/Modded Portraits/
+disasm/data/graphics/battles/weapons-sf2gu/
+disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_0.asm
+disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_1.asm
 
 # Do not ignore assets present in the following folders
 !disasm/data/graphics/battles/battlesprites/allies-sf2gu/*.bin
 !disasm/data/graphics/battles/battlesprites/allies-sf2gu/animations/*.bin
 !disasm/data/graphics/battles/battlesprites/enemies-sf2gu/*.bin
 !disasm/data/graphics/battles/battlesprites/enemies-sf2gu/animations/*.bin
-!disasm/data/graphics/battles/weapons-sf2gu/*.bin
+!disasm/data/graphics/battles/weapons/sf2gu/*.bin
+!disasm/data/graphics/battles/weapons/sf2gu/palettes/*.bin
 !disasm/data/graphics/icons/icons-sf2gu.bin
 !disasm/data/graphics/mapsprites/sf2gu/*.bin
 !disasm/data/graphics/portraits/sf2gu/*.bin

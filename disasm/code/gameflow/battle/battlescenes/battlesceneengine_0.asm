@@ -2702,6 +2702,9 @@ return_197C6:
 
     ; End of function AddEnemyToDeadList
 
+                if (PROJECT_SF2GU=1)
+                include "code\gameflow\battle\battlescenes\getallyanimation-sf2gu.asm"    ; GetAllyAnimation routine (alternate implementation)
+                else
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -2751,17 +2754,18 @@ loc_19826:
 
     ; End of function GetAllyAnimation
 
+                endif
 
 ; =============== S U B R O U T I N E =======================================
 
 sub_19838:
                 
                 move.w  d1,-(sp)
-                cmpi.w  #$76,d1 
+                cmpi.w  #ENEMY_SPECIAL_ANIMATIONS_START,d1 
                 bcc.s   loc_19850
                 cmpi.w  #1,d1
                 bne.s   loc_1984A
-                moveq   #$3C,d1 
+                moveq   #ENEMY_DODGE_ANIMATIONS_START,d1 
                 bra.s   loc_1984C
 loc_1984A:
                 

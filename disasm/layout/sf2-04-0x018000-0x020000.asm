@@ -4,16 +4,13 @@
 ; FREE SPACE : 532 bytes.
 
 
+                include "code\gameflow\battle\battlescenes\battlesceneengine_0.asm"    ; Battlescene engine
+                
                 if (PROJECT_SF2GU=1)
-                include "code\gameflow\battle\battlescenes\battlesceneengine_0-sf2gu_0.asm"    ; Battlescene engine
-                include "code\gameflow\battle\battlescenes\getallyanimation-sf2gu.asm"    ; GetAllyAnimation routine (alternate implementation)
-                align $19838
-                include "code\gameflow\battle\battlescenes\battlesceneengine_0-sf2gu_1.asm"    ; Battlescene engine
                 include "data\stats\allies\allybattlesprites-sf2gu.asm"
                 include "data\stats\enemies\enemybattlesprites-sf2gu.asm"
 				include "data\stats\items\weapongraphics-sf2gu.asm"
                 else
-                include "code\gameflow\battle\battlescenes\battlesceneengine_0.asm"    ; Battlescene engine
                 include "data\stats\allies\allybattlesprites.asm"    ; Ally battle sprites table
                 include "data\stats\enemies\enemybattlesprites.asm"    ; Enemy battle sprites table
 				include "data\stats\items\weapongraphics.asm"    ; Weapon graphics table
