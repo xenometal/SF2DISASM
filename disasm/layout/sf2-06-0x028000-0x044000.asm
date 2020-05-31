@@ -77,10 +77,7 @@ TextBankTreeData:
                 includeIfExpandedRom "data\graphics\battles\grounds\entries.asm"    ; Grounds
                 alignIfExpandedRom $38000
 				
-				if (PROJECT_SF2GU=1)
-                includeIfExpandedRom "data\graphics\battles\weapons\sf2gu\entries.asm"
-                includeIfExpandedRom "data\graphics\battles\weapons\sf2gu\palettes\entries.asm"
-				else
+				if (PROJECT_SF2GU=0)
                 includeIfExpandedRom "data\graphics\battles\weapons\entries.asm"    ; Weapons
                 includeIfExpandedRom "data\graphics\battles\weapons\palettes\entries.asm"    ; WeaponPalettes
 				endif
