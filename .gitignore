@@ -339,7 +339,7 @@ disasm/data/graphics/battles/battlesprites/allies/animations/Modded_Animations/
 disasm/data/graphics/battles/battlesprites/allies/allybattlesprite_Mod/
 disasm/data/graphics/mapsprites/Modded_Mapsprites/
 disasm/data/graphics/portraits/Modded Portraits/
-disasm/data/graphics/battles/weapons-sf2gu/
+disasm/data/graphics/battles/weapons-sf2gu
 disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_0.asm
 disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_1.asm
 

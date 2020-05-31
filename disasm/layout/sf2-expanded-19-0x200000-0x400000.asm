@@ -24,6 +24,10 @@
         include "data\graphics\battles\battlesprites\enemies-sf2gu\entries.asm"
         wordAlign
         include "data\graphics\battles\battlesprites\allies-sf2gu\entries.asm"
+        wordAlign
+        include "data\graphics\battles\weapons\sf2gu\entries.asm"
+        wordAlign
+        include "data\graphics\battles\weapons\sf2gu\palettes\entries.asm"
         align $3A3000
         else
 		align $270000

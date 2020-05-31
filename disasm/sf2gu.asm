@@ -193,8 +193,9 @@ ENEMYBATTLESPRITE_GALAM_GUARD: equ 98
 ; ---------------------------------------------------------------------------
 
 ; enum WeaponSprites_Properties
-SPEAR_WEAPONSPRITES_START:  equ WEAPONSPRITE_SPEAR
-SPEAR_WEAPONSPRITES_END:    equ WEAPONSPRITE_JAVELIN
+SPEAR_WEAPONSPRITES_START:  equ WEAPONSPRITE_SHORTSPEAR
+SPEAR_WEAPONSPRITES_END:    equ WEAPONSPRITE_MISTJAVELIN
+
 ; ---------------------------------------------------------------------------
 
 ; enum WeaponSprites
