@@ -61,7 +61,7 @@ WeaponPalette56:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalet
 WeaponPalette57:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette57_DemonRod.bin"
 WeaponPalette58:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette58_ShortKnife.bin"
 WeaponPalette59:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette59_Dagger.bin"
-WeaponPalette60:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette60_Knife.bin.bin"
+WeaponPalette60:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette60_Knife.bin"
 WeaponPalette61:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette61_Thievesdagger.bin"
 WeaponPalette62:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette62_Katana.bin"
 WeaponPalette63:incbin "data/graphics/battles/weapons/sf2gu/palettes/weaponpalette63_NinjaKatana.bin"
