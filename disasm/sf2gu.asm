@@ -319,8 +319,8 @@ WEAPONPALETTE_PowerStick: equ 45
 WEAPONPALETTE_Flail: equ 46
 WEAPONPALETTE_GuardianStaff: equ 47
 WEAPONPALETTE_IndraStaff: equ 48
-WEAPONPALETTE_MageStaff: equ 49
-WEAPONPALETTE_WishStaff: equ 50
+WEAPONPALETTE_WishStaff: equ 49
+WEAPONPALETTE_Magestaff: equ 50
 WEAPONPALETTE_GreatRod: equ 51
 WEAPONPALETTE_HolyStaff: equ 52
 WEAPONPALETTE_GoddessStaff: equ 53
