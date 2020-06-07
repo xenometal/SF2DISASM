@@ -10,8 +10,8 @@
                 includeIfVanillaRom "data\battles\terrainentries.asm"    ; Battle terrain data
                 include "code\gameflow\battle\battle_s13_2.asm"    ; Battle init, terrain, AI stuff to split more properly
                 
-                if (PROJECT_SF2GU=1)
-                include "data\stats\enemies\enemydefs-sf2gu.asm"
+                if (PROJECT_sfa2=1)
+                include "data\stats\enemies\enemydefs-sfa2.asm"
                 else
                 include "data\stats\enemies\enemydefs.asm"    ; Enemy definitions
                 endif

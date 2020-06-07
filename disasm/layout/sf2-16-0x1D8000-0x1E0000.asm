@@ -6,8 +6,8 @@
 
 p_Icons:        dc.l Icons
 Icons:          
-                if (PROJECT_SF2GU=1)
-                incbin "data/graphics/icons/icons-sf2gu.bin"
+                if (PROJECT_sfa2=1)
+                incbin "data/graphics/icons/icons-sfa2.bin"
                 else
                 incbin "data/graphics/icons/icons.bin"
                 endif

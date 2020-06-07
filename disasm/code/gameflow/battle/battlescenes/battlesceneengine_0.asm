@@ -2702,8 +2702,8 @@ return_197C6:
 
     ; End of function AddEnemyToDeadList
 
-                if (PROJECT_SF2GU=1)
-                include "code\gameflow\battle\battlescenes\getallyanimation-sf2gu.asm"    ; GetAllyAnimation routine (alternate implementation)
+                if (PROJECT_sfa2=1)
+                include "code\gameflow\battle\battlescenes\getallyanimation-sfa2.asm"    ; GetAllyAnimation routine (alternate implementation)
                 else
 
 ; =============== S U B R O U T I N E =======================================

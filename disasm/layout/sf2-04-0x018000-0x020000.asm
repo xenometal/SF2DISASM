@@ -6,10 +6,10 @@
 
                 include "code\gameflow\battle\battlescenes\battlesceneengine_0.asm"    ; Battlescene engine
                 
-                if (PROJECT_SF2GU=1)
-                include "data\stats\allies\allybattlesprites-sf2gu.asm"
-                include "data\stats\enemies\enemybattlesprites-sf2gu.asm"
-				include "data\stats\items\weapongraphics-sf2gu.asm"
+                if (PROJECT_sfa2=1)
+                include "data\stats\allies\allybattlesprites-sfa2.asm"
+                include "data\stats\enemies\enemybattlesprites-sfa2.asm"
+				include "data\stats\items\weapongraphics-sfa2.asm"
                 else
                 include "data\stats\allies\allybattlesprites.asm"    ; Ally battle sprites table
                 include "data\stats\enemies\enemybattlesprites.asm"    ; Enemy battle sprites table
@@ -19,9 +19,9 @@
                 include "data\battles\global\custombackgrounds.asm"    ; Battle custom backgrounds table
                 include "code\gameflow\battle\battlescenes\battlesceneengine_1.asm"    ; Battlescene engine
                 
-                if (PROJECT_SF2GU=1)
-                include "data\graphics\battles\battlesprites\allyidlebattlesprites-sf2gu.asm"
-                include "data\graphics\battles\battlesprites\enemyidlebattlesprites-sf2gu.asm"
+                if (PROJECT_sfa2=1)
+                include "data\graphics\battles\battlesprites\allyidlebattlesprites-sfa2.asm"
+                include "data\graphics\battles\battlesprites\enemyidlebattlesprites-sfa2.asm"
                 else
                 include "data\graphics\battles\battlesprites\allyidlebattlesprites.asm"    ; Ally Idle Battle Sprites
                 include "data\graphics\battles\battlesprites\enemyidlebattlesprites.asm"    ; Enemy Idle Battle Sprites
@@ -29,8 +29,8 @@
                 
                 include "code\gameflow\battle\battlescenes\battlesceneengine_2.asm"    ; Battlescene engine
                 
-                if (PROJECT_SF2GU=1)
-                include "data\stats\allies\centaurbattlesprites-sf2gu.asm" ; Centaur battle sprite and spear throw animation indexes table
+                if (PROJECT_sfa2=1)
+                include "data\stats\allies\centaurbattlesprites-sfa2.asm" ; Centaur battle sprite and spear throw animation indexes table
                 endif
                 
                 align $20000

@@ -10,8 +10,8 @@
 		include "code\specialscreens\jewelend\graphics.asm"		; Jewel End Graphics
 		align $220000
         
-        if (PROJECT_SF2GU=1)
-        include "data\graphics\mapsprites\sf2gu\entries.asm"
+        if (PROJECT_sfa2=1)
+        include "data\graphics\mapsprites\sfa2\entries.asm"
         else
 		include "data\graphics\mapsprites\entries.asm"		; Map sprites
         endif
@@ -19,15 +19,15 @@
 		align $268000
 		include "code\common\tech\graphics\specialspritesentries.asm"		; Special Sprites Entries
         
-        if (PROJECT_SF2GU=1)
+        if (PROJECT_sfa2=1)
         align $26A000
-        include "data\graphics\battles\battlesprites\enemies-sf2gu\entries.asm"
+        include "data\graphics\battles\battlesprites\enemies-sfa2\entries.asm"
         wordAlign
-        include "data\graphics\battles\battlesprites\allies-sf2gu\entries.asm"
+        include "data\graphics\battles\battlesprites\allies-sfa2\entries.asm"
         wordAlign
-        include "data\graphics\battles\weapons\sf2gu\entries.asm"
+        include "data\graphics\battles\weapons\sfa2\entries.asm"
         wordAlign
-        include "data\graphics\battles\weapons\sf2gu\palettes\entries.asm"
+        include "data\graphics\battles\weapons\sfa2\palettes\entries.asm"
         align $3A3000
         else
 		align $270000
@@ -39,7 +39,7 @@
         
 		include "data\graphics\battles\backgrounds\entries.asm"		; Backgrounds
         
-        if (PROJECT_SF2GU=1)
+        if (PROJECT_sfa2=1)
         align $3CC000
         else
 		align $380000
