@@ -1,5 +1,5 @@
 
-; ASM FILE code\gameflow\battle\battlescenes\getallyanimation-sf2gu.asm :
+; ASM FILE code\gameflow\battle\battlescenes\getallyanimation-sfa2.asm :
 ; GetAllyAnimation routine (alternate implementation)
 
 ; =============== S U B R O U T I N E =======================================
