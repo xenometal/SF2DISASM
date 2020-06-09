@@ -126,8 +126,8 @@ j_ClearEntities:
                 include "code\common\scripting\entity\getcombatantmapsprite.asm"    ; Get combatant map sprite ID function
                 endif
                 
-                if (PROJECT_sfa2=1)
-                include "data\stats\enemies\enemymapsprites-sfa2.asm"
+                if (PROJECT_SF2GU=1)
+                include "data\stats\enemies\enemymapsprites-sf2gu.asm"
                 else
                 include "data\stats\enemies\enemymapsprites.asm"    ; Enemy map sprite IDs
                 endif
