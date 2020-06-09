@@ -1507,8 +1507,9 @@ loc_1097A:
     ; End of function LoadHighlightableIcon
 
 IconHighlightTiles:
-                if (PROJECT_sfa2=1)
-                incbin "data/graphics/tech/iconhighlighttiles-sfa2.bin"
+
+                if (PROJECT_SF2GU=1)
+                incbin "data/graphics/tech/iconhighlighttiles-sf2gu.bin"
                 else
                 incbin "data/graphics/tech/iconhighlighttiles.bin"
                 endif

@@ -24,8 +24,8 @@
                 include "data\stats\spells\spellnames.asm"    ; Spell names
                 include "data\stats\allies\allynames.asm"    ; Ally names
                 
-                if (PROJECT_sfa2=1)
-                include "data\stats\enemies\enemynames-sfa2.asm"
+                if (PROJECT_SF2GU=1)
+                include "data\stats\enemies\enemynames-sf2gu.asm"
                 else
                 include "data\stats\enemies\enemynames.asm"    ; Enemy names
                 endif

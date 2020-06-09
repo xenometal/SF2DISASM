@@ -12,8 +12,8 @@ p_pt_InvocationSprites:
                 includeIfVanillaRom "code\specialscreens\title\graphics.asm"    ; Title Screen Graphics
                 includeIfVanillaRom "data\graphics\battles\backgrounds\entries.asm"    ; Backgrounds
                 
-                if (PROJECT_sfa2=1)
-                includeIfExpandedRom "data\graphics\portraits\sfa2\entries.asm"
+                if (PROJECT_SF2GU=1)
+                includeIfExpandedRom "data\graphics\portraits\sf2gu\entries.asm"
                 else
                 includeIfExpandedRom "data\graphics\portraits\entries.asm"    ; Portraits
                 endif
