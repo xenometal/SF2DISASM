@@ -1,6 +1,6 @@
 
 ; ASM FILE data\graphics\mapsprites\sf2gu\entries.asm :
-; Map sprites
+; 0xC8000..0xFFC48 : Map sprites
 pt_MapSprites:  dc.l MapSprite000_0
                 dc.l MapSprite000_1
                 dc.l MapSprite000_2

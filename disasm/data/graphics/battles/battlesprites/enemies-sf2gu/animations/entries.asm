@@ -1,6 +1,6 @@
 
 ; ASM FILE data\graphics\battles\battlesprites\enemies-sf2gu\animations\entries.asm :
-; Enemy animations
+; 0x1AB79E..0x1ABE52 : Enemy animations
 pt_EnemyAnimations:
                 dc.l EnemyAnimation000
                 dc.l EnemyAnimation001

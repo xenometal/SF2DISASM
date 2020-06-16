@@ -1,6 +1,6 @@
 
-; ASM FILE data\stats\enemies\enemynames-sf2gu.asm :
-; Enemy names
+; ASM FILE data\stats\enemies\enemynames.asm :
+; 0xFB8A..0xFF87 : Enemy names
 EnemyNames:     enemyName "Ooze"
                 enemyName "Wolf"
                 enemyName "Galam Soldier"
@@ -8,7 +8,7 @@ EnemyNames:     enemyName "Ooze"
                 enemyName "Goblin"
                 enemyName "Cursed Tree"
                 enemyName "Dark Dwarf"
-                enemyName "Gully"
+                enemyName "Hobgoblin"
                 enemyName "Zombie"
                 enemyName "Golem"
                 enemyName "Kraken Leg"

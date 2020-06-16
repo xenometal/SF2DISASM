@@ -1,6 +1,6 @@
 
-; ASM FILE data\stats\enemies\enemydefs-sf2gu.asm :
-; Enemy definitions
+; ASM FILE data\stats\enemies\enemydefs.asm :
+; 0x1B1A66..0x1B30EE : Enemy definitions
 EnemyDefs:      ; spellPower     enum SpellPower : SPELLPOWER_*
 ; baseResistance enum Resistance : RESISTANCE_*
 ; baseProwess    enum Prowess : PROWESS_*

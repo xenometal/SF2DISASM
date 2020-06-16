@@ -1,6 +1,6 @@
 
 ; ASM FILE data\stats\enemies\enemybattlesprites-sf2gu.asm :
-; Enemy battle sprites table
+; 0x1F914..0x1F9E2 : Enemy battle sprites table
 EnemyBattleSpritesTable:
                 ; enemyBattleSprite enum EnemyBattleSprites : ENEMYBATTLESPRITE_*, Pallete ID
     

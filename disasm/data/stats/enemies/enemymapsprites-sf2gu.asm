@@ -1,6 +1,6 @@
 
-; ASM FILE data\stats\enemies\enemymapsprites-sf2gu.asm :
-; Enemy map sprite IDs
+; ASM FILE data\stats\enemies\enemymapsprites.asm :
+; 0x44AA4..0x44B4A : Enemy map sprite IDs
 EnemyMapSprites:; enum Mapsprites : MAPSPRITE_*
     
                 mapSprite RABID_RABBIT  ; OOZE
