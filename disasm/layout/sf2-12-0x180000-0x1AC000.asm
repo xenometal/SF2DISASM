@@ -31,13 +31,6 @@ BattlesceneTransitionTilesB:
                 incbin "data/graphics/tech/battlescenetransitiontilesb.bin"
 BoltAnimData_A: incbin "data/graphics/battles/spells/animations/boltanimdataa.bin"
 BoltAnimData_B: incbin "data/graphics/battles/spells/animations/boltanimdatab.bin"
-                
-                if (PROJECT_SF2GU=1)
-                include "data\graphics\battles\battlesprites\allies-sf2gu\animations\entries.asm"
-                include "data\graphics\battles\battlesprites\enemies-sf2gu\animations\entries.asm"
-                else
-                include "data\graphics\battles\battlesprites\allies\animations\entries.asm"    ; Ally animations
-                include "data\graphics\battles\battlesprites\enemies\animations\entries.asm"    ; Enemy animations
-                endif
-                
+                include "data\graphics\battles\battlesprites\allies\animations\entries-sf2gu.asm"    ; Ally animations (SF2GU)
+                include "data\graphics\battles\battlesprites\enemies\animations\entries-sf2gu.asm"    ; Enemy animations (SF2GU)
                 align $1AC000

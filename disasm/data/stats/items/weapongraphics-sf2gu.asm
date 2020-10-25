@@ -1,260 +1,260 @@
 
 ; ASM FILE data\stats\items\weapongraphics-sf2gu.asm :
-; 0x1F9E2..0x1FA8A : Weapon graphics table
+; Weapon graphics table
 WeaponGraphicsTable:
                 ; weaponSprite  enum WeaponSprites : WEAPONSPRITE_*
 ; weaponPalette enum WeaponPalettes : WEAPONPALETTE_*
 ; Total of 66 that could use their own palettem will probably make a palette bin for each one so they are all independent of eachother
     
                 weaponSprite NONE       ; Leather Glove
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Power Glove
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Brass Knuckles
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Iron Knuckles
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Misty Knuckles
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Giant Knuckles
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Evil Knuckles
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
-                weaponSprite ShortAxe  ; Short Axe
-                weaponPalette ShortAxe
+                weaponSprite SHORT_AXE  ; Short Axe
+                weaponPalette SHORT_AXE
                     
-                weaponSprite HandAxe  ; Hand Axe
-                weaponPalette HandAxe
+                weaponSprite HAND_AXE  ; Hand Axe
+                weaponPalette HAND_AXE
                     
-                weaponSprite MiddleAxe ; Middle Axe
-                weaponPalette MiddleAxe
+                weaponSprite MIDDLE_AXE ; Middle Axe
+                weaponPalette MIDDLE_AXE
                     
-                weaponSprite PowerAxe ; Power Axe
-                weaponPalette PowerAxe
+                weaponSprite POWER_AXE ; Power Axe
+                weaponPalette POWER_AXE
                     
-                weaponSprite BattleAxe ; Battle Axe
-                weaponPalette BattleAxe
+                weaponSprite BATTLE_AXE ; Battle Axe
+                weaponPalette BATTLE_AXE
                     
-                weaponSprite Largeaxe  ; Large Axe
-                weaponPalette Largeaxe
+                weaponSprite LARGE_AXE  ; Large Axe
+                weaponPalette LARGE_AXE
                     
-                weaponSprite GreatAxe  ; Great Axe
-                weaponPalette GreatAxe
+                weaponSprite GREAT_AXE  ; Great Axe
+                weaponPalette GREAT_AXE
                     
-                weaponSprite Heataxe  ; Heat Axe
-                weaponPalette Heataxe
+                weaponSprite HEAT_AXE  ; Heat Axe
+                weaponPalette HEAT_AXE
                     
-                weaponSprite Atlas ; Atlas Axe
-                weaponPalette Atlas
+                weaponSprite ATLAS_AXE ; Atlas Axe
+                weaponPalette ATLAS_AXE
                     
-                weaponSprite GroundAxe ; Ground Axe
-                weaponPalette GroundAxe
+                weaponSprite GROUND_AXE ; Ground Axe
+                weaponPalette GROUND_AXE
                     
-                weaponSprite RuneAxe ; Rune Axe
-                weaponPalette RuneAxe
+                weaponSprite RUNE_AXE ; Rune Axe
+                weaponPalette RUNE_AXE
                     
-                weaponSprite EvilAxe ; Evil Axe 
-                weaponPalette EvilAxe
+                weaponSprite EVIL_AXE ; Evil Axe 
+                weaponPalette EVIL_AXE
                     
                 weaponSprite NONE       ; Wooden Arrow
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Iron Arrow
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Steel Arrow
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Robin Arrow
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Assault Shell
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Great Shot
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Nazca Cannon
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Buster Shot
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Hyper Cannon
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Grand Cannon
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
                 weaponSprite NONE       ; Evil Shot
-                weaponPalette ShortAxe
+                weaponPalette SHORT_AXE
                     
-                weaponSprite Woodenstick ; Wooden Stick
-                weaponPalette Woodenstick
+                weaponSprite WOODEN_STICK ; Wooden Stick
+                weaponPalette WOODEN_STICK
                     
-                weaponSprite Shortsword ; Short Sword
-                weaponPalette Shortsword
+                weaponSprite SHORT_SWORD ; Short Sword
+                weaponPalette SHORT_SWORD
                     
-                weaponSprite MiddleSword ; Middle Sword
-                weaponPalette MiddleSword
+                weaponSprite MIDDLE_SWORD ; Middle Sword
+                weaponPalette MIDDLE_SWORD
                     
-                weaponSprite LongSword ; Long Sword
-                weaponPalette LongSword
+                weaponSprite LONG_SWORD ; Long Sword
+                weaponPalette LONG_SWORD
                     
-                weaponSprite Steelsword ; Steel Sword
-                weaponPalette Steelsword
+                weaponSprite STEEL_SWORD ; Steel Sword
+                weaponPalette STEEL_SWORD
                     
-                weaponSprite Achilles ; Achilles Sword
-                weaponPalette Achilles
+                weaponSprite ACHILLES_SWORD ; Achilles Sword
+                weaponPalette ACHILLES_SWORD
                     
-                weaponSprite BroadSword ; Broad Sword
-                weaponPalette BroadSword
+                weaponSprite BROAD_SWORD ; Broad Sword
+                weaponPalette BROAD_SWORD
                     
-                weaponSprite BusterSword ; Buster Sword
-                weaponPalette BusterSword
+                weaponSprite BUSTER_SWORD ; Buster Sword
+                weaponPalette BUSTER_SWORD
                     
-                weaponSprite GreatSword ; Great Sword
-                weaponPalette GreatSword
+                weaponSprite GREAT_SWORD ; Great Sword
+                weaponPalette GREAT_SWORD
                     
-                weaponSprite CriticalSword     ; Critical Sword
-                weaponPalette CriticalSword
+                weaponSprite CRITICAL_SWORD     ; Critical Sword
+                weaponPalette CRITICAL_SWORD
                     
-                weaponSprite BattleSword ; Battle Sword
-                weaponPalette BattleSword
+                weaponSprite BATTLE_SWORD ; Battle Sword
+                weaponPalette BATTLE_SWORD
                     
-                weaponSprite ForceSword ; Force Sword
-                weaponPalette ForceSword
+                weaponSprite FORCE_SWORD ; Force Sword
+                weaponPalette FORCE_SWORD
                     
-                weaponSprite CounterSword ; Counter Sword
-                weaponPalette CounterSword
+                weaponSprite COUNTER_SWORD ; Counter Sword
+                weaponPalette COUNTER_SWORD
                     
-                weaponSprite Levanter ; Levanter
-                weaponPalette Levanter
+                weaponSprite LEVANTER ; Levanter
+                weaponPalette LEVANTER
                     
-                weaponSprite DarkSword     ; Dark Sword
-                weaponPalette DarkSword
+                weaponSprite DARK_SWORD     ; Dark Sword
+                weaponPalette DARK_SWORD
                     
-                weaponSprite Woodensword ; Wooden Sword 
-                weaponPalette Woodensword
+                weaponSprite WOODEN_SWORD ; Wooden Sword 
+                weaponPalette WOODEN_SWORD
                     
-                weaponSprite ShortSpear      ; Short Spear
-                weaponPalette ShortSpear
+                weaponSprite SHORT_SPEAR      ; Short Spear
+                weaponPalette SHORT_SPEAR
                     
-                weaponSprite BronzeLance ; Bronze Lance
-                weaponPalette BronzeLance
+                weaponSprite BRONZE_LANCE ; Bronze Lance
+                weaponPalette BRONZE_LANCE
                     
-                weaponSprite Spear      ; Spear
-                weaponPalette Spear
+                weaponSprite SPEAR      ; Spear
+                weaponPalette SPEAR
                     
-                weaponSprite SteelLance ; Steel Lance
-                weaponPalette SteelLance
+                weaponSprite STEEL_LANCE ; Steel Lance
+                weaponPalette STEEL_LANCE
                     
-                weaponSprite PowerSpear      ; Power Spear
-                weaponPalette PowerSpear
+                weaponSprite POWER_SPEAR      ; Power Spear
+                weaponPalette POWER_SPEAR
                     
-                weaponSprite HeavyLance ; Heavy Lance
-                weaponPalette HeavyLance
+                weaponSprite HEAVY_LANCE ; Heavy Lance
+                weaponPalette HEAVY_LANCE
                     
-                weaponSprite Javelin    ; Javelin
-                weaponPalette Javelin
+                weaponSprite JAVELIN    ; Javelin
+                weaponPalette JAVELIN
                     
-                weaponSprite ChromeLance ; Chrome Lance
-                weaponPalette ChromeLance
+                weaponSprite CHROME_LANCE ; Chrome Lance
+                weaponPalette CHROME_LANCE
                     
-                weaponSprite Valkyrie    ; Valkyrie
-                weaponPalette Valkyrie
+                weaponSprite VALKYRIE    ; Valkyrie
+                weaponPalette VALKYRIE
                     
-                weaponSprite HolyLance ; Holy Lance
-                weaponPalette HolyLance
+                weaponSprite HOLY_LANCE ; Holy Lance
+                weaponPalette HOLY_LANCE
                     
-                weaponSprite MistJavelin    ; Mist Javelin
-                weaponPalette MistJavelin
+                weaponSprite MIST_JAVELIN    ; Mist Javelin
+                weaponPalette MIST_JAVELIN
                     
-                weaponSprite Halberd    ; Halberd
-                weaponPalette Halberd
+                weaponSprite HALBERD    ; Halberd
+                weaponPalette HALBERD
                     
-                weaponSprite EvilLance ; Evil Lance 
-                weaponPalette EvilLance
+                weaponSprite EVIL_LANCE ; Evil Lance 
+                weaponPalette EVIL_LANCE
                     
-                weaponSprite WoodenRod ; Wooden Rod
-                weaponPalette WoodenRod
+                weaponSprite WOODEN_ROD ; Wooden Rod
+                weaponPalette WOODEN_ROD
                     
-                weaponSprite ShortRod  ; Short Rod
-                weaponPalette ShortRod
+                weaponSprite SHORT_ROD  ; Short Rod
+                weaponPalette SHORT_ROD
                     
-                weaponSprite BronzeRod  ; Bronze Rod
-                weaponPalette BronzeRod
+                weaponSprite BRONZE_ROD  ; Bronze Rod
+                weaponPalette BRONZE_ROD
                     
-                weaponSprite IronRod  ; Iron Rod
-                weaponPalette IronRod
+                weaponSprite IRON_ROD  ; Iron Rod
+                weaponPalette IRON_ROD
                     
-                weaponSprite PowerStick ; Power Stick
-                weaponPalette PowerStick
+                weaponSprite POWER_STICK ; Power Stick
+                weaponPalette POWER_STICK
                     
-                weaponSprite Flail ; Flail
-                weaponPalette Flail
+                weaponSprite FLAIL ; Flail
+                weaponPalette FLAIL
                     
-                weaponSprite GuardianStaff ; Guardian Staff
-                weaponPalette GuardianStaff
+                weaponSprite GUARDIAN_STAFF ; Guardian Staff
+                weaponPalette GUARDIAN_STAFF
                     
-                weaponSprite IndraStaff ; Indra Staff
-                weaponPalette IndraStaff
+                weaponSprite INDRA_STAFF ; Indra Staff
+                weaponPalette INDRA_STAFF
                     
-                weaponSprite MageStaff ; Mage Staff
-                weaponPalette MageStaff
+                weaponSprite MAGE_STAFF ; Mage Staff
+                weaponPalette MAGE_STAFF
                     
-                weaponSprite WishStaff ; Wish Staff
-                weaponPalette WishStaff
+                weaponSprite WISH_STAFF ; Wish Staff
+                weaponPalette WISH_STAFF
                     
-                weaponSprite GreatRod  ; Great Rod
-                weaponPalette GreatRod
+                weaponSprite GREAT_ROD  ; Great Rod
+                weaponPalette GREAT_ROD
                     
-                weaponSprite SupplyStaff ; Supply Staff
-                weaponPalette SupplyStaff
+                weaponSprite SUPPLY_STAFF ; Supply Staff
+                weaponPalette SUPPLY_STAFF
                     
-                weaponSprite HolyStaff ; Holy Staff
-                weaponPalette HolyStaff
+                weaponSprite HOLY_STAFF ; Holy Staff
+                weaponPalette HOLY_STAFF
                     
-                weaponSprite FreezeStaff ; Freeze Staff
-                weaponPalette FreezeStaff
+                weaponSprite FREEZE_STAFF ; Freeze Staff
+                weaponPalette FREEZE_STAFF
                     
-                weaponSprite GoddessStaff ; Goddess Staff
-                weaponPalette GoddessStaff
+                weaponSprite GODDESS_STAFF ; Goddess Staff
+                weaponPalette GODDESS_STAFF
                     
-                weaponSprite MysteryStaff ; Mystery Staff
-                weaponPalette MysteryStaff
+                weaponSprite MYSTERY_STAFF ; Mystery Staff
+                weaponPalette MYSTERY_STAFF
                     
-                weaponSprite DemonRod  ; Demon Rod
-                weaponPalette DemonRod
+                weaponSprite DEMON_ROD  ; Demon Rod
+                weaponPalette DEMON_ROD
                     
-                weaponSprite GreatRod  ; Iron Ball
-                weaponPalette GreatRod
+                weaponSprite GREAT_ROD  ; Iron Ball
+                weaponPalette GREAT_ROD
                     
-                weaponSprite ShortKnife      ; Short Knife
-                weaponPalette ShortKnife
+                weaponSprite SHORT_KNIFE      ; Short Knife
+                weaponPalette SHORT_KNIFE
                     
-                weaponSprite Dagger     ; Dagger
-                weaponPalette Dagger
+                weaponSprite DAGGER     ; Dagger
+                weaponPalette DAGGER
                     
-                weaponSprite Knife      ; Knife
-                weaponPalette Knife
+                weaponSprite KNIFE     ; Knife
+                weaponPalette KNIFE
                     
-                weaponSprite Thievesdagger     ; Thieve's Dagger
-                weaponPalette Thievesdagger
+                weaponSprite THIEVES_DAGGER     ; Thieve's Dagger
+                weaponPalette THIEVES_DAGGER
                     
-                weaponSprite Katana     ; Katana
-                weaponPalette Katana
+                weaponSprite KATANA     ; Katana
+                weaponPalette KATANA
                     
-                weaponSprite NinjaKatana     ; Ninja Katana
-                weaponPalette NinjaKatana
+                weaponSprite NINJA_KATANA     ; Ninja Katana
+                weaponPalette NINJA_KATANA
                     
-                weaponSprite Gisarme     ; Gisarme 
-                weaponPalette Gisarme
+                weaponSprite GISARME     ; Gisarme 
+                weaponPalette GISARME
                     

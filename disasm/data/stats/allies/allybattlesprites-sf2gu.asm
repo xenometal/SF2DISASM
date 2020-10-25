@@ -86,7 +86,7 @@ AllyBattleSpritesTable:
                 allyBattleSprite NONE, 0
                     
                 forClass BRGN                       ; ROHDE
-                allyBattleSprite ROHDE_SPECIAL, 0
+                allyBattleSprite ROHDE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
@@ -142,49 +142,49 @@ AllyBattleSpritesTable:
                 allyBattleSprite JANET_SPECIAL, 0
                     
                 forClass PLDN                       ; HIGINS
-                allyBattleSprite HIGINS_PROMO, 0
+                allyBattleSprite HIGINS, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass BDBT                       ; SKREECH
-                allyBattleSprite SCREECH_PROMO, 0
+                allyBattleSprite SKREECH, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass SORC                       ; TAYA
-                allyBattleSprite TAYA_SPECIAL, 0
+                allyBattleSprite TAYA, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass VICR                       ; FRAYJA
-                allyBattleSprite FRAYJA_PROMO, 0
+                allyBattleSprite FRAYJA, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass PGNT                       ; JARO
-                allyBattleSprite JARO_SPECIAL, 0
+                allyBattleSprite JARO, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass GLDT                       ; GYAN
-                allyBattleSprite GYAN_PROMO, 0
+                allyBattleSprite GYAN, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                     
                 forClass MMNK                       ; SHEELA
-                allyBattleSprite SHEELA_SPECIAL, 0
+                allyBattleSprite SHEELA, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE
@@ -198,7 +198,7 @@ AllyBattleSpritesTable:
                 allyBattleSprite NONE, 0
                     
                 forClass WIZ                        ; CHAZ
-                allyBattleSprite CHAZ_PROMO, 0
+                allyBattleSprite CHAZ, 0
                 forClass NONE
                 allyBattleSprite NONE, 0
                 forClass NONE

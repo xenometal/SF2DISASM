@@ -9,13 +9,7 @@
                 include "code\gameflow\battle\battle_s13_1.asm"    ; Battle init, terrain, AI stuff to split more properly
                 includeIfVanillaRom "data\battles\terrainentries.asm"    ; Battle terrain data
                 include "code\gameflow\battle\battle_s13_2.asm"    ; Battle init, terrain, AI stuff to split more properly
-                
-                if (PROJECT_SF2GU=1)
-                include "data\stats\enemies\enemydefs-sf2gu.asm"
-                else
                 include "data\stats\enemies\enemydefs.asm"    ; Enemy definitions
-                endif
-                
                 includeIfVanillaRom "data\battles\spritesetentries.asm"    ; Battle sprite sets
                 include "data\battles\global\randombattles.asm"    ; Random battles table
                 include "code\gameflow\battle\battle_s13_3.asm"    ; Data related to UpgradeUnitIdx function

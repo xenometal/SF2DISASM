@@ -1,6 +1,6 @@
 
 ; ASM FILE data\stats\enemies\enemybattlesprites-sf2gu.asm :
-; 0x1F914..0x1F9E2 : Enemy battle sprites table
+; Enemy battle sprites table
 EnemyBattleSpritesTable:
                 ; enemyBattleSprite enum EnemyBattleSprites : ENEMYBATTLESPRITE_*, Pallete ID
     
@@ -10,15 +10,15 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite GALAM_KNIGHT, 0 ; GALAM KNIGHT
                 enemyBattleSprite GOBLIN, 0 ; GOBLIN
                 enemyBattleSprite CURSED_TREE, 0 ; GREEN OOZE
-                enemyBattleSprite DWARF, 0 ; DARK DWARF
+                enemyBattleSprite DARK_DWARF, 0 ; DARK DWARF
                 enemyBattleSprite GULLY, 0 ; Gully
                 enemyBattleSprite ZOMBIE, 0 ; ZOMBIE
                 enemyBattleSprite GOLEM, 0 ; GOLEM
                 enemyBattleSprite KRAKEN_LEG, 0 ; KRAKEN LEG
                 enemyBattleSprite SOULSOWER, 0 ; SOULSOWER
                 enemyBattleSprite ORC, 0 ; ORC
-                enemyBattleSprite CHESS_PAWN, 0 ; PAWN
-                enemyBattleSprite CHESS_KNIGHT, 0 ; KNIGHT
+                enemyBattleSprite PAWN, 0 ; PAWN
+                enemyBattleSprite KNIGHT, 0 ; KNIGHT
                 enemyBattleSprite RAT, 0 ; RAT
                 enemyBattleSprite BUBBLING_OOZE, 0 ; BUBBLING OOZE
                 enemyBattleSprite SKELETON, 0 ; SKELETON
@@ -60,31 +60,31 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite CHAOS_DRAGON, 0 ; CHAOS DRAGON
                 enemyBattleSprite DEVIL_GUARDIAN, 0 ; DEVIL GRIFFIN
                 enemyBattleSprite DEMON, 0 ; ARCH DEMON
-                enemyBattleSprite Archer, 0 ; GALAM ARCHER
+                enemyBattleSprite GALAM_ARCHER, 0 ; GALAM ARCHER
                 enemyBattleSprite BANDIT, 0 ; Bandit
                 enemyBattleSprite MEDUSER, 0 ; DEATH ARCHER
                 enemyBattleSprite KRAKEN_ARM, 0 ; KRAKEN ARM
                 enemyBattleSprite HUNTER_GOBLIN, 0 ; Hunter Goblin
-                enemyBattleSprite CHESS_ROOK, 0 ; Chess Rook
+                enemyBattleSprite ROOK, 0 ; Chess Rook
                 enemyBattleSprite BOW_MASTER, 0 ; DARK SNIPER
                 enemyBattleSprite ARROW_LAUNCHER, 0 ; Arrow Launcher
                 enemyBattleSprite BOW_RIDER, 0 ; BOW RIDER
                 enemyBattleSprite DARK_GUNNER, 0 ; DARK GUNNER
                 enemyBattleSprite BRASS_LOADER, 0 ; HORSEMAN
-                enemyBattleSprite MAGE, 0 ; GALAM MAGE
+                enemyBattleSprite GALAM_MAGE, 0 ; GALAM MAGE
                 enemyBattleSprite WITCH, 0 ; WITCH
                 enemyBattleSprite DARK_MADAM, 0 ; Dark Madam
                 enemyBattleSprite WIZARD, 0 ; Wizard
-                enemyBattleSprite CHESS_QUEEN, 0 ; QUEEN
+                enemyBattleSprite QUEEN, 0 ; QUEEN
                 enemyBattleSprite MASTER_MAGE, 0 ; Master Mage
                 enemyBattleSprite NECROMANCER, 0 ; NECROMANCER
                 enemyBattleSprite DEMON_QUEEN, 0 ; CHAOS WIZARD
                 enemyBattleSprite DEMON_MASTER, 0 ; DEMON MASTER
-                enemyBattleSprite CLERIC, 0 ; DARK CLERIC
-                enemyBattleSprite BISHOP, 0 ; DEATH MONK
+                enemyBattleSprite DARK_CLERIC, 0 ; DARK CLERIC
+                enemyBattleSprite DARK_BISHOP, 0 ; DEATH MONK
                 enemyBattleSprite BLACK_MONK, 0 ; BLACK MONK
                 enemyBattleSprite SUCCUBUS, 0 ; HIGH PRIEST
-                enemyBattleSprite CHESS_BISHOP, 0 ; EVIL BISHOP
+                enemyBattleSprite BISHOP, 0 ; EVIL BISHOP
                 enemyBattleSprite VIPRESS, 0 ; DARK BISHOP
                 enemyBattleSprite GOBLIN_MESSIAH, 0 ; Goblin Lord
                 enemyBattleSprite SHAMAN, 0 ; SHAMAN
@@ -93,7 +93,7 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite SKULLY, 0 ; Skullya
                 enemyBattleSprite KRAKEN_HEAD, 0 ; KRAKEN HEAD
                 enemyBattleSprite TAROS, 0 ; TAROS
-                enemyBattleSprite CHESS_KING, 0 ; KING
+                enemyBattleSprite KING, 0 ; KING
                 enemyBattleSprite WILLARD, 0 ; WILLARD
                 enemyBattleSprite ZALBARD, 0 ; ZALBARD
                 enemyBattleSprite CAMEELA, 0 ; CAMEELA
@@ -104,6 +104,6 @@ EnemyBattleSpritesTable:
                 enemyBattleSprite GALAM, 0 ; GALAM
                 enemyBattleSprite ZEON, 0 ; ZEON
                 enemyBattleSprite PEGASUS_KNIGHT, 1 ; JAR
-                enemyBattleSprite MAGE, 0 ; MASTER MAGE
+                enemyBattleSprite DARK_MADAM, 0 ; MASTER MAGE
                 enemyBattleSprite NECROMANCER, 0 ; NECROMANCER
                 enemyBattleSprite WARLOCK, 0 ; BLUE SHAMAN		

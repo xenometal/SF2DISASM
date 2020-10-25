@@ -342,15 +342,43 @@ disasm/data/graphics/portraits/Modded Portraits/
 disasm/data/graphics/battles/weapons-sf2gu
 disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_0.asm
 disasm/code/gameflow/battle/battlescenes/battlesceneengine_0-sf2gu_1.asm
+disasm/data/graphics/battles/battlesprites/allies-sf2gu/
+disasm/data/graphics/battles/battlesprites/allies-sf2gu/animations/
+disasm/data/graphics/battles/battlesprites/enemies-sf2gu/
+disasm/data/graphics/battles/battlesprites/enemies-sf2gu/animations/
+disasm/data/graphics/battles/weapons/sf2gu/
+disasm/data/graphics/mapsprites/sf2gu/
+disasm/data/graphics/portraits/sf2gu/
+
+# Original files
+build/build.bat
+build/buildexpanded.bat
+disasm/data/graphics/battles/battlesprites/allyidlebattlesprites.asm
+disasm/data/graphics/battles/battlesprites/enemyidlebattlesprites.asm
+disasm/data/graphics/battles/battlesprites/allies/entries.asm
+disasm/data/graphics/battles/battlesprites/allies/animations/entries.asm
+disasm/data/graphics/battles/battlesprites/enemies/entries.asm
+disasm/data/graphics/battles/battlesprites/enemies/animations/entries.asm
+disasm/data/graphics/battles/weapons/entries.asm
+disasm/data/graphics/mapsprites/sf2gu/entries.asm
+disasm/data/graphics/portraits/sf2gu/entries.asm
+disasm/data/stats/allies/allybattlesprites.asm
+disasm/data/stats/enemies/enemybattlesprites.asm
+disasm/data/stats/enemies/enemymapsprites.asm
+disasm/data/stats/enemies/enemynames.asm
+disasm/data/stats/items/weapongraphics.asm
 
 # Do not ignore assets present in the following folders
-!disasm/data/graphics/battles/battlesprites/allies-sf2gu/*.bin
-!disasm/data/graphics/battles/battlesprites/allies-sf2gu/animations/*.bin
-!disasm/data/graphics/battles/battlesprites/enemies-sf2gu/*.bin
-!disasm/data/graphics/battles/battlesprites/enemies-sf2gu/animations/*.bin
-!disasm/data/graphics/battles/weapons/sf2gu/*.bin
-!disasm/data/graphics/battles/weapons/sf2gu/palettes/*.bin
-!disasm/data/graphics/icons/icons-sf2gu.bin
-!disasm/data/graphics/mapsprites/sf2gu/*.bin
-!disasm/data/graphics/portraits/sf2gu/*.bin
+!disasm/data/graphics/battles/battlesprites/allies/*.bin
+!disasm/data/graphics/battles/battlesprites/allies/animations/*.bin
+!disasm/data/graphics/battles/battlesprites/enemies/*.bin
+!disasm/data/graphics/battles/battlesprites/enemies/animations/*.bin
+!disasm/data/graphics/battles/weapons/*.bin
+!disasm/data/graphics/battles/weapons/palettes/*.bin
+!disasm/data/graphics/icons/*.bin
+!disasm/data/graphics/mapsprites/*.bin
+!disasm/data/graphics/portraits/*.bin
 !disasm/data/graphics/tech/iconhighlighttiles-sf2gu.bin
+
+# Palettes
+disasm/data/graphics/battles/battlesprites/*palette*.bin

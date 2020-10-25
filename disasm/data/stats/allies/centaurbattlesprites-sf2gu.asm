@@ -12,8 +12,8 @@ tbl_CentaurBattleSprites:
         dc.b ALLYBATTLESPRITE_ERIC_BASE
         dc.b ALLYBATTLESPRITE_ERIC_PROMO
         dc.b ALLYBATTLESPRITE_ERIC_SPECIAL
-        dc.b ALLYBATTLESPRITE_HIGINS_PROMO
-        dc.b ALLYBATTLESPRITE_JARO_SPECIAL
+        dc.b ALLYBATTLESPRITE_HIGINS
+        dc.b ALLYBATTLESPRITE_JARO
         
 ; ---------------------------------------------------------------------------
         

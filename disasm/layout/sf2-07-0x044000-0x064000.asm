@@ -125,14 +125,8 @@ j_ClearEntities:
                 include "data\stats\allies\allymapsprites.asm"    ; Ally map sprite IDs
                 include "code\common\scripting\entity\getcombatantmapsprite.asm"    ; Get combatant map sprite ID function
                 endif
-                
-                if (PROJECT_SF2GU=1)
-                include "data\stats\enemies\enemymapsprites-sf2gu.asm"
-                else
-                include "data\stats\enemies\enemymapsprites.asm"    ; Enemy map sprite IDs
-                endif
-                
-                wordAlignIfExpandedRom
+                include "data\stats\enemies\enemymapsprites.asm"    ; Enemy map sprites
+                wordAlign
                 include "code\common\scripting\entity\entityfunctions_2.asm"    ; Entity functions
                 include "data\scripting\entity\eas_main.asm"    ; Main entity actscripts
                 include "code\common\scripting\entity\entityfunctions_3.asm"    ; Entity functions
