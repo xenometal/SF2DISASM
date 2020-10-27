@@ -35,7 +35,7 @@ loc_7428:
                 jsr     j_NameCharacter
                 btst    #7,(SAVE_FLAGS).l ; "Game completed" bit
                 beq.w   byte_7476       
-                btst    #INPUT_A_START,((P1_INPUT-$1000000)).w
+                btst    #INPUT_BIT_START,((P1_INPUT-$1000000)).w
                 beq.w   byte_7476       
                 moveq   #1,d0
                 moveq   #$1B,d7
@@ -83,10 +83,10 @@ loc_74B4:
                 bsr.w   SaveGame
                 disableSram
                 clsTxt
-                move.b  #3,d0           ; HARDCODED new game starting map
+                move.b  #MAP_GRANSEAL,d0 ; HARDCODED new game starting map
                 move.w  #$38,d1 ; HARDCODED main entity starting X
                 move.w  #3,d2           ; HARDCODED main entity starting Y
-                move.w  #3,d3           ; HARDCODED main entity starting facing
+                move.w  #DOWN,d3        ; HARDCODED main entity starting facing
                 moveq   #1,d4
 loc_74DE:
                 

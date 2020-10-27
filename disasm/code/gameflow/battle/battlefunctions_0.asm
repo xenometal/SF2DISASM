@@ -9,7 +9,7 @@ LevelUpCutscene:
                 moveq   #0,d1
                 jsr     j_SetCurrentEXP
                 jsr     j_LevelUp
-                lea     ((byte_FFAF82-$1000000)).w,a5
+                lea     ((LEVELUP_ARGUMENTS-$1000000)).w,a5
                 move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
                 clr.l   d1
                 move.b  (a5)+,d1
@@ -131,7 +131,7 @@ loc_22CC2:
                 dbf     d0,loc_22CC2
                 movem.l (sp)+,d0/a0
                 move.b  #2,((FADING_PALETTE_BITMAP-$1000000)).w
-                move.b  #5,((FADING_SETTING-$1000000)).w
+                move.b  #PULSATING_1,((FADING_SETTING-$1000000)).w
                 clr.b   ((FADING_POINTER-$1000000)).w
                 move.b  #1,((FADING_COUNTER-$1000000)).w
                 bra.w   loc_22D56
@@ -241,7 +241,7 @@ loc_22DD2:
                 
                 jsr     (WaitForVInt).w
                 move.b  ((CURRENT_PLAYER_INPUT-$1000000)).w,d0
-                andi.w  #$70,d0 
+                andi.w  #INPUT_B|INPUT_C|INPUT_A,d0
                 beq.s   loc_22DD2
                 move.w  $C(a0),d2
                 move.w  $E(a0),d3
@@ -295,7 +295,7 @@ loc_22E68:
                 bsr.w   UpdateControlledUnitPos
                 jsr     (WaitForVInt).w
                 move.b  ((CURRENT_PLAYER_INPUT-$1000000)).w,d4
-                andi.w  #$70,d4 
+                andi.w  #INPUT_B|INPUT_C|INPUT_A,d4
                 beq.s   loc_22E68
                 clr.b   (a0,d0.w)
                 move.b  $11(a1),d0
@@ -336,7 +336,7 @@ UpdateControlledUnitPos:
                 addi.w  #$C0,d3 
                 ext.l   d3
                 divs.w  #$180,d3
-                move.w  ((MOVING_BATTLE_ENTITY_IDX-$1000000)).w,d0
+                move.w  ((MOVING_BATTLE_ENTITY_INDEX-$1000000)).w,d0
                 jsr     j_GetXPos
                 move.w  d1,-(sp)
                 jsr     j_GetYPos
@@ -360,7 +360,7 @@ UpdateControlledUnitPos:
 
 GetEntityCombatantNumber:
                 
-                bsr.w   GetEntityNumberOfCombatant
+                bsr.w   GetEntityIndexForCombatant
                 rts
 
     ; End of function GetEntityCombatantNumber
@@ -368,39 +368,37 @@ GetEntityCombatantNumber:
 
 ; =============== S U B R O U T I N E =======================================
 
-;     Convert combatant number to entity number.
-;     In: D0 = combatant number
-;     Out: D0 = entity number
+; Get entity index for combatant D0 -> D0
 
-GetEntityNumberOfCombatant:
+GetEntityIndexForCombatant:
                 
                 move.l  a0,-(sp)
-                lea     ((ENTITY_EVENT_IDX_LIST-$1000000)).w,a0
-                tst.b   d0              ; test if d0 represents an enemy index ?
-                bpl.s   loc_22F3E
+                lea     ((ENTITY_EVENT_INDEX_LIST-$1000000)).w,a0
+                tst.b   d0              ; test if D0 represents an enemy index
+                bpl.s   @Ally
                 subi.b  #$60,d0 
-loc_22F3E:
+@Ally:
                 
-                andi.w  #$FF,d0
+                andi.w  #COMBATANT_MASK_ALL,d0
                 move.b  (a0,d0.w),d0
                 movea.l (sp)+,a0
                 rts
 
-    ; End of function GetEntityNumberOfCombatant
+    ; End of function GetEntityIndexForCombatant
 
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = entity idx
-; Out: D0 = entity event idx
+; In: D0 = entity index
+; Out: D0 = entity event index
 
-GetEntityEventIdx:
+GetEntityEventIndex:
                 
                 movem.l d1/d7-a0,-(sp)
                 moveq   #$40,d7 
                 move.w  d0,d1
                 clr.w   d0
-                lea     ((ENTITY_EVENT_IDX_LIST-$1000000)).w,a0
+                lea     ((ENTITY_EVENT_INDEX_LIST-$1000000)).w,a0
 loc_22F58:
                 
                 cmp.b   (a0)+,d1
@@ -418,7 +416,7 @@ loc_22F70:
                 movem.l (sp)+,d1/d7-a0
                 rts
 
-    ; End of function GetEntityEventIdx
+    ; End of function GetEntityEventIndex
 
 word_22F76:     dc.w $180
                 dc.w 0
@@ -614,7 +612,7 @@ loc_23158:
                 move.w  d5,d4
 loc_2315E:
                 
-                bsr.w   GetEntityNumberOfCombatant
+                bsr.w   GetEntityIndexForCombatant
                 move.w  d4,d1
                 moveq   #$FFFFFFFF,d2
                 moveq   #$FFFFFFFF,d3
@@ -630,7 +628,7 @@ loc_23186:
                 jsr     (WaitForVInt).w
                 cmpi.w  #1,d7
                 beq.s   loc_231E0
-                btst    #INPUT_A_UP,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_UP,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_231A4
                 subq.w  #1,d1
                 bge.s   loc_231A0
@@ -641,7 +639,7 @@ loc_231A0:
                 bra.w   loc_23102
 loc_231A4:
                 
-                btst    #INPUT_A_LEFT,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_LEFT,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_231B8
                 subq.w  #1,d1
                 bge.s   loc_231B4
@@ -652,7 +650,7 @@ loc_231B4:
                 bra.w   loc_23102
 loc_231B8:
                 
-                btst    #INPUT_A_DOWN,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_DOWN,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_231CC
                 addq.w  #1,d1
                 cmp.w   d7,d1
@@ -663,7 +661,7 @@ loc_231C8:
                 bra.w   loc_23102
 loc_231CC:
                 
-                btst    #INPUT_A_RIGHT,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_RIGHT,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_231E0
                 addq.w  #1,d1
                 cmp.w   d7,d1
@@ -674,21 +672,21 @@ loc_231DC:
                 bra.w   loc_23102
 loc_231E0:
                 
-                btst    #INPUT_A_B,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_B,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_231F6
                 jsr     j_HideFighterMiniStatusWindow
                 move.w  #$FFFF,d0
                 bra.w   byte_2321E
 loc_231F6:
                 
-                btst    #INPUT_A_C,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_C,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_23208
                 clr.w   d0
                 move.b  (a0,d1.w),d0
                 bra.w   byte_2321E
 loc_23208:
                 
-                btst    #INPUT_A_A,((CURRENT_PLAYER_INPUT-$1000000)).w
+                btst    #INPUT_BIT_A,((CURRENT_PLAYER_INPUT-$1000000)).w
                 beq.s   loc_2321A
                 clr.w   d0
                 move.b  (a0,d1.w),d0
@@ -715,7 +713,7 @@ sub_2322C:
                 move.w  d1,d2
                 jsr     j_GetYPos
                 move.w  d1,d3
-                bsr.w   GetEntityNumberOfCombatant
+                bsr.w   GetEntityIndexForCombatant
                 move.b  d0,((VIEW_TARGET_ENTITY-$1000000)).w
                 jsr     (WaitForVInt).w
                 bsr.w   sub_23256
@@ -759,7 +757,7 @@ sub_23256:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = entity idx
+; In: D0 = entity index
 ; Out: D2 = entity X
 ;      D3 = entity Y
 
@@ -789,7 +787,7 @@ SetUnitCursorDestinationToNextBattleEntity:
                 mulu.w  #$180,d3
                 mulu.w  #$180,d4
                 mulu.w  #$180,d5
-                moveq   #ENTITYIDX_UNITCURSOR,d0
+                moveq   #ENTITY_UNITCURSOR_INDEX,d0
                 jsr     j_SetUnitCursorActscript
                 jsr     (WaitForVInt).w
                 lsl.w   #5,d0
@@ -956,7 +954,7 @@ loc_23448:
 SetEntityBlinkingFlag:
                 
                 movem.l d0/a0,-(sp)
-                bsr.w   GetEntityNumberOfCombatant
+                bsr.w   GetEntityIndexForCombatant
                 lsl.w   #5,d0
                 lea     ((ENTITY_DATA-$1000000)).w,a0
                 bset    #7,$1D(a0,d0.w)
@@ -971,7 +969,7 @@ SetEntityBlinkingFlag:
 ClearEntityBlinkingFlag:
                 
                 movem.l d0/a0,-(sp)
-                bsr.w   GetEntityNumberOfCombatant
+                bsr.w   GetEntityIndexForCombatant
                 lsl.w   #5,d0
                 lea     ((ENTITY_DATA-$1000000)).w,a0
                 bclr    #7,$1D(a0,d0.w)
@@ -1004,8 +1002,8 @@ LoadUnitCursorTileData:
                 lea     UnitCursorTiles(pc), a0
                 lea     ($D000).l,a1
                 move.w  #$800,d0
-                jsr     (ApplyVIntVramDMAOnCompressedTiles).w
-                jsr     (EnableDMAQueueProcessing).w
+                jsr     (ApplyVIntVramDmaOnCompressedTiles).w
+                jsr     (EnableDmaQueueProcessing).w
                 movem.l (sp)+,d0-a1
                 rts
 
@@ -1054,8 +1052,8 @@ loc_234DA:
                 adda.w  d1,a1
                 move.w  #$120,d0
                 moveq   #2,d1
-                jsr     (ApplyVIntVramDMA).w
-                jsr     (EnableDMAQueueProcessing).w
+                jsr     (ApplyVIntVramDma).w
+                jsr     (EnableDmaQueueProcessing).w
 loc_23538:
                 
                 movem.l (sp)+,d0-d2/a0-a1
@@ -1077,7 +1075,7 @@ byte_2353E:     dc.b 0
 WaitForUnitCursor:
                 
                 move.l  d0,-(sp)
-                moveq   #ENTITYIDX_UNITCURSOR,d0
+                moveq   #ENTITY_UNITCURSOR_INDEX,d0
                 jsr     j_WaitForEntityToStopMoving
                 move.l  (sp)+,d0
                 rts
@@ -1090,7 +1088,7 @@ WaitForUnitCursor:
 sub_23554:
                 
                 movem.l d0-d2/d7-a1,-(sp)
-                lea     word_2358C(pc), a0
+                lea     spr_2358C(pc), a0
                 clr.w   d2
                 move.b  ((word_FFAF8E-$1000000)).w,d2
                 andi.w  #$F,d2
@@ -1114,102 +1112,34 @@ loc_23572:
 
     ; End of function sub_23554
 
-word_2358C:     dc.w $74
-                dc.w $F10
-                dc.w $4680
-                dc.w $7C
-                dc.w 1
-                dc.w $F0A
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0B
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0C
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0D
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0E
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0F
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F10
-                dc.w $4680
-                dc.w 1
-                dc.w $56
-                dc.w $F09
-                dc.w $4690
-                dc.w $7C
-                dc.w $74
-                dc.w $F0A
-                dc.w $46A0
-                dc.w $64
-                dc.w $92
-                dc.w $F0B
-                dc.w $5690
-                dc.w $7C
-                dc.w $74
-                dc.w $F10
-                dc.w $4EA0
-                dc.w $94
-                dc.w 1
-                dc.w $F0D
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0E
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F0F
-                dc.w $4680
-                dc.w 1
-                dc.w 1
-                dc.w $F10
-                dc.w $4680
-                dc.w 1
-                dc.w $3E
-                dc.w $F09
-                dc.w $4690
-                dc.w $7C
-                dc.w $74
-                dc.w $F0A
-                dc.w $46A0
-                dc.w $4C
-                dc.w $AA
-                dc.w $F0B
-                dc.w $5690
-                dc.w $7C
-                dc.w $74
-                dc.w $F0C
-                dc.w $4EA0
-                dc.w $AC
-                dc.w $56
-                dc.w $F0D
-                dc.w $46B0
-                dc.w $5F
-                dc.w $56
-                dc.w $F0E
-                dc.w $4EB0
-                dc.w $99
-                dc.w $92
-                dc.w $F0F
-                dc.w $56B0
-                dc.w $5F
-                dc.w $92
-                dc.w $F10
-                dc.w $5EB0
-                dc.w $99
+spr_2358C:      ; unknown sprite definitions
+                
+; Syntax        vdpSprite Y, [VDPSPRITESIZE_]bitfield, [VDPTILE_]bitfield, X
+                
+                vdpSprite 116, V4|H4|16, 1664|PLT3, 124
+                vdpSprite 1, V4|H4|10, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|11, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|12, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|13, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|14, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|15, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|16, 1664|PLT3, 1
+                vdpSprite 86, V4|H4|9, 1680|PLT3, 124
+                vdpSprite 116, V4|H4|10, 1696|PLT3, 100
+                vdpSprite 146, V4|H4|11, 1680|FLIP|PLT3, 124
+                vdpSprite 116, V4|H4|16, 1696|MIRROR|PLT3, 148
+                vdpSprite 1, V4|H4|13, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|14, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|15, 1664|PLT3, 1
+                vdpSprite 1, V4|H4|16, 1664|PLT3, 1
+                vdpSprite 62, V4|H4|9, 1680|PLT3, 124
+                vdpSprite 116, V4|H4|10, 1696|PLT3, 76
+                vdpSprite 170, V4|H4|11, 1680|FLIP|PLT3, 124
+                vdpSprite 116, V4|H4|12, 1696|MIRROR|PLT3, 172
+                vdpSprite 86, V4|H4|13, 1712|PLT3, 95
+                vdpSprite 86, V4|H4|14, 1712|MIRROR|PLT3, 153
+                vdpSprite 146, V4|H4|15, 1712|FLIP|PLT3, 95
+                vdpSprite 146, V4|H4|16, 1712|MIRROR|FLIP|PLT3, 153
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -1238,7 +1168,7 @@ FadeOut_WaitForP1Input:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = entity idx
+; In: D0 = entity index
 ;     D1 = x pos
 ;     D2 = y pos
 

@@ -24,14 +24,14 @@ BattleDebugFunction1B120A:
                 jsr     j_JoinForce
                 move.b  #BATTLE_VERSUS_ALL_BOSSES,((CURRENT_BATTLE-$1000000)).w
                 jsr     j_InitEnemyList
-                bsr.w   InitAllForceBattlePositions
-                bsr.w   InitAllEnemyBattlePositions
+                bsr.w   InitAllAlliesBattlePositions
+                bsr.w   InitAllEnemiesBattlePositions
                 move.b  #$80,d0
                 moveq   #0,d1
                 jsr     j_SetXPos
                 move.w  #$AAAA,d1
                 bsr.w   UpdateEnemyStatsForRespawn
-                bsr.w   GetEnemyAITargetPos
+                bsr.w   GetEnemyAITargetPosition
 loc_1B126E:
                 
                 bra.s   loc_1B126E
@@ -42,75 +42,77 @@ loc_1B126E:
 
 ; =============== S U B R O U T I N E =======================================
 
-InitAllForceBattlePositions:
+InitAllAlliesBattlePositions:
                 
                 movem.l d0-a6,-(sp)
-                moveq   #COM_ALLY_START,d0
-                moveq   #COM_ALLIES_COUNTER,d7
+                moveq   #COMBATANT_ALLIES_START,d0
+                moveq   #COMBATANT_ALLIES_COUNTER,d7
                 move.w  #$FFFF,d1
-loc_1B127E:
+@ResetPositions_Loop:
                 
                 jsr     j_SetXPos
                 addq.b  #1,d0
-                dbf     d7,loc_1B127E
+                dbf     d7,@ResetPositions_Loop
+                
                 jsr     j_UpdateForce
                 lea     ((BATTLE_PARTY_MEMBERS-$1000000)).w,a1
-                move.w  ((NUMBER_OF_BATTLE_PARTY_MEMBERS-$1000000)).w,d6
+                move.w  ((BATTLE_PARTY_MEMBERS_NUMBER-$1000000)).w,d6
                 subq.w  #1,d6
-                moveq   #0,d1
+                moveq   #BATTLESPRITESET_SUBSECTION_SIZES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 clr.w   d7
                 move.b  (a0),d7
                 subq.w  #1,d7
-                bcs.w   loc_1B12EC
-                lea     4(a0),a0
-loc_1B12AE:
+                bcs.w   @Done
+                lea     BATTLESPRITESET_OFFSET_ALLY_ENTRIES(a0),a0
+@InitPositions_Loop:
                 
-                move.b  (a1),d0
+                move.b  (a1),d0         ; D0 = ally index from battle party members table
                 jsr     j_GetCurrentHP
                 tst.w   d1
-                beq.s   loc_1B12D4
+                beq.s   @Skip           ; skip positioning if ally is dead
                 clr.w   d1
-                move.b  1(a0),d1
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_X(a0),d1
                 jsr     j_SetXPos
-                move.b  2(a0),d1
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_Y(a0),d1
                 jsr     j_SetYPos
-                lea     $C(a0),a0
-loc_1B12D4:
+                lea     BATTLESPRITESET_COMBATANT_OFFSET_NEXT_ENTRY(a0),a0
+@Skip:
                 
                 addq.l  #1,a1
                 subq.w  #1,d6
-                bcs.w   loc_1B12EC
-                dbf     d7,loc_1B12AE
-loc_1B12E0:
+                bcs.w   @Done
+                dbf     d7,@InitPositions_Loop
+@LeaveBattleParty_Loop:
                 
                 move.b  (a1)+,d0
                 jsr     j_LeaveBattleParty
-                dbf     d6,loc_1B12E0
-loc_1B12EC:
+                dbf     d6,@LeaveBattleParty_Loop
+@Done:
                 
                 movem.l (sp)+,d0-a6
                 rts
 
-    ; End of function InitAllForceBattlePositions
+    ; End of function InitAllAlliesBattlePositions
 
 
 ; =============== S U B R O U T I N E =======================================
 
-InitAllEnemyBattlePositions:
+InitAllEnemiesBattlePositions:
                 
                 movem.l d0/d7,-(sp)
-                move.b  #COM_ENEMY_START,d0
-                moveq   #COM_ENEMIES_COUNTER,d7
-loc_1B12FC:
+                move.b  #COMBATANT_ENEMIES_START,d0
+                moveq   #COMBATANT_ENEMIES_COUNTER,d7
+@InitPositions_Loop:
                 
                 bsr.w   InitEnemyBattlePosition
                 addq.b  #1,d0
-                dbf     d7,loc_1B12FC
+                dbf     d7,@InitPositions_Loop
+                
                 movem.l (sp)+,d0/d7
                 rts
 
-    ; End of function InitAllEnemyBattlePositions
+    ; End of function InitAllEnemiesBattlePositions
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -124,24 +126,24 @@ InitEnemyBattlePosition:
                 move.b  (a0),d1
                 cmpi.b  #BATTLE_TO_MOUN,d1
                 bne.s   loc_1B132E
-                cmpi.b  #$8F,d0
+                cmpi.b  #$8F,d0         ; check if enemy 15 is present
                 bne.s   loc_1B132E
-                bsr.w   sub_1B1A28
+                bsr.w   HasJaroJoinedTheForce
                 tst.w   d1
                 beq.s   loc_1B132E
-                bra.w   loc_1B139A
+                bra.w   loc_1B139A      ; skip positioning enemy 15 in battle 32 if Jaro has joined the Force
 loc_1B132E:
                 
-                moveq   #2,d1
+                moveq   #BATTLESPRITESET_SUBSECTION_ENEMIES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 move.w  d1,d2
-                bset    #7,d2
+                bset    #COMBATANT_BIT_ENEMY,d2
                 clr.w   d1
                 cmp.b   d2,d0
                 bcc.w   loc_1B1368
                 move.b  d0,d1
-                andi.l  #$7F,d1 
-                mulu.w  #$C,d1
+                andi.l  #COMBATANT_MASK_INDEX_AND_SORT_BIT,d1
+                mulu.w  #BATTLESPRITESET_COMBATANT_ENTRY_SIZE,d1
                 adda.w  d1,a0
                 move.w  $A(a0),d1
                 andi.w  #$F,d1
@@ -160,7 +162,7 @@ loc_1B1368:
                 jsr     j_SetXPos
                 clr.w   d1
                 clr.w   d2
-                move.b  7(a0),d1
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_TRIGGER_REGION(a0),d1
                 move.b  9(a0),d2
                 jsr     j_SetDefeats
 loc_1B139A:
@@ -173,15 +175,16 @@ loc_1B139A:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = char idx
-;     D1 = char word 34 (AI stuff)
+; In: D0 = character index
+;     D1 = character word 34 (AI stuff)
+; 
 ; Out: carry = 0 if respawn, 1 if not
 
 UpdateEnemyStatsForRespawn:
                 
                 movem.l d0-a6,-(sp)
                 move.w  d1,d2
-                moveq   #2,d1
+                moveq   #BATTLESPRITESET_SUBSECTION_ENEMIES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 bset    #7,d1
                 cmp.b   d1,d0
@@ -225,13 +228,13 @@ InitEnemyStats:
                 movem.l d0-a1,-(sp)
                 clr.l   d1
                 move.b  (a0),d1
-                bsr.w   UpgradeUnitIdx  
+                bsr.w   UpgradeEnemyIndex
                 move.w  d1,d6
                 mulu.w  #$38,d1 
-                lea     EnemyDefs(pc), a1
+                lea     tbl_EnemyDefs(pc), a1
                 adda.w  d1,a1
                 move.l  a0,-(sp)
-                jsr     j_GetCharacterRAMAddress_0
+                jsr     j_GetCombatantEntryAddress_0
                 moveq   #$D,d7
 loc_1B142C:
                 
@@ -255,7 +258,7 @@ loc_1B142C:
                 or.w    d2,d1
                 jsr     j_SetMoveType
                 move.b  d6,d1
-                jsr     j_SetEnemyID
+                jsr     j_SetEnemyIndex
                 move.b  7(a0),d1
                 move.b  9(a0),d2
                 jsr     j_SetDefeats
@@ -272,8 +275,8 @@ loc_1B142C:
                 andi.w  #$FFF,d1
                 or.w    d2,d1
                 jsr     j_SetCharacterWord34
-                bsr.w   SetEnemyBaseATK 
-                jsr     j_ApplyStatusAndItemsOnStats
+                bsr.w   SetEnemyBaseATT 
+                jsr     j_ApplyStatusEffectsAndItemsOnStats
                 movem.l (sp)+,d0-a1
                 rts
 
@@ -291,7 +294,7 @@ loc_1B14E2:
                 
                 clr.l   (a1)+
                 dbf     d1,loc_1B14E2
-                moveq   #2,d1
+                moveq   #BATTLESPRITESET_SUBSECTION_ENEMIES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 subq.w  #1,d1
                 lea     ((ENEMY_LIST-$1000000)).w,a1
@@ -308,7 +311,7 @@ loc_1B14F4:
 
 ; =============== S U B R O U T I N E =======================================
 
-; handle custom item idx of monster list entry starting at A0 -> ???
+; Handle custom item index of enemy list entry starting at A0 -> ???
 
 InitEnemyItems:
                 
@@ -316,7 +319,7 @@ InitEnemyItems:
                 cmpi.w  #ITEM_NOTHING,d1
                 beq.w   loc_1B154E
                 jsr     j_AddItem
-                btst    #7,d1
+                btst    #ITEMENTRY_BIT_EQUIPPED,d1
                 beq.s   loc_1B154E
                 move.w  d1,d3
                 clr.w   d1
@@ -331,7 +334,7 @@ loc_1B152E:
                 cmp.b   d1,d3
                 bne.s   loc_1B1546
                 move.w  d5,d1
-                jsr     j_EquipItem
+                jsr     j_EquipItemBySlot
                 bra.w   loc_1B154E
 loc_1B1546:
                 
@@ -354,8 +357,8 @@ loc_1B154E:
 GetEnemyOriginalPosOccupied:
                 
                 movem.l d0-d2/d7,-(sp)
-                moveq   #COM_ALLY_START,d0
-                moveq   #COM_ALLIES_COUNTER,d7
+                moveq   #COMBATANT_ALLIES_START,d0
+                moveq   #COMBATANT_ALLIES_COUNTER,d7
 loc_1B155C:
                 
                 jsr     j_GetXPos
@@ -369,8 +372,8 @@ loc_1B1576:
                 
                 addq.w  #1,d0
                 dbf     d7,loc_1B155C
-                move.w  #COM_ENEMY_START,d0
-                moveq   #COM_ENEMIES_COUNTER,d7
+                move.w  #COMBATANT_ENEMIES_START,d0
+                moveq   #COMBATANT_ENEMIES_COUNTER,d7
 loc_1B1582:
                 
                 jsr     j_GetXPos
@@ -395,46 +398,46 @@ loc_1B15A4:
 
 ; =============== S U B R O U T I N E =======================================
 
-; sets Enemy ATK according to difficulty
+; Set enemy base ATT according to difficulty
 
-SetEnemyBaseATK:
+SetEnemyBaseATT:
                 
                 move.l  d1,-(sp)
                 jsr     j_GetDifficulty
-                cmpi.w  #2,d1
-                beq.s   loc_1B15BC
-                beq.w   loc_1B15F4
-loc_1B15BC:
+                cmpi.w  #DIFFICULTY_SUPER,d1 ; pointless comparison
+                beq.s   @Continue
+                beq.w   @Done
+@Continue:
                 
                 clr.l   d1
-                jsr     j_GetBaseATK
+                jsr     j_GetBaseATT
                 mulu.w  #5,d1
-                lsr.l   #2,d1
-                jsr     j_SetBaseATK
+                lsr.l   #2,d1           ; base ATT effectively multiplied by 1.25
+                jsr     j_SetBaseATT
                 jsr     j_GetDifficulty
-                cmpi.w  #2,d1
-                beq.s   loc_1B15E0
-                bra.w   loc_1B15F4
-loc_1B15E0:
+                cmpi.w  #DIFFICULTY_SUPER,d1
+                beq.s   @SuperDifficulty
+                bra.w   @Done
+@SuperDifficulty:
                 
                 clr.l   d1
-                jsr     j_GetBaseATK
+                jsr     j_GetBaseATT
                 mulu.w  #5,d1
-                lsr.l   #2,d1
-                jsr     j_SetBaseATK
-loc_1B15F4:
+                lsr.l   #2,d1           ; if SUPER difficulty, multiply base ATT by 1.25 a second time
+                jsr     j_SetBaseATT
+@Done:
                 
                 move.l  (sp)+,d1
                 rts
 
-    ; End of function SetEnemyBaseATK
+    ; End of function SetEnemyBaseATT
 
 
 ; =============== S U B R O U T I N E =======================================
 
 ; coords of anchor point used in AI byte D0 -> D1, D2
 
-GetEnemyAITargetPos:
+GetEnemyAITargetPosition:
                 
                 movem.l d0/a0,-(sp)
                 btst    #6,d0
@@ -445,7 +448,7 @@ GetEnemyAITargetPos:
                 bra.s   loc_1B162A
 loc_1B1612:
                 
-                moveq   #4,d1
+                moveq   #BATTLESPRITESET_SUBSECTION_AI_POINTS,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 andi.w  #$F,d0
                 add.w   d0,d0
@@ -459,13 +462,17 @@ loc_1B162A:
                 movem.l (sp)+,d0/a0
                 rts
 
-    ; End of function GetEnemyAITargetPos
+    ; End of function GetEnemyAITargetPosition
 
 
 ; =============== S U B R O U T I N E =======================================
 
-; Get current battle subsection d1 -> A0
-; Subsection size -> d1
+; Get address and size of subsection D1 for current battle
+; 
+;       In: D1 = subsection index
+; 
+;       Out: A0 = subsection address
+;            D1 = subsection size
 
 GetBattleSpriteSetSubsection:
                 
@@ -514,76 +521,79 @@ loc_1B1698:
 
 ; =============== S U B R O U T I N E =======================================
 
-; Starting X and Y of entity d0 -> d1, d2
+; Get starting X and Y of combatant D0 -> D1, D2
 
-GetCombatantStartPos:
+GetCombatantStartingPositions:
                 
                 movem.l d0/d3-a6,-(sp)
-                btst    #7,d0
-                bne.s   loc_1B16CA
-                move.w  #1,d1
+                btst    #COMBATANT_BIT_ENEMY,d0
+                bne.s   @Enemy
+                move.w  #BATTLESPRITESET_SUBSECTION_ALLIES,d1
                 bsr.s   GetBattleSpriteSetSubsection
                 cmp.b   d0,d1
-                bge.s   loc_1B16BE
-                move.w  #$FFFF,d1
+                bge.s   @GetAllyEntryAddress
+                move.w  #$FFFF,d1       ; reset positions
                 move.w  #$FFFF,d2
-                bra.w   loc_1B16F8
-loc_1B16BE:
+                bra.w   @Done
+@GetAllyEntryAddress:
                 
-                andi.w  #$FF,d0
-                mulu.w  #$C,d0
+                andi.w  #COMBATANT_MASK_ALL,d0
+                mulu.w  #BATTLESPRITESET_COMBATANT_ENTRY_SIZE,d0
                 adda.w  d0,a0
-                bra.s   loc_1B16EC
-loc_1B16CA:
+                bra.s   @GetStartingPositions
+@Enemy:
                 
-                move.w  #2,d1
+                move.w  #BATTLESPRITESET_SUBSECTION_ENEMIES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 cmp.b   d0,d1
-                bge.s   loc_1B16E2
-                move.w  #$FFFF,d1
+                bge.s   @GetEnemyEntryAddress
+                move.w  #$FFFF,d1       ; reset positions
                 move.w  #$FFFF,d2
-                bra.w   loc_1B16F8
-loc_1B16E2:
+                bra.w   @Done
+@GetEnemyEntryAddress:
                 
-                andi.w  #$7F,d0 
-                mulu.w  #$C,d0
+                andi.w  #COMBATANT_MASK_INDEX_AND_SORT_BIT,d0
+                mulu.w  #BATTLESPRITESET_COMBATANT_ENTRY_SIZE,d0
                 adda.w  d0,a0
-loc_1B16EC:
+@GetStartingPositions:
                 
                 clr.w   d1
                 clr.w   d2
-                move.b  1(a0),d1
-                move.b  2(a0),d2
-loc_1B16F8:
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_X(a0),d1
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_Y(a0),d2
+@Done:
                 
                 movem.l (sp)+,d0/d3-a6
                 rts
 
-    ; End of function GetCombatantStartPos
+    ; End of function GetCombatantStartingPositions
 
 
 ; =============== S U B R O U T I N E =======================================
 
 ; Battle-related
+; 
+;       In: D1 = 
+;           D2 = 
 
 sub_1B16FE:
                 
                 movem.l d1-a6,-(sp)
                 move.w  d2,d7
                 move.w  d1,d6
-                move.w  #2,d1
+                move.w  #BATTLESPRITESET_SUBSECTION_ENEMIES,d1
                 bsr.w   GetBattleSpriteSetSubsection
                 move.w  d1,d5
                 subi.w  #1,d5
-                move.w  #$80,d0 
+                move.w  #COMBATANT_ENEMIES_START,d0
                 tst.w   d1
                 bne.s   loc_1B1724
                 move.w  #$FFFF,d0
                 bra.w   loc_1B177A
 loc_1B1724:
                 
-                move.b  1(a0),d1
-                move.b  2(a0),d2
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_X(a0),d1
+                move.b  BATTLESPRITESET_COMBATANT_OFFSET_STARTING_Y(a0),d2
                 cmp.b   d1,d6
                 bne.s   loc_1B176A
                 cmp.b   d2,d7
@@ -605,7 +615,7 @@ loc_1B1724:
 loc_1B176A:
                 
                 addi.w  #1,d0
-                adda.w  #$C,a0
+                adda.w  #BATTLESPRITESET_COMBATANT_ENTRY_SIZE,a0
                 dbf     d5,loc_1B1724
                 move.w  #$FFFF,d0
 loc_1B177A:
@@ -713,7 +723,7 @@ loc_1B181C:
                 move.b  (a1,d3.w),d1
                 cmp.b   d1,d7
                 bne.s   loc_1B183E
-                addi.w  #$1F4,d1        ; HARDCODED "Battle completed" flag index start
+                addi.w  #500,d1         ; HARDCODED "Battle completed" flag index start
                 jsr     j_CheckFlag
                 bne.s   loc_1B1836
                 clr.w   d1
@@ -738,244 +748,256 @@ loc_1B1846:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D1 = original unit idx
-; Out: D1 = upgraded unit idx
+; In: D1 = original enemy index
+; 
+; Out: D1 = upgraded enemy index
 
-UpgradeUnitIdx:
+UpgradeEnemyIndex:
                 
                 movem.l d0/d2-a6,-(sp)
-                move.w  d1,d5
+                move.w  d1,d5           ; D5 = original enemy index backup
                 bsr.w   DoesBattleUpgrade
                 tst.w   d1
-                bne.s   loc_1B1860
+                bne.s   @DetermineUpgrade
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B1860:
+                bra.w   @Done
+@DetermineUpgrade:
                 
                 bsr.s   ShouldBattleUpgrade
                 tst.w   d1
-                bne.s   loc_1B186C
+                bne.s   @DoUpgrade
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B186C:
+                bra.w   @Done
+@DoUpgrade:
                 
                 clr.w   d4
                 clr.l   d1
+                
+                ; Get pointer to enemy upgrade data based on move type -> A0
                 move.b  d5,d1
                 mulu.w  #ENEMYDEF_ENTRY_SIZE,d1
-                lea     EnemyDefs(pc), a1
+                lea     tbl_EnemyDefs(pc), a1
                 adda.w  d1,a1
                 move.b  ENEMYDEF_OFFSET_MOVETYPE(a1),d2
-                lsr.w   #4,d2           ; shift movetype upper nibble to lower position
+                lsr.w   #MOVETYPE_NIBBLE_SHIFTCOUNT,d2 ; shift movetype upper nibble to lower position
                 andi.b  #MOVETYPE_MASK_LOWERNIBBLE,d2
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_REGULAR,d2
-                bne.s   loc_1B1896
-                lea     unk_1B6DBC(pc), a0
-                nop
-                bra.w   loc_1B193C
-loc_1B1896:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_CENTAUR,d2
-                bne.s   loc_1B18A6
-                lea     unk_1B6DBC(pc), a0
+                ; Check regular move type
+                cmpi.b  #MOVETYPE_LOWER_REGULAR,d2
+                bne.s   @CheckCentaur
+                lea     tbl_EnemyUpgradeDef_Melee(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18A6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckCentaur:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_STEALTH,d2
-                bne.s   loc_1B18B6
-                lea     unk_1B6DBC(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_CENTAUR,d2
+                bne.s   @CheckStealth
+                lea     tbl_EnemyUpgradeDef_Melee(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18B6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckStealth:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_BRASS_GUNNER,d2
-                bne.s   loc_1B18C6
-                lea     unk_1B6DBC(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_STEALTH,d2
+                bne.s   @CheckGunner
+                lea     tbl_EnemyUpgradeDef_Melee(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18C6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckGunner:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_FLYING,d2
-                bne.s   loc_1B18D6
-                lea     unk_1B6DC6(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_BRASS_GUNNER,d2
+                bne.s   @CheckFlying
+                lea     tbl_EnemyUpgradeDef_Melee(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18D6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckFlying:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_HOVERING,d2
-                bne.s   loc_1B18E6
-                lea     unk_1B6DC6(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_FLYING,d2
+                bne.s   @CheckHovering
+                lea     tbl_EnemyUpgradeDef_Air(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18E6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckHovering:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_ARCHER,d2
-                bne.s   loc_1B18F6
-                lea     unk_1B6DCA(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_HOVERING,d2
+                bne.s   @CheckArcher
+                lea     tbl_EnemyUpgradeDef_Air(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B18F6:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckArcher:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_CENTAUR_ARCHER,d2
-                bne.s   loc_1B1906
-                lea     unk_1B6DCA(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_ARCHER,d2
+                bne.s   @CheckCentaurArcher
+                lea     tbl_EnemyUpgradeDef_Ranged(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B1906:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckCentaurArcher:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_STEALTH_ARCHER,d2
-                bne.s   loc_1B1916
-                lea     unk_1B6DCA(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_CENTAUR_ARCHER,d2
+                bne.s   @CheckStealthArcher
+                lea     tbl_EnemyUpgradeDef_Ranged(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B1916:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckStealthArcher:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_MAGE,d2
-                bne.s   loc_1B1926
-                lea     unk_1B6DD0(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_STEALTH_ARCHER,d2
+                bne.s   @CheckMage
+                lea     tbl_EnemyUpgradeDef_Ranged(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B1926:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckMage:
                 
-                cmpi.b  #MOVETYPE_LOWERNIBBLE_HEALER,d2
-                bne.s   loc_1B1936
-                lea     unk_1B6DD5(pc), a0
+                cmpi.b  #MOVETYPE_LOWER_MAGE,d2
+                bne.s   @CheckHealer
+                lea     tbl_EnemyUpgradeDef_Mage(pc), a0
                 nop
-                bra.w   loc_1B193C
-loc_1B1936:
+                bra.w   @GetLeaderEffectiveLevel
+@CheckHealer:
+                
+                cmpi.b  #MOVETYPE_LOWER_HEALER,d2
+                bne.s   @Default1
+                lea     tbl_EnemyUpgradeDef_Healer(pc), a0
+                nop
+                bra.w   @GetLeaderEffectiveLevel
+@Default1:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B193C:
+                bra.w   @Done           ; no valid move type found, default to original enemy
+@GetLeaderEffectiveLevel:
                 
                 clr.w   d3
-                move.b  d5,d3
+                move.b  d5,d3           ; D3 = original enemy index backup
                 clr.w   d2
                 clr.w   d0
+                
+                ; Get Bowie's effective level -> D2
                 jsr     j_GetCurrentLevel
                 move.w  d1,d2
-                jsr     j_GetClass      
+                jsr     j_GetClass
                 cmpi.b  #CHAR_CLASS_LASTNONPROMOTED,d1
-                ble.s   loc_1B195C
+                ble.s   @Continue
                 addi.w  #CHAR_CLASS_EXTRALEVEL,d2
-loc_1B195C:
+@Continue:
                 
                 lea     ((CURRENT_BATTLE-$1000000)).w,a1
                 clr.w   d1
                 move.b  (a1),d1
-                sub.w   d1,d2           ; subtract battle ID from force leader's effective level
-                bne.s   loc_1B197A
+                sub.w   d1,d2           ; subtract battle index from Bowie's effective level
+                bne.s   @CheckPositive
                 tst.w   d4
-                bne.s   loc_1B1974
+                bne.s   @Default2
                 move.w  #1,d4
-                bra.s   loc_1B193C
-                bra.s   loc_1B197A
-loc_1B1974:
+                bra.s   @GetLeaderEffectiveLevel
+                bra.s   @CheckPositive
+@Default2:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B197A:
+                bra.w   @Done
+@CheckPositive:
                 
-                bpl.s   loc_1B198E
+                bpl.s   @CalculateUpgradeMultiplier
                 tst.w   d4
-                bne.s   loc_1B1988
+                bne.s   @Default3
                 move.w  #1,d4
-                bra.s   loc_1B193C
-                bra.s   loc_1B198E
-loc_1B1988:
+                bra.s   @GetLeaderEffectiveLevel ; if less than 1, do it all over again once more for laughs !
+                bra.s   @CalculateUpgradeMultiplier
+@Default3:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B198E:
+                bra.w   @Done
+@CalculateUpgradeMultiplier:
                 
-                divu.w  #$A,d2
+                divu.w  #10,d2          ; D2 = bowie_level - battle_index / 10
                 andi.l  #$FF,d2
                 tst.w   d2
-                bne.s   loc_1B19A2
+                bne.s   @CalculateUpgradeRange
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B19A2:
+                bra.w   @Done           ; default to original enemy if Bowie is less than 10 levels over current battle
+@CalculateUpgradeRange:
                 
                 clr.w   d6
-                move.b  (a0),d6
+                move.b  (a0),d6         ; D6 = base upgrade range
                 cmpi.b  #5,d6
-                bne.s   loc_1B19B0
-                mulu.w  d6,d2
+                bne.s   @GetStrongestEnemy
+                mulu.w  d6,d2           ; apply upgrade multiplier D2
                 subq.w  #5,d2
-loc_1B19B0:
+@GetStrongestEnemy:
                 
                 add.w   d2,d3
-                move.w  d3,d2
+                move.w  d3,d2           ; strongest enemy upgrade currently allowed -> D2
                 addi.w  #1,d6
-loc_1B19B8:
+@UpgradeEnemy_Loop:
                 
                 jsr     (GenerateRandomNumber).w
                 add.w   d7,d3
-                cmp.b   1(a0),d3
-                bge.s   loc_1B19D8
+                cmp.b   1(a0),d3        ; compare to first upgradable enemy
+                bge.s   @IsEnemyUpgradable
                 tst.w   d4
-                bne.s   loc_1B19D2
+                bne.s   @Default4
                 move.w  #1,d4
                 move.w  d2,d3
-                bra.s   loc_1B19B8
-                bra.s   loc_1B19D8
-loc_1B19D2:
+                bra.s   @UpgradeEnemy_Loop ; fall back to enemy D2 and try again one more time
+                bra.s   @IsEnemyUpgradable
+@Default4:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B19D8:
+                bra.w   @Done
+@IsEnemyUpgradable:
                 
-                cmp.b   2(a0),d3
-                ble.s   loc_1B19F2
+                cmp.b   2(a0),d3        ; compare to last upgradable enemy
+                ble.s   @CheckExcludedEnemies ; keep going if enemy is upgradable
                 tst.w   d4
-                bne.s   loc_1B19EC
+                bne.s   @Default5
                 move.w  #1,d4
                 move.w  d2,d3
-                bra.s   loc_1B19B8
-                bra.s   loc_1B19F2
-loc_1B19EC:
+                bra.s   @UpgradeEnemy_Loop ; fall back to enemy D2 and try again one more time
+                bra.s   @CheckExcludedEnemies
+@Default5:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B19F2:
+                bra.w   @Done
+@CheckExcludedEnemies:
                 
                 movea.l a0,a1
-                adda.w  #3,a1
+                adda.w  #3,a1           ; A1 = pointer to excluded enemies list
                 clr.w   d1
                 move.b  (a1)+,d1
-                subi.w  #1,d1
-loc_1B1A00:
+                subi.w  #1,d1           ; D1 = loop counter
+@FindExcludedEnemy_Loop:
                 
                 move.b  (a1)+,d0
                 cmp.b   d0,d3
-                bne.s   loc_1B1A1A
+                bne.s   @Next
                 tst.w   d4
-                bne.s   loc_1B1A14
+                bne.s   @Default6
                 move.w  #1,d4
                 move.w  d2,d3
-                bra.s   loc_1B19B8
-                bra.s   loc_1B1A1A
-loc_1B1A14:
+                bra.s   @UpgradeEnemy_Loop ; fall back to enemy D2 and try again one more time
+                bra.s   @Next
+@Default6:
                 
                 move.w  d5,d1
-                bra.w   loc_1B1A22
-loc_1B1A1A:
+                bra.w   @Done
+@Next:
                 
-                dbf     d1,loc_1B1A00
+                dbf     d1,@FindExcludedEnemy_Loop
+                
                 clr.w   d1
-                move.b  d3,d1
-loc_1B1A22:
+                move.b  d3,d1           ; D1 = upgraded enemy index
+@Done:
                 
                 movem.l (sp)+,d0/d2-a6
                 rts
 
-    ; End of function UpgradeUnitIdx
+    ; End of function UpgradeEnemyIndex
 
 
 ; =============== S U B R O U T I N E =======================================
 
-sub_1B1A28:
+; Check if Jaro has joined the Force
+; 
+;       Out: D1 = 0 if false, 1 if true
+
+HasJaroJoinedTheForce:
                 
                 movem.l d0/d2-a6,-(sp)
                 jsr     j_UpdateForce
@@ -984,23 +1006,23 @@ sub_1B1A28:
                 subi.w  #1,d7
                 lea     ((TARGET_CHARACTERS_INDEX_LIST-$1000000)).w,a0
                 clr.l   d6
-loc_1B1A42:
+@Loop:
                 
                 clr.w   d0
                 move.b  (a0,d6.w),d0
-                cmpi.b  #$17,d0
-                bne.s   loc_1B1A56
+                cmpi.b  #ALLY_JARO,d0
+                bne.s   @Next           ; keep checking force members until we either find Jaro or reach end of the list
                 move.w  #1,d1
-                bra.w   loc_1B1A60
-loc_1B1A56:
+                bra.w   @Found          ; Jaro is found, so we're done
+@Next:
                 
                 addi.w  #1,d6
-                dbf     d7,loc_1B1A42
-                clr.w   d1
-loc_1B1A60:
+                dbf     d7,@Loop
+                clr.w   d1              ; reached end of the list without finding Jaro
+@Found:
                 
                 movem.l (sp)+,d0/d2-a6
                 rts
 
-    ; End of function sub_1B1A28
+    ; End of function HasJaroJoinedTheForce
 

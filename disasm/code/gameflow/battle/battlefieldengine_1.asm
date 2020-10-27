@@ -181,7 +181,7 @@ MemorizePath:
                 movem.l d0-a6,-(sp)     ; copy current moving unit's terrain list to memory
                 jsr     GetUpperMoveType
                 lsl.w   #4,d1
-                lea     MoveTypeTerrainCosts(pc), a0
+                lea     tbl_LandEffectSettingsAndMoveCosts(pc), a0
                 adda.w  d1,a0
                 lea     ((MOVE_COST_LIST-$1000000)).w,a1
                 moveq   #$F,d7
@@ -221,30 +221,35 @@ sub_C1BE:
 
 ; =============== S U B R O U T I N E =======================================
 
-GetMoveCost:
+; In: D0 = combatant index
+; 
+; Out: D1 = land effect setting (0=0%, 1=15%, 2=30%)
+
+GetLandEffectSetting:
                 
                 movem.l d0/d2-a6,-(sp)
                 jsr     GetUpperMoveType
-                lsl.w   #4,d1
-                lea     MoveTypeTerrainCosts(pc), a0
+                lsl.w   #MOVETYPE_NIBBLE_SHIFTCOUNT,d1
+                lea     tbl_LandEffectSettingsAndMoveCosts(pc), a0
                 adda.w  d1,a0
                 bsr.w   GetCurrentTerrainType
-                andi.w  #$F,d0
+                andi.w  #TERRAIN_MASK_TYPE,d0
                 adda.w  d0,a0
                 move.b  (a0),d1
-                lsr.b   #4,d1
-                andi.b  #$F,d1
+                lsr.b   #LANDEFFECT_NIBBLE_SHIFTCOUNT,d1 ; shift land effect setting into lower nibble position
+                andi.b  #LANDEFFECT_MASK_LOWERNIBBLE,d1
                 movem.l (sp)+,d0/d2-a6
                 rts
 
-    ; End of function GetMoveCost
+    ; End of function GetLandEffectSetting
 
 
 ; =============== S U B R O U T I N E =======================================
 
-;     Set coord to movable in movable grid.
-;     In: D1 = X coord
-;         D2 = Y coord
+; Set coord to movable in movable grid
+; 
+;       In: D1 = X coord
+;           D2 = Y coord
 
 SetMovableAtCoord:
                 
@@ -263,21 +268,18 @@ SetMovableAtCoord:
 
 ; =============== S U B R O U T I N E =======================================
 
-;     Get resistance to spell of combatant.
-;     In: D0 = combatant idx
-;         D1 = spell idx
-;     Out: D2 = resistance bitmask
+; Get combatant D0's resistance setting to spell D1 -> D2
 
 GetResistanceToSpell:
                 
                 movem.l d0-d1/d3-a6,-(sp)
-                andi.b  #SPELL_MASK_IDX,d1
-                move.b  SpellElementsTable(pc,d1.w),d2
+                andi.b  #SPELLENTRY_MASK_INDEX,d1
+                move.b  tbl_SpellElements(pc,d1.w),d2
                 jsr     GetCurrentResistance
-                andi.w  #SPELL_MASK_ALLRESIST,d1
+                andi.w  #RESISTANCEENTRY_MASK_ALL,d1
                 ror.w   d2,d1
                 move.w  d1,d2
-                andi.w  #SPELL_MASK_RESIST,d2
+                andi.w  #RESISTANCEENTRY_LOWERMASK_SETTING,d2
                 movem.l (sp)+,d0-d1/d3-a6
                 rts
 

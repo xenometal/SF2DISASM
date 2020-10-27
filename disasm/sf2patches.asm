@@ -1,66 +1,21 @@
-
-; ---------------------------------------------------------------------------
-
-; patch Easy_Battle_Test
-;
-;     0 = OFF, 1 = ON
-;
-EASY_BATTLE_TEST: equ 0
-
-; ---------------------------------------------------------------------------
-
-; patch Easy_Configuration_Mode
-;
-;     0 = OFF, 1 = ON
-;
-EASY_CONFIGURATION_MODE: equ 1
-
-; ---------------------------------------------------------------------------
-
-; patch Easy_Debug_Mode
-;
-;     0 = OFF, 1 = ON
-;
-EASY_DEBUG_MODE: equ 0
-
-; ---------------------------------------------------------------------------
-
-; patch Percent_Poison_Damage
-;
-;     0 = OFF, 1-100 = n% of max HP
-;
-PERCENT_POISON_DAMAGE: equ 0
-
-; ---------------------------------------------------------------------------
-
-; patch Three_Digits_Stats
-;
-;     0 = OFF, 1 = ON
-;
-THREE_DIGITS_STATS: equ 1
-
-; ---------------------------------------------------------------------------
-
-; patch Eight_Characters_Member_Names
-;
-;     0 = OFF, 1 = ON
-;
-EIGHT_CHARACTERS_MEMBER_NAMES: equ 1
-
-; ---------------------------------------------------------------------------
-
-; patch Full_Class_Names
-;
-;     0 = OFF, 1 = ON
-;
-FULL_CLASS_NAMES: equ 1
-
-; ---------------------------------------------------------------------------
-
-; patch Force_Members_Expansion
-;
-;     Enable the use of 2 additional force members
-;
-;     0 = OFF, 1 = ON
-
-FORCE_MEMBERS_EXPANSION: equ 0
+EASY_BATTLE_TEST: equ 0                         ; 0 = OFF, 1 = ON
+EASY_CONFIGURATION_MODE: equ 1                  ; 0 = OFF, 1 = ON
+EASY_DEBUG_MODE: equ 0                          ; 0 = OFF, 1 = ON
+PERCENT_POISON_DAMAGE: equ 0                    ; 0 = OFF, 1-100 = n% of max HP
+CAPITALIZED_CHARACTER_NAMES: equ 1              ; 0 = OFF, 1 = ON
+FORCE_MEMBERS_EXPANSION: equ 0                  ; 0 = OFF, 1 = ON. Enable the use of 2 additional force members.
+; Bugfixes
+BUGFIX_SEARCH_IN_BATTLE: equ 1                  ; 0 = OFF, 1 = ON
+BUGFIX_SKIPPED_TURNS: equ 1                     ; 0 = OFF, 1 = ON. Fixes cases where a combatant can miss a turn because of AGI getting higher than 127.
+BUGFIX_INCREASE_DOUBLE_RESETS_COUNTER: equ 1    ; 0 = OFF, 1 = ON
+BUGFIX_GODDESS_STAFF_DEALS_ABUSE: equ 1         ; 0 = OFF, 1 = ON
+BUGFIX_GARBLED_HP_BAR: equ 1                    ; 0 = OFF, 1 = ON. Prevents drawing garbage pixels when HP is greater then 600.
+BUGFIX_KIWI_SPELLS_LEARNING_LEVEL: equ 1        ; 0 = OFF, 1 = ON. Kiwi's base class is wrongfully treated as promoted for the purpose of learning spells.
+; Menu enhancements
+THREE_DIGITS_STATS: equ 1                       ; 0 = OFF, 1 = ON
+EIGHT_CHARACTERS_MEMBER_NAMES: equ 1            ; 0 = OFF, 1 = ON
+FULL_CLASS_NAMES: equ 1                         ; 0 = OFF, 1 = ON
+ALTERNATE_JEWEL_ICONS_DISPLAY: equ 0            ; 0 = OFF, 1 = small icons, 2 = no display
+EXTENDED_SPELL_NAMES: equ 1                     ; 0 = OFF, 1 = ON
+SHOW_ENEMY_LEVEL: equ 1                         ; 0 = OFF, 1 = ON
+SHOW_ALL_SPELLS_IN_MEMBER_SCREEN: equ 0         ; 0 = OFF, 1 = ON

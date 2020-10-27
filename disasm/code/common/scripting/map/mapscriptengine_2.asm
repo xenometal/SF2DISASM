@@ -8,13 +8,13 @@
 
 ExecuteMapScript:
                 
-                move.l  #byte_FF9004,(dword_FFB1A4).l
+                move.l  #FF9004_LOADING_SPACE,(dword_FFB1A4).l
                 movem.l d0-a6,-(sp)
                 movea.l a0,a6
                 clr.b   ((SKIP_CUTSCENE_TEXT-$1000000)).w
 loc_47140:
                 
-                btst    #INPUT_A_START,((P2_INPUT-$1000000)).w ; if P2 START and DEBUG MODE, DEACTIVATE DIALOGS
+                btst    #INPUT_BIT_START,((P2_INPUT-$1000000)).w ; if P2 START and DEBUG MODE, DEACTIVATE DIALOGS
                 beq.s   loc_47156
                 tst.b   (DEBUG_MODE_ACTIVATED).l
                 beq.s   loc_47156
@@ -49,7 +49,7 @@ rjt_cutsceneScriptCommands:
                 dc.w csc04_setTextIndex-rjt_cutsceneScriptCommands
                 dc.w csc05_playSound-rjt_cutsceneScriptCommands
                 dc.w csc06_doNothing-rjt_cutsceneScriptCommands
-                dc.w csc07_executeMapSystemEvent-rjt_cutsceneScriptCommands
+                dc.w csc07_warp-rjt_cutsceneScriptCommands
                 dc.w csc08_joinForce-rjt_cutsceneScriptCommands
                 dc.w csc09_hideTextBoxAndPortrait-rjt_cutsceneScriptCommands
                 dc.w csc0A_executeSubroutine-rjt_cutsceneScriptCommands 
@@ -332,7 +332,7 @@ csc06_doNothing:
 
 ; =============== S U B R O U T I N E =======================================
 
-csc07_executeMapSystemEvent:
+csc07_warp:
                 
                 lea     ((MAP_EVENT_TYPE-$1000000)).w,a0
                 move.w  #1,(a0)+
@@ -343,7 +343,7 @@ csc07_executeMapSystemEvent:
                 move.b  (a6)+,(a0)+
                 rts
 
-    ; End of function csc07_executeMapSystemEvent
+    ; End of function csc07_warp
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -375,7 +375,7 @@ loc_473B4:
 loc_473D4:
                 
                 jsr     j_JoinForce
-                jsr     j_GetClass      
+                jsr     j_GetClass
                 move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
                 move.w  d1,((TEXT_NAME_INDEX_2-$1000000)).w
                 txt     $1BE            ; "{NAME} the {CLASS} {N}has joined the force."
@@ -571,12 +571,12 @@ csc12_executeContextMenu:
                 move.l  a6,-(sp)
                 tst.w   d0
                 bne.s   loc_474C4
-                jsr     j_ChurchActions ; xxxx = 0
+                jsr     j_ChurchMenuActions ; xxxx = 0
 loc_474C4:
                 
                 cmpi.w  #1,d0
                 bne.s   loc_474D0
-                jsr     j_ShopActions   ; xxxx = 1
+                jsr     j_ShopMenuActions ; xxxx = 1
 loc_474D0:
                 
                 cmpi.w  #2,d0

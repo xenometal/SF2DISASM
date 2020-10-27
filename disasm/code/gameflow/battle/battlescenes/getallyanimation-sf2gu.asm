@@ -29,14 +29,14 @@ GetAllyAnimation:
 ; ---------------------------------------------------------------------------
         
         ; Check if weapon sprite is a spear
-        cmpi.w  #SPEAR_WEAPONSPRITES_START,((CHARACTER_WEAPON_SPRITE-$1000000)).w
+        cmpi.w  #SPEAR_WEAPONSPRITES_START,((ALLY_WEAPON_SPRITE-$1000000)).w
         blo.s   @GetAnimationIndex
-        cmpi.w  #SPEAR_WEAPONSPRITES_END,((CHARACTER_WEAPON_SPRITE-$1000000)).w
+        cmpi.w  #SPEAR_WEAPONSPRITES_END,((ALLY_WEAPON_SPRITE-$1000000)).w
         bhi.s   @GetAnimationIndex
         
         ; Check if battle sprite is a centaur
         lea     tbl_CentaurBattleSprites(pc), a0
-        move.w  ((BATTLESCENE_ACTOR-$1000000)).w,d1
+        move.w  ((ALLY_BATTLE_SPRITE-$1000000)).w,d1
         move.w  #@CENTAUR_BATTLESPRITES_COUNTER,d7
         
 @Loop:
@@ -53,20 +53,20 @@ GetAllyAnimation:
 ; ---------------------------------------------------------------------------
         
 @CheckSpecialAnimationType:
-        cmpi.w  #SPECIAL_ANIMATIONS_START,d1
+        cmpi.w  #ALLYBATTLEANIMATION_SPECIALS_START,d1
         bhs.s   @GetAnimationPointer
         
         ; Check if dodge animation type
         cmpi.w  #@ANIMATIONTYPE_DODGE,d1
         bne.s   @Default
-        moveq   #DODGE_ANIMATIONS_START,d1
+        moveq   #ALLYBATTLEANIMATION_DODGES_START,d1
         bra.s   @GetAnimationIndex
         
 @Default:
         clr.w   d1                                      ; default to regular attack animation
         
 @GetAnimationIndex:
-        add.w   ((BATTLESCENE_ACTOR-$1000000)).w,d1
+        add.w   ((ALLY_BATTLE_SPRITE-$1000000)).w,d1
         
 @GetAnimationPointer:
         movea.l (p_pt_AllyAnimations).l,a0

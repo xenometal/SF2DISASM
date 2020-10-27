@@ -68,7 +68,7 @@ cs_5FB6A:       textCursor $D31
                 csWait 40
                 fadeOutB
                 setCameraEntity 65535
-                mapLoad 75,40,12
+                mapLoad MAP_OVERWORLD_GRANS_NORTH_SHORE,40,12
                 loadMapEntities ce_5FDD4
                 setActscriptWait ALLY_BOWIE,eas_Init
                 setBlocks 60,59,4,5,44,15
@@ -78,7 +78,7 @@ cs_5FB6A:       textCursor $D31
                 nextSingleText $0,FOLLOWER_B ; "I've never experienced{N}anything like this in my{N}seventy years of life!{W1}"
                 csWait 60
                 fadeOutB
-                mapLoad 37,4,6
+                mapLoad MAP_NAZCA_SHIP_INTERIOR,4,6
                 loadEntitiesFromMapSetup 9,11,RIGHT
                 csWait 1
                 setActscriptWait ALLY_PETER,eas_Init
@@ -101,7 +101,7 @@ cs_5FB6A:       textCursor $D31
                 nextSingleText $80,ALLY_ZYNK ; "Oh, thank you very much.{W1}"
                 csWait 60
                 fadeOutB
-                mapLoad 75,40,12
+                mapLoad MAP_OVERWORLD_GRANS_NORTH_SHORE,40,12
                 loadMapEntities ce_5FDD4
                 setActscriptWait ALLY_BOWIE,eas_Init
                 setBlocks 60,59,4,5,44,15
@@ -117,7 +117,7 @@ cs_5FB6A:       textCursor $D31
                 csWait 15
                 executeSubroutine sub_5FD66
                 csWait 120
-                warp $3B,$3F,$3F,$0
+                warp MAP_ZEON_ARENA,63,63,RIGHT
                 csc_end
 
 ; =============== S U B R O U T I N E =======================================
@@ -204,7 +204,7 @@ loc_5FD82:
 
 sub_5FD92:
                 
-                move.b  #1,((byte_FFDFAB-$1000000)).w
+                move.b  #1,((FADING_TIMER+1-$1000000)).w
                 lea     plt_5FDB4(pc), a0
                 lea     (PALETTE_4_BASE).l,a1
                 moveq   #$20,d7 

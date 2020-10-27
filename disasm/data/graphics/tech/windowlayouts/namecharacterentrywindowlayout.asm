@@ -2,45 +2,39 @@
 ; ASM FILE data\graphics\tech\windowlayouts\namecharacterentrywindowlayout.asm :
 ; 0x16204..0x1623A : Name character entry window layout
 NameEntryWindowLayout:
-                dc.w $C060
-                dc.w $C061
-                dc.w $C061
-                dc.w $C061
-                dc.w $C061
-                dc.w $C061
-                dc.w $C061
-                dc.w $C061
                 
-                if (EIGHT_CHARACTERS_MEMBER_NAMES=1)
-                dc.w $C061
-                endif
+; Syntax        vdpBaseTile [VDPTILE_]index[|mirror|flip]
                 
-                dc.w $C860
-                dc.w $C070
-                dc.w $C05F
-                dc.w $C05F
-                dc.w $C05F
-                dc.w $C05F
-                dc.w $C05F
-                dc.w $C05F
-                dc.w $C05F
+; 1st line
+                vdpBaseTile CORNER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile CORNER|MIRROR
                 
-                if (EIGHT_CHARACTERS_MEMBER_NAMES=1)
-                dc.w $C05F
-                endif
+; 2nd line
+                vdpBaseTile V_BORDER
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile UNDERSCORE
+                vdpBaseTile V_BORDER|MIRROR
                 
-                dc.w $C870
-                dc.w $D060
-                dc.w $D061
-                dc.w $D061
-                dc.w $D061
-                dc.w $D061
-                dc.w $D061
-                dc.w $D061
-                dc.w $D061
+; 3rd line
+                vdpBaseTile CORNER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile CORNER|MIRROR|FLIP
                 
-                if (EIGHT_CHARACTERS_MEMBER_NAMES=1)
-                dc.w $D061
-                endif
-                
-                dc.w $D860

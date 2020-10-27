@@ -4,20 +4,18 @@
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetCharName:
+j_GetCombatantName:
                 
-                jmp     GetCharName(pc) 
+                jmp     GetCombatantName(pc)
 
-    ; End of function j_GetCharName
+    ; End of function j_GetCombatantName
 
 
 ; =============== S U B R O U T I N E =======================================
 
-; get entity's class index ?
-
 j_GetClass:
                 
-                jmp     GetClass(pc)
+                jmp     GetClass(pc)    
 
     ; End of function j_GetClass
 
@@ -69,29 +67,29 @@ j_GetUpperMoveType:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetStatus:
+j_GetStatusEffects:
                 
-                jmp     GetStatus(pc)
+                jmp     GetStatusEffects(pc)
 
-    ; End of function j_GetStatus
+    ; End of function j_GetStatusEffects
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetCurrentSpecialAbility:
+j_GetGetCurrentProwess:
                 
                 jmp     GetCurrentProwess(pc)
 
-    ; End of function j_GetCurrentSpecialAbility
+    ; End of function j_GetGetCurrentProwess
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetBaseSpecialAbility:
+j_GetBaseProwess:
                 
                 jmp     GetBaseProwess(pc)
 
-    ; End of function j_GetBaseSpecialAbility
+    ; End of function j_GetBaseProwess
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -123,11 +121,11 @@ j_GetBaseResistance:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetBaseATK:
+j_GetBaseATT:
                 
-                jmp     GetBaseATK(pc)
+                jmp     GetBaseATT(pc)
 
-    ; End of function j_GetBaseATK
+    ; End of function j_GetBaseATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -204,11 +202,11 @@ j_GetCurrentResistance:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetCurrentATK:
+j_GetCurrentATT:
                 
-                jmp     GetCurrentATK(pc)
+                jmp     GetCurrentATT(pc)
 
-    ; End of function j_GetCurrentATK
+    ; End of function j_GetCurrentATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -251,11 +249,11 @@ j_GetCurrentAGI:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetEnemyID:
+j_GetEnemyIndex:
                 
-                jmp     GetEnemyID(pc)
+                jmp     GetEnemyIndex(pc)
 
-    ; End of function j_GetEnemyID
+    ; End of function j_GetEnemyIndex
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -287,11 +285,11 @@ j_GetDefeats:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_CopyCharNameToRAM:
+j_CopyCharacterNameToRam:
                 
-                jmp     CopyCharNameToRAM(pc)
+                jmp     CopyCharacterNameToRam(pc)
 
-    ; End of function j_CopyCharNameToRAM
+    ; End of function j_CopyCharacterNameToRam
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -341,11 +339,11 @@ j_SetMoveType:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_SetStatus:
+j_SetStatusEffects:
                 
-                jmp     SetStatus(pc)
+                jmp     SetStatusEffects(pc)
 
-    ; End of function j_SetStatus
+    ; End of function j_SetStatusEffects
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -395,11 +393,11 @@ j_SetBaseResistance:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_SetBaseATK:
+j_SetBaseATT:
                 
-                jmp     SetBaseATK(pc)
+                jmp     SetBaseATT(pc)
 
-    ; End of function j_SetBaseATK
+    ; End of function j_SetBaseATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -485,11 +483,11 @@ j_SetCurrentResistance:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_SetCurrentATK:
+j_SetCurrentATT:
                 
-                jmp     SetCurrentATK(pc)
+                jmp     SetCurrentATT(pc)
 
-    ; End of function j_SetCurrentATK
+    ; End of function j_SetCurrentATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -530,11 +528,11 @@ j_SetCurrentAGI:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_SetEnemyID:
+j_SetEnemyIndex:
                 
-                jmp     SetEnemyID(pc)
+                jmp     SetEnemyIndex(pc)
 
-    ; End of function j_SetEnemyID
+    ; End of function j_SetEnemyIndex
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -575,11 +573,11 @@ j_IncreaseBaseDEF:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_IncreaseBaseATK:
+j_IncreaseBaseATT:
                 
-                jmp     IncreaseBaseATK(pc)
+                jmp     IncreaseBaseATT(pc)
 
-    ; End of function j_IncreaseBaseATK
+    ; End of function j_IncreaseBaseATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -647,11 +645,11 @@ j_IncreaseCurrentDEF:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_IncreaseCurrentATK:
+j_IncreaseCurrentATT:
                 
-                jmp     IncreaseCurrentATK(pc)
+                jmp     IncreaseCurrentATT(pc)
 
-    ; End of function j_IncreaseCurrentATK
+    ; End of function j_IncreaseCurrentATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -746,11 +744,11 @@ j_DecreaseCurrentDEF:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_DecreaseCurrentATK:
+j_DecreaseCurrentATT:
                 
-                jmp     DecreaseCurrentATK(pc)
+                jmp     DecreaseCurrentATT(pc)
 
-    ; End of function j_DecreaseCurrentATK
+    ; End of function j_DecreaseCurrentATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -809,11 +807,11 @@ j_DecreaseGold:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_ApplyStatusAndItemsOnStats:
+j_ApplyStatusEffectsAndItemsOnStats:
                 
-                jmp     ApplyStatusAndItemsOnStats(pc)
+                jmp     ApplyStatusEffectsAndItemsOnStats(pc)
 
-    ; End of function j_ApplyStatusAndItemsOnStats
+    ; End of function j_ApplyStatusEffectsAndItemsOnStats
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -847,18 +845,18 @@ j_GetItemDefAddress:
 
 j_GetItemAndNumberOfItems:
                 
-                jmp     GetCharItemAtSlotAndNumberOfItems(pc)
+                jmp     GetItemAndNumberOfItems(pc)
 
     ; End of function j_GetItemAndNumberOfItems
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetItemType:
+j_GetEquipmentType:
                 
-                jmp     GetItemType(pc) 
+                jmp     GetEquipmentType(pc)
 
-    ; End of function j_GetItemType
+    ; End of function j_GetEquipmentType
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -899,20 +897,20 @@ j_RepairItemBySlot:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_EquipItem:
+j_EquipItemBySlot:
                 
                 jmp     EquipItemBySlot(pc)
 
-    ; End of function j_EquipItem
+    ; End of function j_EquipItemBySlot
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_UnequipItemIfNotCursed:
+j_UnequipItemBySlotIfNotCursed:
                 
                 jmp     UnequipItemBySlotIfNotCursed(pc)
 
-    ; End of function j_UnequipItemIfNotCursed
+    ; End of function j_UnequipItemBySlotIfNotCursed
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -998,11 +996,11 @@ j_IsWeaponOrRingEquippable:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetWeaponNewATKandDEF:
+j_GetEquipmentNewATTandDEF:
                 
-                jmp     GetWeaponNewATKandDEF(pc)
+                jmp     GetEquipmentNewATTandDEF(pc)
 
-    ; End of function j_GetWeaponNewATKandDEF
+    ; End of function j_GetEquipmentNewATTandDEF
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1079,11 +1077,11 @@ j_FindSpellName:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetSpellDefAddress:
+j_FindSpellDefAddress:
                 
-                jmp     GetSpellDefAddress(pc)
+                jmp     FindSpellDefAddress(pc)
 
-    ; End of function j_GetSpellDefAddress
+    ; End of function j_FindSpellDefAddress
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1115,11 +1113,11 @@ j_LearnSpell:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetCharacterRAMAddress_0:
+j_GetCombatantEntryAddress_0:
                 
-                jmp     GetCharEntryAddress(pc)
+                jmp     GetCombatantEntryAddress(pc)
 
-    ; End of function j_GetCharacterRAMAddress_0
+    ; End of function j_GetCombatantEntryAddress_0
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1142,11 +1140,11 @@ j_nullsub_9482:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetCharEntryAddress:
+j_GetCombatantEntryAddress:
                 
-                jmp     GetCharEntryAddress(pc)
+                jmp     GetCombatantEntryAddress(pc)
 
-    ; End of function j_GetCharEntryAddress
+    ; End of function j_GetCombatantEntryAddress
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1187,18 +1185,18 @@ j_DebugModeActionSelect:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_WriteSkirmishScript:
+j_WriteBattlesceneScript:
                 
-                jmp     WriteSkirmishScript(pc)
+                jmp     WriteBattlesceneScript(pc)
 
-    ; End of function j_WriteSkirmishScript
+    ; End of function j_WriteBattlesceneScript
 
 
 ; =============== S U B R O U T I N E =======================================
 
 j_sub_C404:
                 
-                jmp     j_sub_C404_0(pc)
+                jmp     sub_C404(pc)
 
     ; End of function j_sub_C404
 
@@ -1225,25 +1223,25 @@ j_CreateItemRangeGrid:
 
 j_sub_C4E8:
                 
-                jmp     j_sub_C4E8_0(pc)
+                jmp     sub_C4E8(pc)
 
     ; End of function j_sub_C4E8
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_sub_C5D6:
+j_CreateTargetGridFromUsedItem:
                 
-                jmp     j_sub_C5D6_0(pc)
+                jmp     CreateTargetGridFromUsedItem(pc)
 
-    ; End of function j_sub_C5D6
+    ; End of function j_CreateTargetGridFromUsedItem
 
 
 ; =============== S U B R O U T I N E =======================================
 
 j_sub_C5FA:
                 
-                jmp     j_sub_C5FA_0(pc)
+                jmp     sub_C5FA(pc)
 
     ; End of function j_sub_C5FA
 
@@ -1286,11 +1284,11 @@ j_MakeTargetListAllies:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_MakeTargetListMonsters:
+j_MakeTargetListEnemies:
                 
-                jmp     MakeTargetListMonsters(pc)
+                jmp     MakeTargetListEnemies(pc)
 
-    ; End of function j_MakeTargetListMonsters
+    ; End of function j_MakeTargetListEnemies
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1304,20 +1302,20 @@ j_MakeTargetListEverybody:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_UpdateTargetListCharacters:
+j_UpdateTargetListAllies:
                 
-                jmp     UpdateTargetListCharacters(pc)
+                jmp     UpdateTargetListAllies(pc)
 
-    ; End of function j_UpdateTargetListCharacters
+    ; End of function j_UpdateTargetListAllies
 
 
 ; =============== S U B R O U T I N E =======================================
 
-j_UpdateTargetListMonsters:
+j_UpdateTargetListEnemies:
                 
-                jmp     UpdateTargetListMonsters(pc)
+                jmp     UpdateTargetListEnemies(pc)
 
-    ; End of function j_UpdateTargetListMonsters
+    ; End of function j_UpdateTargetListEnemies
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1358,11 +1356,11 @@ j_GetTargetAtCoordOffset:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_GetMoveCost:
+j_GetLandEffectSetting:
                 
-                jmp     GetMoveCost(pc)
+                jmp     GetLandEffectSetting(pc)
 
-    ; End of function j_GetMoveCost
+    ; End of function j_GetLandEffectSetting
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1423,7 +1421,7 @@ j_UpdateForce:
 
 j_JoinForce:
                 
-                jmp     JoinForce(pc)
+                jmp     JoinForce(pc)   
 
     ; End of function j_JoinForce
 
@@ -1432,14 +1430,12 @@ j_JoinForce:
 
 j_LeaveForce:
                 
-                jmp     LeaveForce(pc)
+                jmp     LeaveForce(pc)  
 
     ; End of function j_LeaveForce
 
 
 ; =============== S U B R O U T I N E =======================================
-
-; In: D0 = character idx
 
 j_IsInBattleParty:
                 
@@ -1450,8 +1446,6 @@ j_IsInBattleParty:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = character idx
-
 j_JoinBattleParty:
                 
                 jmp     JoinBattleParty(pc)
@@ -1460,8 +1454,6 @@ j_JoinBattleParty:
 
 
 ; =============== S U B R O U T I N E =======================================
-
-; In: D0 = character idx
 
 j_LeaveBattleParty:
                 
@@ -1526,11 +1518,11 @@ j_AddAllToStack:
 
 ; =============== S U B R O U T I N E =======================================
 
-j_sub_DEFC:
+sub_82A0:
                 
-                jmp     j_sub_DEFC_0(pc)
+                jmp     sub_DEFC(pc)    
 
-    ; End of function j_sub_DEFC
+    ; End of function sub_82A0
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1606,54 +1598,59 @@ j_GetDifficulty:
 
     ; End of function j_GetDifficulty
 
-p_SpellNames:   dc.l SpellNames
-p_AllyNames:    dc.l AllyNames
-p_EnemyNames:   dc.l EnemyNames
+p_tbl_SpellNames:
+                dc.l tbl_SpellNames
+p_tbl_AllyNames:dc.l tbl_AllyNames
+p_tbl_EnemyNames:
+                dc.l tbl_EnemyNames
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = char idx
+; In: D0 = combatant index
+; 
 ; Out: A0 = address of name
 ;      D7 = length of name
 
-GetCharName:
+GetCombatantName:
                 
                 movem.l d0-d1,-(sp)
-                btst    #CHAR_BIT_ENEMY,d0
-                bne.s   loc_82F0
-                bsr.w   GetCharEntryAddress
-                moveq   #CHAR_NAME_COUNTER,d0
+                btst    #COMBATANT_BIT_ENEMY,d0
+                bne.s   @Enemy
+                bsr.w   GetCombatantEntryAddress
+                moveq   #ALLYNAME_CHARACTERS_COUNTER,d0
                 clr.w   d7
-loc_82E2:
+@CountNameLength_Loop:
                 
                 tst.b   (a0,d7.w)
-                beq.s   loc_82EE
+                beq.s   @Break          ; break out of loop upon reaching end of name
                 addq.w  #1,d7
-                dbf     d0,loc_82E2
-loc_82EE:
+                dbf     d0,@CountNameLength_Loop
+@Break:
                 
-                bra.s   loc_8300
-loc_82F0:
+                bra.s   @Done
+@Enemy:
                 
                 clr.w   d1
-                bsr.w   GetEnemyID
-                movea.l (p_EnemyNames).l,a0
+                bsr.w   GetEnemyIndex   
+                movea.l (p_tbl_EnemyNames).l,a0
                 bsr.w   FindName        
-loc_8300:
+@Done:
                 
                 movem.l (sp)+,d0-d1
                 rts
 
-    ; End of function GetCharName
+    ; End of function GetCombatantName
 
 
 ; =============== S U B R O U T I N E =======================================
 
+; Get combatant D0's class index -> D1
+
 GetClass:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_CLASS_IDX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_CLASS,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1662,11 +1659,13 @@ GetClass:
 
 ; =============== S U B R O U T I N E =======================================
 
+; Get combatant D0's current level -> D1
+
 GetCurrentLevel:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_LEVEL,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_LEVEL,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1678,8 +1677,8 @@ GetCurrentLevel:
 GetMaxHP:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_HP_MAX,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_HP_MAX,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1691,8 +1690,8 @@ GetMaxHP:
 GetCurrentHP:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_HP_CURRENT,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_HP_CURRENT,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1704,8 +1703,8 @@ GetCurrentHP:
 GetMaxMP:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_MP_MAX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_MP_MAX,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1717,8 +1716,8 @@ GetMaxMP:
 GetCurrentMP:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_MP_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_MP_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1727,28 +1726,28 @@ GetCurrentMP:
 
 ; =============== S U B R O U T I N E =======================================
 
-GetBaseATK:
+GetBaseATT:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_ATK_MAX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_ATT_BASE,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
-    ; End of function GetBaseATK
+    ; End of function GetBaseATT
 
 
 ; =============== S U B R O U T I N E =======================================
 
-GetCurrentATK:
+GetCurrentATT:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_ATK_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_ATT_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
-    ; End of function GetCurrentATK
+    ; End of function GetCurrentATT
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1756,8 +1755,8 @@ GetCurrentATK:
 GetBaseDEF:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_DEF_MAX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_DEF_BASE,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1769,8 +1768,8 @@ GetBaseDEF:
 GetCurrentDEF:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_DEF_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_DEF_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1782,8 +1781,8 @@ GetCurrentDEF:
 GetBaseAGI:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_AGI_MAX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_AGI_BASE,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1795,8 +1794,8 @@ GetBaseAGI:
 GetCurrentAGI:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_AGI_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_AGI_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1808,8 +1807,8 @@ GetCurrentAGI:
 GetBaseMOV:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_MOV_MAX,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_MOV_BASE,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1821,8 +1820,8 @@ GetBaseMOV:
 GetCurrentMOV:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_MOV_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_MOV_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1834,10 +1833,10 @@ GetCurrentMOV:
 GetBaseResistance:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_RESIST_BASE,d7
+                moveq   #COMBATANT_OFFSET_RESIST_BASE1,d7
 loc_83EC:
                 
-                bsr.w   GetCharacterWord
+                bsr.w   GetCombatantWord
 loc_83F0:
                 
                 movem.l (sp)+,d7-a0
@@ -1851,8 +1850,8 @@ loc_83F0:
 GetCurrentResistance:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_RESIST_CURRENT,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_RESIST_CURRENT,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1864,8 +1863,8 @@ GetCurrentResistance:
 GetBaseProwess:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_PROWESS_BASE,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_PROWESS_BASE,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1877,8 +1876,8 @@ GetBaseProwess:
 GetCurrentProwess:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_PROWESS_CURRENT,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_PROWESS_CURRENT,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1887,15 +1886,15 @@ GetCurrentProwess:
 
 ; =============== S U B R O U T I N E =======================================
 
-GetStatus:
+GetStatusEffects:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_STATUS,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_STATUSEFFECTS,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
-    ; End of function GetStatus
+    ; End of function GetStatusEffects
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -1903,10 +1902,8 @@ GetStatus:
 GetXPos:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_X,d7
-loc_843C:
-                
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_X,d7
+                bsr.w   GetCombatantByte
                 ext.w   d1
                 movem.l (sp)+,d7-a0
                 rts
@@ -1919,8 +1916,8 @@ loc_843C:
 GetYPos:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_Y,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_Y,d7
+                bsr.w   GetCombatantByte
                 ext.w   d1
                 movem.l (sp)+,d7-a0
                 rts
@@ -1933,8 +1930,8 @@ GetYPos:
 GetCurrentEXP:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_EXP,d7
-                bsr.w   GetCharacterByte
+                moveq   #COMBATANT_OFFSET_EXP,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1943,13 +1940,15 @@ GetCurrentEXP:
 
 ; =============== S U B R O U T I N E =======================================
 
+; Get combatant D0's upper move type, shifted into lower nibble position -> D1
+
 GetUpperMoveType:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #$31,d7 
-                bsr.w   GetCharacterByte
-                lsr.w   #4,d1
-                andi.w  #$F,d1
+                moveq   #COMBATANT_OFFSET_MOVETYPE,d7
+                bsr.w   GetCombatantByte
+                lsr.w   #MOVETYPE_NIBBLE_SHIFTCOUNT,d1
+                andi.w  #MOVETYPE_MASK_LOWERNIBBLE,d1
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1961,9 +1960,9 @@ GetUpperMoveType:
 GetLowerMoveType:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #$31,d7 
-                bsr.w   GetCharacterByte
-                andi.w  #$F,d1
+                moveq   #COMBATANT_OFFSET_MOVETYPE,d7
+                bsr.w   GetCombatantByte
+                andi.w  #MOVETYPE_MASK_LOWERNIBBLE,d1
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -1976,7 +1975,7 @@ GetEnemyAISetting3233:
                 
                 movem.l d7-a0,-(sp)
                 moveq   #$32,d7 
-                bsr.w   GetCharacterWord
+                bsr.w   GetCombatantWord
                 move.w  d1,d2
                 lsr.w   #8,d1
                 andi.w  #$FF,d1
@@ -1989,19 +1988,20 @@ GetEnemyAISetting3233:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = char idx
+; In: D0 = combatant index
+; 
 ; Out: D1 = high 4 bits
 ;      D2 = low 4 bits
 
 GetEnemyAISetting36:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #$36,d7 
-                bsr.w   GetCharacterByte
+                moveq   #ENEMYCOMBATANT_OFFSET_AI_SETTINGS,d7
+                bsr.w   GetCombatantByte
                 move.w  d1,d2
-                lsr.w   #4,d1
-                andi.w  #$F,d1
-                andi.w  #$F,d2
+                lsr.w   #ENEMYCOMBATANT_AI_SETTINGS_SHIFTCOUNT,d1
+                andi.w  #ENEMYCOMBATANT_AI_SETTINGS_MASK,d1
+                andi.w  #ENEMYCOMBATANT_AI_SETTINGS_MASK,d2
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -2013,8 +2013,8 @@ GetEnemyAISetting36:
 GetCharacterWord34:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #$34,d7 
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_34,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -2023,22 +2023,26 @@ GetCharacterWord34:
 
 ; =============== S U B R O U T I N E =======================================
 
-GetEnemyID:
+; In: D0 = combatant index
+; 
+; Out: D1 = enemy index ($FFFF if not an enemy)
+
+GetEnemyIndex:
                 
-                btst    #CHAR_BIT_ENEMY,d0
-                bne.s   loc_84EA
-                move.w  #$FFFF,d1
+                btst    #COMBATANT_BIT_ENEMY,d0
+                bne.s   @Continue
+                move.w  #$FFFF,d1       ; skip function and return -1 if combatant is not an enemy
                 rts
                 bra.s   GetKills
-loc_84EA:
+@Continue:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_ENEMYIDX,d7
-                bsr.w   GetCharacterByte
+                moveq   #ENEMYCOMBATANT_OFFSET_INDEX,d7
+                bsr.w   GetCombatantByte
                 movem.l (sp)+,d7-a0
                 rts
 
-    ; End of function GetEnemyID
+    ; End of function GetEnemyIndex
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2046,8 +2050,8 @@ loc_84EA:
 GetKills:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_KILLS,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_KILLS,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -2059,8 +2063,8 @@ GetKills:
 GetDefeats:
                 
                 movem.l d7-a0,-(sp)
-                moveq   #CHAR_OFFSET_DEFEATS,d7
-                bsr.w   GetCharacterWord
+                moveq   #COMBATANT_OFFSET_DEFEATS,d7
+                bsr.w   GetCombatantWord
                 movem.l (sp)+,d7-a0
                 rts
 
@@ -2069,23 +2073,24 @@ GetDefeats:
 
 ; =============== S U B R O U T I N E =======================================
 
-; In: D0 = combatant ID
+; In: D0 = combatant index
+; 
 ; Out: D1 = something class type ??
 
 GetSomethingClassType:
                 
-                btst    #CHAR_BIT_ENEMY,d0 ; check if combatant is an enemy
-                bne.s   @IsEnemy
+                btst    #COMBATANT_BIT_ENEMY,d0 ; check if combatant is an enemy
+                bne.s   @Enemy
                 moveq   #0,d1
-                bsr.w   GetClass
-                move.b  ClassTypesTable(pc,d1.w),d1 ; 0,1,2 = base class, promoted class, special promoted class
-                mulu.w  #$1E,d1
+                bsr.w   GetClass        
+                move.b  tbl_ClassTypes(pc,d1.w),d1 ; 0,1,2 = base class, promoted class, special promoted class
+                mulu.w  #COMBATANT_ALLIES_NUMBER,d1
                 add.w   d0,d1
                 bset    #$F,d1
                 bra.s   @Return
-@IsEnemy:
+@Enemy:
                 
-                bsr.s   GetEnemyID
+                bsr.s   GetEnemyIndex   
 @Return:
                 
                 rts

@@ -1,7 +1,7 @@
 
 ; ASM FILE data\stats\enemies\enemynames-sf2gu.asm :
 ; Enemy names
-EnemyNames:     enemyName "Ooze"
+tbl_EnemyNames: enemyName "Ooze"
                 enemyName "Wolf"
                 enemyName "Galam Soldier"
                 enemyName "Galam Knight"

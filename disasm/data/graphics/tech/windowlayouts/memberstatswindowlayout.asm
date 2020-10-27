@@ -3,759 +3,602 @@
 ; 0x16A62..0x16EA6 : Member stats window layout
 MemberStatsWindowLayout:
                 
-                ; 1st line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPLEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_TOPRIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 2nd line
-                
-@blankLine:     macro
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endm
-                
-                @blankLine
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 3rd line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 4th line
-                
-@firstStatsLine:    macro
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_L
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_V
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND      ; LV
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_A
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_T
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_T
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; ATT
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endm
-                
-                if (FULL_CLASS_NAMES=1)
-                @blankLine
-                else
-                @firstStatsLine
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 5th line
-                
-                if (FULL_CLASS_NAMES=1)
-                @firstStatsLine
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 6th line
-                
-@secondStatsLine:   macro
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_H
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_P
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; current HP
-                endif
-                dc.w VDPTILE_IDX_ASCII_SLASH
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; max HP
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_D
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_E
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_F
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; DEF
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endm
-                
-                if (FULL_CLASS_NAMES=1)
-                @blankLine
-                else
-                @secondStatsLine
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 7th line
-                
-                if (FULL_CLASS_NAMES=1)
-                @secondStatsLine
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 8th line
-                
-@thirdStatsLine:    macro
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_M
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_P
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; current MP
-                endif
-                dc.w VDPTILE_IDX_ASCII_SLASH
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; max MP
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_A
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_G
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_I
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK            ; AGI
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endm
-                
-                if (FULL_CLASS_NAMES=1)
-                @blankLine
-                else
-                @thirdStatsLine
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 9th line
-                
-                if (FULL_CLASS_NAMES=1)
-                @thirdStatsLine
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 10th line
-                
-@fourthStatsLine:   macro
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_E
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_X
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_P
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                if (THREE_DIGITS_STATS=1)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND      ; EXP
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_M
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_O
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_V
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                dc.w VDPTILE_IDX_ASCII_QUESTION_MARK
-                if (THREE_DIGITS_STATS=0)
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                endif
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endm
-                
-                if (FULL_CLASS_NAMES=1)
-                @blankLine
-                else
-                @fourthStatsLine
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 11th line
-                
-                if (FULL_CLASS_NAMES=1)
-                @fourthStatsLine
-                else
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                endif
-                
-                ; ---------------------------------------------------------------------------
-                
-                ; 12th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 13th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_M
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_A
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_G
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_I
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_C
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_I
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_T
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_E
-                dc.w VDPTILE_IDX_ASCII_UPPERCASE_M
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 14th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 15th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 16th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 17th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 18th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 19th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 20th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 21th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 22th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 23th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 24th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 25th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_LEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BACKGROUND
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_RIGHTBORDER
-                
-; ---------------------------------------------------------------------------
-                
-                ; 26th line
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMLEFTBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMBORDER
-                dc.w VDPTILE_IDX_DIALOGUEWINDOW_BOTTOMRIGHTBORDER
+; Syntax        vdpBaseTile [VDPTILE_]index[|mirror|flip]
+                
+; 1st line
+                vdpBaseTile CORNER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile H_BORDER
+                vdpBaseTile CORNER|MIRROR
+                
+; 2nd line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 3rd line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 4th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_L
+                vdpBaseTile UPPERCASE_V
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_A
+                vdpBaseTile UPPERCASE_T
+                vdpBaseTile UPPERCASE_T
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 5th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 6th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_H
+                vdpBaseTile UPPERCASE_P
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SLASH
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_D
+                vdpBaseTile UPPERCASE_E
+                vdpBaseTile UPPERCASE_F
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 7th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 8th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_M
+                vdpBaseTile UPPERCASE_P
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SLASH
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_A
+                vdpBaseTile UPPERCASE_G
+                vdpBaseTile UPPERCASE_I
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 9th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 10th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_E
+                vdpBaseTile UPPERCASE_X
+                vdpBaseTile UPPERCASE_P
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_M
+                vdpBaseTile UPPERCASE_O
+                vdpBaseTile UPPERCASE_V
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile QUESTION_MARK
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 11th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 12th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 13th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile UPPERCASE_M
+                vdpBaseTile UPPERCASE_A
+                vdpBaseTile UPPERCASE_G
+                vdpBaseTile UPPERCASE_I
+                vdpBaseTile UPPERCASE_C
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile UPPERCASE_I
+                vdpBaseTile UPPERCASE_T
+                vdpBaseTile UPPERCASE_E
+                vdpBaseTile UPPERCASE_M
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 14th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 15th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 16th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 17th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 18th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 19th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 20th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 21th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 22th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 23th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 24th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 25th line
+                vdpBaseTile V_BORDER
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile SPACE
+                vdpBaseTile V_BORDER|MIRROR
+                
+; 26th line
+                vdpBaseTile CORNER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile H_BORDER|FLIP
+                vdpBaseTile CORNER|MIRROR|FLIP

@@ -4,9 +4,9 @@
 ; FREE SPACE : 626 bytes.
 
 
-j_ShopActions:                
+j_ShopMenuActions:                
                 jmp     ShopMenuActions(pc)
-j_ChurchActions:                
+j_ChurchMenuActions:                
                 jmp     ChurchMenuActions(pc)
 j_MainMenuActions:                
                 jmp     MainMenuActions(pc)
@@ -34,10 +34,10 @@ j_BattleLoop:
                 jmp     BattleLoop(pc)  
 j_BattleLoop_Unused:                
                 jmp     BattleLoop(pc)  
-j_GetEntityEventIdx:                
-                jmp     GetEntityEventIdx(pc)
+j_GetEntityEventIndex:                
+                jmp     GetEntityEventIndex(pc)
 j_GetEntityIndex:                
-                jmp     GetEntityNumberOfCombatant(pc)
+                jmp     GetEntityIndexForCombatant(pc)
 j_FadeOut_WaitForP1Input:                
                 jmp     FadeOut_WaitForP1Input(pc)
 j_SetEntityPosition:                
@@ -56,10 +56,10 @@ j_SuspendGame:
                 jmp     SuspendGame(pc)
                 include "code\common\menus\shop\shopactions.asm"    ; Shop functions
                 include "data\stats\items\shopdefs.asm"    ; Shop definitions
-                wordAlignIfExpandedRom
+                wordAlign
                 include "code\common\menus\church\churchactions_1.asm"    ; Church functions
                 include "data\stats\allies\promotions.asm"    ; Promotions
-                wordAlignIfExpandedRom
+                wordAlign
                 include "code\common\menus\church\churchactions_2.asm"    ; Church functions
                 include "code\common\menus\main\mainactions.asm"    ; Main menu functions
                 include "code\common\menus\blacksmith\blacksmithactions.asm"    ; Blacksmith functions

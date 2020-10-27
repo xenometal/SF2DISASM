@@ -801,8 +801,8 @@ FinalizeScrollDataUpdate:
                 add.w   d0,(VERTICAL_SCROLL_DATA+2).l
 loc_3D7E:
                 
-                bsr.w   UpdateVDPHScrollData
-                bsr.w   UpdateVDPVScrollData
+                bsr.w   UpdateVdpHScrollData
+                bsr.w   UpdateVdpVScrollData
                 rts
 
     ; End of function FinalizeScrollDataUpdate
@@ -1251,7 +1251,7 @@ OpenChest:
 loc_416E:
                 
                 jsr     j_SetFlag
-                move.w  #MAP_BLOCKIDX_OPENCHEST,(a2,d0.w) ; set block idx to open chest
+                move.w  #MAP_BLOCKINDEX_OPEN_CHEST,(a2,d0.w) ; set block index to open chest
                 tst.b   ((MAP_AREA_LAYER_TYPE-$1000000)).w
                 beq.s   loc_4188
                 bset    #0,((VIEW_PLANE_UPDATE_TRIGGERS-$1000000)).w
@@ -1276,7 +1276,7 @@ CloseChest:
                 tst.w   d0
                 blt.s   loc_41C0
                 jsr     j_ClearFlag
-                move.w  #MAP_BLOCKIDX_CLOSEDCHEST,(a2,d0.w)
+                move.w  #MAP_BLOCKINDEX_CLOSED_CHEST,(a2,d0.w)
                 tst.b   ((MAP_AREA_LAYER_TYPE-$1000000)).w
                 beq.s   loc_41BA
                 bset    #0,((VIEW_PLANE_UPDATE_TRIGGERS-$1000000)).w
@@ -1302,7 +1302,7 @@ CheckChestItem:
                 blt.s   loc_41F0
                 jsr     j_CheckFlag
                 beq.s   loc_41DE
-                move.w  #$7F,d2 
+                move.w  #ITEM_NOTHING,d2 ; no item if chest has already been opened
 loc_41DE:
                 
                 move.w  (a2,d0.w),d0
@@ -1328,7 +1328,7 @@ CheckNonChestItem:
                 blt.s   loc_4214
                 jsr     j_CheckFlag
                 beq.s   loc_420E
-                move.w  #$7F,d2 
+                move.w  #ITEM_NOTHING,d2
 loc_420E:
                 
                 jsr     j_SetFlag
@@ -1407,7 +1407,7 @@ GetItem:
                 beq.w   loc_4290        ; if we are not in battle branch
                 movem.l a0,-(sp)
                 conditionalWordAddr lea,BattleMapCoordinates,a0
-                mulu.w  #5,d2           ; US/EU "Open chest in battle" bug here ! Should be 7, not 5 !
+                mulu.w  #BATTLEMAPCOORDS_ENTRY_SIZE,d2 ; US/EU "Open chest in battle" bug here ! Should be 7, not 5 !
                 add.b   1(a0,d2.w),d0
                 add.b   2(a0,d2.w),d1   ; add x1 and y1 of battle camera bounds
                 movem.l (sp)+,a0
@@ -1518,7 +1518,7 @@ loc_435E:
                 move.w  ((VIEW_PLANE_A_X_COUNTER-$1000000)).w,d2
                 move.w  ((VIEW_PLANE_A_Y_COUNTER-$1000000)).w,d3
                 lea     (PLANE_A_MAP_LAYOUT).l,a1
-                bsr.w   sub_43F8
+                bsr.w   UpdateVdpPlane
                 movea.l ((WINDOW_LAYOUTS_END-$1000000)).w,a1
                 cmpa.l  #WINDOW_TILE_LAYOUTS,a1
                 bne.s   loc_439A
@@ -1526,7 +1526,7 @@ loc_435E:
                 lea     ($C000).l,a1    ; Update VDP Plane A layout data
                 move.w  #$400,d0
                 moveq   #2,d1
-                bsr.w   ApplyVIntVramDMA
+                bsr.w   ApplyVIntVramDma
 loc_439A:
                 
                 movem.w (sp)+,d7
@@ -1558,12 +1558,12 @@ loc_43BE:
                 move.w  ((VIEW_PLANE_B_X_COUNTER-$1000000)).w,d2
                 move.w  ((VIEW_PLANE_B_Y_COUNTER-$1000000)).w,d3
                 lea     (PLANE_B_LAYOUT).l,a1
-                bsr.w   sub_43F8
+                bsr.w   UpdateVdpPlane
                 lea     (PLANE_B_LAYOUT).l,a0
                 lea     ($E000).l,a1    ; Update VDP Plane B layout data
                 move.w  #$400,d0
                 moveq   #2,d1
-                bsr.w   ApplyVIntVramDMA
+                bsr.w   ApplyVIntVramDma
                 movem.w (sp)+,d7
                 movem.l (sp)+,a0-a1
                 rts
@@ -1573,7 +1573,7 @@ loc_43BE:
 
 ; =============== S U B R O U T I N E =======================================
 
-sub_43F8:
+UpdateVdpPlane:
                 
                 neg.w   d2
                 andi.w  #$FF,d2
@@ -1709,5 +1709,5 @@ loc_452A:
                 dbf     d7,loc_44B6
                 rts
 
-    ; End of function sub_43F8
+    ; End of function UpdateVdpPlane
 

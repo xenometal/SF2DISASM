@@ -1,7 +1,7 @@
 
 ; ASM FILE data\stats\allies\classes\classnames.asm :
 ; 0x17F3E..0x17FDA : Class names
-ClassNames:     className "SDMN"
+tbl_ClassNames: className "SDMN"
                 className "KNTE"
                 className "WARR"
                 className "MAGE"
@@ -33,3 +33,4 @@ ClassNames:     className "SDMN"
                 className "RBT"
                 className "GLM"
                 className "RDBN"
+                
