@@ -28,7 +28,9 @@ BattleLoop:
                 move.b  d0,((CURRENT_MAP-$1000000)).w
                 move.b  d1,((CURRENT_BATTLE-$1000000)).w
                 bsr.w   SetBaseVIntFunctions
-                jsr     j_ExecuteBattleCutscene_Intro
+                if (PROJECT_VS_DEMO=0)
+                    jsr     j_ExecuteBattleCutscene_Intro
+                endif
                 movem.w (sp)+,d0-d1
                 move.b  d0,((CURRENT_MAP-$1000000)).w
                 move.b  d1,((CURRENT_BATTLE-$1000000)).w
@@ -46,11 +48,15 @@ BattleLoop:
                 jsr     j_ClearEnemyMoveInfo
                 clr.w   d0
                 bsr.w   LoadBattle      
-                jsr     j_ExecuteBattleCutscene_Start
+                if (PROJECT_VS_DEMO=0)
+                    jsr     j_ExecuteBattleCutscene_Start
+                endif
 @Start:
                 
                 bsr.w   UpdateAllEnemiesAI ; start of battle loop
-                jsr     j_ExecuteBattleRegionCutscene
+                if (PROJECT_VS_DEMO=0)
+                    jsr     j_ExecuteBattleRegionCutscene
+                endif
                 tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
                 beq.s   @SpawnEnemies
                 bsr.w   PrintAllActivatedDefCons
@@ -86,7 +92,9 @@ BattleLoop:
                 bsr.w   KillRemainingEnemies
 @Continue2:
                 
-                jsr     j_ExecuteBattleCutscene_Defeated
+                if (PROJECT_VS_DEMO=0)
+                    jsr     j_ExecuteBattleCutscene_Defeated
+                endif
                 jsr     HandleKilledCombatants(pc)
                 nop
                 bsr.w   GetRemainingCombatants
@@ -155,22 +163,26 @@ HealLivingAndImmortalAllies:
                 moveq   #COMBATANT_ALLIES_COUNTER,d7
 @Loop:
                 
-                cmpi.b  #ALLY_PETER,d0  ; HARDCODED ally indexes
-                beq.w   @Immortal
-                cmpi.b  #ALLY_LEMON,d0
-                beq.w   @Immortal       ; always heal if character is immortal
-                jsr     j_GetCurrentHP
-                tst.w   d1
-                beq.s   @Dead           ; skip healing if character is dead
+                if (PROJECT_VS_DEMO=0)
+                    beq.w   @Immortal
+                    cmpi.b  #ALLY_LEMON,d0
+                    beq.w   @Immortal       ; always heal if character is immortal
+                    jsr     j_GetCurrentHP
+                    tst.w   d1
+                    beq.s   @Dead           ; skip healing if character is dead
+                endif
 @Immortal:
                 
                 jsr     j_GetMaxHP
                 jsr     j_SetCurrentHP
                 jsr     j_GetMaxMP
                 jsr     j_SetCurrentMP
-                jsr     j_GetStatusEffects
-                andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE,d1 
-                                                        ; cure all but lasting status effects
+                if (PROJECT_VS_DEMO=1)
+                    clr.w   d1                          ; cure all status effects
+                else
+                    jsr     j_GetStatusEffects
+                    andi.w  #STATUSEFFECT_STUN|STATUSEFFECT_POISON|STATUSEFFECT_CURSE,d1 
+                endif                                   ; cure all but lasting status effects
                 jsr     j_SetStatusEffects
                 jsr     j_ApplyStatusEffectsAndItemsOnStats
 @Dead:
@@ -225,11 +237,13 @@ GetRemainingCombatants:
                 addq.w  #1,d0
                 dbf     d7,@Enemies_Loop
                 
-                clr.w   d0
-                jsr     j_GetCurrentHP
-                tst.w   d1
-                bne.s   @Return
-                clr.w   d2
+                if (PROJECT_VS_DEMO=0)      ; skip checking if Bowie is alive
+                    clr.w   d0
+                    jsr     j_GetCurrentHP
+                    tst.w   d1
+                    bne.s   @Return
+                    clr.w   d2
+                endif
 @Return:
                 
                 rts
@@ -242,43 +256,52 @@ GetRemainingCombatants:
 
 BattleLoop_Victory:
                 
-                bsr.w   HealLivingAndImmortalAllies
-                cmpi.b  #BATTLE_FAIRY_WOODS,((CURRENT_BATTLE-$1000000)).w 
+                if (PROJECT_VS_DEMO=1)
+                    sndCom  MUSIC_ITEM
+                    txt     4267            ; "The Shining Force wins!{W1}"
+                    clsTxt
+                    bsr.w   HealLivingAndImmortalAllies
+                    addq.l  #4,sp
+                    jmp     NewVsBattle
+                else
+                    bsr.w   HealLivingAndImmortalAllies
+                    cmpi.b  #BATTLE_FAIRY_WOODS,((CURRENT_BATTLE-$1000000)).w 
                                                         ; HARDCODED Battle check for fairy woods
-                bne.s   @Continue
-                jsr     j_DisplayTimerWindow
+                    bne.s   @Continue
+                    jsr     j_DisplayTimerWindow
 @Continue:
                 
-                move.b  ((CURRENT_MAP-$1000000)).w,((MAP_EVENT_PARAM_2-$1000000)).w
-                jsr     (UpdateForceAndGetFirstBattlePartyMemberIndex).w
-                jsr     j_GetXPos
-                add.b   ((BATTLE_AREA_X-$1000000)).w,d1
-                move.b  d1,((MAP_EVENT_PARAM_3-$1000000)).w
-                jsr     j_GetYPos
-                add.b   ((BATTLE_AREA_Y-$1000000)).w,d1
-                move.b  d1,((MAP_EVENT_PARAM_4-$1000000)).w
-                bsr.w   GetEntityIndexForCombatant
-                lsl.w   #5,d0
-                lea     ((ENTITY_DATA-$1000000)).w,a0
-                move.b  $10(a0,d0.w),((MAP_EVENT_PARAM_5-$1000000)).w
-                move.b  #0,((MAP_EVENT_PARAM_1-$1000000)).w
-                jsr     j_ExecuteAfterBattleCutscene
-                clr.w   d1
-                move.b  ((CURRENT_BATTLE-$1000000)).w,d1
-                addi.w  #$190,d1
-                jsr     j_ClearFlag
-                addi.w  #$64,d1 
-                jsr     j_SetFlag
-                clr.w   d0
-                clr.w   d1
-                clr.w   d2
-                clr.w   d3
-                move.b  ((MAP_EVENT_PARAM_2-$1000000)).w,d0
-                move.b  ((MAP_EVENT_PARAM_3-$1000000)).w,d1
-                move.b  ((MAP_EVENT_PARAM_4-$1000000)).w,d2
-                move.b  ((MAP_EVENT_PARAM_5-$1000000)).w,d3
-                moveq   #1,d4
-                rts
+                    move.b  ((CURRENT_MAP-$1000000)).w,((MAP_EVENT_PARAM_2-$1000000)).w
+                    jsr     (UpdateForceAndGetFirstBattlePartyMemberIndex).w
+                    jsr     j_GetXPos
+                    add.b   ((BATTLE_AREA_X-$1000000)).w,d1
+                    move.b  d1,((MAP_EVENT_PARAM_3-$1000000)).w
+                    jsr     j_GetYPos
+                    add.b   ((BATTLE_AREA_Y-$1000000)).w,d1
+                    move.b  d1,((MAP_EVENT_PARAM_4-$1000000)).w
+                    bsr.w   GetEntityIndexForCombatant
+                    lsl.w   #5,d0
+                    lea     ((ENTITY_DATA-$1000000)).w,a0
+                    move.b  $10(a0,d0.w),((MAP_EVENT_PARAM_5-$1000000)).w
+                    move.b  #0,((MAP_EVENT_PARAM_1-$1000000)).w
+                    jsr     j_ExecuteAfterBattleCutscene
+                    clr.w   d1
+                    move.b  ((CURRENT_BATTLE-$1000000)).w,d1
+                    addi.w  #$190,d1
+                    jsr     j_ClearFlag
+                    addi.w  #$64,d1 
+                    jsr     j_SetFlag
+                    clr.w   d0
+                    clr.w   d1
+                    clr.w   d2
+                    clr.w   d3
+                    move.b  ((MAP_EVENT_PARAM_2-$1000000)).w,d0
+                    move.b  ((MAP_EVENT_PARAM_3-$1000000)).w,d1
+                    move.b  ((MAP_EVENT_PARAM_4-$1000000)).w,d2
+                    move.b  ((MAP_EVENT_PARAM_5-$1000000)).w,d3
+                    moveq   #1,d4
+                    rts
+                endif
 
     ; End of function BattleLoop_Victory
 
@@ -288,33 +311,42 @@ BattleLoop_Victory:
 
 BattleLoop_Defeat:
                 
-                bsr.w   UpdateBattleUnlockedFlag
-                clr.w   ((TEXT_NAME_INDEX_1-$1000000)).w
-                sndCom  MUSIC_SAD_THEME_2
-                txt     363             ; "{LEADER} is exhausted.{W1}"
-                clsTxt
-                clr.w   d0
-                jsr     j_GetMaxHP
-                jsr     j_SetCurrentHP
-                jsr     j_GetGold
-                lsr.l   #1,d1           ; divide current gold amount by 2
-                jsr     j_SetGold
-                jsr     GetEgressPositionForBattle(pc)
-                nop
-                moveq   #$FFFFFFFF,d4
+                if (PROJECT_VS_DEMO=1)
+                    sndCom  MUSIC_CURSED_ITEM
+                    txt     4268            ; "The Devil Army wins!{W1}"
+                    clsTxt
+                    bsr.w   HealLivingAndImmortalAllies
+                    addq.l  #4,sp
+                    jmp     NewVsBattle
+                else
+                    bsr.w   UpdateBattleUnlockedFlag
+                    clr.w   ((TEXT_NAME_INDEX_1-$1000000)).w
+                    sndCom  MUSIC_SAD_THEME_2
+                    txt     363             ; "{LEADER} is exhausted.{W1}"
+                    clsTxt
+                    clr.w   d0
+                    jsr     j_GetMaxHP
+                    jsr     j_SetCurrentHP
+                    jsr     j_GetGold
+                    lsr.l   #1,d1           ; divide current gold amount by 2
+                    jsr     j_SetGold
+                    jsr     GetEgressPositionForBattle(pc)
+                    nop
+                    moveq   #$FFFFFFFF,d4
                 
-                ; Losable battles
-                cmpi.b  #BATTLE_AMBUSHED_BY_GALAM_SOLDIERS,((CURRENT_BATTLE-$1000000)).w 
+                    ; Losable battles
+                    cmpi.b  #BATTLE_AMBUSHED_BY_GALAM_SOLDIERS,((CURRENT_BATTLE-$1000000)).w 
                                                         ; HARDCODED battle 4 upgrade
-                bne.s   @Return
-                clrFlg  404             ; Battle 4 unlocked - BATTLE_AMBUSHED_BY_GALAM_SOLDIERS
-                setFlg  504             ; Battle 4 completed - BATTLE_AMBUSHED_BY_GALAM_SOLDIERS   
-                jsr     j_UpgradeBattle
-                moveq   #$11,d0
-                clr.w   d4
+                    bne.s   @Return
+                    clrFlg  404             ; Battle 4 unlocked - BATTLE_AMBUSHED_BY_GALAM_SOLDIERS
+                    setFlg  504             ; Battle 4 completed - BATTLE_AMBUSHED_BY_GALAM_SOLDIERS   
+                    jsr     j_UpgradeBattle
+                    moveq   #$11,d0
+                    clr.w   d4
 @Return:
                 
-                rts
+                    rts
+                endif
 
     ; End of function BattleLoop_Defeat
 
@@ -678,56 +710,59 @@ ExecuteIndividualTurn:
                 bra.w   @GetFirstBattlesceneEnemy
 @EnemyMusic:
                 
-                move.b  #MUSIC_ENEMY_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
+                if (PROJECT_VS_DEMO=1)
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                else
+                    move.b  #MUSIC_ENEMY_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
                                                         ; enemy
-                jsr     j_GetEnemyIndex
+                    jsr     j_GetEnemyIndex
                 
-                ; Determine boss attack music
-                cmpi.b  #ENEMY_KRAKEN_HEAD,d1 ; HARDCODED enemy indexes
-                bne.s   @CheckTaros
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
+                    ; Determine boss attack music
+                    cmpi.b  #ENEMY_KRAKEN_HEAD,d1 ; HARDCODED enemy indexes
+                    bne.s   @CheckTaros
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
                                                         ; boss
 @CheckTaros:
                 
-                cmpi.b  #ENEMY_TAROS,d1
-                bne.s   @CheckZalbard
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_TAROS,d1
+                    bne.s   @CheckZalbard
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckZalbard:
                 
-                cmpi.b  #ENEMY_ZALBARD,d1
-                bne.s   @CheckCameela
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_ZALBARD,d1
+                    bne.s   @CheckCameela
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckCameela:
                 
-                cmpi.b  #ENEMY_CAMEELA,d1
-                bne.s   @CheckRedBaron
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_CAMEELA,d1
+                    bne.s   @CheckRedBaron
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckRedBaron:
                 
-                cmpi.b  #ENEMY_RED_BARON,d1
-                bne.s   @CheckGeshp
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_RED_BARON,d1
+                    bne.s   @CheckGeshp
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckGeshp:
                 
-                cmpi.b  #ENEMY_GESHP,d1
-                bne.s   @CheckOddEye
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_GESHP,d1
+                    bne.s   @CheckOddEye
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckOddEye:
                 
-                cmpi.b  #ENEMY_ODD_EYE,d1
-                bne.s   @CheckGalam
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_ODD_EYE,d1
+                    bne.s   @CheckGalam
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckGalam:
                 
-                cmpi.b  #ENEMY_GALAM,d1
-                bne.s   @CheckZeon
-                move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
+                    cmpi.b  #ENEMY_GALAM,d1
+                    bne.s   @CheckZeon
+                    move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
 @CheckZeon:
                 
-                cmpi.b  #ENEMY_ZEON,d1
-                bne.s   @GetFirstBattlesceneEnemy
-                move.b  #MUSIC_ZEON_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
-                                                        ; zeon
+                    cmpi.b  #ENEMY_ZEON,d1
+                    bne.s   @GetFirstBattlesceneEnemy
+                    move.b  #MUSIC_ZEON_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
+                endif                                   ; zeon
 @GetFirstBattlesceneEnemy:
                 
                 clr.w   d0
@@ -943,12 +978,14 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #HOLY_STAFF_HP_RECOVERY,d1
                 jsr     j_IncreaseCurrentHP
-                sub.w   d2,d1
-                ble.s   @ApplyMysteryStaffRecovery
-                ext.l   d1
-                move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
-                move.l  d1,((TEXT_NUMBER-$1000000)).w
-                txt     356             ; "{CLEAR}{NAME} recovered{N}{#} hit points.{D3}"
+                if (PROJECT_VS_DEMO=0)
+                    sub.w   d2,d1
+                    ble.s   @ApplyMysteryStaffRecovery
+                    ext.l   d1
+                    move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
+                    move.l  d1,((TEXT_NUMBER-$1000000)).w
+                    txt     356             ; "{CLEAR}{NAME} recovered{N}{#} hit points.{D3}"
+                endif
 @ApplyMysteryStaffRecovery:
                 
                 jsr     j_GetEquippedWeapon
@@ -958,12 +995,14 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #MYSTERY_STAFF_MP_RECOVERY,d1
                 jsr     j_IncreaseCurrentMP
-                sub.w   d2,d1
-                ble.s   @ApplyLifeRingRecovery
-                ext.l   d1
-                move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
-                move.l  d1,((TEXT_NUMBER-$1000000)).w
-                txt     357             ; "{CLEAR}{NAME} recovered{N}{#} magic points.{D3}"
+                if (PROJECT_VS_DEMO=0)
+                    sub.w   d2,d1
+                    ble.s   @ApplyLifeRingRecovery
+                    ext.l   d1
+                    move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
+                    move.l  d1,((TEXT_NUMBER-$1000000)).w
+                    txt     357             ; "{CLEAR}{NAME} recovered{N}{#} magic points.{D3}"
+                endif
 @ApplyLifeRingRecovery:
                 
                 jsr     j_GetEquippedRing
@@ -973,12 +1012,14 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #LIFE_RING_HP_RECOVERY,d1
                 jsr     j_IncreaseCurrentHP
-                sub.w   d2,d1
-                ble.s   @ApplyPoisonDamage
-                ext.l   d1
-                move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
-                move.l  d1,((TEXT_NUMBER-$1000000)).w
-                txt     356             ; "{CLEAR}{NAME} recovered{N}{#} hit points.{D3}"
+                if (PROJECT_VS_DEMO=0)
+                    sub.w   d2,d1
+                    ble.s   @ApplyPoisonDamage
+                    ext.l   d1
+                    move.w  d0,((TEXT_NAME_INDEX_1-$1000000)).w
+                    move.l  d1,((TEXT_NUMBER-$1000000)).w
+                    txt     356             ; "{CLEAR}{NAME} recovered{N}{#} hit points.{D3}"
+                endif
 @ApplyPoisonDamage:
                 
                 jsr     j_GetStatusEffects
@@ -2323,25 +2364,30 @@ loc_252A6:
                 clsTxt
                 tst.w   d0
                 bmi.w   loc_25236
-                move.l  ((SECONDS_COUNTER-$1000000)).w,((SECONDS_COUNTER_FROM_SRAM-$1000000)).w
-                setFlg  88              ; checks if a game has been saved for copying purposes ? (or if saved from battle?)
-                getCurrentSaveSlot
-                enableSram
-                jsr     (SaveGame).l
-                disableSram
-                tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
-                beq.w   byte_252E6
-                btst    #INPUT_BIT_START,((P1_INPUT-$1000000)).w
-                bne.w   byte_252F2      
+                if (PROJECT_VS_DEMO=1)
+                    bsr.w   HealLivingAndImmortalAllies
+                    jmp     NewVsBattle
+                else
+                    move.l  ((SECONDS_COUNTER-$1000000)).w,((SECONDS_COUNTER_FROM_SRAM-$1000000)).w
+                    setFlg  88              ; checks if a game has been saved for copying purposes ? (or if saved from battle?)
+                    getCurrentSaveSlot
+                    enableSram
+                    jsr     (SaveGame).l
+                    disableSram
+                    tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
+                    beq.w   byte_252E6
+                    btst    #INPUT_BIT_START,((P1_INPUT-$1000000)).w
+                    bne.w   byte_252F2      
 byte_252E6:
                 
-                sndCom  SOUND_COMMAND_FADE_OUT
-                jsr     (FadeOutToBlack).w
-                jmp     (WitchSuspend).w
+                    sndCom  SOUND_COMMAND_FADE_OUT
+                    jsr     (FadeOutToBlack).w
+                    jmp     (WitchSuspend).w
 byte_252F2:
                 
-                clrFlg  88              ; checks if a game has been saved for copying purposes ? (or if saved from battle?)
-                bra.w   loc_25236
+                    clrFlg  88              ; checks if a game has been saved for copying purposes ? (or if saved from battle?)
+                    bra.w   loc_25236
+                endif
 
     ; End of function BattlefieldMenuActions
 

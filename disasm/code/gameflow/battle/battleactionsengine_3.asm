@@ -61,7 +61,9 @@ loc_A396:
                 beq.w   loc_A3B2
 loc_A3AE:
                 
-                bsr.w   WriteBattlesceneScript_EXPandGold
+                if (PROJECT_VS_DEMO=0)
+                    bsr.w   WriteBattlesceneScript_EXPandGold
+                endif
 loc_A3B2:
                 
                 lea     allCombatantsCurrentHpTable(a2),a0

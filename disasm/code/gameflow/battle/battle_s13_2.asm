@@ -409,17 +409,19 @@ loc_1B15A4:
 SetEnemyBaseATT:
                 
                 move.l  d1,-(sp)
-                jsr     j_GetDifficulty
-                cmpi.w  #DIFFICULTY_SUPER,d1 ; pointless comparison
-                beq.s   @Continue
-                beq.w   @Done
+                if (PROJECT_VS_DEMO=0)
+                    jsr     j_GetDifficulty
+                    cmpi.w  #DIFFICULTY_SUPER,d1 ; pointless comparison
+                    beq.s   @Continue
+                    beq.w   @Done
 @Continue:
                 
-                clr.l   d1
-                jsr     j_GetBaseATT
-                mulu.w  #5,d1
-                lsr.l   #2,d1           ; base ATT effectively multiplied by 1.25
-                jsr     j_SetBaseATT
+                    clr.l   d1
+                    jsr     j_GetBaseATT
+                    mulu.w  #5,d1
+                    lsr.l   #2,d1           ; base ATT effectively multiplied by 1.25
+                    jsr     j_SetBaseATT
+                endif
                 jsr     j_GetDifficulty
                 cmpi.w  #DIFFICULTY_SUPER,d1
                 beq.s   @SuperDifficulty

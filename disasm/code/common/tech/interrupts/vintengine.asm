@@ -520,6 +520,18 @@ loc_9DC:
 loc_9F6:
                 
                 bsr.w   UpdatePlayerInputs
+                if (PROJECT_VS_DEMO=1)
+                
+                    ; Use P2 input if currently in battle and an enemy is taking its turn
+                    cmpi.b  #NOT_CURRENTLY_IN_BATTLE,((CURRENT_BATTLE-$1000000)).w
+                    beq.s   @Skip
+                    move.b  ((BATTLE_CURRENT_TURN_OFFSET-$1000000)).w,d0
+                    lea     ((BATTLE_TURN_ORDER-$1000000)).w,a0
+                    tst.b   (a0,d0.w)
+                    bpl.s   @Skip
+                    move.b  ((P2_INPUT-$1000000)).w,((P1_INPUT-$1000000)).w
+@Skip:
+                endif
                 tst.b   ((CONTROLLING_UNIT_CURSOR-$1000000)).w
                 bne.s   loc_A60
                 moveq   #2,d0

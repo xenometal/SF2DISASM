@@ -27,15 +27,18 @@ cd ../musicbank1/
 ..\..\..\..\tools\asw\p2bin.exe .\musicbank1.p ..\musicbank1build.bin -k -r $8000-$ffff
 cd ../../../
 echo Assembling game ...
-SET "buildname=sf2build-%today%-%hour%%minutes%%seconds%.bin"
+SET "buildname=sf2-6vs6-demo-%today%-%hour%%minutes%%seconds%.bin"
+SET "patchname=sf2-6vs6-demo-%today%-%hour%%minutes%%seconds%.bps"
 @"../tools/asm68k" /e EXPANDED_ROM=0 /e EXTENDED_SSF_MAPPER=0 /o ae-,e+,w+ /p sf2.asm, "../build/%buildname%" > ../build/output.log
 echo End of assembly, produced %buildname%
 
 echo -------------------------------------------------------------
-echo Checking build against reference ROM ...
+echo Checking build ...
 cd ../build/
 IF EXIST "%buildname%" ..\tools\fixheader "%buildname%"
-IF EXIST "%buildname%" (IF EXIST ../rom/sf2.bin (fc /b "%buildname%" ../rom/sf2.bin) ELSE echo sf2.bin does not exist in build directory) ELSE echo "%buildname%" does not exist, probably due to an assembly error. Check output.log.
+IF EXIST "%buildname%" (echo "%buildname%" exists in build directory. Success!) ELSE echo "%buildname%" does not exist, probably due to an assembly error. Check output.log.
+IF EXIST "%buildname%" echo Creating patch ...
+IF EXIST "%buildname%" ..\tools\floating\flips --create --bps-delta ..\rom\sf2.bin "%buildname%" "..\patch\%patchname%"
 
 
 pause

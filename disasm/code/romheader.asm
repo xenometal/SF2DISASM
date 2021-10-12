@@ -70,12 +70,22 @@ p_Start:        dc.l Start              ; Start Address
                 dc.l Int_OtherError     ; Reserved
 aSegaGenesis:   declareSystemId
 aCSega1994_jul: dc.b '(C)SEGA 1994.JUL'
-aShiningForce2: dc.b 'SHINING FORCE 2 '
-                dc.b '                '
-                dc.b '                '
-aShiningForce_0:dc.b 'SHINING FORCE 2 '
-                dc.b '                '
-                dc.b '                '
+aShiningForce2: 
+                if (PROJECT_VS_DEMO=1)
+                    dc.b 'SHINING FORCE 2:'
+                    dc.b ' 6 VS. 6 DEMO   '
+                    dc.b '                '
+                    dc.b 'SHINING FORCE 2:'
+                    dc.b ' 6 VS. 6 DEMO   '
+                    dc.b '                '
+                else
+                    dc.b 'SHINING FORCE 2 '
+                    dc.b '                '
+                    dc.b '                '
+                    dc.b 'SHINING FORCE 2 '
+                    dc.b '                '
+                    dc.b '                '
+                endif
 aGmMk13150:     dc.b 'GM MK-1315 -0'    ; Serial Number
                 dc.b $30
                 dc.w $8921              ; checksum
@@ -84,10 +94,18 @@ aJ:             dc.b 'J               '
 RomEndAddress:  declareRomEnd           ; ROM End Address
                 dc.l $FF0000            ; RAM Start Address
                 dc.l $FFFFFF            ; RAM End Address
-                dc.l $5241F820          ; SRAM data
+                if (PROJECT_VS_DEMO=1)
+                    dc.l $5241B820          ; SRAM data
+                else
+                    dc.l $5241F820          ; SRAM data
+                endif
                 dc.l $200001            ; SRAM Start Address
                 dc.l $203FFF            ; SRAM End Address
                 dc.b '            '     ; Modem data
                 dc.b '                    ' ; Memo
                 dc.b '                    '
-aU:             dc.b 'U               ' ; Countries codes
+                if (PROJECT_VS_DEMO=1)
+                    dc.b 'JUE             '
+                else
+aU:                 dc.b 'U               ' ; Countries codes
+                endif

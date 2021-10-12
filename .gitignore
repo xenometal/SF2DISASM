@@ -302,3 +302,14 @@ disasm/data/maps/entries/map*/*layoutflags*.txt
 disasm/code/common/menus/getallyportrait-expanded.asm
 disasm/code/common/scripting/entity/getallymapsprite-expanded.asm
 disasm/code/gameflow/special/battletest-expanded.asm
+
+#################
+## 6 vs. 6 demo
+#################
+
+!disasm/data/battles/entries/battle01/newterrain.bin
+!disasm/data/battles/entries/battle01/newspriteset.bin
+!disasm/data/graphics/battles/battlesprites/allies/new*.bin
+!disasm/data/graphics/battles/battlesprites/enemies/new*.bin
+!disasm/data/graphics/mapsprites/new/*.bin
+!disasm/data/scripting/text/new*.bin

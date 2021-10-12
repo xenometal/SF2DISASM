@@ -50,7 +50,11 @@ pt_BattleSpriteSets:
 BattleSpriteSet00:
                 incbin "data/battles/entries/battle00/spriteset.bin"
 BattleSpriteSet01:
-                incbin "data/battles/entries/battle01/spriteset.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/battles/entries/battle01/newspriteset.bin"
+                else
+                    incbin "data/battles/entries/battle01/spriteset.bin"
+                endif
 BattleSpriteSet02:
                 incbin "data/battles/entries/battle02/spriteset.bin"
 BattleSpriteSet03:

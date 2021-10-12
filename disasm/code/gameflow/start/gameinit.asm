@@ -9,12 +9,21 @@ InitGame:
                 
                 move    #$2300,sr
                 bsr.w   LoadBaseTiles
-                bsr.w   CheckRegion
-                jsr     j_NewGame
-                jsr     j_DisplaySegaLogo
-                bne.w   loc_71EC
-                tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
-                beq.w   GameIntro
+                if (PROJECT_VS_DEMO=1)
+                    nop
+                    nop
+                    jsr     j_NewGame
+                    jsr     j_DisplaySegaLogo
+                    move.b  #3,((MESSAGE_SPEED-$1000000)).w
+                    move.b  #1,((DISPLAY_BATTLE_MESSAGES-$1000000)).w
+                else
+                    bsr.w   CheckRegion
+                    jsr     j_NewGame
+                    jsr     j_DisplaySegaLogo
+                    bne.w   loc_71EC
+                    tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
+                    beq.w   GameIntro
+                endif
                 bsr.w   EnableDisplayAndInterrupts
                 bsr.w   WaitForVInt
                 

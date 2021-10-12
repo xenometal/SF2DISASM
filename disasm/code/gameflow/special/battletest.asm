@@ -7,7 +7,11 @@
 
 DebugModeBattleTest:
                 
-                move.b  #$FF,((DEBUG_MODE_ACTIVATED-$1000000)).w
+                if (PROJECT_VS_DEMO=1)
+                    move.b  #$FF,((CONTROL_OPPONENT_CHEAT-$1000000)).w
+                else
+                    move.b  #$FF,((DEBUG_MODE_ACTIVATED-$1000000)).w
+                endif
                 move.b  #$FF,((SPECIAL_TURBO_CHEAT-$1000000)).w
                 
                 if (FORCE_MEMBERS_EXPANSION=1)
@@ -19,20 +23,42 @@ DebugModeBattleTest:
                 addq.w  #1,d0
                 dbf     d1,@JoinForce_Loop
                 else
-                moveq   #ALLY_SARAH,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_CHESTER,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_JAHA,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_KAZIN,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_SLADE,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_KIWI,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_PETER,d0
-                bsr.w   j_JoinForce
+                
+                    if (PROJECT_VS_DEMO=1)
+                        moveq   #ALLY_BOWIE,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_SARAH,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_CHESTER,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_JAHA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_KAZIN,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_MAY,d0
+                        bsr.w   j_JoinForce
+NewVsBattle:
+
+                        move.w  #1,d0           ; battle 1
+                        bra.w   loc_StartBattle
+                        nop
+                    else
+                        moveq   #ALLY_SARAH,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_CHESTER,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_JAHA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_KAZIN,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_SLADE,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_KIWI,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_PETER,d0
+                        bsr.w   j_JoinForce
+                    endif
+                    
                 moveq   #ALLY_MAY,d0
                 bsr.w   j_JoinForce
                 moveq   #ALLY_GERHALT,d0
@@ -136,6 +162,8 @@ loc_7820:
                 move.w  #$46,d0 
                 jsr     j_DebugFlagSetter
                 movem.w (sp)+,d0-d4
+loc_StartBattle:
+                
                 clr.w   d1
                 move.b  d0,d1
                 mulu.w  #7,d0

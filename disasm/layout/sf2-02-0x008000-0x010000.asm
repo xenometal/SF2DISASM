@@ -46,7 +46,11 @@
                 
                 if (CAPITALIZED_CHARACTER_NAMES=1)
                 include "data\stats\allies\allynames-capitalized.asm"
-                include "data\stats\enemies\enemynames-capitalized.asm"
+                if (PROJECT_VS_DEMO=1)
+                    include "data\stats\enemies\newenemynames-capitalized.asm"
+                else
+                    include "data\stats\enemies\enemynames-capitalized.asm"
+                endif
                 else
                 include "data\stats\allies\allynames.asm"    ; Ally names
                 include "data\stats\enemies\enemynames.asm"    ; Enemy names

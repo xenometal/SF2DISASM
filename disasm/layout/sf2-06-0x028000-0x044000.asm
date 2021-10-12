@@ -73,10 +73,17 @@ StaticWidthFont:incbin "data/graphics/tech/fonts/staticwidthfont.bin"
 TitleScreenPalettes:
                 incbin "data/graphics/specialscreens/titlescreen/titlescreenpalettes.bin"
                 include "code\common\scripting\text\decoding.asm"    ; Text decoding functions
+                if (PROJECT_VS_DEMO=1)
 TextBankTreeOffsets:
-                incbin "data/scripting/text/huffmantreeoffsets.bin"
+                    incbin "data/scripting/text/newhuffmantreeoffsets.bin"
 TextBankTreeData:
-                incbin "data/scripting/text/huffmantrees.bin"
+                    incbin "data/scripting/text/newhuffmantrees.bin"
+                else
+TextBankTreeOffsets:
+                    incbin "data/scripting/text/huffmantreeoffsets.bin"
+TextBankTreeData:
+                    incbin "data/scripting/text/huffmantrees.bin"
+                endif
                 includeIfVanillaRom "data\scripting\text\entries.asm"    ; Textbank entries
                 alignIfExpandedRom $30000
                 includeIfExpandedRom "data\graphics\battles\grounds\entries.asm"    ; Grounds

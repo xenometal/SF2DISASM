@@ -9,7 +9,11 @@
                 include "code\gameflow\battle\battle_s13_1.asm"    ; Battle init, terrain, AI stuff to split more properly
                 includeIfVanillaRom "data\battles\terrainentries.asm"    ; Battle terrain data
                 include "code\gameflow\battle\battle_s13_2.asm"    ; Battle init, terrain, AI stuff to split more properly
-                include "data\stats\enemies\enemydefs.asm"    ; Enemy definitions
+                if (PROJECT_VS_DEMO=1)
+                    include "data\stats\enemies\newenemydefs.asm"
+                else
+                    include "data\stats\enemies\enemydefs.asm"    ; Enemy definitions
+                endif
                 includeIfVanillaRom "data\battles\spritesetentries.asm"    ; Battle sprite sets
                 include "data\battles\global\randombattles.asm"    ; Random battles table
                 includeIfVanillaRom "code\specialscreens\endkiss\graphics.asm"    ; End Kiss Graphics

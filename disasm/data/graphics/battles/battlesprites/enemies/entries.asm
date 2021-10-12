@@ -111,7 +111,11 @@ EnemyBattleSprite25:
 EnemyBattleSprite26:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite26.bin"
 EnemyBattleSprite27:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite27.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite27.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite27.bin"
+                endif
 EnemyBattleSprite28:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite28.bin"
 EnemyBattleSprite29:
@@ -127,7 +131,11 @@ EnemyBattleSprite33:
 EnemyBattleSprite34:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite34.bin"
 EnemyBattleSprite35:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite35.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite35.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite35.bin"
+                endif
 EnemyBattleSprite36:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite36.bin"
 EnemyBattleSprite37:
@@ -135,7 +143,11 @@ EnemyBattleSprite37:
 EnemyBattleSprite38:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite38.bin"
 EnemyBattleSprite39:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite39.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite39.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite39.bin"
+                endif
 EnemyBattleSprite40:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite40.bin"
 EnemyBattleSprite41:
@@ -153,14 +165,26 @@ EnemyBattleSprite46:
 EnemyBattleSprite47:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite47.bin"
 EnemyBattleSprite48:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite48.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite48.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite48.bin"
+                endif
 EnemyBattleSprite49:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite49.bin"
 EnemyBattleSprite50:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite50.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite50.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite50.bin"
+                endif
 EnemyBattleSprite51:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite51.bin"
 EnemyBattleSprite52:
-                incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite52.bin"
+                if (PROJECT_VS_DEMO=1)
+                    incbin "data/graphics/battles/battlesprites/enemies/newenemybattlesprite52.bin"
+                else
+                    incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite52.bin"
+                endif
 EnemyBattleSprite53:
                 incbin "data/graphics/battles/battlesprites/enemies/enemybattlesprite53.bin"

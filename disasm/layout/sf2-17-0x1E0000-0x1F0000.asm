@@ -28,7 +28,12 @@ p_SuspendStringTiles:
 p_BaseTiles:    dc.l BaseTiles
                 include "data\stats\allies\growthcurves.asm"    ; Stat growth curves
                 include "data\stats\allies\stats\entries.asm"    ; Ally stats
-                include "data\stats\allies\allystartdefs.asm"    ; Ally start definitions
+                if (PROJECT_VS_DEMO=1)
+                    include "data\stats\allies\newallystartdefs.asm"
+                else
+                    include "data\stats\allies\allystartdefs.asm"    ; Ally start definitions
+                    
+                endif
                 include "data\stats\allies\classes\classdefs.asm"    ; Class definitions
                 
                 if (FULL_CLASS_NAMES=1)

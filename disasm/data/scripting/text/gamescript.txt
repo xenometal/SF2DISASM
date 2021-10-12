@@ -4265,3 +4265,5 @@
 10A8=Somebody...HELP!{D2}
 10A9=Aughhhh!!!{D2}
 10AA=(Sigh)....{D2}
+10AB=The Shining Force wins!{W1}
+10AC=The Devil Army wins!{W1}

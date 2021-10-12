@@ -44,9 +44,14 @@
                 include "code\common\maps\mapinit_0.asm"    ; Map init functions
                 include "data\maps\global\flagswitchedmaps.asm"    ; Flag-switched maps
                 include "code\common\maps\getbattle.asm"    ; GetNextBattleOnMap function
-                includeIfVanillaRom "data\battles\global\battlemapcoords.asm"    ; Battle map coords
+                if (PROJECT_VS_DEMO=1)
+                    includeIfVanillaRom "data\battles\global\newbattlemapcoords.asm"
+                else
+                    includeIfVanillaRom "data\battles\global\battlemapcoords.asm"    ; Battle map coords
+                endif
                 includeIfVanillaRom "data\maps\global\savepointmapcoords.asm"    ; Save point map coords
                 includeIfVanillaRom "data\maps\global\raftresetmapcoords.asm"    ; Raft reset map coords
+                wordAlign
                 include "code\specialscreens\witch\witchfunctions.asm"    ; Witch functions
                 include "code\gameflow\special\configurationmode.asm"    ; Configuration mode function
                 include "code\gameflow\start\regioncheck.asm"    ; Region check function

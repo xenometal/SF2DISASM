@@ -82,8 +82,13 @@ WindowBorderTiles:
                 endif
                 
                 if (ITEMS_AND_SPELLS_EXPANSION=0)
-                    include "data\stats\items\itemdefs.asm"    ; Item definitions
-                    include "data\stats\spells\spelldefs.asm"    ; Spell definitions
+                    if (PROJECT_VS_DEMO=1)
+                        include "data\stats\items\newitemdefs.asm"
+                        include "data\stats\spells\newspelldefs.asm"
+                    else
+                        include "data\stats\items\itemdefs.asm"    ; Item definitions
+                        include "data\stats\spells\spelldefs.asm"    ; Spell definitions
+                    endif
                     include "data\stats\items\itemnames.asm"    ; Item names
                 endif
                 include "data\stats\allies\classes\classnames.asm"    ; Class names
