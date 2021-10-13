@@ -11,6 +11,6 @@ A short demo of a PvP themed Shining Force 2 mod, based on the [SF2DISASM](https
 
 ## How to :
 
-1. Obtain the [Latest Release](https://github.com/owner/repository/releases/latest/download/sf2-6vs6-demo.zip) patch file
+1. Obtain the [Latest Release](https://github.com/xenometal/SF2DISASM/releases/latest/download/sf2-6vs6-demo.zip) patch file
 2. Get the [Flips](https://www.smwcentral.net/?p=section&a=details&id=11474) patcher
 3. Apply the patch to a copy of a North American version, non-interleaved SF2 ROM with MD5 hash: 6473B1505334EF5620D13191C18251FE
