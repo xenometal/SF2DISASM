@@ -7,26 +7,22 @@
 
 DebugModeBattleTest:
                 
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                     move.b  #$FF,((CONTROL_OPPONENT_CHEAT-$1000000)).w
                 else
                     move.b  #$FF,((DEBUG_MODE_ACTIVATED-$1000000)).w
                 endif
                 move.b  #$FF,((SPECIAL_TURBO_CHEAT-$1000000)).w
-                
                 if (FORCE_MEMBERS_EXPANSION=1)
-                move.w  #COMBATANT_ALLIES_COUNTER-1,d1
-                moveq   #1,d0
+                    move.w  #COMBATANT_ALLIES_COUNTER-1,d1
+                    moveq   #1,d0
 @JoinForce_Loop:
                 
-                bsr.w   JoinForce
-                addq.w  #1,d0
-                dbf     d1,@JoinForce_Loop
+                    bsr.w   JoinForce
+                    addq.w  #1,d0
+                    dbf     d1,@JoinForce_Loop
                 else
-                
                     if (PROJECT_VS_DEMO=1)
-                        moveq   #ALLY_BOWIE,d0
-                        bsr.w   j_JoinForce
                         moveq   #ALLY_SARAH,d0
                         bsr.w   j_JoinForce
                         moveq   #ALLY_CHESTER,d0
@@ -37,11 +33,6 @@ DebugModeBattleTest:
                         bsr.w   j_JoinForce
                         moveq   #ALLY_MAY,d0
                         bsr.w   j_JoinForce
-NewVsBattle:
-
-                        move.w  #1,d0           ; battle 1
-                        bra.w   loc_StartBattle
-                        nop
                     else
                         moveq   #ALLY_SARAH,d0
                         bsr.w   j_JoinForce
@@ -57,64 +48,73 @@ NewVsBattle:
                         bsr.w   j_JoinForce
                         moveq   #ALLY_PETER,d0
                         bsr.w   j_JoinForce
+                        moveq   #ALLY_MAY,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_GERHALT,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_LUKE,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_ROHDE,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_RICK,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_ELRIC,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_ERIC,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_KARNA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_RANDOLF,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_TYRIN,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_JANET,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_HIGINS,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_SKREECH,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_TAYA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_FRAYJA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_JARO,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_GYAN,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_SHEELA,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_ZYNK,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_CHAZ,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_LEMON,d0
+                        bsr.w   j_JoinForce
+                        moveq   #ALLY_CLAUDE,d0
+                        bsr.w   j_JoinForce
                     endif
-                    
-                moveq   #ALLY_MAY,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_GERHALT,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_LUKE,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_ROHDE,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_RICK,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_ELRIC,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_ERIC,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_KARNA,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_RANDOLF,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_TYRIN,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_JANET,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_HIGINS,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_SKREECH,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_TAYA,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_FRAYJA,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_JARO,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_GYAN,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_SHEELA,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_ZYNK,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_CHAZ,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_LEMON,d0
-                bsr.w   j_JoinForce
-                moveq   #ALLY_CLAUDE,d0
-                bsr.w   j_JoinForce
                 endif
-                
-                moveq   #0,d0
-                move.w  #$63,d1 
-                bsr.w   j_SetBaseAGI
-                bsr.w   j_SetBaseATT
-                bsr.w   j_SetBaseDEF
-                bsr.w   j_SetMaxHP
-                bsr.w   j_SetCurrentAGI
-                bsr.w   j_SetCurrentATT
-                bsr.w   j_SetCurrentDEF
-                bsr.w   j_SetCurrentHP
+                if (VERSUS_MODE=1)
+NewVsBattle:
+                    
+                    if (START_AT_BATTLE_NUMBER_PROMPT=1)
+                        move.b  #NOT_CURRENTLY_IN_BATTLE,((CURRENT_BATTLE-$1000000)).w
+                    elseif (PROJECT_VS_DEMO=1)
+                        move.w  #1,d0               ; jump right into battle 1
+                        bra.w   loc_StartBattle
+                    endif
+                else
+                    moveq   #0,d0
+                    move.w  #$63,d1 
+                    bsr.w   j_SetBaseAGI
+                    bsr.w   j_SetBaseATT
+                    bsr.w   j_SetBaseDEF
+                    bsr.w   j_SetMaxHP
+                    bsr.w   j_SetCurrentAGI
+                    bsr.w   j_SetCurrentATT
+                    bsr.w   j_SetCurrentDEF
+                    bsr.w   j_SetCurrentHP
+                endif
                 sndCom  MUSIC_BATTLE_THEME_3
                 bsr.w   EnableDisplayAndInterrupts
                 bsr.w   InitDisplay
@@ -134,17 +134,32 @@ NewVsBattle:
                 move.l  #$14151617,(a0)+
                 move.l  #$18191A1B,(a0)+
                 move.l  #$1C1D1E1F,(a0)+
-                bsr.w   CheatModeConfiguration
+                if (VERSUS_MODE=0)
+                    bsr.w   CheatModeConfiguration
+                endif
 byte_77DE:
                 
                 txt     456             ; "Battle number?{D1}"
                 clr.w   d0
                 clr.w   d1
-                move.w  #$31,d2 
+                move.w  #BATTLE_TEST_PROMPT_MAX_NUMBER,d2 
                 jsr     j_NumberPrompt
                 clsTxt
                 tst.w   d0
-                blt.w   loc_7894
+                if (RANDOM_BATTLE_SELECTION=1)
+                    bpl.s   @Skip
+                    move.w  #BATTLE_TEST_PROMPT_MAX_NUMBER+1,d6     ; pick a random battle if we pressed B
+                    bsr.w   GenerateRandomNumber
+                    move.w  d7,d0
+@Skip:
+                
+                else
+                    blt.w   loc_7894
+                endif
+                if (VERSUS_MODE=1)
+                    tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
+                    bpl.s   loc_StartBattle
+                endif
                 movem.w d0-d2,-(sp)
                 clr.w   d0
                 clr.w   d1

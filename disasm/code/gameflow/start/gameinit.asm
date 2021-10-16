@@ -9,7 +9,7 @@ InitGame:
                 
                 move    #$2300,sr
                 bsr.w   LoadBaseTiles
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                     nop
                     nop
                     jsr     j_NewGame

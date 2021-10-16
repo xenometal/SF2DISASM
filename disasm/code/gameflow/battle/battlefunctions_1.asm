@@ -28,7 +28,7 @@ BattleLoop:
                 move.b  d0,((CURRENT_MAP-$1000000)).w
                 move.b  d1,((CURRENT_BATTLE-$1000000)).w
                 bsr.w   SetBaseVIntFunctions
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     jsr     j_ExecuteBattleCutscene_Intro
                 endif
                 movem.w (sp)+,d0-d1
@@ -48,13 +48,13 @@ BattleLoop:
                 jsr     j_ClearEnemyMoveInfo
                 clr.w   d0
                 bsr.w   LoadBattle      
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     jsr     j_ExecuteBattleCutscene_Start
                 endif
 @Start:
                 
                 bsr.w   UpdateAllEnemiesAI ; start of battle loop
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     jsr     j_ExecuteBattleRegionCutscene
                 endif
                 tst.b   ((DEBUG_MODE_ACTIVATED-$1000000)).w
@@ -92,7 +92,7 @@ BattleLoop:
                 bsr.w   KillRemainingEnemies
 @Continue2:
                 
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     jsr     j_ExecuteBattleCutscene_Defeated
                 endif
                 jsr     HandleKilledCombatants(pc)
@@ -163,7 +163,7 @@ HealLivingAndImmortalAllies:
                 moveq   #COMBATANT_ALLIES_COUNTER,d7
 @Loop:
                 
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     beq.w   @Immortal
                     cmpi.b  #ALLY_LEMON,d0
                     beq.w   @Immortal       ; always heal if character is immortal
@@ -177,7 +177,7 @@ HealLivingAndImmortalAllies:
                 jsr     j_SetCurrentHP
                 jsr     j_GetMaxMP
                 jsr     j_SetCurrentMP
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                     clr.w   d1                          ; cure all status effects
                 else
                     jsr     j_GetStatusEffects
@@ -237,7 +237,7 @@ GetRemainingCombatants:
                 addq.w  #1,d0
                 dbf     d7,@Enemies_Loop
                 
-                if (PROJECT_VS_DEMO=0)      ; skip checking if Bowie is alive
+                if (BOWIE_CAN_DIE=0)        ; allow battle to continue after Bowie dies
                     clr.w   d0
                     jsr     j_GetCurrentHP
                     tst.w   d1
@@ -256,7 +256,7 @@ GetRemainingCombatants:
 
 BattleLoop_Victory:
                 
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                     sndCom  MUSIC_ITEM
                     txt     4267            ; "The Shining Force wins!{W1}"
                     clsTxt
@@ -710,7 +710,7 @@ ExecuteIndividualTurn:
                 bra.w   @GetFirstBattlesceneEnemy
 @EnemyMusic:
                 
-                if (PROJECT_VS_DEMO=1)
+                if (BOSS_ATTACK_MUSIC_FOR_ALL_ENEMIES=1)
                     move.b  #MUSIC_BOSS_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w
                 else
                     move.b  #MUSIC_ENEMY_ATTACK,((BATTLESCENE_MUSIC_INDEX-$1000000)).w 
@@ -978,7 +978,7 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #HOLY_STAFF_HP_RECOVERY,d1
                 jsr     j_IncreaseCurrentHP
-                if (PROJECT_VS_DEMO=0)
+                if (SKIP_AFTER_TURN_MESSAGES=0)
                     sub.w   d2,d1
                     ble.s   @ApplyMysteryStaffRecovery
                     ext.l   d1
@@ -995,7 +995,7 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #MYSTERY_STAFF_MP_RECOVERY,d1
                 jsr     j_IncreaseCurrentMP
-                if (PROJECT_VS_DEMO=0)
+                if (SKIP_AFTER_TURN_MESSAGES=0)
                     sub.w   d2,d1
                     ble.s   @ApplyLifeRingRecovery
                     ext.l   d1
@@ -1012,7 +1012,7 @@ HandleAfterTurnEffects:
                 move.w  d1,d2
                 moveq   #LIFE_RING_HP_RECOVERY,d1
                 jsr     j_IncreaseCurrentHP
-                if (PROJECT_VS_DEMO=0)
+                if (SKIP_AFTER_TURN_MESSAGES=0)
                     sub.w   d2,d1
                     ble.s   @ApplyPoisonDamage
                     ext.l   d1
@@ -2364,7 +2364,7 @@ loc_252A6:
                 clsTxt
                 tst.w   d0
                 bmi.w   loc_25236
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                     bsr.w   HealLivingAndImmortalAllies
                     jmp     NewVsBattle
                 else

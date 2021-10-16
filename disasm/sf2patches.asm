@@ -25,4 +25,10 @@ EXTENDED_SPELL_NAMES: equ 0                     ; 0 = OFF, 1 = ON
 SHOW_ENEMY_LEVEL: equ 1                         ; 0 = OFF, 1 = ON
 SHOW_ALL_SPELLS_IN_MEMBER_SCREEN: equ 1         ; 0 = OFF, 1 = ON
 ; Project VS Demo
-PROJECT_VS_DEMO: equ 1
+PROJECT_VS_DEMO: equ 1                          ; Include 6 vs. 6 demo specific assets.
+VERSUS_MODE: equ 1                              ; Must be enabled.
+START_AT_BATTLE_NUMBER_PROMPT: equ 0
+RANDOM_BATTLE_SELECTION: equ 1                  ; Press B at battle number prompt to randomly pick a battle.
+BOWIE_CAN_DIE: equ 1
+BOSS_ATTACK_MUSIC_FOR_ALL_ENEMIES: equ 1
+SKIP_AFTER_TURN_MESSAGES: equ 1                 ; Skip displaying HP/MP regen and poison damage messages.

@@ -61,7 +61,7 @@ loc_A396:
                 beq.w   loc_A3B2
 loc_A3AE:
                 
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     bsr.w   WriteBattlesceneScript_EXPandGold
                 endif
 loc_A3B2:

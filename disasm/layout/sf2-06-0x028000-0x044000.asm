@@ -73,7 +73,7 @@ StaticWidthFont:incbin "data/graphics/tech/fonts/staticwidthfont.bin"
 TitleScreenPalettes:
                 incbin "data/graphics/specialscreens/titlescreen/titlescreenpalettes.bin"
                 include "code\common\scripting\text\decoding.asm"    ; Text decoding functions
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
 TextBankTreeOffsets:
                     incbin "data/scripting/text/newhuffmantreeoffsets.bin"
 TextBankTreeData:

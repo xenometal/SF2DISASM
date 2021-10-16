@@ -409,7 +409,7 @@ loc_1B15A4:
 SetEnemyBaseATT:
                 
                 move.l  d1,-(sp)
-                if (PROJECT_VS_DEMO=0)
+                if (VERSUS_MODE=0)
                     jsr     j_GetDifficulty
                     cmpi.w  #DIFFICULTY_SUPER,d1 ; pointless comparison
                     beq.s   @Continue

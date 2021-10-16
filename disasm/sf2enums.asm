@@ -3203,3 +3203,12 @@ MAPEVENT_GETINTORAFT: equ $3
 MAPEVENT_GETOUTOFCARAVAN: equ $4
 MAPEVENT_GETOUTOFRAFT: equ $5
 MAPEVENT_ZONE_EVENT: equ $6
+
+; ---------------------------------------------------------------------------
+
+; enum BattleTest
+    if (START_AT_BATTLE_NUMBER_PROMPT=1)
+BATTLE_TEST_PROMPT_MAX_NUMBER: equ 44
+    else
+BATTLE_TEST_PROMPT_MAX_NUMBER: equ 49
+    endif

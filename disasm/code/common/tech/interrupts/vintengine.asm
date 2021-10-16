@@ -520,7 +520,7 @@ loc_9DC:
 loc_9F6:
                 
                 bsr.w   UpdatePlayerInputs
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
                 
                     ; Use P2 input if currently in battle and an enemy is taking its turn
                     cmpi.b  #NOT_CURRENTLY_IN_BATTLE,((CURRENT_BATTLE-$1000000)).w

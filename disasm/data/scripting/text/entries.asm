@@ -1,7 +1,7 @@
 
 ; ASM FILE data\scripting\text\entries.asm :
 ; 0x2EB34..0x4201E : Textbank entries
-                if (PROJECT_VS_DEMO=1)
+                if (VERSUS_MODE=1)
 TextBank00:         incbin "data/scripting/text/newtextbank00.bin"
 TextBank01:         incbin "data/scripting/text/newtextbank01.bin"
 TextBank02:         incbin "data/scripting/text/newtextbank02.bin"

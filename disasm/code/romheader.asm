@@ -94,18 +94,18 @@ aJ:             dc.b 'J               '
 RomEndAddress:  declareRomEnd           ; ROM End Address
                 dc.l $FF0000            ; RAM Start Address
                 dc.l $FFFFFF            ; RAM End Address
-                if (PROJECT_VS_DEMO=1)
-                    dc.l $5241B820          ; SRAM data
+                if (VERSUS_MODE=1)
+                    dc.l $5241B820          ; SRAM is not saved
                 else
-                    dc.l $5241F820          ; SRAM data
+                    dc.l $5241F820
                 endif
                 dc.l $200001            ; SRAM Start Address
                 dc.l $203FFF            ; SRAM End Address
                 dc.b '            '     ; Modem data
                 dc.b '                    ' ; Memo
                 dc.b '                    '
-                if (PROJECT_VS_DEMO=1)
-                    dc.b 'JUE             '
+                if (VERSUS_MODE=1)
+                    dc.b 'JUE             ' ; No region lock
                 else
-aU:                 dc.b 'U               ' ; Countries codes
+aU:                 dc.b 'U               '
                 endif
