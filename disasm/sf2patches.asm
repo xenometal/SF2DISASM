@@ -1,0 +1,1 @@
+DISABLE_ENEMY_ITEM_DROPS: equ 0     ; 0 = OFF, 1 = ON
