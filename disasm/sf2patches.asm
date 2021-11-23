@@ -1,3 +1,4 @@
+DISABLE_ENEMY_ITEM_DROPS: equ 1                 ; 0 = OFF, 1 = ON
 PERCENT_POISON_DAMAGE: equ 0                    ; 0 = OFF, 1-100 = n% of max HP
 CAPITALIZED_CHARACTER_NAMES: equ 1              ; 0 = OFF, 1 = ON
 ; Debugging facilitations

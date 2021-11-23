@@ -110,7 +110,9 @@ loc_9CB6:
                 move.b  d1,targetDies(a2)
                 bsr.w   WriteBattlesceneScript_SwitchTargets
                 bsr.w   WriteBattlesceneScript_DoAction
-                bsr.w   WriteBattlesceneScript_EnemyDropItem
+                if (DISABLE_ENEMY_ITEM_DROPS=0)
+                    bsr.w   WriteBattlesceneScript_EnemyDropItem
+                endif
                 addq.w  #1,a5
                 moveq   #2,d6
                 dbf     d7,loc_9CB6
@@ -137,7 +139,9 @@ loc_9CB6:
                 bsr.w   CreateBattlesceneAnimation
                 bsr.w   WriteBattlesceneScript_SwitchTargets
                 bsr.w   WriteBattlesceneScript_DoAction
-                bsr.w   WriteBattlesceneScript_EnemyDropItem
+                if (DISABLE_ENEMY_ITEM_DROPS=0)
+                    bsr.w   WriteBattlesceneScript_EnemyDropItem
+                endif
                 bsr.w   WriteBattlesceneScript_IdleSprite
 loc_9D3E:
                 
@@ -164,7 +168,9 @@ loc_9D3E:
                 bsr.w   CreateBattlesceneAnimation
                 bsr.w   WriteBattlesceneScript_SwitchTargets
                 bsr.w   WriteBattlesceneScript_DoAction
-                bsr.w   WriteBattlesceneScript_EnemyDropItem
+                if (DISABLE_ENEMY_ITEM_DROPS=0)
+                    bsr.w   WriteBattlesceneScript_EnemyDropItem
+                endif
                 bsr.w   WriteBattlesceneScript_IdleSprite
 loc_9D9C:
                 

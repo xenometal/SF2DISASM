@@ -24,7 +24,9 @@
                 include "data\stats\allies\classes\criticalhitsettings.asm"    ; Critical hit settings
                 include "code\gameflow\battle\battleactionsengine_6.asm"    ; Battle actions engine
                 include "data\stats\items\itembreakmessages.asm"    ; Item break messages
-                include "code\gameflow\battle\battleactionsengine_7.asm"    ; Battle actions engine
+                if (DISABLE_ENEMY_ITEM_DROPS=0)
+                    include "code\gameflow\battle\battleactionsengine_7.asm"    ; Battle actions engine
+                endif
                 include "data\battles\global\enemyitemdrops.asm"    ; Enemy item drops
                 include "data\stats\enemies\enemygold.asm"    ; Enemy gold amounts
                 include "code\gameflow\battle\battleactionsengine_8.asm"    ; Battle actions engine
