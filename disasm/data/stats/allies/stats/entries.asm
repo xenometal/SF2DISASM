@@ -33,7 +33,11 @@ pt_AllyStats:   dc.l AllyStats00        ; BOWIE
                 dc.l AllyStats29        ; CLAUDE
                 dc.l AllyStats29
                 dc.l AllyStats29
-                include "data\stats\allies\stats\allystats00.asm"    ; Ally stats 00
+                if (SFCD_LEVELUP=1)
+                  include "data\stats\allies\stats\sfcd-allystats00.asm"    ; Ally stats 00
+                else
+                  include "data\stats\allies\stats\allystats00.asm"    ; Ally stats 00
+                endif
                 include "data\stats\allies\stats\allystats01.asm"    ; Ally stats 01
                 include "data\stats\allies\stats\allystats02.asm"    ; Ally stats 02
                 include "data\stats\allies\stats\allystats03.asm"    ; Ally stats 03

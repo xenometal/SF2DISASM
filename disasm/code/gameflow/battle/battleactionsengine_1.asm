@@ -1419,8 +1419,13 @@ GetAmountOfEXPforEncounter:
                 jsr     GetClass        
                 move.w  d1,d3
                 jsr     GetCurrentLevel
-                cmpi.b  #CHAR_CLASS_FIRSTPROMOTED,d3
-                bcs.s   loc_A990
+                if (SFCD_LEVELUP=1)
+                  btst    #0,d3           ; odd class index = promoted
+                  beq.s   loc_A990
+                else
+                  cmpi.b  #CHAR_CLASS_FIRSTPROMOTED,d3
+                  bcs.s   loc_A990
+                endif
                 addi.w  #CHAR_CLASS_EXTRALEVEL,d1
 loc_A990:
                 

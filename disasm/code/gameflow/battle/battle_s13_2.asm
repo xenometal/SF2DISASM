@@ -867,8 +867,13 @@ loc_1B193C:
                 jsr     j_GetCurrentLevel
                 move.w  d1,d2
                 jsr     j_GetClass
-                cmpi.b  #CHAR_CLASS_LASTNONPROMOTED,d1
-                ble.s   loc_1B195C
+                if (SFCD_LEVELUP=1)
+                  btst    #0,d1           ; odd class index = promoted
+                  beq.s   loc_1B195C
+                else
+                  cmpi.b  #CHAR_CLASS_LASTNONPROMOTED,d1
+                  ble.s   loc_1B195C
+                endif
                 addi.w  #CHAR_CLASS_EXTRALEVEL,d2
 loc_1B195C:
                 

@@ -472,9 +472,14 @@ forClass: macro
     defineShorthand.b CLASS_,\1
     endm
     
-defineStatGrowth: macro Start,Proj,Curve
-    defineShorthand.b GROWTHCURVE_,\Curve
-    dc.b \Start,\Proj
+defineStatGrowth: macro
+    if (SFCD_LEVELUP=1)
+    defineShorthand.b GROWTHTYPE_,\2
+    dc.b \1
+    else
+    defineShorthand.b GROWTHCURVE_,\3
+    dc.b \1,\2
+    endc
     endm
     
 hpGrowth: macro

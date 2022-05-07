@@ -9,7 +9,9 @@
                 incbin "data/sound/yminst.bin"
 SoundDriver:    incbin "data/sound/sounddriver.bin"
 p_StatGrowthCurves:
-                dc.l StatGrowthCurves   
+                if (SFCD_LEVELUP=0)
+                  dc.l StatGrowthCurves
+                endif
 p_pt_AllyStats: dc.l pt_AllyStats       
 p_AllyStartDefs:dc.l AllyStartDefs      
 p_ClassDefs:    dc.l ClassDefs          
@@ -25,7 +27,9 @@ p_SuspendStringTiles:
                 dc.l SuspendStringTiles
                 dc.l unused_BasePalettes
 p_BaseTiles:    dc.l BaseTiles
-                include "data\stats\allies\growthcurves.asm"    ; Stat growth curves
+                if (SFCD_LEVELUP=0)
+                  include "data\stats\allies\growthcurves.asm"    ; Stat growth curves
+                endif
                 include "data\stats\allies\stats\entries.asm"    ; Ally stats
                 include "data\stats\allies\allystartdefs.asm"    ; Ally start definitions
                 include "data\stats\allies\classes\classdefs.asm"    ; Class definitions

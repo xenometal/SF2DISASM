@@ -7,6 +7,14 @@
                 include "code\common\stats\statsengine_1.asm"    ; Character stats engine
                 include "data\stats\allies\classes\classtypes.asm"    ; Class types table
                 include "code\common\stats\statsengine_2.asm"    ; Character stats engine
+                if (SFCD_LEVELUP=1)
+                  include "code\common\stats\levelup-sfcd.asm"
+                else
+                  include "code\common\stats\levelup.asm"    ; Level up function
+                  include "code\common\stats\initcharacterstats.asm"    ; Init character stats function
+                  include "code\common\stats\calculatestatgain.asm"    ; Calculate stat gain function
+                endif
+                include "code\common\stats\statsengine_3.asm"    ; Character stats engine
                 include "code\gameflow\special\debugmodebattleactions.asm"    ; Debug mode battle actions
                 include "code\gameflow\battle\battleactionsengine_1.asm"    ; Battle actions engine
                 include "data\stats\allies\classes\criticalhitsettings.asm"    ; Critical hit settings

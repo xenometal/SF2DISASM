@@ -1380,8 +1380,13 @@ AdjustSpellPower:
                 bne.w   @CheckSummon    ; go to next step if action is not a spell
                 move.b  (a4),d0
                 jsr     GetClass        
-                cmpi.b  #CHAR_CLASS_FIRSTPROMOTED,d1
-                bcs.w   @CheckSummon    ; go to next step if caster is not promoted
+                if (SFCD_LEVELUP=1)
+                  btst    #0,d1           ; odd class index = promoted
+                  beq.s   @CheckSummon
+                else
+                  cmpi.b  #CHAR_CLASS_FIRSTPROMOTED,d1
+                  bcs.w   @CheckSummon    ; go to next step if caster is not promoted
+                endif
                 mulu.w  #5,d6
                 lsr.w   #2,d6           ; +25% spell power
 @CheckSummon:

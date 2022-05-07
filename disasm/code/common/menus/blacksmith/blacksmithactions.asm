@@ -257,8 +257,13 @@ byte_21D1A:
                 move.w  d0,-8(a6)
                 jsr     j_GetClass
                 move.w  d1,-$18(a6)
-                cmpi.w  #$C,d1
-                bcc.w   loc_21D5C
+                if (SFCD_LEVELUP=1)
+                  btst    #0,d1           ; odd class index = promoted
+                  bne.s   loc_21D5C
+                else
+                  cmpi.w  #CHAR_CLASS_FIRSTPROMOTED,d1
+                  bcc.w   loc_21D5C
+                endif
                 move.w  -8(a6),((TEXT_NAME_INDEX_1-$1000000)).w
                 txt     $D3             ; "{NAME} has to be promoted{N}first.{W1}"
                 bra.s   byte_21D1A      

@@ -172,11 +172,18 @@ STATUSEFFECTS_MASK_ATTACK: equ $C000
 ; ---------------------------------------------------------------------------
 
 ; enum CharDef
+  if (SFCD_LEVELUP=1)
+charClassExtraLevel = 10
+charLevelCapBase = 20
+  else
+charClassExtraLevel = 20
+charLevelCapBase = 40
+  endif
 CHAR_CLASS_LASTNONPROMOTED: equ $B
 CHAR_CLASS_FIRSTPROMOTED: equ $C
-CHAR_CLASS_EXTRALEVEL: equ $14
+CHAR_CLASS_EXTRALEVEL: equ charClassExtraLevel
 CHAR_STATGAIN_PROJECTIONLEVEL: equ $1E
-CHAR_LEVELCAP_BASE: equ $28
+CHAR_LEVELCAP_BASE: equ charLevelCapBase
 CHAR_LEVELCAP_PROMOTED: equ $63
 CHAR_STATCAP_AGI_BASE: equ $64
 CHAR_STATCAP_AGI_CURRENT: equ $7F
@@ -2580,6 +2587,20 @@ GROWTHCURVE_DEF_SIZE: equ $74
 
 ; ---------------------------------------------------------------------------
 
+; enum GrowthTypes
+  if (SFCD_LEVELUP=1)
+GROWTHTYPE_NONE: equ 0
+GROWTHTYPE_LOW: equ 1           ; Type A
+GROWTHTYPE_MEDIUM: equ 2        ; Type B
+GROWTHTYPE_HIGH: equ 3          ; Type C
+GROWTHTYPE_VERYHIGH: equ 4      ; Type D
+GROWTHTYPE_LATE: equ 5          ; Type E
+GROWTHTYPE_EARLY: equ 6         ; Type F
+GROWTHTYPE_MIDDLE: equ 7        ; Type G
+  endif
+
+; ---------------------------------------------------------------------------
+
 ; enum BattleMapCoordinates_Properties
 BATTLEMAPCOORDS_ENTRY_SIZE: equ $5
 
@@ -2598,8 +2619,13 @@ ALLYSTARTDEF_ENTRY_SIZE: equ $6
 ; ---------------------------------------------------------------------------
 
 ; enum AllyStats
-ALLYSTATS_OFFSET_SPELL_LIST_MINUS_ONE: equ $F
-ALLYSTATS_OFFSET_SPELL_LIST: equ $10
+  if (SFCD_LEVELUP=1)
+spellListOffset = 11
+  else
+spellListOffset = 16
+  endif
+ALLYSTATS_OFFSET_SPELL_LIST_MINUS_ONE: equ spellListOffset-1
+ALLYSTATS_OFFSET_SPELL_LIST: equ spellListOffset
 ALLYSTATS_CODE_USE_FIRST_SPELL_LIST: equ $FE
 ALLYSTATS_CODE_END_OF_SPELL_LIST: equ $FF
 

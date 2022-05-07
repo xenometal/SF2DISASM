@@ -628,8 +628,13 @@ loc_240F4:
                 tst.b   d0
                 blt.s   loc_2412C       
                 jsr     j_GetClass
-                cmpi.w  #CHAR_CLASS_FIRSTPROMOTED,d1 ; HARDCODED music choices
-                bge.s   loc_24122
+                if (SFCD_LEVELUP=1)
+                  btst    #0,d1           ; odd class index = promoted
+                  bne.s   loc_24122
+                else
+                  cmpi.w  #CHAR_CLASS_FIRSTPROMOTED,d1 ; HARDCODED music choices
+                  bge.s   loc_24122
+                endif
                 move.b  #MUSIC_ATTACK,((SKIRMISH_MUSIC_INDEX-$1000000)).w
                 bra.s   loc_24128
 loc_24122:
