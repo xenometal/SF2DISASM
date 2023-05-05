@@ -1,6 +1,7 @@
 
 # No rom files or game content on the repository
 *.bin
+!*-redarcher.bin
 
 # No symbols or listings files
 *.lst
@@ -239,6 +240,7 @@ pip-log.txt
 #*.jar
 *.csv
 *.png
+!disasm/data/graphics/mapsprites/redarcher/*.png
 disasm/data/flags/flagmap.txt
 disasm/data/flags/sf2 flags.txt
 disasm/data/flags/SF2_debug_list.doc
