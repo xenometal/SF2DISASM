@@ -3667,3 +3667,24 @@ LONGWORD_DEALS_COUNTER: equ longwordDealsCounter
 LONGWORD_CARAVAN_COUNTER: equ longwordCaravanCounter
 LONGWORD_GAMEFLAGS_COUNTER: equ $1F
 LONGWORD_CARAVAN_INITVALUE: equ longwordCaravanInitValue
+
+; ---------------------------------------------------------------------------
+
+; enum GameStartValues
+gamestartGold = 60
+gamestartMap = MAP_GRANSEAL
+gamestartSavepointX = 56
+gamestartSavepointY = 3
+gamestartFacing = DOWN
+    if (STANDARD_BUILD&DEMO_BUILD=1)
+gamestartGold = -1
+gamestartMap = MAP_NEW_GRANSEAL_CASTLE
+gamestartSavepointX = 11
+gamestartSavepointY = 7
+gamestartFacing = UP
+    endif
+GAMESTART_MAP:          equ gamestartMap
+GAMESTART_SAVEPOINT_Y:  equ gamestartSavepointY
+GAMESTART_FACING:       equ gamestartFacing
+GAMESTART_SAVEPOINT_X:  equ gamestartSavepointX
+GAMESTART_GOLD:         equ gamestartGold

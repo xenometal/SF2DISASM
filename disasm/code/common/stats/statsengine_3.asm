@@ -15,12 +15,20 @@ NewGame:
                 moveq   #COMBATANT_ALLIES_COUNTER,d0
                 sub.w   d7,d0
                 bsr.w   InitAllyCombatantEntry
+            if (STANDARD_BUILD&DEMO_BUILD=1)
+                bsr.w   JoinForce
+            endif
                 dbf     d7,@Loop
                 
-                moveq   #GOLD_STARTING_AMOUNT,d1 ; starting gold value
+                moveq   #GAMESTART_GOLD,d1 ; starting gold value
                 bsr.w   SetGold
+                
+            if (STANDARD_BUILD&DEMO_BUILD=1)
+                nop
+            else
                 moveq   #ALLY_BOWIE,d0  ; starting character
                 bsr.w   JoinForce       
+            endif
                 movem.w (sp)+,d0-d1/d7
                 rts
 
@@ -82,6 +90,9 @@ InitAllyCombatantEntry:
                 move.b  (a0)+,d1
                 move.b  d1,COMBATANT_OFFSET_CLASS(a1)
                 move.b  (a0)+,d2
+            if (STANDARD_BUILD&DEMO_BUILD=1)
+                moveq   #24,d2
+            endif
                 move.b  d2,COMBATANT_OFFSET_LEVEL(a1)
                 ext.w   d2
                 move.w  d2,-(sp)        ; -> push starting level

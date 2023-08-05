@@ -369,8 +369,14 @@ sub_5F9C6:
 
 Map37_EntityEvent26:
                 
-                 
+            if (STANDARD_BUILD&DEMO_BUILD=1)
+                jsr     CaravanMenuActions
+                move.b  #31,((CURRENT_SHOP_INDEX-$1000000)).w
+                jsr     ShopMenuActions
+                jmp     ChurchMenuActions
+            else
                 txt     11              ; "{LEADER}, take it easy!{W1}"
+            endif
 Map37_EntityEvent27:
                 
                 rts

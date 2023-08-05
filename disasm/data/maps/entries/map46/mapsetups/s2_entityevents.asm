@@ -359,8 +359,15 @@ Map46_EntityEvent28:
 Map46_EntityEvent29:
                 
                  
+            if (STANDARD_BUILD&DEMO_BUILD=1)
+                jsr     CaravanMenuActions
+                move.b  #30,((CURRENT_SHOP_INDEX-$1000000)).w
+                jsr     ShopMenuActions
+                jmp     ChurchMenuActions
+            else
                 txt     11              ; "{LEADER}, take it easy!{W1}"
                 rts
+            endif
 
     ; End of function Map46_EntityEvent29
 

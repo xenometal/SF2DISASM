@@ -2,10 +2,11 @@
 ; 0 = OFF, 1 = ON
 
 ; Assets
-REDARCHER_MAPSPRITES:               equ 1       ; 
+REDARCHER_MAPSPRITES:               equ 1       ; A collection of remade SF2 mapsprites created by RedArcher.
 
 ; Debugging facilitations
-EASY_DEBUG_MODE:                    equ 0       ; Activate Debug Mode automatically when booting up the game.
+DEMO_BUILD                          equ 1       ; Game starts with all characters having joined and at level 20, ready to be promoted.
+EASY_DEBUG_MODE:                    equ 1       ; Activate Debug Mode automatically when booting up the game.
 EASY_BATTLE_TEST:                   equ 0       ; If Debug Mode is activated, go to Battle Test instead of playing the intro cutscene.
 EASY_CONFIGURATION_MODE:            equ 0       ; Activate Configuration Mode automatically, and skip checking if the Start button is pressed.
 
@@ -40,7 +41,7 @@ SPELLS_REFRESH_STATUS_COUNTERS:     equ 0       ; Boost, Slow, and Attack spells
 SOUND_TEST_RESTORATION:             equ 1       ; Reimplement Sound Test functions that are missing in the US version. Based on Earl's patch.
 
 ; AI enhancements
-HEALER_AI_ENHANCEMENTS:             equ 1       ; See SF2_AI_Healing_Rewrite.txt for more details.
+HEALER_AI_ENHANCEMENTS:             equ 0       ; See SF2_AI_Healing_Rewrite.txt for more details.
 
 ; Menu enhancements
 THREE_DIGITS_STATS:                 equ 0       ; 
@@ -60,14 +61,14 @@ RESUME_MUSIC_AFTER_JOIN_JINGLE:     equ 0       ; Resume background music after 
 CHAPTER_SCREEN:                     equ 0       ; Patch implementation with template SFCD screen as applicable example.
 
 ; ROM expansions
-EXPANDED_ROM:                       equ 1       ; Build a 4MB ROM and manage SRAM mapping.
+EXPANDED_ROM:                       equ 0       ; Build a 4MB ROM and manage SRAM mapping.
 MEMORY_MAPPER:                      equ 0       ; Build a 6MB ROM and manage both ROM and SRAM mapping, supporting both SEGA and Extended SSF mappers.
 SSF_SYSTEM_ID:                      equ 0       ; Put "SEGA SSF" string in ROM header to activate memory mapper on Mega EverDrive cartridges.
-EXPANDED_SRAM:                      equ 1       ; Expand SRAM from 8KB to 32KB.
+EXPANDED_SRAM:                      equ 0       ; Expand SRAM from 8KB to 32KB.
 RELOCATED_SAVED_DATA_TO_SRAM:       equ 0       ; Relocate currently loaded saved data from system RAM to cartridge SRAM.
-EXPANDED_FORCE_MEMBERS:             equ 1       ; Enable all 32 force members supported by the engine instead of 30.
-EXPANDED_ITEMS_AND_SPELLS:          equ 1       ; Expand number of items from 127 to 255, and number of spells from 44 to 63. Forces build of 4MB ROM with 32KB SRAM.
-OPTIMIZED_ROM_LAYOUT:               equ 1       ; Align ROM sections to next word boundary to consolidate free space.
+EXPANDED_FORCE_MEMBERS:             equ 0       ; Enable all 32 force members supported by the engine instead of 30.
+EXPANDED_ITEMS_AND_SPELLS:          equ 0       ; Expand number of items from 127 to 255, and number of spells from 44 to 63. Forces build of 4MB ROM with 32KB SRAM.
+OPTIMIZED_ROM_LAYOUT:               equ 0       ; Align ROM sections to next word boundary to consolidate free space.
 REGION_FREE_ROM:                    equ 1       ; Skip checking system region, omit including related function, and update ROM header.
 
 ; Assembler optimizations
